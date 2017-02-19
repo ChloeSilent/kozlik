@@ -453,8 +453,9 @@ PlayerSettings:
   XboxOnePersistentLocalStorageSize: 0
   vrEditorSettings: {}
   cloudServicesEnabled:
+    Build: 1
     UNet: 1
-  cloudProjectId: 3e00bcff-4974-4677-bb2f-1164e45e9837
+  cloudProjectId: d5cbd6fb-fd23-482b-85b5-63db74de7a1b
   projectName: kozlenok
   organizationId: v_osnovnom_bezvreden
   cloudEnabled: 0
