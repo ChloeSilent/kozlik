@@ -27,27 +27,29 @@ public class Test5 : MonoBehaviour {
 		anotherComponent = anotherObject.GetComponent<SpriteRenderer> ();
 
 
-		Debug.Log ("myComponent.sprite is:" + myComponent.sprite);
-		Debug.Log ("anotherComponent.sprite is:" + anotherComponent.sprite);
-//		newSprite = (Sprite) Resources.Load <Sprite> ("table");
-		myComponent.sprite = anotherComponent.sprite;
+		newSprite = (Sprite) Resources.Load <Sprite> ("object001");
 
-		Debug.Log ("myComponent.sprite is:" + myComponent.sprite);
-		Debug.Log ("anotherComponent.sprite is:" + anotherComponent.sprite);
+				myComponent.sprite = newSprite;
+
+	
+
+
 
 //		Debug.Log ("myComponent.sprite is:" + myComponent.sprite);
+//		Debug.Log ("anotherComponent.sprite is:" + anotherComponent.sprite);
+//		Debug.Log ("myComponent.sprite is:" + myComponent.sprite);
+//		Debug.Log ("anotherComponent.sprite is:" + anotherComponent.sprite);
+		Debug.Log ("myComponent.sprite is:" + myComponent.sprite);
 //		Debug.Log ("myObject is:" + myObject);
 //		Debug.Log ("myComponent is:" + myComponent);
-
 //		Debug.Log ("anotherObject is:" + anotherObject);
 //		Debug.Log ("anotherComponent is:" + anotherComponent);
-
-//		Debug.Log ("newSprite is:" + newSprite);
+		Debug.Log ("newSprite is:" + newSprite);
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		myComponent.sprite = anotherComponent.sprite;
+//		myComponent.sprite = anotherComponent.sprite;
 	}
 }
