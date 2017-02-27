@@ -19,7 +19,7 @@ public class Test5 : MonoBehaviour {
 
 
 
-		myObject= GameObject.Find ("Test5");
+		myObject= GameObject.Find ("Button (1)");
 		myComponent = myObject.GetComponent<SpriteRenderer> ();
 
 
