@@ -440,6 +440,8 @@ MonoBehaviour:
     icon: {fileID: 21300000, guid: 85c525f18ac4d415e843fd20afd84d1b, type: 3}
   - itemName: "\u041B\u0435\u0432"
     icon: {fileID: 21300000, guid: f58a9783ba88e47ad949bf55da5a5025, type: 3}
+  - itemName: "\u0412\u0438\u043A\u0442\u043E\u0440\u0438\u043D\u0430 \u0436\u0438\u0432\u043E\u0442\u043D\u044B\u0435"
+    icon: {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
   contentPanel: {fileID: 343125507}
   buttonObjectPool: {fileID: 436182474}
 --- !u!1 &436182473
