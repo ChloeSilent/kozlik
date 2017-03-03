@@ -13,8 +13,9 @@ public class SampleButton : MonoBehaviour {
 	private ButtonsList buttonsList;
 
 	// Use this for initialization
-	void Start () {
-		
+	void Start () 
+	{
+		button.onClick.AddListener (HandleClick);
 	}
 
 	public void Setup (Item currentItem, ButtonsList currentButtonslist)
@@ -24,9 +25,13 @@ public class SampleButton : MonoBehaviour {
 		iconImage.sprite = item.icon;
 
 		buttonsList = currentButtonslist; 
-		  
 
 	}
-	
+
+	public void HandleClick()
+	{
+		// выводим в лог какая кнопка кликнута
+		Debug.Log ("button clicked:" + nameLabel.text);	
+	}
 
 }

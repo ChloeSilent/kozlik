@@ -20,28 +20,37 @@ public class SimpleObjectPool : MonoBehaviour
 	{
 		GameObject spawnedGameObject;
 
+
 		// if there is an inactive instance of the prefab ready to return, return that
 		if (inactiveInstances.Count > 0) 
 		{
 			// remove the instance from teh collection of inactive instances
 			spawnedGameObject = inactiveInstances.Pop();
+
 		}
 		// otherwise, create a new instance
 		else 
 		{
 			spawnedGameObject = (GameObject)GameObject.Instantiate(prefab);
-
 			// add the PooledObject component to the prefab so we know it came from this pool
 			PooledObject pooledObject = spawnedGameObject.AddComponent<PooledObject>();
 			pooledObject.pool = this;
 		}
 
-		// put the instance in the root of the scene and enable it
-//		spawnedGameObject.transform.SetParent(null);
 
-		//устанавливаем родителя для spawnedGameObject. Это влияет на скейлинг, поэтому важно. Второй аргумент "false" говорит "dont modify parent-relative position"
+		//устанавливаем родителя для spawnedGameObject. Если использовать SetParent  с одним аргументом - распидорасит скейлинг. Второй аргумент "false" говорит "dont modify parent-relative position"
 		parentGameObjectsTransform = parentGameObject.GetComponent<Transform>();
 		spawnedGameObject.transform.SetParent(parentGameObjectsTransform, false);
+
+
+
+		//grid layout родителя иногда ломает скейл дочерней кнопки. Фиксим принудительно.
+		spawnedGameObject.transform.localScale = new Vector3 (1,1,1);
+
+		//следы войны с уезжающим скейлингом, памятник одной бессонной ночи
+//		Debug.Log ("currentscale  is:" +  spawnedGameObject.transform.localScale + "should be (1.0, 1.0, 1.0)");
+
+		// и наконец включаем
 		spawnedGameObject.SetActive(true);
 
 		// return a reference to the instance
