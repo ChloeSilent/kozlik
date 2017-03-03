@@ -28,10 +28,27 @@ public class SampleButton : MonoBehaviour {
 
 	}
 
+	//обработка нажатий
 	public void HandleClick()
 	{
 		// выводим в лог какая кнопка кликнута
 		Debug.Log ("button clicked:" + nameLabel.text);	
+
+		//выясняем какая кнопка нажата
+		switch (transform.parent.name) 
+		{
+		case("CategoryPickerPanel"): 
+			Debug.Log ("transform.parent.name:" + transform.parent.name);	
+			break;
+		case("ObjectPickerPanel"): 
+			Debug.Log ("transform.parent.name:" + transform.parent.name);
+			break;
+		default:
+			Debug.LogError ("new or unknown category" + transform.parent.name);
+			break;
+		}
+
+
 	}
 
 }

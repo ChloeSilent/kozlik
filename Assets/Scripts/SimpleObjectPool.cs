@@ -16,7 +16,7 @@ public class SimpleObjectPool : MonoBehaviour
 	private Stack<GameObject> inactiveInstances = new Stack<GameObject>();
 
 	// Returns an instance of the prefab
-	public GameObject GetObject() 
+	public GameObject GetObject(Transform parentGameObject) 
 	{
 		GameObject spawnedGameObject;
 
@@ -59,6 +59,7 @@ public class SimpleObjectPool : MonoBehaviour
 
 	// Return an instance of the prefab to the pool
 	public void ReturnObject(GameObject toReturn) 
+
 	{
 		PooledObject pooledObject = toReturn.GetComponent<PooledObject>();
 
@@ -66,7 +67,7 @@ public class SimpleObjectPool : MonoBehaviour
 		if(pooledObject != null && pooledObject.pool == this)
 		{
 			// make the instance a child of this and disable it
-			toReturn.transform.SetParent(transform);
+			toReturn.transform.SetParent(transform,false);
 			toReturn.SetActive(false);
 
 			// add the instance to the collection of inactive instances

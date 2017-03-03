@@ -19,7 +19,8 @@ public class ButtonsList : MonoBehaviour {
 
 	void Start () 
 	{
-		RefreshDisplay ();
+//		RefreshDisplay ();
+		AddButtons ();
 	}
 		
 
@@ -33,9 +34,10 @@ public class ButtonsList : MonoBehaviour {
 	public void AddButtons()
 	{
 		//обойти лист, на каждой итерации доставать объект из пула, сетапить его
-		for (int i = 0; i < itemList.Count; i++) {
+		for (int i = 0; i < itemList.Count; i++) 
+		{
 			Item currentItem = itemList [i];
-			GameObject newButton = buttonObjectPool.GetObject ();
+			GameObject newButton = buttonObjectPool.GetObject ( contentPanel);
 
 			//следы войны с уезжающим скейлингом, памятник одной бессонной ночи
 //			Debug.Log ("transform.parent 2 is:" +  newButton.transform.parent.name);
