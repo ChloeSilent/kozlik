@@ -16,8 +16,9 @@ public class PanelsController : MonoBehaviour {
 	public	void GoBrowseMode () 
 	{
 //		Debug.Log ("BrowseMode clicked");
-		MakeMainInvisible ();
 		MakeBrowseVisible ();
+		MakeMainInvisible ();
+
 
 
 	}
