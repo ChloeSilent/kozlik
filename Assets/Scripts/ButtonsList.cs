@@ -17,18 +17,6 @@ public class ButtonsList : MonoBehaviour {
 	public Transform contentPanel;
 	public SimpleObjectPool buttonObjectPool;
 
-	void Start () 
-	{
-//		RefreshDisplay ();
-		AddButtons ();
-	}
-		
-
-	public void RefreshDisplay()
-	{
-		RemoveAllButtons ();
-		AddButtons ();
-	}
 
 	//наплодить кнопок
 	public void AddButtons()
@@ -37,13 +25,7 @@ public class ButtonsList : MonoBehaviour {
 		for (int i = 0; i < itemList.Count; i++) 
 		{
 			Item currentItem = itemList [i];
-			GameObject newButton = buttonObjectPool.GetObject ( contentPanel);
-
-			//следы войны с уезжающим скейлингом, памятник одной бессонной ночи
-//			Debug.Log ("transform.parent 2 is:" +  newButton.transform.parent.name);
-//			newButton.transform.SetParent (contentPanel);
-//			Debug.Log ("transform.parent 2 is:" +  newButton.transform.parent.name);
-
+			GameObject newButton = buttonObjectPool.GetObject (contentPanel);
 			SampleButton sampleButton = newButton.GetComponent<SampleButton> ();
 			sampleButton.Setup (currentItem, this);
 
@@ -53,11 +35,14 @@ public class ButtonsList : MonoBehaviour {
 	//удалить все кнопки из панели, геймобжекты вернуть в пул
 	public void RemoveAllButtons()
 	{
+		//убираем кнопки в пул пока не кончатся
 		while (contentPanel.childCount > 0) 
 		{
 			GameObject toRemove = transform.GetChild (0).gameObject;
 			buttonObjectPool.ReturnObject (toRemove);
 		}
 	}
+
+
 
 }

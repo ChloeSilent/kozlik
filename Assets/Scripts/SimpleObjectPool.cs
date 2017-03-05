@@ -47,7 +47,7 @@ public class SimpleObjectPool : MonoBehaviour
 		//grid layout родителя иногда ломает скейл дочерней кнопки. Фиксим принудительно.
 		spawnedGameObject.transform.localScale = new Vector3 (1,1,1);
 
-		//следы войны с уезжающим скейлингом, памятник одной бессонной ночи
+		//следы войны с уезжающим скейлингом
 //		Debug.Log ("currentscale  is:" +  spawnedGameObject.transform.localScale + "should be (1.0, 1.0, 1.0)");
 
 		// и наконец включаем
