@@ -32,21 +32,24 @@ public class SampleButton : MonoBehaviour {
 		//храним ссылку на родителя
 		PanelsController panelsController = GameObject.Find ("MainCanvas").GetComponent<PanelsController> ();
 
-		//выясняем какая кнопка нажата
+		//выясняем кто parent нажатой кнопки, реагируем соответственно
 		switch (transform.parent.name) 
 		{
 
 		case("CategoryPickerPanel"): 
 			Debug.Log ("transform.parent.name:" + transform.parent.name);
+			Debug.Log ("NYI 6");
 			break;
 
 		case("ObjectPickerPanel"): 
 			//goto browse Mode
-			panelsController.GoBrowseMode();
+			Debug.Log ("item is" + item);
+			panelsController.GoBrowseMode(item);
 			break;
 
 		case("BrowseModePanel"):
-			panelsController.GoMainMode();
+			panelsController.GoMainMode(); //TODO category id here
+//			Debug.Log ("NYI 7");
 			break;
 
 		default:

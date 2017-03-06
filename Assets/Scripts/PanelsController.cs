@@ -13,28 +13,23 @@ public class PanelsController : MonoBehaviour {
 	}
 	
 
-	public	void GoBrowseMode () 
+	public	void GoBrowseMode (Item itemToBrowse) 
 	{
-//		Debug.Log ("BrowseMode clicked");
-		MakeBrowseVisible ();
-		MakeMainInvisible ();
-
-
-
+		MakeBrowseVisible (itemToBrowse);
+		MakeMainInvisible (); //TODO add category id
 	}
 
 	public	void GoMainMode () 
 	{
-//		Debug.Log ("GoMainMode clicked");
 		MakeMainVisible ();
 		MakeBrowseInvisible ();
 	}
 
 
-	public void MakeBrowseVisible ()
+	public void MakeBrowseVisible (Item itemToBrowse)
 	{
 		GameObject.Find("BrowseModePanel").gameObject.GetComponent<Image>().enabled =true;
-		GameObject.Find("BrowseModePanel").gameObject.GetComponent<ButtonsList> ().AddButtons();
+		GameObject.Find("BrowseModePanel").gameObject.GetComponent<ButtonsList> ().AddButtons2Browse(itemToBrowse);
 	}
 
 	public void MakeBrowseInvisible ()
@@ -58,8 +53,8 @@ public class PanelsController : MonoBehaviour {
 		GameObject.Find("MainMenuPanel").gameObject.GetComponent<Image>().enabled =true;
 		GameObject.Find("ObjectPickerPanel").gameObject.GetComponent<Image>().enabled =true;
 		GameObject.Find("CategoryPickerPanel").gameObject.GetComponent<Image>().enabled =true;
-		GameObject.Find("CategoryPickerPanel").gameObject.GetComponent<ButtonsList> ().AddButtons();
-		GameObject.Find("ObjectPickerPanel").gameObject.GetComponent<ButtonsList> ().AddButtons();
+		GameObject.Find("CategoryPickerPanel").gameObject.GetComponent<ButtonsList> ().AddButtons2Main();
+		GameObject.Find("ObjectPickerPanel").gameObject.GetComponent<ButtonsList> ().AddButtons2Main();
 	}
 
 }

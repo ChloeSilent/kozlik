@@ -18,8 +18,8 @@ public class ButtonsList : MonoBehaviour {
 	public SimpleObjectPool buttonObjectPool;
 
 
-	//наплодить кнопок
-	public void AddButtons()
+	//наплодить кнопок для MainMenuPanel. не принимает  аргументов 
+	public void AddButtons2Main()
 	{
 		//обойти лист, на каждой итерации доставать объект из пула, сетапить его
 		for (int i = 0; i < itemList.Count; i++) 
@@ -28,8 +28,18 @@ public class ButtonsList : MonoBehaviour {
 			GameObject newButton = buttonObjectPool.GetObject (contentPanel);
 			SampleButton sampleButton = newButton.GetComponent<SampleButton> ();
 			sampleButton.Setup (currentItem, this);
-
 		}
+
+	}
+
+
+
+	//наплодить 1 кнопку для BrowseModePanel . принимает 1 аргумент типа Item
+	public void AddButtons2Browse(Item itemToBrowse)
+	{
+			GameObject newButton = buttonObjectPool.GetObject (contentPanel);
+			SampleButton sampleButton = newButton.GetComponent<SampleButton> ();
+			sampleButton.Setup (itemToBrowse, this);
 	}
 
 	//удалить все кнопки из панели, геймобжекты вернуть в пул
