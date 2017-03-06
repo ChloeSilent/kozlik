@@ -32,13 +32,13 @@ public class PanelsController : MonoBehaviour {
 	public void MakeBrowseVisible (Item itemToBrowse)
 	{
 		GameObject.Find("BrowseModePanel").gameObject.GetComponent<Image>().enabled =true;
-		GameObject.Find("BrowseModePanel").gameObject.GetComponent<ButtonsList> ().AddButtons2Browse(itemToBrowse);
+		GameObject.Find("BrowseModePanel").gameObject.GetComponent<ButtonsController> ().AddButtons2Browse(itemToBrowse);
 	}
 
 	public void MakeBrowseInvisible ()
 	{
 		GameObject.Find("BrowseModePanel").gameObject.GetComponent<Image>().enabled =false;
-		GameObject.Find("BrowseModePanel").gameObject.GetComponent<ButtonsList> ().RemoveAllButtons();
+		GameObject.Find("BrowseModePanel").gameObject.GetComponent<ButtonsController> ().RemoveAllButtons();
 		
 	}
 
@@ -48,16 +48,16 @@ public class PanelsController : MonoBehaviour {
 		GameObject.Find("MainMenuPanel").gameObject.GetComponent<Image>().enabled =false;
 		GameObject.Find("ObjectPickerPanel").gameObject.GetComponent<Image>().enabled =false;
 		GameObject.Find("CategoryPickerPanel").gameObject.GetComponent<Image>().enabled =false;
-		GameObject.Find("CategoryPickerPanel").gameObject.GetComponent<ButtonsList> ().RemoveAllButtons();
-		GameObject.Find("ObjectPickerPanel").gameObject.GetComponent<ButtonsList> ().RemoveAllButtons();
+		GameObject.Find("CategoryPickerPanel").gameObject.GetComponent<ButtonsController> ().RemoveAllButtons();
+		GameObject.Find("ObjectPickerPanel").gameObject.GetComponent<ButtonsController> ().RemoveAllButtons();
 	}
 	public void MakeMainVisible ()
 	{
 		GameObject.Find("MainMenuPanel").gameObject.GetComponent<Image>().enabled =true;
 		GameObject.Find("ObjectPickerPanel").gameObject.GetComponent<Image>().enabled =true;
 		GameObject.Find("CategoryPickerPanel").gameObject.GetComponent<Image>().enabled =true;
-		GameObject.Find("CategoryPickerPanel").gameObject.GetComponent<ButtonsList> ().AddButtons2Main();
-		GameObject.Find("ObjectPickerPanel").gameObject.GetComponent<ButtonsList> ().AddButtons2Main();
+		GameObject.Find("CategoryPickerPanel").gameObject.GetComponent<ButtonsController> ().AddButtons2Main();
+		GameObject.Find("ObjectPickerPanel").gameObject.GetComponent<ButtonsController> ().AddButtons2Main();
 	}
 
 }

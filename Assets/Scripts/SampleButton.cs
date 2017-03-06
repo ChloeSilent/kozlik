@@ -18,7 +18,7 @@ public class SampleButton : MonoBehaviour {
 		button.onClick.AddListener (HandleClick);
 	}
 
-	public void Setup (Item currentItem, ButtonsList currentButtonsList)
+	public void Setup (Item currentItem, ButtonsController currentButtonsController)
 	{
 		item = currentItem;
 		nameLabel.text = item.itemName;
@@ -31,14 +31,14 @@ public class SampleButton : MonoBehaviour {
 
 		//храним ссылку на родителей
 		PanelsController currentPanelsController = GameObject.Find ("MainCanvas").GetComponent<PanelsController> ();
-		ButtonsList currentButtonsList = this.transform.parent.GetComponent<ButtonsList> ();
+		ButtonsController currentButtonsController = this.transform.parent.GetComponent<ButtonsController> ();
 
 		//выясняем кто parent нажатой кнопки, реагируем соответственно
 		switch (transform.parent.name) 
 		{
 
 		case("CategoryPickerPanel"): 
-			currentButtonsList.ChangeCategoryTo (item);
+			currentButtonsController.ChangeCategoryTo (item);
 			break;
 
 		case("ObjectPickerPanel"): 
@@ -47,7 +47,7 @@ public class SampleButton : MonoBehaviour {
 
 		case("BrowseModePanel"):
 			currentPanelsController.GoMainMode(); //TODO category id here
-//			currentButtonsList.ChangeCategoryTo (item);
+			//			currentButtonsController.ChangeCategoryTo (item);
 			break;
 
 		default:

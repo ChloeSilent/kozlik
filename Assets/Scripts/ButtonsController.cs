@@ -11,7 +11,7 @@ public class Item
 
 }
 
-public class ButtonsList : MonoBehaviour {
+public class ButtonsController : MonoBehaviour {
 
 	public List<Item> itemList;
 	public Transform contentPanel;
