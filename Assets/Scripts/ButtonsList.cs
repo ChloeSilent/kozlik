@@ -42,6 +42,13 @@ public class ButtonsList : MonoBehaviour {
 			sampleButton.Setup (itemToBrowse, this);
 	}
 
+	//переключиться на другую категорию
+	public	void ChangeCategoryTo (Item targetItem) 
+	{
+//		RemoveAllButtons (); //TODO from obj picker only
+//		AddButtons2Main (targetItem);
+	}
+
 	//удалить все кнопки из панели, геймобжекты вернуть в пул
 	public void RemoveAllButtons()
 	{

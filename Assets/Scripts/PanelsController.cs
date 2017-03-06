@@ -26,6 +26,9 @@ public class PanelsController : MonoBehaviour {
 	}
 
 
+
+
+
 	public void MakeBrowseVisible (Item itemToBrowse)
 	{
 		GameObject.Find("BrowseModePanel").gameObject.GetComponent<Image>().enabled =true;
