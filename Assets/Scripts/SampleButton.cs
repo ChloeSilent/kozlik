@@ -2,17 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-
-
-public class SampleButton : MonoBehaviour {
-
+public class SampleButton : MonoBehaviour 
+{
 	public Button button;
 	public Text nameLabel;
 	public Image iconImage;
 	private Item item;
 
-	// Use this for initialization
 	void Start () 
 	{
 		button.onClick.AddListener (HandleClick);
@@ -28,7 +24,6 @@ public class SampleButton : MonoBehaviour {
 	//обработка нажатий
 	public void HandleClick()
 	{
-
 		//храним ссылку на родителей
 		PanelsController currentPanelsController = GameObject.Find ("MainCanvas").GetComponent<PanelsController> ();
 		ButtonsController currentButtonsController = this.transform.parent.GetComponent<ButtonsController> ();
@@ -36,9 +31,8 @@ public class SampleButton : MonoBehaviour {
 		//выясняем кто parent нажатой кнопки, реагируем соответственно
 		switch (transform.parent.name) 
 		{
-
 		case("CategoryPickerPanel"): 
-			currentButtonsController.ChangeCategoryTo (item);
+			currentButtonsController.ChangeCategory (item);
 			break;
 
 		case("ObjectPickerPanel"): 
@@ -46,16 +40,12 @@ public class SampleButton : MonoBehaviour {
 			break;
 
 		case("BrowseModePanel"):
-			currentPanelsController.GoMainMode(); //TODO category id here
-			//			currentButtonsController.ChangeCategoryTo (item);
+			currentPanelsController.GoMainMode(item); 
 			break;
 
 		default:
 			Debug.LogError ("new or unknown category" + transform.parent.name);
 			break;
 		}
-
-
 	}
-
 }

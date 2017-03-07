@@ -3,63 +3,82 @@ using System.Collections.Generic; // нужно для  [System.Serializable]
 using UnityEngine;
 using UnityEngine.UI;
 
-[System.Serializable] // выводит в инспектор
-public class Item 
+public class ButtonsController : MonoBehaviour 
 {
-	public string itemName;
-	public Sprite  icon;
-
-}
-
-public class ButtonsController : MonoBehaviour {
-
 	public List<Item> itemList;
-	public Transform contentPanel;
+	public Transform currentController;
 	public SimpleObjectPool buttonObjectPool;
 
-
-	//наплодить кнопок для MainMenuPanel. не принимает  аргументов 
-	public void AddButtons2Main()
+	//взять кнопку из пула и просетапить ее переданным аргументом someItem
+	public void TakeOneButtonFromPoolAndSetupWith(Item someItem)
 	{
-		//обойти лист, на каждой итерации доставать объект из пула, сетапить его
-		for (int i = 0; i < itemList.Count; i++) 
-		{
+		//для правильного скейлинга при извлечении из пула нужно утанавливать parent. для этого передаем currentController
+		GameObject newButton = buttonObjectPool.GetObject (currentController);
+		SampleButton sampleButton = newButton.GetComponent<SampleButton> ();
+		sampleButton.Setup (someItem, this);
+	}
+
+	//сетапим все кнопки из itemList в цикле
+	public void AddButtons()
+	{
+		for (int i = 0; i < itemList.Count; i++) {
 			Item currentItem = itemList [i];
-			GameObject newButton = buttonObjectPool.GetObject (contentPanel);
-			SampleButton sampleButton = newButton.GetComponent<SampleButton> ();
-			sampleButton.Setup (currentItem, this);
+			TakeOneButtonFromPoolAndSetupWith (currentItem);
 		}
+	}
+
+	//наплодить 1 кнопку для BrowseModePanel . принимает 1 аргумент типа Item
+	public void AddButtonToBrowse()
+	{
+		ButtonsController browseModePanel = GameObject.Find ("BrowseModePanel").GetComponent<ButtonsController>();
+		browseModePanel.AddButtons ();
 
 	}
 
-
-
-	//наплодить 1 кнопку для BrowseModePanel . принимает 1 аргумент типа Item
-	public void AddButtons2Browse(Item itemToBrowse)
+	//наплодить кнопок для ObjectPicker 
+	public void AddButtonsToObjectPicker ()
 	{
-			GameObject newButton = buttonObjectPool.GetObject (contentPanel);
-			SampleButton sampleButton = newButton.GetComponent<SampleButton> ();
-			sampleButton.Setup (itemToBrowse, this);
+			ButtonsController objectPicker = GameObject.Find ("ObjectPickerPanel").GetComponent<ButtonsController>();
+			objectPicker.AddButtons ();
+
+	}
+
+	//наплодить кнопок для CategoryPicker
+	public void AddButtonsToCategoryPicker ()
+	{
+		ButtonsController categoryPicker = GameObject.Find ("CategoryPickerPanel").GetComponent<ButtonsController>();
+		categoryPicker.AddButtons ();
 	}
 
 	//переключиться на другую категорию
-	public	void ChangeCategoryTo (Item targetItem) 
+	public void ChangeCategory (Item chosenItem)
 	{
-//		RemoveAllButtons (); //TODO from obj picker only
-//		AddButtons2Main (targetItem);
+		PanelsController panelsController = GameObject.Find ("MainCanvas").GetComponent<PanelsController> ();
+		RemoveAllButtonsFromObjectPicker();
+		panelsController.RefreshObjectPickerItemListTo (chosenItem.Category); //подтягиваем в objectPicker нужные item
+		AddButtonsToObjectPicker ();
 	}
 
-	//удалить все кнопки из панели, геймобжекты вернуть в пул
-	public void RemoveAllButtons()
+	//убрать в пул одну кнопку 
+	public void ReturnOneButtonToPool ()
+	{	
+		GameObject toRemove = transform.GetChild (0).gameObject;
+		buttonObjectPool.ReturnObject (toRemove);
+	}
+
+	//убирать в пул все кнопки  пока не кончатся
+	public void RemoveAllButtons() 
 	{
-		//убираем кнопки в пул пока не кончатся
-		while (contentPanel.childCount > 0) 
+		while (currentController.childCount > 0) 
 		{
-			GameObject toRemove = transform.GetChild (0).gameObject;
-			buttonObjectPool.ReturnObject (toRemove);
+			ReturnOneButtonToPool ();
 		}
 	}
 
-
-
+	// убрать в пул все кнопки из ObjectPicker
+	public void RemoveAllButtonsFromObjectPicker ()
+	{
+		ButtonsController objectPicker = GameObject.Find ("ObjectPickerPanel").GetComponent<ButtonsController>();
+		objectPicker.RemoveAllButtons ();
+	}
 }

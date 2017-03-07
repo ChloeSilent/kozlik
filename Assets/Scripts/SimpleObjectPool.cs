@@ -2,15 +2,11 @@
 using System.Collections.Generic;
 
 // осмысленно взято отсюда https://unity3d.com/ru/learn/tutorials/topics/user-interface-ui/button-prefab?playlist=17111
-
-
-// A very simple object pooling class
+// пул кнопок
 public class SimpleObjectPool : MonoBehaviour
 {
 	// the prefab that this object pool returns instances of
 	public GameObject prefab;
-	public GameObject parentGameObject;
-	private Transform parentGameObjectsTransform;
 
 	// collection of currently inactive instances of the prefab
 	private Stack<GameObject> inactiveInstances = new Stack<GameObject>();
@@ -20,14 +16,13 @@ public class SimpleObjectPool : MonoBehaviour
 	{
 		GameObject spawnedGameObject;
 
-
 		// if there is an inactive instance of the prefab ready to return, return that
 		if (inactiveInstances.Count > 0) 
 		{
 			// remove the instance from teh collection of inactive instances
 			spawnedGameObject = inactiveInstances.Pop();
-
 		}
+
 		// otherwise, create a new instance
 		else 
 		{
@@ -37,18 +32,11 @@ public class SimpleObjectPool : MonoBehaviour
 			pooledObject.pool = this;
 		}
 
-
 		//устанавливаем родителя для spawnedGameObject. Если использовать SetParent  с одним аргументом - распидорасит скейлинг. Второй аргумент "false" говорит "dont modify parent-relative position"
-		parentGameObjectsTransform = parentGameObject.GetComponent<Transform>();
-		spawnedGameObject.transform.SetParent(parentGameObjectsTransform, false);
-
-
+		spawnedGameObject.transform.SetParent(parentGameObject, false);
 
 		//grid layout родителя иногда ломает скейл дочерней кнопки. Фиксим принудительно.
 		spawnedGameObject.transform.localScale = new Vector3 (1,1,1);
-
-		//следы войны с уезжающим скейлингом
-//		Debug.Log ("currentscale  is:" +  spawnedGameObject.transform.localScale + "should be (1.0, 1.0, 1.0)");
 
 		// и наконец включаем
 		spawnedGameObject.SetActive(true);
@@ -73,6 +61,7 @@ public class SimpleObjectPool : MonoBehaviour
 			// add the instance to the collection of inactive instances
 			inactiveInstances.Push(toReturn);
 		}
+
 		// otherwise, just destroy it
 		else
 		{
