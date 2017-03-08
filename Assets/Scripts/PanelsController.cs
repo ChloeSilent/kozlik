@@ -18,9 +18,10 @@ public class PanelsController : MonoBehaviour
 	public GameObject categoryPickerPanel;
 	public GameObject browseModePanel;
 	public GameObject quizModePanel;
-	private Item item; // а нужно ли это ?
+	public Item item; // а нужно ли это ?
 	public List<Item> itemList;
 	private List<Item> tempItemsList;
+	public List<Item> fourVariantsItemsList;
 
 	void Start () 
 	{
@@ -40,10 +41,49 @@ public class PanelsController : MonoBehaviour
 		MakeBrowseInvisible ();
 	}
 
+	// в аргументе указано кто призвал квиз
+	public void GoQuizMode ()
+	{
+		MakeMainInvisible (); 
+		RefreshQuizModeItemListTo (); 
+		MakeQuizVisible (); 
+
+	}
+
+	// в аргументе item с целевой категорией
+	public void RefreshQuizModeItemListTo ()
+	{
+		//храним ссылку на objectPickerPanel
+		ButtonsController objectPickerPanel = GameObject.Find ("ObjectPickerPanel").GetComponent<ButtonsController>();
+
+		//ссылка на панель, которую будем тюнить
+		ButtonsController quizModePanel = GameObject.Find ("QuizModePanel").GetComponent<ButtonsController>();
+
+		//берем в цикле 4 раза item из objectPickerPanel.itemList , помещаем в лист вариантов 
+		for (int i = 0; i < 4; i++) 
+		{
+			fourVariantsItemsList [i]  = objectPickerPanel.itemList [i];
+		}
+
+		//наконец передаем 4 варианта в quiz
+		for (int i = 0; i < 4; i++) 
+		{
+			quizModePanel.itemList [i] = fourVariantsItemsList [i];
+		}
+
+
+	}
+
+	public void MakeQuizVisible ()
+	{
+		quizModePanel.GetComponent<Image> ().enabled = true;
+		quizModePanel.GetComponent<ButtonsController> ().AddButtonsToQuiz (); 
+	}
+
 	public void RefreshBrowseModeItemListTo (Item newItem)
 	{
 		ButtonsController browseModePanel = GameObject.Find ("BrowseModePanel").GetComponent<ButtonsController>();
-		browseModePanel.itemList.RemoveAt(0);
+		browseModePanel.itemList.RemoveAt(0); // убрать ?
 		browseModePanel.itemList.Insert (0, newItem);
 	}
 
@@ -71,11 +111,8 @@ public class PanelsController : MonoBehaviour
 				{
 					i++;
 				}
-
 			}
-
 		}
-
 	}
 
 	public void MakeBrowseVisible (Item newItem)

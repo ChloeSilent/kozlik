@@ -16,15 +16,29 @@ public class ButtonsController : MonoBehaviour
 		GameObject newButton = buttonObjectPool.GetObject (currentController);
 		SampleButton sampleButton = newButton.GetComponent<SampleButton> ();
 		sampleButton.Setup (someItem, this);
+
+//		browseModePanel
+		RectTransform buttonRectTransform = sampleButton.GetComponent<RectTransform>();
+
+		buttonRectTransform.anchorMax = new Vector2(1, 1);
+		buttonRectTransform.anchorMin = new Vector2(0, 0);
+
+		buttonRectTransform.offsetMin = new Vector2(buttonRectTransform.offsetMin.x, 0);
+		buttonRectTransform.offsetMax = new Vector2(buttonRectTransform.offsetMax.x, 0);
+		buttonRectTransform.offsetMin = new Vector2(buttonRectTransform.offsetMin.y, 0);
+		buttonRectTransform.offsetMax = new Vector2(buttonRectTransform.offsetMax.y, 0);
 	}
 
 	//сетапим все кнопки из itemList в цикле
 	public void AddButtons()
 	{
-		for (int i = 0; i < itemList.Count; i++) {
+		for (int i = 0; i < itemList.Count; i++) 
+		{
 			Item currentItem = itemList [i];
 			TakeOneButtonFromPoolAndSetupWith (currentItem);
 		}
+
+
 	}
 
 	//наплодить 1 кнопку для BrowseModePanel . принимает 1 аргумент типа Item
@@ -48,6 +62,12 @@ public class ButtonsController : MonoBehaviour
 	{
 		ButtonsController categoryPicker = GameObject.Find ("CategoryPickerPanel").GetComponent<ButtonsController>();
 		categoryPicker.AddButtons ();
+	}
+
+	public void AddButtonsToQuiz ()
+	{
+		ButtonsController quizModePanel = GameObject.Find ("QuizModePanel").GetComponent<ButtonsController>();
+		quizModePanel.AddButtons ();
 	}
 
 	//переключиться на другую категорию
@@ -81,4 +101,12 @@ public class ButtonsController : MonoBehaviour
 		ButtonsController objectPicker = GameObject.Find ("ObjectPickerPanel").GetComponent<ButtonsController>();
 		objectPicker.RemoveAllButtons ();
 	}
+
+	public void RemoveAllButtonsFromQuiz ()
+	{
+		ButtonsController quizPanel = GameObject.Find ("QuizModePanel").GetComponent<ButtonsController>();
+		quizPanel.RemoveAllButtons ();
+	}
+
+
 }

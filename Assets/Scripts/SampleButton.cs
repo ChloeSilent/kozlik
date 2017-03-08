@@ -19,6 +19,7 @@ public class SampleButton : MonoBehaviour
 		item = currentItem;
 		nameLabel.text = item.itemName;
 		iconImage.sprite = item.icon;
+		//TODO убрать надпись на викторине
 	}
 
 	//обработка нажатий
@@ -36,11 +37,26 @@ public class SampleButton : MonoBehaviour
 			break;
 
 		case("ObjectPickerPanel"): 
-			currentPanelsController.GoBrowseMode(item);
+			if(this.item.itemName == "Quiz") //12 кнопка quiz
+			{
+				currentPanelsController.GoQuizMode ();
+			}
+			else //1-11 кнопка
+			{
+				currentPanelsController.GoBrowseMode(item);	
+			}
+
 			break;
 
 		case("BrowseModePanel"):
 			currentPanelsController.GoMainMode(item); 
+			break;
+
+		case("QuizModePanel"):
+			//TODO check winner
+
+			currentPanelsController.GoBrowseMode (item); 
+			currentButtonsController.RemoveAllButtonsFromQuiz ();
 			break;
 
 		default:
