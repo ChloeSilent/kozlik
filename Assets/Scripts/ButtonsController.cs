@@ -17,7 +17,7 @@ public class ButtonsController : MonoBehaviour
 		SampleButton sampleButton = newButton.GetComponent<SampleButton> ();
 		sampleButton.Setup (someItem, this);
 
-//		browseModePanel
+		//смена парента ломает не только скейлинг, но и якоря и оффсеты. жестко фиксим  
 		RectTransform buttonRectTransform = sampleButton.GetComponent<RectTransform>();
 
 		buttonRectTransform.anchorMax = new Vector2(1, 1);
