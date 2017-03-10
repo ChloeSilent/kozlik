@@ -37,7 +37,7 @@ public class SampleButton : MonoBehaviour
 			break;
 
 		case("ObjectPickerPanel"): 
-			if(this.item.itemName == "Quiz") //12 кнопка quiz
+			if(this.item.itemName == "QuizButton") //12 кнопка quiz
 			{
 				currentPanelsController.GoQuizMode ();
 			}
@@ -52,7 +52,7 @@ public class SampleButton : MonoBehaviour
 			currentPanelsController.GoMainMode(item); 
 			break;
 
-		case("QuizModePanel"):
+		case("QuizButtonsPanel"):
 			//TODO check winner
 
 			currentPanelsController.GoBrowseMode (item); 

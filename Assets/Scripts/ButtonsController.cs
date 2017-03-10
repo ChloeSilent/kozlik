@@ -66,8 +66,8 @@ public class ButtonsController : MonoBehaviour
 
 	public void AddButtonsToQuiz ()
 	{
-		ButtonsController quizModePanel = GameObject.Find ("QuizModePanel").GetComponent<ButtonsController>();
-		quizModePanel.AddButtons ();
+		ButtonsController quizButtonsPanel = GameObject.Find ("QuizButtonsPanel").GetComponent<ButtonsController>();
+		quizButtonsPanel.AddButtons ();
 	}
 
 	//переключиться на другую категорию
@@ -104,8 +104,8 @@ public class ButtonsController : MonoBehaviour
 
 	public void RemoveAllButtonsFromQuiz ()
 	{
-		ButtonsController quizPanel = GameObject.Find ("QuizModePanel").GetComponent<ButtonsController>();
-		quizPanel.RemoveAllButtons ();
+		ButtonsController quizButtonsPanel = GameObject.Find ("QuizButtonsPanel").GetComponent<ButtonsController>();
+		quizButtonsPanel.RemoveAllButtons ();
 	}
 
 

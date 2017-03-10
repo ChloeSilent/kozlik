@@ -18,6 +18,7 @@ public class PanelsController : MonoBehaviour
 	public GameObject categoryPickerPanel;
 	public GameObject browseModePanel;
 	public GameObject quizModePanel;
+	public GameObject quizButtonsPanel;
 	public Item item; // а нужно ли это ?
 	public List<Item> itemList;
 	private List<Item> tempItemsList;
@@ -29,35 +30,70 @@ public class PanelsController : MonoBehaviour
 		MakeMainVisible ();
 	}
 
-	public	void GoBrowseMode (Item itemToBrowse) 
-	{
-		MakeBrowseVisible (itemToBrowse);
-		MakeMainInvisible (); 
-	}
-
 	public	void GoMainMode (Item item) 
 	{
 		MakeMainVisible ();
 		MakeBrowseInvisible ();
 	}
 
+	public	void GoBrowseMode (Item itemToBrowse) 
+	{
+		MakeBrowseVisible (itemToBrowse);
+		MakeMainInvisible (); 
+	}
+
 	// в аргументе указано кто призвал квиз
 	public void GoQuizMode ()
 	{
 		MakeMainInvisible (); 
+		MakeBrowseInvisible (); 
 		RefreshQuizModeItemListTo (); 
 		MakeQuizVisible (); 
 
 	}
 
-	// в аргументе item с целевой категорией
+	//на входе принимаем id желаемой категории, перенастраиваем  itemList у ObjectPicker
+	public void RefreshObjectPickerItemListTo (int desiredCategoryId)
+	{
+		//ссылка на панель, которую будем тюнить
+		ButtonsController objectPickerPanel = GameObject.Find ("ObjectPickerPanel").GetComponent<ButtonsController>();
+
+		//копируем лист во временный
+		List<Item> tempItemsList  = new List<Item>(itemList);
+
+		//проходим циклом по двум листам, выбираем из общего объекты нужной категории, копируем в objectPickerPanel
+		for (int j = 0; j < 11;)
+		{
+			for (int i = 0; i < tempItemsList.Count;)
+			{
+				if (tempItemsList [i].Category == desiredCategoryId) 
+				{
+					objectPickerPanel.itemList [j] = tempItemsList [i];
+					i++;
+					j++;
+				} 
+				else 
+				{
+					i++;
+				}
+			}
+		}
+	}
+
+	public void RefreshBrowseModeItemListTo (Item newItem)
+	{
+		ButtonsController browseModePanel = GameObject.Find ("BrowseModePanel").GetComponent<ButtonsController>();
+		browseModePanel.itemList.RemoveAt(0); // убрать ?
+		browseModePanel.itemList.Insert (0, newItem);
+	}
+
 	public void RefreshQuizModeItemListTo ()
 	{
 		//храним ссылку на objectPickerPanel
 		ButtonsController objectPickerPanel = GameObject.Find ("ObjectPickerPanel").GetComponent<ButtonsController>();
 
 		//ссылка на панель, которую будем тюнить
-		ButtonsController quizModePanel = GameObject.Find ("QuizModePanel").GetComponent<ButtonsController>();
+		ButtonsController quizButtonsPanel = GameObject.Find ("QuizButtonsPanel").GetComponent<ButtonsController>();
 
 		// выберем из objectPickerPanel.itemList 4 случайных варианта для викторины.
 		// берем в цикле 4 раза случайный item из objectPickerPanel.itemList , и после проверки помещаем в лист вариантов fourVariantsItemsList
@@ -105,67 +141,17 @@ public class PanelsController : MonoBehaviour
 		//наконец, передаем сформированный лист из 4 вариантов в quiz
 		for (int i = 0; i < 4; i++) 
 		{
-			quizModePanel.itemList [i] = fourVariantsItemsList [i];
+			quizButtonsPanel.itemList [i] = fourVariantsItemsList [i];
 		}
 		// здесь на первый взгляд хорошо бы обнулить fourVariantsItemsList [k]
 		// потому, что он сохранится до и при следующем запуске квиза, и при выборе кандидатов на второй квиз претенденты будут
 		// отбрасываться, если были в первом квизе, но если подумать, такое поведение нас устраивает,выглядит более разноообрано оставлем так
 	}
 
-	public void MakeQuizVisible ()
-	{
-		quizModePanel.GetComponent<Image> ().enabled = true;
-		quizModePanel.GetComponent<ButtonsController> ().AddButtonsToQuiz (); 
-	}
 
-	public void RefreshBrowseModeItemListTo (Item newItem)
-	{
-		ButtonsController browseModePanel = GameObject.Find ("BrowseModePanel").GetComponent<ButtonsController>();
-		browseModePanel.itemList.RemoveAt(0); // убрать ?
-		browseModePanel.itemList.Insert (0, newItem);
-	}
 
-	//на входе принимаем id желаемой категории, перенастраиваем  itemList у ObjectPicker
-	public void RefreshObjectPickerItemListTo (int desiredCategoryId)
-	{
-		//ссылка на панель, которую будем тюнить
-		ButtonsController objectPickerPanel = GameObject.Find ("ObjectPickerPanel").GetComponent<ButtonsController>();
 
-		//копируем лист во временный
-		List<Item> tempItemsList  = new List<Item>(itemList);
 
-		//проходим циклом по двум листам, выбираем из общего объекты нужной категории, копируем в objectPickerPanel
-		 for (int j = 0; j < 11;)
-		{
-			for (int i = 0; i < tempItemsList.Count;)
-			{
-				if (tempItemsList [i].Category == desiredCategoryId) 
-				{
-					objectPickerPanel.itemList [j] = tempItemsList [i];
-					i++;
-					j++;
-				} 
-				else 
-				{
-					i++;
-				}
-			}
-		}
-	}
-
-	public void MakeBrowseVisible (Item newItem)
-	{
-		ButtonsController browseModePanel = GameObject.Find ("BrowseModePanel").GetComponent<ButtonsController>();
-		browseModePanel.GetComponent<Image>().enabled =true;
-		RefreshBrowseModeItemListTo (newItem);
-		browseModePanel.GetComponent<ButtonsController> ().AddButtonToBrowse();
-	}
-
-	public void MakeBrowseInvisible ()
-	{
-		browseModePanel.GetComponent<Image>().enabled =false;
-		browseModePanel.GetComponent<ButtonsController> ().RemoveAllButtons();
-	}
 
 	public void MakeMainVisible ()
 	{
@@ -183,6 +169,34 @@ public class PanelsController : MonoBehaviour
 		objectPickerPanel.GetComponent<Image>().enabled =false;
 		categoryPickerPanel.GetComponent<Image>().enabled =false;
 		mainMenuPanel.GetComponent<Image>().enabled =false;
+	}
+
+	public void MakeBrowseVisible (Item newItem)
+	{
+		ButtonsController browseModePanel = GameObject.Find ("BrowseModePanel").GetComponent<ButtonsController>();
+		browseModePanel.GetComponent<Image>().enabled =true;
+		RefreshBrowseModeItemListTo (newItem);
+		browseModePanel.GetComponent<ButtonsController> ().AddButtonToBrowse();
+	}
+
+	public void MakeBrowseInvisible ()
+	{
+		browseModePanel.GetComponent<Image>().enabled =false;
+		browseModePanel.GetComponent<ButtonsController> ().RemoveAllButtons();
+	}
+
+	public void MakeQuizVisible ()
+	{
+		quizModePanel.GetComponent<Image> ().enabled = true;
+		quizButtonsPanel.GetComponent<Image> ().enabled = true;
+		quizButtonsPanel.GetComponent<ButtonsController> ().AddButtonsToQuiz (); 
+	}
+
+	public void MakeQuizInvisible ()
+	{
+		quizModePanel.GetComponent<Image> ().enabled = false;
+		quizButtonsPanel.GetComponent<Image> ().enabled = false;
+		quizButtonsPanel.GetComponent<ButtonsController> ().RemoveAllButtonsFromQuiz (); 
 	}
 
 }
