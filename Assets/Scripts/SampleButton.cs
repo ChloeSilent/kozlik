@@ -65,3 +65,8 @@ public class SampleButton : MonoBehaviour
 		}
 	}
 }
+
+public class QuizButton : SampleButton 
+{
+	public bool isRightAnswer;
+}
