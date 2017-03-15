@@ -2,6 +2,8 @@
 using UnityEngine;
 using UnityEngine.UI; 
 using System.Collections.Generic; // нужно для  [System.Serializable]
+//using System.Security.Cryptography.X509Certificates;
+using UnityEditor;
 
 [System.Serializable] // выводит в инспектор
 public class Item 
@@ -17,17 +19,29 @@ public class PanelsController : MonoBehaviour
 	public GameObject objectPickerPanel;
 	public GameObject categoryPickerPanel;
 	public GameObject browseModePanel;
-	public GameObject quizModePanel;
-	public GameObject quizButtonsPanel;
+
+
+	public Image quizButtonsPanelImage;
+	public ButtonsController quizButtonsController;
+	public Image questionPanelImage;
+	public Text constantQuuestionText;
+	public Text variativeQuestionText;
+
+
 	public Item item; // а нужно ли это ?
 	public List<Item> itemList;
 	private List<Item> tempItemsList;
 	public List<Item> fourVariantsItemsList;
+	private int winnerId;
+
+	private string wrongVariantName;
+
 
 	void Start () 
 	{
 		//app start
 		MakeMainVisible ();
+
 	}
 
 	public	void GoMainMode (Item item) 
@@ -47,7 +61,10 @@ public class PanelsController : MonoBehaviour
 	{
 		MakeMainInvisible (); 
 		MakeBrowseInvisible (); 
-		RefreshQuizModeItemListTo (); 
+		SelectFourRandomVariants ();
+		RefreshQuizModeItemList (); 
+		SetSomeVariantAsWinner ();
+		RefreshVariativeQuestionText ();
 		MakeQuizVisible (); 
 
 	}
@@ -87,13 +104,11 @@ public class PanelsController : MonoBehaviour
 		browseModePanel.itemList.Insert (0, newItem);
 	}
 
-	public void RefreshQuizModeItemListTo ()
+
+	public void SelectFourRandomVariants ()
 	{
 		//храним ссылку на objectPickerPanel
 		ButtonsController objectPickerPanel = GameObject.Find ("ObjectPickerPanel").GetComponent<ButtonsController>();
-
-		//ссылка на панель, которую будем тюнить
-		ButtonsController quizButtonsPanel = GameObject.Find ("QuizButtonsPanel").GetComponent<ButtonsController>();
 
 		// выберем из objectPickerPanel.itemList 4 случайных варианта для викторины.
 		// берем в цикле 4 раза случайный item из objectPickerPanel.itemList , и после проверки помещаем в лист вариантов fourVariantsItemsList
@@ -138,20 +153,66 @@ public class PanelsController : MonoBehaviour
 			}
 		}
 
-		//наконец, передаем сформированный лист из 4 вариантов в quiz
+	}
+
+
+
+	public void RefreshQuizModeItemList ()
+	{
+		//передаем сформированный лист из 4 вариантов в quiz
 		for (int i = 0; i < 4; i++) 
 		{
-			quizButtonsPanel.itemList [i] = fourVariantsItemsList [i];
+			quizButtonsController.itemList [i] = fourVariantsItemsList [i];
 		}
 		// здесь на первый взгляд хорошо бы обнулить fourVariantsItemsList [k]
 		// потому, что он сохранится до и при следующем запуске квиза, и при выборе кандидатов на второй квиз претенденты будут
 		// отбрасываться, если были в первом квизе, но если подумать, такое поведение нас устраивает,выглядит более разноообрано оставлем так
 	}
 
+	//выбираем что будем отгадывать
+	public void SetSomeVariantAsWinner()
+	{
+		winnerId = Random.Range(0, 4);
+	}
 
+	//указываем победителя в variativeQuestionText
+	public void RefreshVariativeQuestionText ()
+	{
+		variativeQuestionText.GetComponent<Text> ().text = fourVariantsItemsList [winnerId].itemName;
+	}
 
-
-
+	//проверяем ответ викторины на правильность
+	public void CheckIfWinner (Item selectedItem)
+	{
+		if(selectedItem.itemName == fourVariantsItemsList [winnerId].itemName)
+		{
+			//угадал
+			GoBrowseMode (selectedItem);
+			MakeQuizInvisible ();
+		}
+		else
+		{
+			//не угадал
+			wrongVariantName = selectedItem.itemName;
+//			Debug.Log ("wrongVariantName" + wrongVariantName); 
+			for (int v = 0; v < 4; v++ )
+			{
+//				Debug.Log ("do if"); 
+				if (fourVariantsItemsList [v].itemName == wrongVariantName) 
+				{
+					Debug.Log ("budem ispravlat" + fourVariantsItemsList [v].itemName); 
+					fourVariantsItemsList [v].itemName = "wrong";
+					Debug.Log ("ipravleno na wrong" + fourVariantsItemsList [v].itemName); 
+				} 
+				else 
+				{
+					Debug.Log ("else" + wrongVariantName); 
+				}
+			}	
+			RefreshQuizModeItemList ();
+		
+		}
+	}
 
 	public void MakeMainVisible ()
 	{
@@ -187,16 +248,20 @@ public class PanelsController : MonoBehaviour
 
 	public void MakeQuizVisible ()
 	{
-		quizModePanel.GetComponent<Image> ().enabled = true;
-		quizButtonsPanel.GetComponent<Image> ().enabled = true;
-		quizButtonsPanel.GetComponent<ButtonsController> ().AddButtonsToQuiz (); 
+		quizButtonsPanelImage.enabled = true;
+		questionPanelImage.enabled = true;
+		constantQuuestionText.enabled = true;
+		variativeQuestionText.enabled = true;
+		quizButtonsController.AddButtonsToQuiz ();
 	}
 
 	public void MakeQuizInvisible ()
 	{
-		quizModePanel.GetComponent<Image> ().enabled = false;
-		quizButtonsPanel.GetComponent<Image> ().enabled = false;
-		quizButtonsPanel.GetComponent<ButtonsController> ().RemoveAllButtonsFromQuiz (); 
+		quizButtonsPanelImage.enabled = false;
+		questionPanelImage.enabled = false;
+		constantQuuestionText.enabled = false;
+		variativeQuestionText.enabled = false;
+		quizButtonsController.RemoveAllButtonsFromQuiz (); 
 	}
 
 }

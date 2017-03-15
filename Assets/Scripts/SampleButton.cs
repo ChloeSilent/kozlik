@@ -53,10 +53,7 @@ public class SampleButton : MonoBehaviour
 			break;
 
 		case("QuizButtonsPanel"):
-			//TODO check winner
-
-			currentPanelsController.GoBrowseMode (item); 
-			currentButtonsController.RemoveAllButtonsFromQuiz ();
+			currentPanelsController.CheckIfWinner(item); 
 			break;
 
 		default:
@@ -66,7 +63,9 @@ public class SampleButton : MonoBehaviour
 	}
 }
 
-public class QuizButton : SampleButton 
-{
-	public bool isRightAnswer;
-}
+//public class QuizButton : SampleButton 
+//{
+//	public bool isRightAnswer;
+//	public Image answerImage;
+//
+//}

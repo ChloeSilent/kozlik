@@ -101,7 +101,6 @@ GameObject:
   - component: {fileID: 154025921}
   - component: {fileID: 154025923}
   - component: {fileID: 154025922}
-  - component: {fileID: 154025924}
   m_Layer: 5
   m_Name: QuizModePanel
   m_TagString: Untagged
@@ -162,29 +161,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 154025920}
---- !u!114 &154025924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 154025920}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -2095666955, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 4
-  m_StartCorner: 0
-  m_StartAxis: 0
-  m_CellSize: {x: 370, y: 570}
-  m_Spacing: {x: 40, y: 40}
-  m_Constraint: 1
-  m_ConstraintCount: 2
 --- !u!1 &312061594
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,8 +546,11 @@ MonoBehaviour:
   objectPickerPanel: {fileID: 343125506}
   categoryPickerPanel: {fileID: 1490034594}
   browseModePanel: {fileID: 780615070}
-  quizModePanel: {fileID: 154025920}
-  quizButtonsPanel: {fileID: 1324254777}
+  quizButtonsPanelImage: {fileID: 1324254781}
+  quizButtonsController: {fileID: 1324254779}
+  questionPanelImage: {fileID: 312061597}
+  constantQuuestionText: {fileID: 1396631007}
+  variativeQuestionText: {fileID: 1317587837}
   item:
     itemName: 
     icon: {fileID: 0}
