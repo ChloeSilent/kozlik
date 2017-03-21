@@ -2,8 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI; 
 using System.Collections.Generic; // нужно для  [System.Serializable]
-//using System.Security.Cryptography.X509Certificates;
-using UnityEditor;
+
 
 [System.Serializable] // выводит в инспектор
 public class Item 
@@ -194,8 +193,7 @@ public class PanelsController : MonoBehaviour
 		}
 		else
 		{
-			//TODO не угадал
-			Transform wrongImage = selectedButton.transform.FindChild ("WrongImage").transform;
+			// не угадал
 			selectedButton.GetComponent <SampleButton> ().MoveRedCrossForward ();
 		}
 	}
