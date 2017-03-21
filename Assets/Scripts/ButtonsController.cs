@@ -80,13 +80,16 @@ public class ButtonsController : MonoBehaviour
 		}
 	}
 
+	//откатываем изменения, которые вносились в кнопки для квиз режима
 	public void unTuneButtonsForQuiz ()
 	{
 		//перебираем кнопки в квизе
 		foreach (Transform quizButton in transform) 
 		{
+			//включаем обратно плашку с текстом
 			GameObject currentTextPanel = quizButton.FindChild ("TextPanel").gameObject;
 			currentTextPanel.SetActive (true);
+			//прячем красный крест на второй план
 			quizButton.GetComponent <SampleButton> ().MoveRedCrossBackward ();
 		}
 	}
