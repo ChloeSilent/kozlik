@@ -77,10 +77,8 @@ public class ButtonsController : MonoBehaviour
 		{
 			GameObject currentTextPanel = quizButton.FindChild ("TextPanel").gameObject;
 			currentTextPanel.SetActive (false);
-
 		}
 	}
-
 
 	public void unTuneButtonsForQuiz ()
 	{
@@ -89,11 +87,8 @@ public class ButtonsController : MonoBehaviour
 		{
 			GameObject currentTextPanel = quizButton.FindChild ("TextPanel").gameObject;
 			currentTextPanel.SetActive (true);
-
 		}
 	}
-
-
 
 	//переключиться на другую категорию
 	public void ChangeCategory (Item chosenItem)
@@ -129,9 +124,9 @@ public class ButtonsController : MonoBehaviour
 
 	public void RemoveAllButtonsFromQuiz ()
 	{
-		ButtonsController quizButtonsPanel = GameObject.Find ("QuizButtonsPanel").GetComponent<ButtonsController>();
 		//приведем кнопку в порядок перед возвращением в пул
 		unTuneButtonsForQuiz ();
+		ButtonsController quizButtonsPanel = GameObject.Find ("QuizButtonsPanel").GetComponent<ButtonsController>();
 		quizButtonsPanel.RemoveAllButtons ();
 	}
 

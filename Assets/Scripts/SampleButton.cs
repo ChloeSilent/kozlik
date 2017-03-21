@@ -60,7 +60,4 @@ public class SampleButton : MonoBehaviour
 			break;
 		}
 	}
-	public void TestSB()
-	{
-	}
 }
