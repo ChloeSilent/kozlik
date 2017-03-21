@@ -36,9 +36,8 @@ public class ButtonsController : MonoBehaviour
 		{
 			Item currentItem = itemList [i];
 			TakeOneButtonFromPoolAndSetupWith (currentItem);
+			// тут проверка на квиз
 		}
-
-
 	}
 
 	//наплодить 1 кнопку для BrowseModePanel . принимает 1 аргумент типа Item
@@ -54,7 +53,6 @@ public class ButtonsController : MonoBehaviour
 	{
 			ButtonsController objectPicker = GameObject.Find ("ObjectPickerPanel").GetComponent<ButtonsController>();
 			objectPicker.AddButtons ();
-
 	}
 
 	//наплодить кнопок для CategoryPicker
@@ -68,7 +66,34 @@ public class ButtonsController : MonoBehaviour
 	{
 		ButtonsController quizButtonsPanel = GameObject.Find ("QuizButtonsPanel").GetComponent<ButtonsController>();
 		quizButtonsPanel.AddButtons ();
+		quizButtonsPanel.TuneButtonsForQuiz ();
 	}
+
+	// модифицируем кнопки для квиза, убираем надпись и подложку
+	public void TuneButtonsForQuiz ()
+	{
+		//перебираем кнопки в квизе
+		foreach (Transform quizButton in transform) 
+		{
+			GameObject currentTextPanel = quizButton.FindChild ("TextPanel").gameObject;
+			currentTextPanel.SetActive (false);
+
+		}
+	}
+
+
+	public void unTuneButtonsForQuiz ()
+	{
+		//перебираем кнопки в квизе
+		foreach (Transform quizButton in transform) 
+		{
+			GameObject currentTextPanel = quizButton.FindChild ("TextPanel").gameObject;
+			currentTextPanel.SetActive (true);
+
+		}
+	}
+
+
 
 	//переключиться на другую категорию
 	public void ChangeCategory (Item chosenItem)
@@ -105,6 +130,8 @@ public class ButtonsController : MonoBehaviour
 	public void RemoveAllButtonsFromQuiz ()
 	{
 		ButtonsController quizButtonsPanel = GameObject.Find ("QuizButtonsPanel").GetComponent<ButtonsController>();
+		//приведем кнопку в порядок перед возвращением в пул
+		unTuneButtonsForQuiz ();
 		quizButtonsPanel.RemoveAllButtons ();
 	}
 

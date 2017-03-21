@@ -19,7 +19,6 @@ public class SampleButton : MonoBehaviour
 		item = currentItem;
 		nameLabel.text = item.itemName;
 		iconImage.sprite = item.icon;
-		//TODO убрать надпись на викторине
 	}
 
 	//обработка нажатий
@@ -61,11 +60,7 @@ public class SampleButton : MonoBehaviour
 			break;
 		}
 	}
+	public void TestSB()
+	{
+	}
 }
-
-//public class QuizButton : SampleButton 
-//{
-//	public bool isRightAnswer;
-//	public Image answerImage;
-//
-//}

@@ -61,12 +61,13 @@ public class PanelsController : MonoBehaviour
 	{
 		MakeMainInvisible (); 
 		MakeBrowseInvisible (); 
+
 		SelectFourRandomVariants ();
 		RefreshQuizModeItemList (); 
 		SetSomeVariantAsWinner ();
 		RefreshVariativeQuestionText ();
-		MakeQuizVisible (); 
-
+		MakeQuizPanelsVisible (); 
+		quizButtonsController.AddButtonsToQuiz ();
 	}
 
 	//на входе принимаем id желаемой категории, перенастраиваем  itemList у ObjectPicker
@@ -187,29 +188,14 @@ public class PanelsController : MonoBehaviour
 		if(selectedItem.itemName == fourVariantsItemsList [winnerId].itemName)
 		{
 			//угадал
+			MakeQuizPanelsInvisible ();
+			quizButtonsController.RemoveAllButtonsFromQuiz ();
 			GoBrowseMode (selectedItem);
-			MakeQuizInvisible ();
 		}
 		else
 		{
-			//не угадал
-			wrongVariantName = selectedItem.itemName;
-//			Debug.Log ("wrongVariantName" + wrongVariantName); 
-			for (int v = 0; v < 4; v++ )
-			{
-//				Debug.Log ("do if"); 
-				if (fourVariantsItemsList [v].itemName == wrongVariantName) 
-				{
-					Debug.Log ("budem ispravlat" + fourVariantsItemsList [v].itemName); 
-					fourVariantsItemsList [v].itemName = "wrong";
-					Debug.Log ("ipravleno na wrong" + fourVariantsItemsList [v].itemName); 
-				} 
-				else 
-				{
-					Debug.Log ("else" + wrongVariantName); 
-				}
-			}	
-			RefreshQuizModeItemList ();
+			//TODO не угадал
+	
 		
 		}
 	}
@@ -246,22 +232,20 @@ public class PanelsController : MonoBehaviour
 		browseModePanel.GetComponent<ButtonsController> ().RemoveAllButtons();
 	}
 
-	public void MakeQuizVisible ()
+	public void MakeQuizPanelsVisible ()
 	{
 		quizButtonsPanelImage.enabled = true;
 		questionPanelImage.enabled = true;
 		constantQuuestionText.enabled = true;
 		variativeQuestionText.enabled = true;
-		quizButtonsController.AddButtonsToQuiz ();
 	}
 
-	public void MakeQuizInvisible ()
+	public void MakeQuizPanelsInvisible ()
 	{
 		quizButtonsPanelImage.enabled = false;
 		questionPanelImage.enabled = false;
 		constantQuuestionText.enabled = false;
 		variativeQuestionText.enabled = false;
-		quizButtonsController.RemoveAllButtonsFromQuiz (); 
 	}
 
 }
