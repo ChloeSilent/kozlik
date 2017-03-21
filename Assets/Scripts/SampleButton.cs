@@ -52,12 +52,23 @@ public class SampleButton : MonoBehaviour
 			break;
 
 		case("QuizButtonsPanel"):
-			currentPanelsController.CheckIfWinner(item); 
+			currentPanelsController.CheckIfWinner(item, button.gameObject); 
 			break;
 
 		default:
 			Debug.LogError ("new or unknown category" + transform.parent.name);
 			break;
 		}
+	}
+
+	public void MoveRedCrossForward()
+	{
+		this.transform.FindChild ("WrongImage").SetAsLastSibling ();
+	}
+
+	public void MoveRedCrossBackward()
+	{
+		
+		this.transform.FindChild ("WrongImage").SetAsFirstSibling ();
 	}
 }

@@ -87,6 +87,7 @@ public class ButtonsController : MonoBehaviour
 		{
 			GameObject currentTextPanel = quizButton.FindChild ("TextPanel").gameObject;
 			currentTextPanel.SetActive (true);
+			quizButton.GetComponent <SampleButton> ().MoveRedCrossBackward ();
 		}
 	}
 

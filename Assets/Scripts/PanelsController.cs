@@ -24,7 +24,7 @@ public class PanelsController : MonoBehaviour
 	public Image quizButtonsPanelImage;
 	public ButtonsController quizButtonsController;
 	public Image questionPanelImage;
-	public Text constantQuuestionText;
+	public Text constantQuuestionText; //fix typo
 	public Text variativeQuestionText;
 
 
@@ -183,7 +183,7 @@ public class PanelsController : MonoBehaviour
 	}
 
 	//проверяем ответ викторины на правильность
-	public void CheckIfWinner (Item selectedItem)
+	public void CheckIfWinner (Item selectedItem, GameObject selectedButton)
 	{
 		if(selectedItem.itemName == fourVariantsItemsList [winnerId].itemName)
 		{
@@ -195,8 +195,8 @@ public class PanelsController : MonoBehaviour
 		else
 		{
 			//TODO не угадал
-	
-		
+			Transform wrongImage = selectedButton.transform.FindChild ("WrongImage").transform;
+			selectedButton.GetComponent <SampleButton> ().MoveRedCrossForward ();
 		}
 	}
 
