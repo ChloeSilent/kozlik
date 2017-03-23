@@ -15,10 +15,12 @@ public class Item
 public class PanelsController : MonoBehaviour 
 {
 	public GameObject mainMenuPanel;
+
 	public GameObject objectPickerPanel;
+	public ButtonsController objectPickerButtonsController;
+
 	public GameObject categoryPickerPanel;
 	public GameObject browseModePanel;
-
 
 	public Image quizButtonsPanelImage;
 	public ButtonsController quizButtonsController;
@@ -60,7 +62,6 @@ public class PanelsController : MonoBehaviour
 	{
 		MakeMainInvisible (); 
 		MakeBrowseInvisible (); 
-
 		SelectFourRandomVariants ();
 		RefreshQuizModeItemList (); 
 		SetSomeVariantAsWinner ();
@@ -72,20 +73,17 @@ public class PanelsController : MonoBehaviour
 	//на входе принимаем id желаемой категории, перенастраиваем  itemList у ObjectPicker
 	public void RefreshObjectPickerItemListTo (int desiredCategoryId)
 	{
-		//ссылка на панель, которую будем тюнить
-		ButtonsController objectPickerPanel = GameObject.Find ("ObjectPickerPanel").GetComponent<ButtonsController>();
-
 		//копируем лист во временный
 		List<Item> tempItemsList  = new List<Item>(itemList);
 
-		//проходим циклом по двум листам, выбираем из общего объекты нужной категории, копируем в objectPickerPanel
+		//проходим циклом по двум листам, выбираем из общего объекты нужной категории, копируем в objectPickerButtonsController
 		for (int j = 0; j < 11;)
 		{
 			for (int i = 0; i < tempItemsList.Count;)
 			{
 				if (tempItemsList [i].Category == desiredCategoryId) 
 				{
-					objectPickerPanel.itemList [j] = tempItemsList [i];
+					objectPickerButtonsController.itemList [j] = tempItemsList [i];
 					i++;
 					j++;
 				} 
@@ -107,28 +105,25 @@ public class PanelsController : MonoBehaviour
 
 	public void SelectFourRandomVariants ()
 	{
-		//храним ссылку на objectPickerPanel
-		ButtonsController objectPickerPanel = GameObject.Find ("ObjectPickerPanel").GetComponent<ButtonsController>();
-
-		// выберем из objectPickerPanel.itemList 4 случайных варианта для викторины.
-		// берем в цикле 4 раза случайный item из objectPickerPanel.itemList , и после проверки помещаем в лист вариантов fourVariantsItemsList
+		// выберем из objectPickerButtonsController.itemList 4 случайных варианта для викторины.
+		// берем в цикле 4 раза случайный item из objectPickerButtonsController.itemList , и после проверки помещаем в лист вариантов fourVariantsItemsList
 		for (int k = 0; k <4 ; k++) // k индекс листа fourVariantsItemsList [k]. нам нужно 4 варианта, поэтому цикл на 4 итерации, с нуля до трёх
 		{
 			// Наш лист из 12 элементов  нумеруется с 0 до 11. 11ый вариант это кнопка квиза, она не является валидным участником викторины
 			// ,а значит нам нужны номера с 0 до 10.
 			// Random.Range Note that max is exclusive, so using Random.Range( 0, 10 ) will return values between 0 and 9. 
 			// значит range будет (0, 11)
-			int i = Random.Range(0, 11); // i индекс листа objectPickerPanel.itemList [i] . рандомизированный.
+			int i = Random.Range(0, 11); // i индекс листа objectPickerButtonsController.itemList [i] . рандомизированный.
 
 			// кроме того, нужно обеспечить неповторяемость айтемов в fourVariantsItemsList
 			// проверим, вдруг в fourVariantsItemsList уже есть такой item
 			// обойдём в цикле с индексом "u" fourVariantsItemsList и сравним каждый его элемент 
-			// с текущим выбранным претендентом objectPickerPanel.itemList [i] на помещение в список.
-			// если окажется, что fourVariantsItemsList [u] == objectPickerPanel.itemList [i] то отмеитм его флажком
+			// с текущим выбранным претендентом objectPickerButtonsController.itemList [i] на помещение в список.
+			// если окажется, что fourVariantsItemsList [u] == objectPickerButtonsController.itemList [i] то отмеитм его флажком
 			bool isUnique = true;
 			for (int u = 0; u < 4; u++) 
 			{
-				if (fourVariantsItemsList [u] == objectPickerPanel.itemList [i]) 
+				if (fourVariantsItemsList [u] == objectPickerButtonsController.itemList [i]) 
 				{
 					//такой вариант уже был, устанавливаем флаг в false
 					isUnique = false;
@@ -143,7 +138,7 @@ public class PanelsController : MonoBehaviour
 			if(isUnique==true)
 			{
 				//хороший предентент, копируем его в fourVariantsItemsList [k]
-				fourVariantsItemsList [k]  = objectPickerPanel.itemList [i];
+				fourVariantsItemsList [k]  = objectPickerButtonsController.itemList [i];
 			}
 			else
 			{
@@ -203,17 +198,20 @@ public class PanelsController : MonoBehaviour
 		mainMenuPanel.GetComponent<Image> ().enabled = true;
 		objectPickerPanel.GetComponent<Image> ().enabled = true;
 		categoryPickerPanel.GetComponent<Image> ().enabled = true;
-		objectPickerPanel.GetComponent<ButtonsController> ().AddButtonsToObjectPicker (); 
+
+		objectPickerButtonsController.AddButtonsToObjectPicker (); 
 		categoryPickerPanel.GetComponent<ButtonsController> ().AddButtonsToCategoryPicker ();
 	}
 
 	public void MakeMainInvisible ()
 	{
-		objectPickerPanel.GetComponent<ButtonsController> ().RemoveAllButtons();
-		categoryPickerPanel.GetComponent<ButtonsController> ().RemoveAllButtons();
 		objectPickerPanel.GetComponent<Image>().enabled =false;
 		categoryPickerPanel.GetComponent<Image>().enabled =false;
 		mainMenuPanel.GetComponent<Image>().enabled =false;
+
+		objectPickerButtonsController.RemoveAllButtons();
+		categoryPickerPanel.GetComponent<ButtonsController> ().RemoveAllButtons();
+
 	}
 
 	public void MakeBrowseVisible (Item newItem)

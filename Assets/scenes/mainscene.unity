@@ -544,6 +544,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenuPanel: {fileID: 1882820510}
   objectPickerPanel: {fileID: 343125506}
+  objectPickerButtonsController: {fileID: 343125511}
   categoryPickerPanel: {fileID: 1490034594}
   browseModePanel: {fileID: 780615070}
   quizButtonsPanelImage: {fileID: 1324254781}
