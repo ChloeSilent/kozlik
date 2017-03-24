@@ -29,14 +29,13 @@ public class ButtonsController : MonoBehaviour
 		buttonRectTransform.offsetMax = new Vector2(buttonRectTransform.offsetMax.y, 0);
 	}
 
-	//сетапим все кнопки из itemList в цикле
+	//сетапим все кнопки из itemList в циклециклециклецикле
 	public void AddButtons()
 	{
 		for (int i = 0; i < itemList.Count; i++) 
 		{
 			Item currentItem = itemList [i];
 			TakeOneButtonFromPoolAndSetupWith (currentItem);
-			// тут проверка на квиз
 		}
 	}
 
