@@ -542,15 +542,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 194c7fe8ef1e548cb907bebc7d0092d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenuPanel: {fileID: 1882820510}
-  objectPickerPanel: {fileID: 343125506}
+  browseModeButtonsController: {fileID: 780615074}
   objectPickerButtonsController: {fileID: 343125511}
-  categoryPickerPanel: {fileID: 1490034594}
-  browseModePanel: {fileID: 780615070}
-  quizButtonsPanelImage: {fileID: 1324254781}
   quizButtonsController: {fileID: 1324254779}
+  categoryPickerButtonsController: {fileID: 1490034599}
+  objectPickerPanelImage: {fileID: 343125508}
+  categoryPickerPanelImage: {fileID: 1490034596}
+  quizButtonsPanelImage: {fileID: 1324254781}
   questionPanelImage: {fileID: 312061597}
-  constantQuuestionText: {fileID: 1396631007}
+  constantQuestionText: {fileID: 1396631007}
   variativeQuestionText: {fileID: 1317587837}
   item:
     itemName: 

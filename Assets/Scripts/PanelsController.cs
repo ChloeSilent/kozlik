@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.UI; 
 using System.Collections.Generic; // нужно для  [System.Serializable]
 
-
 [System.Serializable] // выводит в инспектор
 public class Item 
 {
@@ -14,35 +13,28 @@ public class Item
 
 public class PanelsController : MonoBehaviour 
 {
-	public GameObject mainMenuPanel;
-
-	public GameObject objectPickerPanel;
+	public ButtonsController browseModeButtonsController;
 	public ButtonsController objectPickerButtonsController;
-
-	public GameObject categoryPickerPanel;
-	public GameObject browseModePanel;
-
-	public Image quizButtonsPanelImage;
 	public ButtonsController quizButtonsController;
+	public ButtonsController categoryPickerButtonsController;
+
+	public Image objectPickerPanelImage;
+	public Image categoryPickerPanelImage;
+	public Image quizButtonsPanelImage;
 	public Image questionPanelImage;
-	public Text constantQuuestionText; //fix typo
+
+	public Text constantQuestionText; 
 	public Text variativeQuestionText;
 
-
-	public Item item; // а нужно ли это ?
-	public List<Item> itemList;
-	private List<Item> tempItemsList;
+	public List<Item> itemList; //здесь хранится весь контент
 	public List<Item> fourVariantsItemsList;
+
 	private int winnerId;
-
-	private string wrongVariantName;
-
 
 	void Start () 
 	{
 		//app start
 		MakeMainVisible ();
-
 	}
 
 	public	void GoMainMode (Item item) 
@@ -79,27 +71,21 @@ public class PanelsController : MonoBehaviour
 		//проходим циклом по двум листам, выбираем из общего объекты нужной категории, копируем в objectPickerButtonsController
 		for (int j = 0; j < 11;)
 		{
-			for (int i = 0; i < tempItemsList.Count;)
+			for (int i = 0; i < tempItemsList.Count;i++)
 			{
 				if (tempItemsList [i].Category == desiredCategoryId) 
 				{
 					objectPickerButtonsController.itemList [j] = tempItemsList [i];
-					i++;
 					j++;
 				} 
-				else 
-				{
-					i++;
-				}
 			}
 		}
 	}
 
 	public void RefreshBrowseModeItemListTo (Item newItem)
 	{
-		ButtonsController browseModePanel = GameObject.Find ("BrowseModePanel").GetComponent<ButtonsController>();
-		browseModePanel.itemList.RemoveAt(0); // убрать ?
-		browseModePanel.itemList.Insert (0, newItem);
+		browseModeButtonsController.itemList.RemoveAt(0); 
+		browseModeButtonsController.itemList.Insert (0, newItem);
 	}
 
 
@@ -119,7 +105,7 @@ public class PanelsController : MonoBehaviour
 			// проверим, вдруг в fourVariantsItemsList уже есть такой item
 			// обойдём в цикле с индексом "u" fourVariantsItemsList и сравним каждый его элемент 
 			// с текущим выбранным претендентом objectPickerButtonsController.itemList [i] на помещение в список.
-			// если окажется, что fourVariantsItemsList [u] == objectPickerButtonsController.itemList [i] то отмеитм его флажком
+			// если окажется, что fourVariantsItemsList [u] == objectPickerButtonsController.itemList [i] то отметим его флажком
 			bool isUnique = true;
 			for (int u = 0; u < 4; u++) 
 			{
@@ -150,8 +136,6 @@ public class PanelsController : MonoBehaviour
 
 	}
 
-
-
 	public void RefreshQuizModeItemList ()
 	{
 		//передаем сформированный лист из 4 вариантов в quiz
@@ -173,7 +157,7 @@ public class PanelsController : MonoBehaviour
 	//указываем победителя в variativeQuestionText
 	public void RefreshVariativeQuestionText ()
 	{
-		variativeQuestionText.GetComponent<Text> ().text = fourVariantsItemsList [winnerId].itemName;
+		variativeQuestionText.text = fourVariantsItemsList [winnerId].itemName;
 	}
 
 	//проверяем ответ викторины на правильность
@@ -195,44 +179,39 @@ public class PanelsController : MonoBehaviour
 
 	public void MakeMainVisible ()
 	{
-		mainMenuPanel.GetComponent<Image> ().enabled = true;
-		objectPickerPanel.GetComponent<Image> ().enabled = true;
-		categoryPickerPanel.GetComponent<Image> ().enabled = true;
+		objectPickerPanelImage.enabled = true;
+		categoryPickerPanelImage.enabled = true;
 
 		objectPickerButtonsController.AddButtonsToObjectPicker (); 
-		categoryPickerPanel.GetComponent<ButtonsController> ().AddButtonsToCategoryPicker ();
+		categoryPickerButtonsController.AddButtonsToCategoryPicker ();
 	}
 
 	public void MakeMainInvisible ()
 	{
-		objectPickerPanel.GetComponent<Image>().enabled =false;
-		categoryPickerPanel.GetComponent<Image>().enabled =false;
-		mainMenuPanel.GetComponent<Image>().enabled =false;
+		objectPickerPanelImage.enabled =false;
+		categoryPickerPanelImage.enabled =false;
 
 		objectPickerButtonsController.RemoveAllButtons();
-		categoryPickerPanel.GetComponent<ButtonsController> ().RemoveAllButtons();
+		categoryPickerButtonsController.RemoveAllButtons();
 
 	}
 
 	public void MakeBrowseVisible (Item newItem)
 	{
-		ButtonsController browseModePanel = GameObject.Find ("BrowseModePanel").GetComponent<ButtonsController>();
-		browseModePanel.GetComponent<Image>().enabled =true;
 		RefreshBrowseModeItemListTo (newItem);
-		browseModePanel.GetComponent<ButtonsController> ().AddButtonToBrowse();
+		browseModeButtonsController.AddButtonToBrowse();
 	}
 
 	public void MakeBrowseInvisible ()
 	{
-		browseModePanel.GetComponent<Image>().enabled =false;
-		browseModePanel.GetComponent<ButtonsController> ().RemoveAllButtons();
+		browseModeButtonsController.RemoveAllButtons();
 	}
 
 	public void MakeQuizPanelsVisible ()
 	{
 		quizButtonsPanelImage.enabled = true;
 		questionPanelImage.enabled = true;
-		constantQuuestionText.enabled = true;
+		constantQuestionText.enabled = true;
 		variativeQuestionText.enabled = true;
 	}
 
@@ -240,7 +219,7 @@ public class PanelsController : MonoBehaviour
 	{
 		quizButtonsPanelImage.enabled = false;
 		questionPanelImage.enabled = false;
-		constantQuuestionText.enabled = false;
+		constantQuestionText.enabled = false;
 		variativeQuestionText.enabled = false;
 	}
 
