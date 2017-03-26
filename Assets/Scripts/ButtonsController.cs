@@ -6,18 +6,20 @@ using UnityEngine.UI;
 public class ButtonsController : MonoBehaviour 
 {
 	public List<Item> itemList;
-	public Transform currentController;
+	private ButtonsController currentController;
 	public SimpleObjectPool buttonObjectPool;
 
-	//взять кнопку из пула и просетапить ее переданным аргументом someItem
-	public void TakeOneButtonFromPoolAndSetupWith(Item someItem)
+	//взять кнопку из пула и просетапить ее полученным аргументом itemToSetupWith
+	public void TakeOneButtonFromPoolAndSetupWith(Item itemToSetupWith)
 	{
-		//для правильного скейлинга при извлечении из пула нужно утанавливать parent. для этого передаем currentController
-		GameObject newButton = buttonObjectPool.GetObject (currentController);
-		SampleButton sampleButton = newButton.GetComponent<SampleButton> ();
-		sampleButton.Setup (someItem, this);
+		currentController = this;
 
-		//смена парента ломает не только скейлинг, но и якоря и оффсеты. жестко фиксим  
+		//для правильного скейлинга при извлечении из пула нужно утанавливать parent. для этого передаем currentController
+		GameObject newButton = buttonObjectPool.GetObject (currentController.transform);
+		SampleButton sampleButton = newButton.GetComponent<SampleButton> ();
+		sampleButton.Setup (itemToSetupWith, this);
+
+		//смена парента при возвращении из пула  ломает не только скейлинг, но и якоря и оффсеты. жестко фиксим  
 		RectTransform buttonRectTransform = sampleButton.GetComponent<RectTransform>();
 
 		buttonRectTransform.anchorMax = new Vector2(1, 1);
@@ -29,7 +31,7 @@ public class ButtonsController : MonoBehaviour
 		buttonRectTransform.offsetMax = new Vector2(buttonRectTransform.offsetMax.y, 0);
 	}
 
-	//сетапим все кнопки из itemList в циклециклециклецикле
+	//сетапим все кнопки из itemList в цикле
 	public void AddButtons()
 	{
 		for (int i = 0; i < itemList.Count; i++) 
@@ -112,7 +114,8 @@ public class ButtonsController : MonoBehaviour
 	//убирать в пул все кнопки  пока не кончатся
 	public void RemoveAllButtons() 
 	{
-		while (currentController.childCount > 0) 
+		currentController = this;
+		while (currentController.transform.childCount > 0) 
 		{
 			ReturnOneButtonToPool ();
 		}

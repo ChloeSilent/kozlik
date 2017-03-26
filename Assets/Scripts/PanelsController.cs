@@ -49,7 +49,6 @@ public class PanelsController : MonoBehaviour
 		MakeMainInvisible (); 
 	}
 
-	// в аргументе указано кто призвал квиз
 	public void GoQuizMode ()
 	{
 		MakeMainInvisible (); 
@@ -71,7 +70,7 @@ public class PanelsController : MonoBehaviour
 		//проходим циклом по двум листам, выбираем из общего объекты нужной категории, копируем в objectPickerButtonsController
 		for (int j = 0; j < 11;)
 		{
-			for (int i = 0; i < tempItemsList.Count;i++)
+			for (int i = 0; i < tempItemsList.Count; i++)
 			{
 				if (tempItemsList [i].Category == desiredCategoryId) 
 				{
