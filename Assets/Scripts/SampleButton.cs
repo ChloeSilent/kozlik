@@ -14,7 +14,7 @@ public class SampleButton : MonoBehaviour
 		button.onClick.AddListener (HandleClick);
 	}
 
-	public void Setup (Item currentItem, ButtonsController currentButtonsController)
+	public void Setup (Item currentItem)
 	{
 		item = currentItem;
 		nameLabel.text = item.itemName;

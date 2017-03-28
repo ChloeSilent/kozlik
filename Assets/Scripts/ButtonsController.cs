@@ -23,7 +23,7 @@ public class ButtonsController : MonoBehaviour
 		//для правильного скейлинга при извлечении из пула нужно утанавливать parent. для этого передаем currentController
 		GameObject newButton = buttonObjectPool.GetObject (currentController.transform);
 		SampleButton sampleButton = newButton.GetComponent<SampleButton> ();
-		sampleButton.Setup (itemToSetupWith, this);
+		sampleButton.Setup (itemToSetupWith);
 
 		//смена парента при возвращении из пула  ломает не только скейлинг, но и якоря и оффсеты. жестко фиксим  
 		RectTransform buttonRectTransform = sampleButton.GetComponent<RectTransform>();
