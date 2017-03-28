@@ -372,8 +372,12 @@ MonoBehaviour:
   - itemName: QuizButton
     icon: {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
     Category: 0
-  currentController: {fileID: 343125507}
   buttonObjectPool: {fileID: 436182474}
+  browseModePanel: {fileID: 780615074}
+  objectPicker: {fileID: 343125511}
+  categoryPicker: {fileID: 1490034599}
+  quizButtonsPanel: {fileID: 1324254779}
+  panelsController: {fileID: 598185861}
 --- !u!1 &436182473
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,10 +556,6 @@ MonoBehaviour:
   questionPanelImage: {fileID: 312061597}
   constantQuestionText: {fileID: 1396631007}
   variativeQuestionText: {fileID: 1317587837}
-  item:
-    itemName: 
-    icon: {fileID: 0}
-    Category: 0
   itemList:
   - itemName: "\u042F\u0433\u0443\u0430\u0440"
     icon: {fileID: 21300000, guid: efe1792e2f0dd40d9a539c54bb0a0988, type: 3}
@@ -727,8 +727,12 @@ MonoBehaviour:
   - itemName: browse mode
     icon: {fileID: 21300000, guid: 1c3645ccd744a41d58af6b81b34c7a8e, type: 3}
     Category: 0
-  currentController: {fileID: 780615071}
   buttonObjectPool: {fileID: 436182474}
+  browseModePanel: {fileID: 780615074}
+  objectPicker: {fileID: 343125511}
+  categoryPicker: {fileID: 1490034599}
+  quizButtonsPanel: {fileID: 1324254779}
+  panelsController: {fileID: 598185861}
 --- !u!114 &780615075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1035,8 +1039,12 @@ MonoBehaviour:
   - itemName: 1
     icon: {fileID: 0}
     Category: 0
-  currentController: {fileID: 1324254778}
   buttonObjectPool: {fileID: 436182474}
+  browseModePanel: {fileID: 780615074}
+  objectPicker: {fileID: 343125511}
+  categoryPicker: {fileID: 1490034599}
+  quizButtonsPanel: {fileID: 1324254779}
+  panelsController: {fileID: 598185861}
 --- !u!114 &1324254780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1287,8 +1295,12 @@ MonoBehaviour:
   - itemName: "\u0418\u043D\u0441\u0442\u0440\u0443\u043C\u0435\u043D\u0442\u044B"
     icon: {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
     Category: 1
-  currentController: {fileID: 1490034595}
   buttonObjectPool: {fileID: 436182474}
+  browseModePanel: {fileID: 780615074}
+  objectPicker: {fileID: 343125511}
+  categoryPicker: {fileID: 1490034599}
+  quizButtonsPanel: {fileID: 1324254779}
+  panelsController: {fileID: 598185861}
 --- !u!1 &1882820510
 GameObject:
   m_ObjectHideFlags: 0

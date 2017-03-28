@@ -9,6 +9,12 @@ public class ButtonsController : MonoBehaviour
 	private ButtonsController currentController;
 	public SimpleObjectPool buttonObjectPool;
 
+	public ButtonsController browseModePanel;
+	public ButtonsController objectPicker;
+	public ButtonsController categoryPicker;
+	public ButtonsController quizButtonsPanel;
+	public PanelsController panelsController;
+
 	//взять кнопку из пула и просетапить ее полученным аргументом itemToSetupWith
 	public void TakeOneButtonFromPoolAndSetupWith(Item itemToSetupWith)
 	{
@@ -44,7 +50,6 @@ public class ButtonsController : MonoBehaviour
 	//наплодить 1 кнопку для BrowseModePanel . принимает 1 аргумент типа Item
 	public void AddButtonToBrowse()
 	{
-		ButtonsController browseModePanel = GameObject.Find ("BrowseModePanel").GetComponent<ButtonsController>();
 		browseModePanel.AddButtons ();
 
 	}
@@ -52,20 +57,17 @@ public class ButtonsController : MonoBehaviour
 	//наплодить кнопок для ObjectPicker 
 	public void AddButtonsToObjectPicker ()
 	{
-			ButtonsController objectPicker = GameObject.Find ("ObjectPickerPanel").GetComponent<ButtonsController>();
 			objectPicker.AddButtons ();
 	}
 
 	//наплодить кнопок для CategoryPicker
 	public void AddButtonsToCategoryPicker ()
 	{
-		ButtonsController categoryPicker = GameObject.Find ("CategoryPickerPanel").GetComponent<ButtonsController>();
 		categoryPicker.AddButtons ();
 	}
 
 	public void AddButtonsToQuiz ()
 	{
-		ButtonsController quizButtonsPanel = GameObject.Find ("QuizButtonsPanel").GetComponent<ButtonsController>();
 		quizButtonsPanel.AddButtons ();
 		quizButtonsPanel.TuneButtonsForQuiz ();
 	}
@@ -98,7 +100,6 @@ public class ButtonsController : MonoBehaviour
 	//переключиться на другую категорию
 	public void ChangeCategory (Item chosenItem)
 	{
-		PanelsController panelsController = GameObject.Find ("MainCanvas").GetComponent<PanelsController> ();
 		RemoveAllButtonsFromObjectPicker();
 		panelsController.RefreshObjectPickerItemListTo (chosenItem.Category); //подтягиваем в objectPicker нужные item
 		AddButtonsToObjectPicker ();
@@ -124,7 +125,6 @@ public class ButtonsController : MonoBehaviour
 	// убрать в пул все кнопки из ObjectPicker
 	public void RemoveAllButtonsFromObjectPicker ()
 	{
-		ButtonsController objectPicker = GameObject.Find ("ObjectPickerPanel").GetComponent<ButtonsController>();
 		objectPicker.RemoveAllButtons ();
 	}
 
@@ -132,7 +132,7 @@ public class ButtonsController : MonoBehaviour
 	{
 		//приведем кнопку в порядок перед возвращением в пул
 		unTuneButtonsForQuiz ();
-		ButtonsController quizButtonsPanel = GameObject.Find ("QuizButtonsPanel").GetComponent<ButtonsController>();
+
 		quizButtonsPanel.RemoveAllButtons ();
 	}
 
