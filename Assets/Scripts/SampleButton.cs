@@ -16,9 +16,10 @@ public class SampleButton : MonoBehaviour
 
 	public void Setup (Item currentItem)
 	{
-		nameLabel.text = currentItem.itemName;
-		int numberOfRandomPictureOfItem = Random.Range (0, currentItem.pictureList.Capacity);
-		iconImage.sprite = currentItem.pictureList[numberOfRandomPictureOfItem];
+		item = currentItem;
+		nameLabel.text = item.itemName;
+		int numberOfRandomPictureOfItem = Random.Range (0, item.pictureList.Capacity);
+		iconImage.sprite = item.pictureList[numberOfRandomPictureOfItem];
 	}
 
 	//обработка нажатий
@@ -43,7 +44,6 @@ public class SampleButton : MonoBehaviour
 			else //1-11 кнопка
 			{
 				currentPanelsController.GoBrowseMode(item);	
-				Debug.Log ("1");
 			}
 
 			break;

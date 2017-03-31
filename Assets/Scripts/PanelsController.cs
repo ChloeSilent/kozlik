@@ -45,11 +45,8 @@ public class PanelsController : MonoBehaviour
 
 	public	void GoBrowseMode (Item itemToBrowse) 
 	{
-		Debug.Log ("2");
 		MakeBrowseVisible (itemToBrowse);
-		Debug.Log ("3");
 		MakeMainInvisible (); 
-		Debug.Log ("4");
 	}
 
 	public void GoQuizMode ()
