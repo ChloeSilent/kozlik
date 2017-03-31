@@ -16,16 +16,16 @@ public class SampleButton : MonoBehaviour
 
 	public void Setup (Item currentItem)
 	{
-		item = currentItem;
-		nameLabel.text = item.itemName;
-		iconImage.sprite = item.icon;
+		nameLabel.text = currentItem.itemName;
+		int numberOfRandomPictureOfItem = Random.Range (0, currentItem.pictureList.Capacity);
+		iconImage.sprite = currentItem.pictureList[numberOfRandomPictureOfItem];
 	}
 
 	//обработка нажатий
 	public void HandleClick()
 	{
 		//храним ссылку на родителей
-		PanelsController currentPanelsController = GameObject.Find ("MainCanvas").GetComponent<PanelsController> ();
+		PanelsController currentPanelsController = GameObject.Find ("MainCanvas").GetComponent<PanelsController> (); //todo fix find
 		ButtonsController currentButtonsController = this.transform.parent.GetComponent<ButtonsController> ();
 
 		//выясняем кто parent нажатой кнопки, реагируем соответственно
@@ -43,6 +43,7 @@ public class SampleButton : MonoBehaviour
 			else //1-11 кнопка
 			{
 				currentPanelsController.GoBrowseMode(item);	
+				Debug.Log ("1");
 			}
 
 			break;
