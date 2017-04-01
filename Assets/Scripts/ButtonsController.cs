@@ -2,6 +2,7 @@
 using System.Collections.Generic; // нужно для  [System.Serializable]
 using UnityEngine;
 using UnityEngine.UI;
+using System.Runtime.CompilerServices;
 
 public class ButtonsController : MonoBehaviour 
 {
@@ -9,11 +10,20 @@ public class ButtonsController : MonoBehaviour
 	private ButtonsController currentController;
 	public SimpleObjectPool buttonObjectPool;
 
-	public ButtonsController browseModePanel;
-	public ButtonsController objectPicker;
-	public ButtonsController categoryPicker;
-	public ButtonsController quizButtonsPanel;
+	public ButtonsController browseModePanel; //TODO fix name
+	public ButtonsController objectPicker;//TODO fix name
+	public ButtonsController categoryPicker;//TODO fix name
+	public ButtonsController quizButtonsPanel;//TODO fix name
 	public PanelsController panelsController;
+
+	public GameObject dataContainer;
+	public List<Item> allItemsList;
+
+	void Start () 
+	{
+		//загружаем данные в лист
+		dataContainer.GetComponentsInChildren <Item> (allItemsList);
+	}
 
 	//взять кнопку из пула и просетапить ее полученным аргументом itemToSetupWith
 	public void TakeOneButtonFromPoolAndSetupWith(Item itemToSetupWith)
@@ -51,7 +61,6 @@ public class ButtonsController : MonoBehaviour
 	public void AddButtonToBrowse()
 	{
 		browseModePanel.AddButtons ();
-
 	}
 
 	//наплодить кнопок для ObjectPicker 
@@ -101,8 +110,25 @@ public class ButtonsController : MonoBehaviour
 	public void ChangeCategory (Item chosenItem)
 	{
 		RemoveAllButtonsFromObjectPicker();
-		panelsController.RefreshObjectPickerItemListTo (chosenItem.Category); //подтягиваем в objectPicker нужные item
+		RemoveItemsFrom (objectPicker);
+		RefreshObjectPickerItemListTo (chosenItem.Category); //подтягиваем в objectPicker нужные item
 		AddButtonsToObjectPicker ();
+	}
+
+	public void RefreshObjectPickerItemListTo (int desiredCategoryId)
+	{
+		foreach (Item sortedItem in allItemsList)
+		{
+			if (sortedItem.Category == desiredCategoryId && sortedItem.transform.parent.name != "DataContainer")
+			{
+				objectPicker.itemList.Add (sortedItem);
+			}
+		}
+	}
+
+	public void RemoveItemsFrom (ButtonsController controllerToClear)
+	{
+		controllerToClear.itemList.Clear ();
 	}
 
 	//убрать в пул одну кнопку 

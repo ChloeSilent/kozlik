@@ -17,27 +17,27 @@ public class SampleButton : MonoBehaviour
 	public void Setup (Item currentItem)
 	{
 		item = currentItem; //TODO это хуйня. переделать
-		nameLabel.text = currentItem.itemName;
+		nameLabel.text = item.itemName;
 
 		//если номер спрайта был выбран ранее
-		if (currentItem.spriteWasSelected == true) 
+		if (item.spriteWasSelected == true) 
 		{
 			// то используем выбранный ранее
-			iconImage.sprite = currentItem.pictureList [currentItem.savedNumberOfSelectedPicture];
+			iconImage.sprite = item.pictureList [item.savedNumberOfSelectedPicture];
 		} 
 		else 
 		{
 			// то выберем новый спрайт
-			int numberOfRandomPicture = Random.Range (0, currentItem.pictureList.Capacity);
+			int numberOfRandomPicture = Random.Range (0, item.pictureList.Capacity);
 
 			//пропишем выбранный спрайт в кнопку 
-			iconImage.sprite = currentItem.pictureList [numberOfRandomPicture];
+			iconImage.sprite = item.pictureList [numberOfRandomPicture];
 
 			//пропишем выбранный спрайт в айтем 
-			currentItem.savedNumberOfSelectedPicture = numberOfRandomPicture;
+			item.savedNumberOfSelectedPicture = numberOfRandomPicture;
 
 			// и отметим, что у этого айтема спрайт уже выбран
-			currentItem.spriteWasSelected = true;
+			item.spriteWasSelected = true;
 		}
 	}
 
@@ -56,7 +56,9 @@ public class SampleButton : MonoBehaviour
 			break;
 
 		case("ObjectPickerPanel"): 
-			if(this.item.itemName == "QuizButton") //12 кнопка quiz
+//			Debug.Log (this.item.itemName);
+//			Debug.Log (transform.parent.name);
+			if(item.itemName == "quiz") //12 кнопка quiz
 			{
 				currentPanelsController.GoQuizMode ();
 			}
