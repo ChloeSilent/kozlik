@@ -16,10 +16,29 @@ public class SampleButton : MonoBehaviour
 
 	public void Setup (Item currentItem)
 	{
-		item = currentItem;
-		nameLabel.text = item.itemName;
-		int numberOfRandomPictureOfItem = Random.Range (0, item.pictureList.Capacity);
-		iconImage.sprite = item.pictureList[numberOfRandomPictureOfItem];
+		item = currentItem; //TODO это хуйня. переделать
+		nameLabel.text = currentItem.itemName;
+
+		//если номер спрайта был выбран ранее
+		if (currentItem.spriteWasSelected == true) 
+		{
+			// то используем выбранный ранее
+			iconImage.sprite = currentItem.pictureList [currentItem.savedNumberOfSelectedPicture];
+		} 
+		else 
+		{
+			// то выберем новый спрайт
+			int numberOfRandomPicture = Random.Range (0, currentItem.pictureList.Capacity);
+
+			//пропишем выбранный спрайт в кнопку 
+			iconImage.sprite = currentItem.pictureList [numberOfRandomPicture];
+
+			//пропишем выбранный спрайт в айтем 
+			currentItem.savedNumberOfSelectedPicture = numberOfRandomPicture;
+
+			// и отметим, что у этого айтема спрайт уже выбран
+			currentItem.spriteWasSelected = true;
+		}
 	}
 
 	//обработка нажатий

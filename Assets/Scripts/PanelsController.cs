@@ -9,7 +9,9 @@ public class Item
 	public string itemName;
 	public List<Sprite> pictureList;
 	public int Category;
-}
+	public int savedNumberOfSelectedPicture;
+	public bool spriteWasSelected;
+}  
 
 public class PanelsController : MonoBehaviour 
 {

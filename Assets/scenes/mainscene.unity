@@ -344,6 +344,8 @@ MonoBehaviour:
     - {fileID: 21300000, guid: fe245060c71ab4d8fbe9c0faeb1de785, type: 3}
     - {fileID: 21300000, guid: 3ad03fd1a6b224be39838593f1517ab2, type: 3}
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u041A\u043E\u0440\u043E\u0432\u0430"
     pictureList:
     - {fileID: 21300000, guid: 0a0961a3d13084e818a3c68bb6fc32bc, type: 3}
@@ -352,6 +354,8 @@ MonoBehaviour:
     - {fileID: 21300000, guid: b5108857a992340a59eb6bade522d3ec, type: 3}
     - {fileID: 21300000, guid: b4dba1345c12642f3bb3ae8543cdfd5a, type: 3}
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u041A\u043E\u0437\u0430"
     pictureList:
     - {fileID: 21300000, guid: 06b900bccf96b4199bb34e932b056598, type: 3}
@@ -359,6 +363,8 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 32cfa4fe33e00406ab6754fe2f7e2c6b, type: 3}
     - {fileID: 21300000, guid: 9e679e83f3ac049d2b37f43c4e6d0dae, type: 3}
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u041B\u043E\u0448\u0430\u0434\u044C"
     pictureList:
     - {fileID: 21300000, guid: 8e71911b6b8f24689a60d1a019b8bf86, type: 3}
@@ -367,6 +373,8 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 8c3817a36d366470ea5d81d38f0e5e1a, type: 3}
     - {fileID: 21300000, guid: c574ca83228ef481bb8f9d0de4407271, type: 3}
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u041E\u0431\u0435\u0437\u044C\u044F\u043D\u0430"
     pictureList:
     - {fileID: 21300000, guid: a5bc72b5e55644f6382ddff8d4c4a200, type: 3}
@@ -376,34 +384,50 @@ MonoBehaviour:
     - {fileID: 21300000, guid: e4989b6caa3a94f6d8842ab372940d79, type: 3}
     - {fileID: 21300000, guid: 265b7f54b4ce648638cfa71a975484e5, type: 3}
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u041A\u0443\u0440\u0438\u0446\u0430"
     pictureList:
-    - {fileID: 21300000, guid: 347b553284b4e427697968f7f98fcf87, type: 3}
+    - {fileID: 21300000, guid: bd8b390bb6d6d48f5b9c462fb4e8abaa, type: 3}
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u0411\u0430\u0440\u0430\u043D"
     pictureList:
-    - {fileID: 21300000, guid: fe245060c71ab4d8fbe9c0faeb1de785, type: 3}
+    - {fileID: 21300000, guid: 8dc5c7c4bcf1f449da60eb86f0fe85c3, type: 3}
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u041F\u0430\u043D\u0434\u0430"
     pictureList:
-    - {fileID: 21300000, guid: eac00c2dccd7f4ed5986256ba17782ee, type: 3}
+    - {fileID: 21300000, guid: 1a54eeb4eb0264a98a3e8b89a0ae230a, type: 3}
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u0410\u043D\u0442\u0438\u043B\u043E\u043F\u0430"
     pictureList:
-    - {fileID: 21300000, guid: eac00c2dccd7f4ed5986256ba17782ee, type: 3}
+    - {fileID: 21300000, guid: a836723d3b5db43e88332fbf64749141, type: 3}
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u041A\u043E\u0440\u043E\u0432\u0430"
     pictureList:
-    - {fileID: 21300000, guid: eac00c2dccd7f4ed5986256ba17782ee, type: 3}
+    - {fileID: 21300000, guid: 836e38432b650436eb792c978ef3c46e, type: 3}
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u041B\u0435\u0432"
     pictureList:
-    - {fileID: 21300000, guid: eac00c2dccd7f4ed5986256ba17782ee, type: 3}
+    - {fileID: 21300000, guid: 65f091e269982444bbad888f71d5bf25, type: 3}
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: QuizButton
     pictureList:
     - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   buttonObjectPool: {fileID: 436182474}
   browseModePanel: {fileID: 780615074}
   objectPicker: {fileID: 343125511}
@@ -592,88 +616,144 @@ MonoBehaviour:
   - itemName: "\u042F\u0433\u0443\u0430\u0440"
     pictureList: []
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u0423\u0442\u043A\u0430"
     pictureList: []
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u041A\u0440\u043E\u043B\u0438\u043A"
     pictureList: []
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u0421\u043E\u0431\u0430\u043A\u0430"
     pictureList: []
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u0411\u0435\u043B\u043A\u0430"
     pictureList: []
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u041A\u0443\u0440\u0438\u0446\u0430"
     pictureList: []
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u0411\u0430\u0440\u0430\u043D"
     pictureList: []
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u041F\u0430\u043D\u0434\u0430"
     pictureList: []
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u0410\u043D\u0442\u0438\u043B\u043E\u043F\u0430"
     pictureList: []
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u041A\u043E\u0440\u043E\u0432\u0430"
     pictureList: []
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u041B\u0435\u0432"
     pictureList: []
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: QuizButton
     pictureList: []
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u042D\u043A\u0441\u043A\u0430\u0432\u0430\u0442\u043E\u0440"
     pictureList: []
     Category: 1
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u041A\u043E\u0440\u0430\u0431\u043B\u044C"
     pictureList: []
     Category: 1
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u0421\u0430\u043C\u043E\u043B\u0435\u0442"
     pictureList: []
     Category: 1
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u041C\u043E\u0442\u043E\u0446\u0438\u043A\u043B"
     pictureList: []
     Category: 1
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u0414\u0436\u0438\u043F"
     pictureList: []
     Category: 1
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u0422\u0440\u0430\u043A\u0442\u043E\u0440"
     pictureList: []
     Category: 1
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u0410\u0432\u0442\u043E\u0431\u0443\u0441"
     pictureList: []
     Category: 1
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u0420\u0430\u043A\u0435\u0442\u0430"
     pictureList: []
     Category: 1
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u0421\u0430\u043C\u043E\u0441\u0432\u0430\u043B"
     pictureList: []
     Category: 1
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u0412\u0435\u0440\u0442\u043E\u043B\u0435\u0442"
     pictureList: []
     Category: 1
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u0412\u0435\u043B\u043E\u0441\u0438\u043F\u0435\u0434"
     pictureList: []
     Category: 1
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: QuizButton
     pictureList: []
     Category: 1
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   fourVariantsItemsList:
   - itemName: 
     pictureList: []
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: 
     pictureList: []
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: 
     pictureList: []
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: 
     pictureList: []
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
 --- !u!1 &780615070
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,6 +839,8 @@ MonoBehaviour:
   - itemName: browse mode
     pictureList: []
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   buttonObjectPool: {fileID: 436182474}
   browseModePanel: {fileID: 780615074}
   objectPicker: {fileID: 343125511}
@@ -1062,15 +1144,23 @@ MonoBehaviour:
   - itemName: 1
     pictureList: []
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: 1
     pictureList: []
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: 1
     pictureList: []
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: 1
     pictureList: []
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   buttonObjectPool: {fileID: 436182474}
   browseModePanel: {fileID: 780615074}
   objectPicker: {fileID: 343125511}
@@ -1316,28 +1406,66 @@ MonoBehaviour:
     pictureList:
     - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
     Category: 0
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u041C\u0430\u0448\u0438\u043D\u044B"
     pictureList:
     - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
     Category: 1
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u041C\u0443\u0437\u044B\u043A\u0430"
     pictureList:
     - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
     Category: 1
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u041F\u0442\u0438\u0446\u044B"
     pictureList:
     - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
     Category: 1
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   - itemName: "\u0418\u043D\u0441\u0442\u0440\u0443\u043C\u0435\u043D\u0442\u044B"
     pictureList:
     - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
     Category: 1
+    savedNumberOfSelectedPicture: 0
+    spriteWasSelected: 0
   buttonObjectPool: {fileID: 436182474}
   browseModePanel: {fileID: 780615074}
   objectPicker: {fileID: 343125511}
   categoryPicker: {fileID: 1490034599}
   quizButtonsPanel: {fileID: 1324254779}
   panelsController: {fileID: 598185861}
+--- !u!1 &1714477797
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1714477798}
+  m_Layer: 0
+  m_Name: DataContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1714477798
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1714477797}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 303.5, y: 582.60004, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1882820510
 GameObject:
   m_ObjectHideFlags: 0
