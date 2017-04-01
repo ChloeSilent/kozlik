@@ -80,19 +80,10 @@ public class ButtonsController : MonoBehaviour
 	}
 
 	//переключиться на другую категорию
-	public void ChangeCategory (Item chosenItem)
+	public void ChangeCategory (int desiredCategoryId)
 	{
-		objectPicker.RemoveAllButtons();
 		RemoveItemsFrom (objectPicker);
-		RefreshObjectPickerItemListTo (chosenItem.Category); //подтягиваем в objectPicker нужные item
-		objectPicker.AddButtons ();
-
-//		Debug.Log (this.name);
-//		this.RemoveAllButtons ();
-//		RemoveItemsFrom (this);
-//		RefreshObjectPickerItemListTo (chosenItem.Category);
-//		this.AddButtons ();
-
+		RefreshObjectPickerItemListTo (desiredCategoryId); //подтягиваем в objectPicker нужные item
 	}
 
 	public void RefreshObjectPickerItemListTo (int desiredCategoryId)
@@ -101,8 +92,8 @@ public class ButtonsController : MonoBehaviour
 		{
 			if (sortedItem.Category == desiredCategoryId && sortedItem.transform.parent.name != "DataContainer")
 			{
-				objectPicker.itemList.Add (sortedItem);
-//				this.itemList.Add (sortedItem);
+//				objectPicker.itemList.Add (sortedItem);
+				this.itemList.Add (sortedItem);
 			}
 		}
 	}

@@ -45,34 +45,34 @@ public class SampleButton : MonoBehaviour
 	public void HandleClick()
 	{
 		//храним ссылку на родителей
-		PanelsController currentPanelsController = GameObject.Find ("MainCanvas").GetComponent<PanelsController> (); //todo fix find
+		PanelsController panelsController = GameObject.Find ("MainCanvas").GetComponent<PanelsController> (); //todo fix find
 		ButtonsController currentButtonsController = this.transform.parent.GetComponent<ButtonsController> ();
 
 		//выясняем кто parent нажатой кнопки, реагируем соответственно
 		switch (transform.parent.name) 
 		{
 		case("CategoryPickerPanel"): 
-			currentButtonsController.ChangeCategory (item);
-
+//			currentButtonsController.ChangeCategory (item);
+			panelsController.GoMainMode (item);
 			break;
 
 		case("ObjectPickerPanel"): 
 			if(item.itemName == "quiz") //12 кнопка quiz
 			{
-				currentPanelsController.GoQuizMode ();
+				panelsController.GoQuizMode ();
 			}
 			else //1-11 кнопка
 			{
-				currentPanelsController.GoBrowseMode(item);	
+				panelsController.GoBrowseMode(item);	
 			}
 			break;
 
 		case("BrowseModePanel"):
-			currentPanelsController.GoMainMode(item); 
+			panelsController.GoMainMode(item); 
 			break;
 
 		case("QuizButtonsPanel"):
-			currentPanelsController.CheckIfWinner(item, button.gameObject); 
+			panelsController.CheckIfWinner(item, button.gameObject); 
 			break;
 
 		default:

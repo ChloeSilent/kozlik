@@ -845,19 +845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a716cee504e43bda6af25ef85374fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemList:
-  - {fileID: 1220443845}
-  - {fileID: 616920228}
-  - {fileID: 1563689794}
-  - {fileID: 169811554}
-  - {fileID: 376808126}
-  - {fileID: 1951228856}
-  - {fileID: 546596428}
-  - {fileID: 554121863}
-  - {fileID: 1746721184}
-  - {fileID: 82451684}
-  - {fileID: 1049096887}
-  - {fileID: 1362304038}
+  itemList: []
   buttonObjectPool: {fileID: 436182474}
   objectPicker: {fileID: 343125511}
   categoryPicker: {fileID: 1490034599}

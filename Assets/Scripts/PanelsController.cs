@@ -27,12 +27,13 @@ public class PanelsController : MonoBehaviour
 	void Start () 
 	{
 		//app start
-		MakeMainVisible ();
+		MakeMainVisible (0);
 	}
 
 	public	void GoMainMode (Item item) 
 	{
-		MakeMainVisible ();
+		MakeMainInvisible();
+		MakeMainVisible (item.Category);
 		MakeBrowseInvisible ();
 	}
 
@@ -46,13 +47,21 @@ public class PanelsController : MonoBehaviour
 	{
 		MakeMainInvisible (); 
 		MakeBrowseInvisible (); 
+
 		SelectFourRandomVariants ();
 		RefreshQuizModeItemList (); 
 		SetSomeVariantAsWinner ();
 		RefreshVariativeQuestionText ();
+
 		MakeQuizPanelsVisible (); 
+
 		quizButtonsController.AddButtons ();
 		quizButtonsController.TuneButtonsForQuiz ();
+	}
+
+	public void RefreshMainModeItemList(int categoryId)
+	{
+		objectPickerButtonsController.ChangeCategory (categoryId);
 	}
 
 	public void RefreshBrowseModeItemListTo (Item newItem)
@@ -151,10 +160,12 @@ public class PanelsController : MonoBehaviour
 		}
 	}
 
-	public void MakeMainVisible ()
+	public void MakeMainVisible (int categoryId)
 	{
 		objectPickerPanelImage.enabled = true;
 		categoryPickerPanelImage.enabled = true;
+
+		RefreshMainModeItemList (categoryId);//new
 
 		objectPickerButtonsController.AddButtons (); 
 		categoryPickerButtonsController.AddButtons ();
