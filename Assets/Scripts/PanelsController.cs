@@ -51,31 +51,9 @@ public class PanelsController : MonoBehaviour
 		SetSomeVariantAsWinner ();
 		RefreshVariativeQuestionText ();
 		MakeQuizPanelsVisible (); 
-		quizButtonsController.AddButtonsToQuiz ();
+		quizButtonsController.AddButtons ();
+		quizButtonsController.TuneButtonsForQuiz ();
 	}
-
-	//на входе принимаем id желаемой категории, перенастраиваем  itemList у ObjectPicker
-//	public void RefreshObjectPickerItemListTo (int desiredCategoryId)
-//	{
-//		objectPickerButtonsController.itemList [0] = 
-
-
-		//копируем лист во временный
-//		List<Item> tempItemsList  = new List<Item>(itemList);
-
-		//проходим циклом по двум листам, выбираем из общего объекты нужной категории, копируем в objectPickerButtonsController
-//		for (int j = 0; j < 11;)
-//		{
-//			for (int i = 0; i < tempItemsList.Count; i++)
-//			{
-//				if (tempItemsList [i].Category == desiredCategoryId) 
-//				{
-//					objectPickerButtonsController.itemList [j] = tempItemsList [i];
-//					j++;
-//				} 
-//			}
-//		}
-//	}
 
 	public void RefreshBrowseModeItemListTo (Item newItem)
 	{
@@ -156,13 +134,14 @@ public class PanelsController : MonoBehaviour
 	}
 
 	//проверяем ответ викторины на правильность
-	public void CheckIfWinner (Item selectedItem, GameObject selectedButton)
+	public void CheckIfWinner (Item selectedItem, GameObject selectedButton) //TODO много аргументов
 	{
 		if(selectedItem.itemName == fourVariantsItemsList [winnerId].itemName)
 		{
 			//угадал
 			MakeQuizPanelsInvisible ();
-			quizButtonsController.RemoveAllButtonsFromQuiz ();
+			quizButtonsController.unTuneButtonsForQuiz ();
+			quizButtonsController.RemoveAllButtons ();
 			GoBrowseMode (selectedItem);
 		}
 		else
@@ -177,8 +156,8 @@ public class PanelsController : MonoBehaviour
 		objectPickerPanelImage.enabled = true;
 		categoryPickerPanelImage.enabled = true;
 
-		objectPickerButtonsController.AddButtonsToObjectPicker (); 
-		categoryPickerButtonsController.AddButtonsToCategoryPicker ();
+		objectPickerButtonsController.AddButtons (); 
+		categoryPickerButtonsController.AddButtons ();
 	}
 
 	public void MakeMainInvisible ()
@@ -194,7 +173,8 @@ public class PanelsController : MonoBehaviour
 	public void MakeBrowseVisible (Item newItem)
 	{
 		RefreshBrowseModeItemListTo (newItem);
-		browseModeButtonsController.AddButtonToBrowse();
+		browseModeButtonsController.AddButtons();
+
 	}
 
 	public void MakeBrowseInvisible ()

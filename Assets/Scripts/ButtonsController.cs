@@ -10,11 +10,8 @@ public class ButtonsController : MonoBehaviour
 	private ButtonsController currentController;
 	public SimpleObjectPool buttonObjectPool;
 
-	public ButtonsController browseModePanel; //TODO fix name
 	public ButtonsController objectPicker;//TODO fix name
 	public ButtonsController categoryPicker;//TODO fix name
-	public ButtonsController quizButtonsPanel;//TODO fix name
-	public PanelsController panelsController;
 
 	public GameObject dataContainer;
 	public List<Item> allItemsList;
@@ -57,30 +54,6 @@ public class ButtonsController : MonoBehaviour
 		}
 	}
 
-	//наплодить 1 кнопку для BrowseModePanel . принимает 1 аргумент типа Item
-	public void AddButtonToBrowse()
-	{
-		browseModePanel.AddButtons ();
-	}
-
-	//наплодить кнопок для ObjectPicker 
-	public void AddButtonsToObjectPicker ()
-	{
-			objectPicker.AddButtons ();
-	}
-
-	//наплодить кнопок для CategoryPicker
-	public void AddButtonsToCategoryPicker ()
-	{
-		categoryPicker.AddButtons ();
-	}
-
-	public void AddButtonsToQuiz ()
-	{
-		quizButtonsPanel.AddButtons ();
-		quizButtonsPanel.TuneButtonsForQuiz ();
-	}
-
 	// модифицируем кнопки для квиза, убираем надпись и подложку
 	public void TuneButtonsForQuiz ()
 	{
@@ -109,10 +82,17 @@ public class ButtonsController : MonoBehaviour
 	//переключиться на другую категорию
 	public void ChangeCategory (Item chosenItem)
 	{
-		RemoveAllButtonsFromObjectPicker();
+		objectPicker.RemoveAllButtons();
 		RemoveItemsFrom (objectPicker);
 		RefreshObjectPickerItemListTo (chosenItem.Category); //подтягиваем в objectPicker нужные item
-		AddButtonsToObjectPicker ();
+		objectPicker.AddButtons ();
+
+//		Debug.Log (this.name);
+//		this.RemoveAllButtons ();
+//		RemoveItemsFrom (this);
+//		RefreshObjectPickerItemListTo (chosenItem.Category);
+//		this.AddButtons ();
+
 	}
 
 	public void RefreshObjectPickerItemListTo (int desiredCategoryId)
@@ -122,6 +102,7 @@ public class ButtonsController : MonoBehaviour
 			if (sortedItem.Category == desiredCategoryId && sortedItem.transform.parent.name != "DataContainer")
 			{
 				objectPicker.itemList.Add (sortedItem);
+//				this.itemList.Add (sortedItem);
 			}
 		}
 	}
@@ -143,24 +124,10 @@ public class ButtonsController : MonoBehaviour
 	{
 		currentController = this;
 		while (currentController.transform.childCount > 0) 
+//		while (this.transform.childCount > 0) 
+			
 		{
 			ReturnOneButtonToPool ();
 		}
 	}
-
-	// убрать в пул все кнопки из ObjectPicker
-	public void RemoveAllButtonsFromObjectPicker ()
-	{
-		objectPicker.RemoveAllButtons ();
-	}
-
-	public void RemoveAllButtonsFromQuiz ()
-	{
-		//приведем кнопку в порядок перед возвращением в пул
-		unTuneButtonsForQuiz ();
-
-		quizButtonsPanel.RemoveAllButtons ();
-	}
-
-
 }

@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 66635173}
   - component: {fileID: 66635174}
   m_Layer: 0
-  m_Name: Machine 0 (4)
+  m_Name: Jeep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -131,9 +131,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: "\u041C\u0430\u0448\u0438\u043D\u0430 1"
+  itemName: "\u0414\u0436\u0438\u043F"
   pictureList:
-  - {fileID: 21300000, guid: 4220b40fd0c894d52a7e40aa2d16e74a, type: 3}
+  - {fileID: 21300000, guid: 94e8723220a8444daafe50c9b8f6c755, type: 3}
   Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 76314718}
   - component: {fileID: 76314719}
   m_Layer: 0
-  m_Name: Machine 0 (6)
+  m_Name: Bus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -269,9 +269,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: "\u041C\u0430\u0448\u0438\u043D\u0430 1"
+  itemName: "\u0410\u0432\u0442\u043E\u0431\u0443\u0441"
   pictureList:
-  - {fileID: 21300000, guid: 4220b40fd0c894d52a7e40aa2d16e74a, type: 3}
+  - {fileID: 21300000, guid: ca07a994aeffb4c4e8eeaee49c5c4698, type: 3}
   Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
@@ -859,14 +859,9 @@ MonoBehaviour:
   - {fileID: 1049096887}
   - {fileID: 1362304038}
   buttonObjectPool: {fileID: 436182474}
-  browseModePanel: {fileID: 780615074}
   objectPicker: {fileID: 343125511}
   categoryPicker: {fileID: 1490034599}
-  quizButtonsPanel: {fileID: 1324254779}
-  panelsController: {fileID: 598185861}
-  currentCategory: 0
   dataContainer: {fileID: 1714477797}
-  desiredCategoryItem: {fileID: 0}
   allItemsList:
   - {fileID: 0}
   - {fileID: 0}
@@ -1268,7 +1263,7 @@ GameObject:
   - component: {fileID: 493757012}
   - component: {fileID: 493757013}
   m_Layer: 0
-  m_Name: Machine 0 (1)
+  m_Name: Ship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1298,9 +1293,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: "\u041C\u0430\u0448\u0438\u043D\u0430 1"
+  itemName: "\u041A\u043E\u0440\u0430\u0431\u043B\u044C"
   pictureList:
-  - {fileID: 21300000, guid: 4220b40fd0c894d52a7e40aa2d16e74a, type: 3}
+  - {fileID: 21300000, guid: 8bcaa95c3781b4006923b594eac5301c, type: 3}
   Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
@@ -1928,14 +1923,9 @@ MonoBehaviour:
   itemList:
   - {fileID: 0}
   buttonObjectPool: {fileID: 436182474}
-  browseModePanel: {fileID: 780615074}
-  objectPicker: {fileID: 343125511}
+  objectPicker: {fileID: 0}
   categoryPicker: {fileID: 1490034599}
-  quizButtonsPanel: {fileID: 1324254779}
-  panelsController: {fileID: 598185861}
-  currentCategory: 0
   dataContainer: {fileID: 1714477797}
-  desiredCategoryItem: {fileID: 0}
   allItemsList: []
 --- !u!114 &780615075
 MonoBehaviour:
@@ -2061,7 +2051,7 @@ GameObject:
   - component: {fileID: 880261914}
   - component: {fileID: 880261915}
   m_Layer: 0
-  m_Name: Machine 0 (2)
+  m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2091,9 +2081,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: "\u041C\u0430\u0448\u0438\u043D\u0430 1"
+  itemName: "\u0421\u0430\u043C\u043E\u043B\u0435\u0442"
   pictureList:
-  - {fileID: 21300000, guid: 4220b40fd0c894d52a7e40aa2d16e74a, type: 3}
+  - {fileID: 21300000, guid: 776fa7876ed214b3b8a7e58719bbcaed, type: 3}
   Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
@@ -2153,7 +2143,7 @@ GameObject:
   - component: {fileID: 916378232}
   - component: {fileID: 916378233}
   m_Layer: 0
-  m_Name: Machine 0
+  m_Name: Excavator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2183,9 +2173,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: "\u041C\u0430\u0448\u0438\u043D\u0430 1"
+  itemName: "\u042D\u043A\u0441\u043A\u0430\u0432\u0430\u0442\u043E\u0440"
   pictureList:
-  - {fileID: 21300000, guid: 4220b40fd0c894d52a7e40aa2d16e74a, type: 3}
+  - {fileID: 21300000, guid: 39230e2ecc0ea45ef8c118dee774a705, type: 3}
   Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
@@ -2470,7 +2460,7 @@ GameObject:
   - component: {fileID: 1148336661}
   - component: {fileID: 1148336662}
   m_Layer: 0
-  m_Name: Machine 0 (8)
+  m_Name: Truck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2500,7 +2490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: "\u041C\u0430\u0448\u0438\u043D\u0430 1"
+  itemName: "\u0413\u0440\u0443\u0437\u043E\u0432\u0438\u043A"
   pictureList:
   - {fileID: 21300000, guid: 4220b40fd0c894d52a7e40aa2d16e74a, type: 3}
   Category: 1
@@ -2562,7 +2552,7 @@ GameObject:
   - component: {fileID: 1189250682}
   - component: {fileID: 1189250683}
   m_Layer: 0
-  m_Name: Machine 0 (9)
+  m_Name: Helicopter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2592,9 +2582,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: "\u041C\u0430\u0448\u0438\u043D\u0430 1"
+  itemName: "\u0412\u0435\u0440\u0442\u043E\u043B\u0435\u0442"
   pictureList:
-  - {fileID: 21300000, guid: 4220b40fd0c894d52a7e40aa2d16e74a, type: 3}
+  - {fileID: 21300000, guid: 5dee325ef714e4355ba086ee1fb7ad0f, type: 3}
   Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
@@ -2684,7 +2674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: "\u0441\u043E\u0431\u0430\u043A\u0430"
+  itemName: "\u0421\u043E\u0431\u0430\u043A\u0430"
   pictureList:
   - {fileID: 21300000, guid: eac00c2dccd7f4ed5986256ba17782ee, type: 3}
   - {fileID: 21300000, guid: 347b553284b4e427697968f7f98fcf87, type: 3}
@@ -2808,7 +2798,7 @@ GameObject:
   - component: {fileID: 1276349609}
   - component: {fileID: 1276349610}
   m_Layer: 0
-  m_Name: Machine 0 (7)
+  m_Name: Rocket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2838,9 +2828,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: "\u041C\u0430\u0448\u0438\u043D\u0430 1"
+  itemName: "\u0420\u0430\u043A\u0435\u0442\u0430"
   pictureList:
-  - {fileID: 21300000, guid: 4220b40fd0c894d52a7e40aa2d16e74a, type: 3}
+  - {fileID: 21300000, guid: 5d48dfe62587347039201d653b3cc6a3, type: 3}
   Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
@@ -3034,14 +3024,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   buttonObjectPool: {fileID: 436182474}
-  browseModePanel: {fileID: 780615074}
-  objectPicker: {fileID: 343125511}
+  objectPicker: {fileID: 0}
   categoryPicker: {fileID: 1490034599}
-  quizButtonsPanel: {fileID: 1324254779}
-  panelsController: {fileID: 598185861}
-  currentCategory: 0
   dataContainer: {fileID: 1714477797}
-  desiredCategoryItem: {fileID: 0}
   allItemsList: []
 --- !u!114 &1324254780
 MonoBehaviour:
@@ -3367,7 +3352,7 @@ GameObject:
   - component: {fileID: 1398702016}
   - component: {fileID: 1398702017}
   m_Layer: 0
-  m_Name: Machine 0 (3)
+  m_Name: Bike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3397,9 +3382,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: "\u041C\u0430\u0448\u0438\u043D\u0430 1"
+  itemName: "\u041C\u043E\u0442\u043E\u0446\u0438\u043A\u043B"
   pictureList:
-  - {fileID: 21300000, guid: 4220b40fd0c894d52a7e40aa2d16e74a, type: 3}
+  - {fileID: 21300000, guid: a8bbd7275b10640afa30c3b1df2c3400, type: 3}
   Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
@@ -3459,7 +3444,7 @@ GameObject:
   - component: {fileID: 1452271612}
   - component: {fileID: 1452271613}
   m_Layer: 0
-  m_Name: Machine 0 (5)
+  m_Name: Tractor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3489,9 +3474,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: "\u041C\u0430\u0448\u0438\u043D\u0430 1"
+  itemName: "\u0422\u0440\u0430\u043A\u0442\u043E\u0440"
   pictureList:
-  - {fileID: 21300000, guid: 4220b40fd0c894d52a7e40aa2d16e74a, type: 3}
+  - {fileID: 21300000, guid: 01ad5af50213b45ea8ec642b539df68b, type: 3}
   Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
@@ -3698,14 +3683,9 @@ MonoBehaviour:
   - {fileID: 533418076}
   - {fileID: 1647184632}
   buttonObjectPool: {fileID: 436182474}
-  browseModePanel: {fileID: 780615074}
   objectPicker: {fileID: 343125511}
   categoryPicker: {fileID: 1490034599}
-  quizButtonsPanel: {fileID: 1324254779}
-  panelsController: {fileID: 598185861}
-  currentCategory: 0
   dataContainer: {fileID: 1714477797}
-  desiredCategoryItem: {fileID: 0}
   allItemsList: []
 --- !u!1 &1563689792
 GameObject:
@@ -3949,7 +3929,7 @@ GameObject:
   - component: {fileID: 1724236382}
   - component: {fileID: 1724236383}
   m_Layer: 0
-  m_Name: Machine 0 (10)
+  m_Name: Bicycle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3979,9 +3959,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: "\u041C\u0430\u0448\u0438\u043D\u0430 1"
+  itemName: "\u0412\u0435\u043B\u043E\u0441\u0438\u043F\u0435\u0434"
   pictureList:
-  - {fileID: 21300000, guid: 4220b40fd0c894d52a7e40aa2d16e74a, type: 3}
+  - {fileID: 21300000, guid: 8a316e4c75e2a4a07afdea08883e5d24, type: 3}
   Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0

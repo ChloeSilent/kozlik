@@ -53,11 +53,10 @@ public class SampleButton : MonoBehaviour
 		{
 		case("CategoryPickerPanel"): 
 			currentButtonsController.ChangeCategory (item);
+
 			break;
 
 		case("ObjectPickerPanel"): 
-//			Debug.Log (this.item.itemName);
-//			Debug.Log (transform.parent.name);
 			if(item.itemName == "quiz") //12 кнопка quiz
 			{
 				currentPanelsController.GoQuizMode ();
@@ -66,7 +65,6 @@ public class SampleButton : MonoBehaviour
 			{
 				currentPanelsController.GoBrowseMode(item);	
 			}
-
 			break;
 
 		case("BrowseModePanel"):
