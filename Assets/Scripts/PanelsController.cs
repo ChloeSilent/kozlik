@@ -19,7 +19,7 @@ public class PanelsController : MonoBehaviour
 	public Text constantQuestionText; 
 	public Text variativeQuestionText;
 
-	public List<Item> itemList; //здесь хранится текущий контент
+	public List<Item> itemList; //здесь хранится текущий контент загруженный из контейнера
 	public List<Item> fourVariantsItemsList;
 
 	private int winnerId;
@@ -32,9 +32,10 @@ public class PanelsController : MonoBehaviour
 
 	public	void GoMainMode (Item item) 
 	{
-		MakeMainInvisible();
-		MakeMainVisible (item.Category);
 		MakeBrowseInvisible ();
+		MakeMainInvisible(); 
+
+		MakeMainVisible (item.Category);
 	}
 
 	public	void GoBrowseMode (Item itemToBrowse) 
