@@ -151,52 +151,6 @@ MonoBehaviour:
   itemName: "\u0414\u0436\u0438\u043F"
   pictureList:
   - {fileID: 21300000, guid: 94e8723220a8444daafe50c9b8f6c755, type: 3}
-  Category: 1
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
---- !u!1 &69076619
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 69076620}
-  - component: {fileID: 69076621}
-  m_Layer: 0
-  m_Name: SomeItem (6)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &69076620
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 69076619}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 375557640}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &69076621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 69076619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: SomeItem
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
   Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
@@ -289,7 +243,7 @@ MonoBehaviour:
   itemName: "\u0410\u0432\u0442\u043E\u0431\u0443\u0441"
   pictureList:
   - {fileID: 21300000, guid: ca07a994aeffb4c4e8eeaee49c5c4698, type: 3}
-  Category: 1
+  Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
 --- !u!1 &80782404
@@ -380,10 +334,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: "\u041E\u0432\u0446\u0430"
   pictureList:
-  - {fileID: 21300000, guid: 8a7cfe7d17b4d4891ac7752df60bf539, type: 3}
-  - {fileID: 21300000, guid: 41b114410ad454d42b00847f88ff28e0, type: 3}
-  - {fileID: 21300000, guid: bd1f6d14c770f41329677d330e6146f4, type: 3}
-  - {fileID: 21300000, guid: fce55e6adb1284db4b67f0a6ef075ab7, type: 3}
+  - {fileID: 21300000, guid: 3c95d2d00341f4373941d097aeb16887, type: 3}
+  - {fileID: 21300000, guid: 7b681ccf886de419d98495d948fd9aa9, type: 3}
+  - {fileID: 21300000, guid: f2273cb225bee4f0b98839eea6918328, type: 3}
+  - {fileID: 21300000, guid: 3edbd553d1a0a4e80a476fa079e80434, type: 3}
+  - {fileID: 21300000, guid: 99af5a39bfaf9485dbfb124f5238b7b4, type: 3}
   Category: 0
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
@@ -545,11 +500,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: "\u041B\u043E\u0448\u0430\u0434\u044C"
   pictureList:
-  - {fileID: 21300000, guid: 8e71911b6b8f24689a60d1a019b8bf86, type: 3}
-  - {fileID: 21300000, guid: 40bcbac70985048289256ca0deef85c6, type: 3}
-  - {fileID: 21300000, guid: 7a96e852ed60b45f295e61c85e1f8af9, type: 3}
-  - {fileID: 21300000, guid: 8c3817a36d366470ea5d81d38f0e5e1a, type: 3}
-  - {fileID: 21300000, guid: c574ca83228ef481bb8f9d0de4407271, type: 3}
+  - {fileID: 21300000, guid: 0af2dcceb68664e4798f30361d5a52fe, type: 3}
+  - {fileID: 21300000, guid: bc52060199989446191f555089290ced, type: 3}
+  - {fileID: 21300000, guid: 6e9d76b29b1114902be7f8f7a614ec2f, type: 3}
+  - {fileID: 21300000, guid: 9871b8ef807aa41aca70946f314aac06, type: 3}
+  - {fileID: 21300000, guid: 1657dcb44d3144248bff7afe28da9006, type: 3}
   Category: 0
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
@@ -715,6 +670,106 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 312061594}
+--- !u!1 &323613537
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 323613538}
+  - component: {fileID: 323613539}
+  m_Layer: 0
+  m_Name: Duck (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &323613538
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 323613537}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 375557640}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &323613539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 323613537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: "\u0423\u0442\u043A\u0430"
+  pictureList:
+  - {fileID: 21300000, guid: cc50046291ce74565aed5c39f4dad709, type: 3}
+  - {fileID: 21300000, guid: 4aafcf8e2048d4f36908432204ff3c28, type: 3}
+  - {fileID: 21300000, guid: 301af2dfeaa4941dbaf8818df74ccb30, type: 3}
+  - {fileID: 21300000, guid: 5951e87a739944e28bf3e7d573336efe, type: 3}
+  - {fileID: 21300000, guid: ae50b16ce95ad407eb00d58a55b4e19a, type: 3}
+  Category: 1
+  savedNumberOfSelectedPicture: 0
+  spriteWasSelected: 0
+--- !u!1 &325978613
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 325978614}
+  - component: {fileID: 325978615}
+  m_Layer: 0
+  m_Name: Duck (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &325978614
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 325978613}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 375557640}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &325978615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 325978613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: "\u0423\u0442\u043A\u0430"
+  pictureList:
+  - {fileID: 21300000, guid: cc50046291ce74565aed5c39f4dad709, type: 3}
+  - {fileID: 21300000, guid: 4aafcf8e2048d4f36908432204ff3c28, type: 3}
+  - {fileID: 21300000, guid: 301af2dfeaa4941dbaf8818df74ccb30, type: 3}
+  - {fileID: 21300000, guid: 5951e87a739944e28bf3e7d573336efe, type: 3}
+  - {fileID: 21300000, guid: ae50b16ce95ad407eb00d58a55b4e19a, type: 3}
+  Category: 1
+  savedNumberOfSelectedPicture: 0
+  spriteWasSelected: 0
 --- !u!1 &341607314
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,15 +964,15 @@ Transform:
   m_Children:
   - {fileID: 1379817268}
   - {fileID: 800058040}
-  - {fileID: 427766841}
-  - {fileID: 1839287642}
-  - {fileID: 665700839}
-  - {fileID: 1702523788}
-  - {fileID: 69076620}
-  - {fileID: 2138486301}
-  - {fileID: 390773746}
-  - {fileID: 1388734580}
-  - {fileID: 1395983574}
+  - {fileID: 1962206380}
+  - {fileID: 1347421124}
+  - {fileID: 1504134614}
+  - {fileID: 325978614}
+  - {fileID: 1621656864}
+  - {fileID: 1017559826}
+  - {fileID: 888130945}
+  - {fileID: 681272779}
+  - {fileID: 323613538}
   - {fileID: 491692896}
   m_Father: {fileID: 1714477798}
   m_RootOrder: 1
@@ -936,7 +991,7 @@ MonoBehaviour:
   itemName: "\u041F\u0442\u0438\u0446\u044B"
   pictureList:
   - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 2
+  Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
 --- !u!1 &376808124
@@ -981,105 +1036,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: "\u041E\u0431\u0435\u0437\u044C\u044F\u043D\u0430"
   pictureList:
-  - {fileID: 21300000, guid: a5bc72b5e55644f6382ddff8d4c4a200, type: 3}
-  - {fileID: 21300000, guid: 9be02acc4ca6c4eebb6eb814f9448006, type: 3}
-  - {fileID: 21300000, guid: 38eb9122c68f645dea119bcf074f916d, type: 3}
-  - {fileID: 21300000, guid: 0f982609907fc4acf8ead11c55ed6589, type: 3}
-  - {fileID: 21300000, guid: e4989b6caa3a94f6d8842ab372940d79, type: 3}
-  - {fileID: 21300000, guid: 265b7f54b4ce648638cfa71a975484e5, type: 3}
+  - {fileID: 21300000, guid: 4af1f644689e846dcbe0cebc6468291b, type: 3}
+  - {fileID: 21300000, guid: 95dc8501e67e747fba3e070741510fe1, type: 3}
+  - {fileID: 21300000, guid: 6f516ad06c7bc4880b2fb0011da3cbff, type: 3}
+  - {fileID: 21300000, guid: 8d5cc51d5f884436ea609e0316a6f48e, type: 3}
+  - {fileID: 21300000, guid: fd222f2754f784bd7ba90d4c16dd482c, type: 3}
   Category: 0
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
---- !u!1 &390773745
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 390773746}
-  - component: {fileID: 390773747}
-  m_Layer: 0
-  m_Name: SomeItem (8)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &390773746
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 390773745}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 375557640}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &390773747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 390773745}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: SomeItem
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 2
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
---- !u!1 &427766840
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 427766841}
-  - component: {fileID: 427766842}
-  m_Layer: 0
-  m_Name: SomeItem (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &427766841
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 427766840}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 375557640}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &427766842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 427766840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: SomeItem
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
 --- !u!1 &436182473
@@ -1258,7 +1220,7 @@ MonoBehaviour:
   itemName: quiz
   pictureList:
   - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 2
+  Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
 --- !u!1 &493757011
@@ -1304,7 +1266,7 @@ MonoBehaviour:
   itemName: "\u041A\u043E\u0440\u0430\u0431\u043B\u044C"
   pictureList:
   - {fileID: 21300000, guid: 8bcaa95c3781b4006923b594eac5301c, type: 3}
-  Category: 1
+  Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
 --- !u!1 &503819026
@@ -1465,10 +1427,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: "\u041B\u0435\u0432"
   pictureList:
-  - {fileID: 21300000, guid: b5d78ebae86f2495f842b43dbd1666f4, type: 3}
-  - {fileID: 21300000, guid: ad0455ed114924151914836096cb0b5d, type: 3}
-  - {fileID: 21300000, guid: 9098232e8155049928eb2f835b6e0e23, type: 3}
-  - {fileID: 21300000, guid: c501324c5681e4d18847bf97ba518d45, type: 3}
+  - {fileID: 21300000, guid: 659530e31639c4fa4bd4213eceee32cc, type: 3}
+  - {fileID: 21300000, guid: a29491434d0db4351a6cef50121a872b, type: 3}
+  - {fileID: 21300000, guid: f79473d0fc30c47489de162ad57b5003, type: 3}
+  - {fileID: 21300000, guid: f2a7d390841d44b5d9087da141437226, type: 3}
+  - {fileID: 21300000, guid: 2893d154fb6ef41a3841c2aab4b57bf8, type: 3}
   Category: 0
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
@@ -1514,11 +1477,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: "\u0411\u0435\u043B\u043A\u0430"
   pictureList:
-  - {fileID: 21300000, guid: 1b7059d29bae74a0a9c31bdc5b7b8447, type: 3}
-  - {fileID: 21300000, guid: 8ce772eeb157949db9c74d91883446f4, type: 3}
-  - {fileID: 21300000, guid: db3c40abc46524f48bd22d72a5c99c4a, type: 3}
-  - {fileID: 21300000, guid: 6bf656657c8fa469bbdb3329cad172a1, type: 3}
-  - {fileID: 21300000, guid: ab79de465cba341ed95c8e3507fedd4e, type: 3}
+  - {fileID: 21300000, guid: 578ff895c43b54df88b6b5c73461c512, type: 3}
+  - {fileID: 21300000, guid: 9daec57825f484361bdf4975a0ae9c43, type: 3}
+  - {fileID: 21300000, guid: e6f98708d37db4d54b9a220c89077a04, type: 3}
+  - {fileID: 21300000, guid: 0312fb7172535499081f7bd1e2d9f701, type: 3}
+  - {fileID: 21300000, guid: c5dd1919233024bca8f2f3444ac66337, type: 3}
   Category: 0
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
@@ -1755,58 +1718,62 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: "\u041A\u043E\u0440\u043E\u0432\u0430"
   pictureList:
-  - {fileID: 21300000, guid: 0a0961a3d13084e818a3c68bb6fc32bc, type: 3}
-  - {fileID: 21300000, guid: 03ab80a3201ea40f49c7600d698cb8b9, type: 3}
-  - {fileID: 21300000, guid: 44da836c4b1354eb79b58e95d8f9695e, type: 3}
-  - {fileID: 21300000, guid: b5108857a992340a59eb6bade522d3ec, type: 3}
-  - {fileID: 21300000, guid: b4dba1345c12642f3bb3ae8543cdfd5a, type: 3}
+  - {fileID: 21300000, guid: ab0fb228635c3485c97f87e83a0462ce, type: 3}
+  - {fileID: 21300000, guid: 2e94481d1bdc541a5a8ccdbfe4d2c1e0, type: 3}
+  - {fileID: 21300000, guid: dc044a8100a9344a9885ae73eb830be8, type: 3}
+  - {fileID: 21300000, guid: 491613cb3df224e89a7484e038ddf610, type: 3}
+  - {fileID: 21300000, guid: 0106b71d621af4ef3a025c09e3c9a6ba, type: 3}
   Category: 0
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
---- !u!1 &665700838
+--- !u!1 &681272778
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 665700839}
-  - component: {fileID: 665700840}
+  - component: {fileID: 681272779}
+  - component: {fileID: 681272780}
   m_Layer: 0
-  m_Name: SomeItem (4)
+  m_Name: Duck (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &665700839
+--- !u!4 &681272779
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 665700838}
+  m_GameObject: {fileID: 681272778}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 375557640}
-  m_RootOrder: 4
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &665700840
+--- !u!114 &681272780
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 665700838}
+  m_GameObject: {fileID: 681272778}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: SomeItem
+  itemName: "\u0423\u0442\u043A\u0430"
   pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 2
+  - {fileID: 21300000, guid: cc50046291ce74565aed5c39f4dad709, type: 3}
+  - {fileID: 21300000, guid: 4aafcf8e2048d4f36908432204ff3c28, type: 3}
+  - {fileID: 21300000, guid: 301af2dfeaa4941dbaf8818df74ccb30, type: 3}
+  - {fileID: 21300000, guid: 5951e87a739944e28bf3e7d573336efe, type: 3}
+  - {fileID: 21300000, guid: ae50b16ce95ad407eb00d58a55b4e19a, type: 3}
+  Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
 --- !u!1 &716996914
@@ -1975,7 +1942,7 @@ GameObject:
   - component: {fileID: 800058040}
   - component: {fileID: 800058041}
   m_Layer: 0
-  m_Name: SomeItem (1)
+  m_Name: Duck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2005,10 +1972,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: SomeItem
+  itemName: "\u0423\u0442\u043A\u0430"
   pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 2
+  - {fileID: 21300000, guid: cc50046291ce74565aed5c39f4dad709, type: 3}
+  - {fileID: 21300000, guid: 4aafcf8e2048d4f36908432204ff3c28, type: 3}
+  - {fileID: 21300000, guid: 301af2dfeaa4941dbaf8818df74ccb30, type: 3}
+  - {fileID: 21300000, guid: 5951e87a739944e28bf3e7d573336efe, type: 3}
+  - {fileID: 21300000, guid: ae50b16ce95ad407eb00d58a55b4e19a, type: 3}
+  Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
 --- !u!1 &854489480
@@ -2100,6 +2071,56 @@ MonoBehaviour:
   itemName: "\u0421\u0430\u043C\u043E\u043B\u0435\u0442"
   pictureList:
   - {fileID: 21300000, guid: 776fa7876ed214b3b8a7e58719bbcaed, type: 3}
+  Category: 2
+  savedNumberOfSelectedPicture: 0
+  spriteWasSelected: 0
+--- !u!1 &888130944
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 888130945}
+  - component: {fileID: 888130946}
+  m_Layer: 0
+  m_Name: Duck (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &888130945
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 888130944}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 375557640}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &888130946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 888130944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: "\u0423\u0442\u043A\u0430"
+  pictureList:
+  - {fileID: 21300000, guid: cc50046291ce74565aed5c39f4dad709, type: 3}
+  - {fileID: 21300000, guid: 4aafcf8e2048d4f36908432204ff3c28, type: 3}
+  - {fileID: 21300000, guid: 301af2dfeaa4941dbaf8818df74ccb30, type: 3}
+  - {fileID: 21300000, guid: 5951e87a739944e28bf3e7d573336efe, type: 3}
+  - {fileID: 21300000, guid: ae50b16ce95ad407eb00d58a55b4e19a, type: 3}
   Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
@@ -2192,7 +2213,7 @@ MonoBehaviour:
   itemName: "\u042D\u043A\u0441\u043A\u0430\u0432\u0430\u0442\u043E\u0440"
   pictureList:
   - {fileID: 21300000, guid: 39230e2ecc0ea45ef8c118dee774a705, type: 3}
-  Category: 1
+  Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
 --- !u!1 &961350645
@@ -2241,6 +2262,56 @@ MonoBehaviour:
   Category: 3
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+--- !u!1 &1017559825
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1017559826}
+  - component: {fileID: 1017559827}
+  m_Layer: 0
+  m_Name: Duck (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1017559826
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1017559825}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 375557640}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1017559827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1017559825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: "\u0423\u0442\u043A\u0430"
+  pictureList:
+  - {fileID: 21300000, guid: cc50046291ce74565aed5c39f4dad709, type: 3}
+  - {fileID: 21300000, guid: 4aafcf8e2048d4f36908432204ff3c28, type: 3}
+  - {fileID: 21300000, guid: 301af2dfeaa4941dbaf8818df74ccb30, type: 3}
+  - {fileID: 21300000, guid: 5951e87a739944e28bf3e7d573336efe, type: 3}
+  - {fileID: 21300000, guid: ae50b16ce95ad407eb00d58a55b4e19a, type: 3}
+  Category: 1
+  savedNumberOfSelectedPicture: 0
+  spriteWasSelected: 0
 --- !u!1 &1049096885
 GameObject:
   m_ObjectHideFlags: 0
@@ -2283,10 +2354,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: "\u041A\u0440\u043E\u043B\u0438\u043A"
   pictureList:
-  - {fileID: 21300000, guid: 2fa5138018c8541ca8020ebbdbab1de6, type: 3}
-  - {fileID: 21300000, guid: 4908561891113448bb13155780dff5fa, type: 3}
-  - {fileID: 21300000, guid: 94524d1f136b94cb295008d230b8082f, type: 3}
-  - {fileID: 21300000, guid: 488cf142194054e51b954f1e202bb1f5, type: 3}
+  - {fileID: 21300000, guid: 006518cf9c7f14f3e8be5f9a9237fa0b, type: 3}
+  - {fileID: 21300000, guid: f9ce4ec2a2e9a42178de3a5093038fd6, type: 3}
+  - {fileID: 21300000, guid: 87017114a4e2d4180afce2ef62b4f67e, type: 3}
+  - {fileID: 21300000, guid: 954dafdc6b4ae4f4ead4daa09d4d3d24, type: 3}
+  - {fileID: 21300000, guid: 6b1b04afcc7b147f7a5f6615ba2be0ae, type: 3}
   Category: 0
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
@@ -2333,7 +2405,7 @@ MonoBehaviour:
   itemName: quiz
   pictureList:
   - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 1
+  Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
 --- !u!1 &1110590049
@@ -2514,7 +2586,7 @@ MonoBehaviour:
   itemName: "\u0413\u0440\u0443\u0437\u043E\u0432\u0438\u043A"
   pictureList:
   - {fileID: 21300000, guid: 4220b40fd0c894d52a7e40aa2d16e74a, type: 3}
-  Category: 1
+  Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
 --- !u!1 &1168588935
@@ -2606,7 +2678,7 @@ MonoBehaviour:
   itemName: "\u0412\u0435\u0440\u0442\u043E\u043B\u0435\u0442"
   pictureList:
   - {fileID: 21300000, guid: 5dee325ef714e4355ba086ee1fb7ad0f, type: 3}
-  Category: 1
+  Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
 --- !u!1 &1209988417
@@ -2697,11 +2769,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: "\u0421\u043E\u0431\u0430\u043A\u0430"
   pictureList:
-  - {fileID: 21300000, guid: eac00c2dccd7f4ed5986256ba17782ee, type: 3}
-  - {fileID: 21300000, guid: 347b553284b4e427697968f7f98fcf87, type: 3}
-  - {fileID: 21300000, guid: 3ffa7d906a1bb4689b1edfb0d1f884e5, type: 3}
-  - {fileID: 21300000, guid: fe245060c71ab4d8fbe9c0faeb1de785, type: 3}
-  - {fileID: 21300000, guid: 3ad03fd1a6b224be39838593f1517ab2, type: 3}
+  - {fileID: 21300000, guid: ef064c8ac9938421697602a50a355c46, type: 3}
+  - {fileID: 21300000, guid: 33d138e5596a8496aa488951f985ae39, type: 3}
+  - {fileID: 21300000, guid: 56c9b81f96cff466eb23f6883a752e02, type: 3}
+  - {fileID: 21300000, guid: 406ccaf0f4e4f42148049b939224e7d1, type: 3}
+  - {fileID: 21300000, guid: b8608eaf2fe6b4b7dac2d923820f0b2f, type: 3}
   Category: 0
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
@@ -2806,7 +2878,7 @@ MonoBehaviour:
   itemName: "\u041C\u0430\u0448\u0438\u043D\u044B"
   pictureList:
   - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 1
+  Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
 --- !u!1 &1276349608
@@ -2852,7 +2924,7 @@ MonoBehaviour:
   itemName: "\u0420\u0430\u043A\u0435\u0442\u0430"
   pictureList:
   - {fileID: 21300000, guid: 5d48dfe62587347039201d653b3cc6a3, type: 3}
-  Category: 1
+  Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
 --- !u!1 &1282916832
@@ -3105,6 +3177,56 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1324254777}
+--- !u!1 &1347421123
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1347421124}
+  - component: {fileID: 1347421125}
+  m_Layer: 0
+  m_Name: Duck (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1347421124
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1347421123}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 375557640}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1347421125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1347421123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: "\u0423\u0442\u043A\u0430"
+  pictureList:
+  - {fileID: 21300000, guid: cc50046291ce74565aed5c39f4dad709, type: 3}
+  - {fileID: 21300000, guid: 4aafcf8e2048d4f36908432204ff3c28, type: 3}
+  - {fileID: 21300000, guid: 301af2dfeaa4941dbaf8818df74ccb30, type: 3}
+  - {fileID: 21300000, guid: 5951e87a739944e28bf3e7d573336efe, type: 3}
+  - {fileID: 21300000, guid: ae50b16ce95ad407eb00d58a55b4e19a, type: 3}
+  Category: 1
+  savedNumberOfSelectedPicture: 0
+  spriteWasSelected: 0
 --- !u!1 &1362304036
 GameObject:
   m_ObjectHideFlags: 0
@@ -3193,104 +3315,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: "\u0421\u043E\u0432\u0430"
   pictureList:
-  - {fileID: 21300000, guid: 784f48ef2c69c4551893aaf61b9f9957, type: 3}
-  - {fileID: 21300000, guid: 99c68f285d6e34480857b21152d04a3c, type: 3}
-  - {fileID: 21300000, guid: 7bc672ad760694805a52f2ca244655f2, type: 3}
-  - {fileID: 21300000, guid: 824a56c53132c44029eb82787d7bb8e2, type: 3}
-  - {fileID: 21300000, guid: 2ef8e4023f7914647b9dd00e57816f9b, type: 3}
-  Category: 2
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
---- !u!1 &1388734579
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1388734580}
-  - component: {fileID: 1388734581}
-  m_Layer: 0
-  m_Name: SomeItem (9)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1388734580
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1388734579}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 375557640}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1388734581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1388734579}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: SomeItem
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 2
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
---- !u!1 &1395983573
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1395983574}
-  - component: {fileID: 1395983575}
-  m_Layer: 0
-  m_Name: SomeItem (10)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1395983574
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1395983573}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 375557640}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1395983575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1395983573}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: SomeItem
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 2
+  - {fileID: 21300000, guid: 2a30fc25f6522456781bf0e37464d23e, type: 3}
+  - {fileID: 21300000, guid: 58fa5c753f45544dab0b00ed3e061f86, type: 3}
+  - {fileID: 21300000, guid: ed7e019a03a84403fa793fb0a846eb46, type: 3}
+  - {fileID: 21300000, guid: d8d3e466c586849279c4bf1230b3a491, type: 3}
+  - {fileID: 21300000, guid: e3dd76537fdc9495cb7968bb7b40d612, type: 3}
+  Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
 --- !u!1 &1396631005
@@ -3410,7 +3440,7 @@ MonoBehaviour:
   itemName: "\u041C\u043E\u0442\u043E\u0446\u0438\u043A\u043B"
   pictureList:
   - {fileID: 21300000, guid: a8bbd7275b10640afa30c3b1df2c3400, type: 3}
-  Category: 1
+  Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
 --- !u!1 &1438614164
@@ -3502,7 +3532,7 @@ MonoBehaviour:
   itemName: "\u0422\u0440\u0430\u043A\u0442\u043E\u0440"
   pictureList:
   - {fileID: 21300000, guid: 01ad5af50213b45ea8ec642b539df68b, type: 3}
-  Category: 1
+  Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
 --- !u!1 &1470821240
@@ -3703,8 +3733,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemList:
   - {fileID: 503819028}
-  - {fileID: 1225950185}
   - {fileID: 375557641}
+  - {fileID: 1225950185}
   - {fileID: 533418076}
   - {fileID: 1647184632}
   buttonObjectPool: {fileID: 436182474}
@@ -3712,6 +3742,56 @@ MonoBehaviour:
   categoryPicker: {fileID: 1490034599}
   dataContainer: {fileID: 1714477797}
   allItemsList: []
+--- !u!1 &1504134613
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1504134614}
+  - component: {fileID: 1504134615}
+  m_Layer: 0
+  m_Name: Duck (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1504134614
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1504134613}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 375557640}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1504134615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1504134613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: "\u0423\u0442\u043A\u0430"
+  pictureList:
+  - {fileID: 21300000, guid: cc50046291ce74565aed5c39f4dad709, type: 3}
+  - {fileID: 21300000, guid: 4aafcf8e2048d4f36908432204ff3c28, type: 3}
+  - {fileID: 21300000, guid: 301af2dfeaa4941dbaf8818df74ccb30, type: 3}
+  - {fileID: 21300000, guid: 5951e87a739944e28bf3e7d573336efe, type: 3}
+  - {fileID: 21300000, guid: ae50b16ce95ad407eb00d58a55b4e19a, type: 3}
+  Category: 1
+  savedNumberOfSelectedPicture: 0
+  spriteWasSelected: 0
 --- !u!1 &1563689792
 GameObject:
   m_ObjectHideFlags: 0
@@ -3754,11 +3834,62 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: "\u041A\u043E\u0437\u0430"
   pictureList:
-  - {fileID: 21300000, guid: 06b900bccf96b4199bb34e932b056598, type: 3}
-  - {fileID: 21300000, guid: 8a17b49c57adb4c05b9a2e6343190d9a, type: 3}
-  - {fileID: 21300000, guid: 32cfa4fe33e00406ab6754fe2f7e2c6b, type: 3}
-  - {fileID: 21300000, guid: 9e679e83f3ac049d2b37f43c4e6d0dae, type: 3}
+  - {fileID: 21300000, guid: b1722d99219a9412eaeda56a44d397f7, type: 3}
+  - {fileID: 21300000, guid: 0a739c54c653340f08585cf28ea4069d, type: 3}
+  - {fileID: 21300000, guid: 024e921a967444625b29ed4ec6b54651, type: 3}
+  - {fileID: 21300000, guid: 29c822ea5532a4265a346b8f1601416b, type: 3}
+  - {fileID: 21300000, guid: 91231818d716047e185d559962ac595e, type: 3}
   Category: 0
+  savedNumberOfSelectedPicture: 0
+  spriteWasSelected: 0
+--- !u!1 &1621656863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1621656864}
+  - component: {fileID: 1621656865}
+  m_Layer: 0
+  m_Name: Duck (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1621656864
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1621656863}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 375557640}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1621656865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1621656863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: "\u0423\u0442\u043A\u0430"
+  pictureList:
+  - {fileID: 21300000, guid: cc50046291ce74565aed5c39f4dad709, type: 3}
+  - {fileID: 21300000, guid: 4aafcf8e2048d4f36908432204ff3c28, type: 3}
+  - {fileID: 21300000, guid: 301af2dfeaa4941dbaf8818df74ccb30, type: 3}
+  - {fileID: 21300000, guid: 5951e87a739944e28bf3e7d573336efe, type: 3}
+  - {fileID: 21300000, guid: ae50b16ce95ad407eb00d58a55b4e19a, type: 3}
+  Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
 --- !u!1 &1646200062
@@ -3865,52 +3996,6 @@ MonoBehaviour:
   Category: 4
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
---- !u!1 &1702523787
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1702523788}
-  - component: {fileID: 1702523789}
-  m_Layer: 0
-  m_Name: SomeItem (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1702523788
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1702523787}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 375557640}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1702523789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1702523787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: SomeItem
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 2
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
 --- !u!1 &1714477797
 GameObject:
   m_ObjectHideFlags: 0
@@ -3987,7 +4072,7 @@ MonoBehaviour:
   itemName: "\u0412\u0435\u043B\u043E\u0441\u0438\u043F\u0435\u0434"
   pictureList:
   - {fileID: 21300000, guid: 8a316e4c75e2a4a07afdea08883e5d24, type: 3}
-  Category: 1
+  Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
 --- !u!1 &1726901355
@@ -4124,58 +4209,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: "\u0422\u0438\u0433\u0440"
   pictureList:
-  - {fileID: 21300000, guid: e336060d0fc3d47bfb0733136b6456ce, type: 3}
-  - {fileID: 21300000, guid: 887cca96c64ac4b9f93e700f6cd72cba, type: 3}
-  - {fileID: 21300000, guid: df62ace30842b4bb492542f39cd9dabc, type: 3}
-  - {fileID: 21300000, guid: 64c9eaefc93b24b7daf6a770e9d566ec, type: 3}
-  - {fileID: 21300000, guid: b305217cddfdc479da1338e00164d90c, type: 3}
+  - {fileID: 21300000, guid: d582e553704d9401a8439be420a43b96, type: 3}
+  - {fileID: 21300000, guid: cafafa544bdac4b02acbc8aa85553629, type: 3}
+  - {fileID: 21300000, guid: 2b365799bc573489a98c2b88d15e7552, type: 3}
+  - {fileID: 21300000, guid: f3cf7bb28ed6b4a4e968895101af5e04, type: 3}
+  - {fileID: 21300000, guid: 5ca262060fafa4291accf882b38c11d5, type: 3}
   Category: 0
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
---- !u!1 &1839287641
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1839287642}
-  - component: {fileID: 1839287643}
-  m_Layer: 0
-  m_Name: SomeItem (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1839287642
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1839287641}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 375557640}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1839287643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1839287641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: SomeItem
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
 --- !u!1 &1882820510
@@ -4290,11 +4329,62 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: "\u0421\u0443\u0440\u0438\u043A\u0430\u0442"
   pictureList:
-  - {fileID: 21300000, guid: 5d0a2c251fc2844ddb9fa2f04c1b3210, type: 3}
-  - {fileID: 21300000, guid: f78d7c4448d11477c843d9403305345c, type: 3}
-  - {fileID: 21300000, guid: b8465444b21de491db1f8c25650c904c, type: 3}
-  - {fileID: 21300000, guid: 77f6b58e87ae640f6bcefe326c30f9f6, type: 3}
+  - {fileID: 21300000, guid: 6ec8d765e31464eea868386bda9dad4e, type: 3}
+  - {fileID: 21300000, guid: 96525362aa6854678858715b3286450e, type: 3}
+  - {fileID: 21300000, guid: f963f8973045d406285d566680e3cfb5, type: 3}
+  - {fileID: 21300000, guid: be58d199d2e824aba842b8d0d615ffb8, type: 3}
+  - {fileID: 21300000, guid: 1c5427ec7dace42a5b79b2fe3b2dbcdf, type: 3}
   Category: 0
+  savedNumberOfSelectedPicture: 0
+  spriteWasSelected: 0
+--- !u!1 &1962206379
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1962206380}
+  - component: {fileID: 1962206381}
+  m_Layer: 0
+  m_Name: Duck (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1962206380
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1962206379}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 375557640}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1962206381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1962206379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: "\u0423\u0442\u043A\u0430"
+  pictureList:
+  - {fileID: 21300000, guid: cc50046291ce74565aed5c39f4dad709, type: 3}
+  - {fileID: 21300000, guid: 4aafcf8e2048d4f36908432204ff3c28, type: 3}
+  - {fileID: 21300000, guid: 301af2dfeaa4941dbaf8818df74ccb30, type: 3}
+  - {fileID: 21300000, guid: 5951e87a739944e28bf3e7d573336efe, type: 3}
+  - {fileID: 21300000, guid: ae50b16ce95ad407eb00d58a55b4e19a, type: 3}
+  Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
 --- !u!1 &2080325403
@@ -4341,51 +4431,5 @@ MonoBehaviour:
   pictureList:
   - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
   Category: 3
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
---- !u!1 &2138486300
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 2138486301}
-  - component: {fileID: 2138486302}
-  m_Layer: 0
-  m_Name: SomeItem (7)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2138486301
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2138486300}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 375557640}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2138486302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2138486300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: SomeItem
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
