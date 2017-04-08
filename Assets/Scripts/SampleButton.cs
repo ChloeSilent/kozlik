@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
+
 public class SampleButton : MonoBehaviour 
 {
 	public Button button;
@@ -12,6 +14,19 @@ public class SampleButton : MonoBehaviour
 	void Start () 
 	{
 		button.onClick.AddListener (HandleClick);
+	}
+
+	void Update()
+	{
+		if (Input.GetKeyUp("right"))
+		{
+			SwitchToNextSprite ();
+		}
+
+		if (Input.GetKeyUp("left"))
+		{
+			SwitchToPreviousSprite ();
+		}
 	}
 
 	public void Setup (Item currentItem)
@@ -27,7 +42,7 @@ public class SampleButton : MonoBehaviour
 		} 
 		else 
 		{
-			// то выберем новый спрайт
+			// иначе выберем новый спрайт
 			int numberOfRandomPicture = Random.Range (0, item.pictureList.Capacity);
 
 			//пропишем выбранный спрайт в кнопку 
@@ -39,6 +54,34 @@ public class SampleButton : MonoBehaviour
 			// и отметим, что у этого айтема спрайт уже выбран
 			item.spriteWasSelected = true;
 		}
+	}
+
+	public void SwitchToNextSprite()
+	{
+		//если выбран последний спрайт
+		if(item.savedNumberOfSelectedPicture==(item.pictureList.Count-1))
+		{
+			item.savedNumberOfSelectedPicture = 0;
+		}
+		else
+		{
+			item.savedNumberOfSelectedPicture++;			
+		}
+		Setup (item);
+	}
+
+	public void SwitchToPreviousSprite()
+	{
+		//если выбран первый спрайт
+		if(item.savedNumberOfSelectedPicture==0)
+		{
+			item.savedNumberOfSelectedPicture = (item.pictureList.Count-1);
+		}
+		else
+		{
+			item.savedNumberOfSelectedPicture--;			
+		}
+		Setup (item);
 	}
 
 	//обработка нажатий
