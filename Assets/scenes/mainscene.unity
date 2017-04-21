@@ -554,52 +554,6 @@ MonoBehaviour:
   Category: 3
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
---- !u!1 &255762759
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 255762760}
-  - component: {fileID: 255762761}
-  m_Layer: 0
-  m_Name: Quiz
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &255762760
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 255762759}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1647184631}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &255762761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 255762759}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: quiz
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 4
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
 --- !u!1 &312061594
 GameObject:
   m_ObjectHideFlags: 0
@@ -973,7 +927,7 @@ Transform:
   - {fileID: 888130945}
   - {fileID: 681272779}
   - {fileID: 323613538}
-  - {fileID: 491692896}
+  - {fileID: 553426102}
   m_Father: {fileID: 1714477798}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1177,52 +1131,6 @@ MonoBehaviour:
   Category: 4
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
---- !u!1 &491692895
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 491692896}
-  - component: {fileID: 491692897}
-  m_Layer: 0
-  m_Name: Quiz
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &491692896
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 491692895}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 375557640}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &491692897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 491692895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: quiz
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 1
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
 --- !u!1 &493757011
 GameObject:
   m_ObjectHideFlags: 0
@@ -1364,7 +1272,7 @@ Transform:
   - {fileID: 479567745}
   - {fileID: 251546900}
   - {fileID: 341607315}
-  - {fileID: 1438614165}
+  - {fileID: 826114342}
   m_Father: {fileID: 1714477798}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1433,6 +1341,52 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f2a7d390841d44b5d9087da141437226, type: 3}
   - {fileID: 21300000, guid: 2893d154fb6ef41a3841c2aab4b57bf8, type: 3}
   Category: 0
+  savedNumberOfSelectedPicture: 0
+  spriteWasSelected: 0
+--- !u!1 &553426101
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 553426102}
+  - component: {fileID: 553426103}
+  m_Layer: 0
+  m_Name: Quiz
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &553426102
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 553426101}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 375557640}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &553426103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 553426101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: quiz
+  pictureList:
+  - {fileID: 21300000, guid: ce6f0b07176b84ccbb92f79454ba4d41, type: 3}
+  Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
 --- !u!1 &554121861
@@ -1982,6 +1936,52 @@ MonoBehaviour:
   Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+--- !u!1 &826114341
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 826114342}
+  - component: {fileID: 826114343}
+  m_Layer: 0
+  m_Name: Quiz
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &826114342
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 826114341}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 533418075}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &826114343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 826114341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: quiz
+  pictureList:
+  - {fileID: 21300000, guid: ce6f0b07176b84ccbb92f79454ba4d41, type: 3}
+  Category: 3
+  savedNumberOfSelectedPicture: 0
+  spriteWasSelected: 0
 --- !u!1 &854489480
 GameObject:
   m_ObjectHideFlags: 0
@@ -2026,6 +2026,52 @@ MonoBehaviour:
   pictureList:
   - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
   Category: 4
+  savedNumberOfSelectedPicture: 0
+  spriteWasSelected: 0
+--- !u!1 &868920527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 868920528}
+  - component: {fileID: 868920529}
+  m_Layer: 0
+  m_Name: Quiz
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &868920528
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 868920527}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1225950184}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &868920529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 868920527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: quiz
+  pictureList:
+  - {fileID: 21300000, guid: ce6f0b07176b84ccbb92f79454ba4d41, type: 3}
+  Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
 --- !u!1 &880261913
@@ -2360,52 +2406,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 954dafdc6b4ae4f4ead4daa09d4d3d24, type: 3}
   - {fileID: 21300000, guid: 6b1b04afcc7b147f7a5f6615ba2be0ae, type: 3}
   Category: 0
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
---- !u!1 &1066860517
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1066860518}
-  - component: {fileID: 1066860519}
-  m_Layer: 0
-  m_Name: Quiz
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1066860518
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1066860517}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1225950184}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1066860519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1066860517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: quiz
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
 --- !u!1 &1110590049
@@ -2860,7 +2860,7 @@ Transform:
   - {fileID: 1148336661}
   - {fileID: 1189250682}
   - {fileID: 1724236382}
-  - {fileID: 1066860518}
+  - {fileID: 868920528}
   m_Father: {fileID: 1714477798}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3269,7 +3269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: quiz
   pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
+  - {fileID: 21300000, guid: ce6f0b07176b84ccbb92f79454ba4d41, type: 3}
   Category: 0
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
@@ -3441,52 +3441,6 @@ MonoBehaviour:
   pictureList:
   - {fileID: 21300000, guid: a8bbd7275b10640afa30c3b1df2c3400, type: 3}
   Category: 2
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
---- !u!1 &1438614164
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1438614165}
-  - component: {fileID: 1438614166}
-  m_Layer: 0
-  m_Name: Quiz
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1438614165
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1438614164}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 533418075}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1438614166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1438614164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: quiz
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 3
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
 --- !u!1 &1452271611
@@ -3975,7 +3929,7 @@ Transform:
   - {fileID: 480297506}
   - {fileID: 1209988418}
   - {fileID: 1223238300}
-  - {fileID: 255762760}
+  - {fileID: 1915029656}
   m_Father: {fileID: 1714477798}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4287,6 +4241,52 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1882820510}
+--- !u!1 &1915029655
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1915029656}
+  - component: {fileID: 1915029657}
+  m_Layer: 0
+  m_Name: Quiz
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1915029656
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1915029655}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1647184631}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1915029657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1915029655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: quiz
+  pictureList:
+  - {fileID: 21300000, guid: ce6f0b07176b84ccbb92f79454ba4d41, type: 3}
+  Category: 4
+  savedNumberOfSelectedPicture: 0
+  spriteWasSelected: 0
 --- !u!1 &1951228854
 GameObject:
   m_ObjectHideFlags: 0

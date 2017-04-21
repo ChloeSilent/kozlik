@@ -95,12 +95,11 @@ public class SampleButton : MonoBehaviour
 		switch (transform.parent.name) 
 		{
 		case("CategoryPickerPanel"): 
-//			currentButtonsController.ChangeCategory (item);
 			panelsController.GoMainMode (item);
 			break;
 
 		case("ObjectPickerPanel"): 
-			if(item.itemName == "quiz") //12 кнопка quiz
+			if(item.gameObject.name == "Quiz") //12 кнопка quiz
 			{
 				panelsController.GoQuizMode ();
 			}
