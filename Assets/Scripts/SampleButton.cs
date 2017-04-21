@@ -33,28 +33,45 @@ public class SampleButton : MonoBehaviour
 	{
 		item = currentItem; //TODO это хуйня. переделать
 		nameLabel.text = item.itemName;
+		if (transform.parent.name == "CategoryPickerPanel") 
+		{
+			SetupCategorySprite (currentItem);
+		}
+		else
+		{
+			SetupNonCategorySprite (currentItem);
+		}
+	}
 
-		//если номер спрайта был выбран ранее
-		if (item.spriteWasSelected == true) 
+	public void SetupNonCategorySprite (Item currentItem)
+	{
+		if (item.spriteWasSelected == true) //если номер спрайта был выбран ранее
 		{
 			// то используем выбранный ранее
 			iconImage.sprite = item.pictureList [item.savedNumberOfSelectedPicture];
 		} 
-		else 
+		else // иначе выберем новый спрайт
 		{
-			// иначе выберем новый спрайт
-			int numberOfRandomPicture = Random.Range (0, item.pictureList.Capacity);
+				int numberOfRandomPicture = Random.Range (0, item.pictureList.Capacity);	
 
-			//пропишем выбранный спрайт в кнопку 
-			iconImage.sprite = item.pictureList [numberOfRandomPicture];
+				//пропишем выбранный спрайт в кнопку 
+				iconImage.sprite = item.pictureList [numberOfRandomPicture];
 
-			//пропишем выбранный спрайт в айтем 
-			item.savedNumberOfSelectedPicture = numberOfRandomPicture;
+				//пропишем выбранный спрайт в айтем 
+				item.savedNumberOfSelectedPicture = numberOfRandomPicture;
 
-			// и отметим, что у этого айтема спрайт уже выбран
-			item.spriteWasSelected = true;
+				// и отметим, что у этого айтема спрайт уже выбран
+				item.spriteWasSelected = true;
 		}
 	}
+
+	public void SetupCategorySprite (Item currentItem)
+	{
+//				int numberOfRandomItemOfCategory = Random.Range (0, 11);
+	}
+
+
+
 
 	public void SwitchToNextSprite()
 	{
