@@ -26,51 +26,48 @@ public class PanelsController : MonoBehaviour
 
 	void Start () 
 	{
-		//app start
-		MakeMainVisible (0);
+		//app start with default category of zero
+		objectPickerPanelImage.enabled = true;
+		objectPickerButtonsController.FilterObjectPickerItemListTo (0);
+		objectPickerButtonsController.AddButtonsFromCurrentItemList (); 
+
+		categoryPickerPanelImage.enabled = true;
+		categoryPickerButtonsController.FilterCategoryPickerItemList();
+		categoryPickerButtonsController.AddButtonsFromCurrentItemList ();
 	}
 
-	public	void GoMainMode (Item item) 
+	public	void GoMainMode () 
 	{
-		MakeBrowseInvisible ();
-		MakeMainInvisible(); 
-
-		MakeMainVisible (item.Category);
+		EnableMainMode ();
+		DisableBrowseMode ();
+		DisableQuizMode ();
 	}
 
-	public	void GoBrowseMode (Item itemToBrowse) 
+	public	void GoBrowseMode () 
 	{
-		MakeBrowseVisible (itemToBrowse);
-		MakeMainInvisible (); 
+		EnableBrowseMode ();
+		DisableMainMode (); 
+		DisableQuizMode ();
 	}
 
 	public void GoQuizMode ()
 	{
-		MakeMainInvisible (); 
-		MakeBrowseInvisible (); 
-
 		SelectFourRandomVariants ();
 		RefreshQuizModeItemList (); 
 		SetSomeVariantAsWinner ();
 		RefreshVariativeQuestionText ();
 
-		MakeQuizPanelsVisible (); 
+		EnableQuizMode (); 
 
-		quizButtonsController.AddButtons ();
-		quizButtonsController.TuneButtonsForQuiz ();
+		DisableMainMode (); 
+		DisableBrowseMode (); 
 	}
 
-	public void RefreshMainModeItemList(int categoryId)
+	public void RefreshMainModeItemLists (int categoryId)
 	{
-		objectPickerButtonsController.ChangeCategory (categoryId);
+		objectPickerButtonsController.FilterObjectPickerItemListTo (categoryId);
+		categoryPickerButtonsController.FilterCategoryPickerItemList();
 	}
-
-	public void RefreshBrowseModeItemListTo (Item newItem)
-	{
-		browseModeButtonsController.itemList.RemoveAt(0); 
-		browseModeButtonsController.itemList.Insert (0, newItem);
-	}
-
 
 	public void SelectFourRandomVariants ()
 	{
@@ -80,7 +77,7 @@ public class PanelsController : MonoBehaviour
 		{
 			// Наш лист из 12 элементов  нумеруется с 0 до 11. 11ый вариант это кнопка квиза, она не является валидным участником викторины
 			// ,а значит нам нужны номера с 0 до 10.
-			// Random.Range Note that max is exclusive, so using Random.Range( 0, 10 ) will return values between 0 and 9. 
+			// Random.Range: Note that max is exclusive, so using Random.Range( 0, 10 ) will return values between 0 and 9. 
 			// значит range будет (0, 11)
 			int i = Random.Range(0, 11); // i индекс листа objectPickerButtonsController.itemList [i] . рандомизированный.
 
@@ -92,7 +89,7 @@ public class PanelsController : MonoBehaviour
 			bool isUnique = true;
 			for (int u = 0; u < 4; u++) 
 			{
-				if (fourVariantsItemsList [u] == objectPickerButtonsController.itemList [i]) 
+				if (fourVariantsItemsList [u] == objectPickerButtonsController.currentItemList [i]) 
 				{
 					//такой вариант уже был, устанавливаем флаг в false
 					isUnique = false;
@@ -107,7 +104,7 @@ public class PanelsController : MonoBehaviour
 			if(isUnique==true)
 			{
 				//хороший предентент, копируем его в fourVariantsItemsList [k]
-				fourVariantsItemsList [k]  = objectPickerButtonsController.itemList [i];
+				fourVariantsItemsList [k]  = objectPickerButtonsController.currentItemList [i];
 			}
 			else
 			{
@@ -124,7 +121,7 @@ public class PanelsController : MonoBehaviour
 		//передаем сформированный лист из 4 вариантов в quiz
 		for (int i = 0; i < 4; i++) 
 		{
-			quizButtonsController.itemList [i] = fourVariantsItemsList [i];
+			quizButtonsController.currentItemList.Add (fourVariantsItemsList [i]);
 		}
 		// здесь на первый взгляд хорошо бы обнулить fourVariantsItemsList [k]
 		// потому, что он сохранится до и при следующем запуске квиза, и при выборе кандидатов на второй квиз претенденты будут
@@ -134,7 +131,7 @@ public class PanelsController : MonoBehaviour
 	//выбираем что будем отгадывать
 	public void SetSomeVariantAsWinner()
 	{
-		winnerId = Random.Range(0, 4);
+		winnerId = Random.Range(0, 4); //TODO save this info to item ?
 	}
 
 	//указываем победителя в variativeQuestionText
@@ -144,35 +141,31 @@ public class PanelsController : MonoBehaviour
 	}
 
 	//проверяем ответ викторины на правильность
-	public void CheckIfWinner (Item selectedItem, GameObject selectedButton) //TODO много аргументов
+	public void CheckIfWinner (Item clickedItem, GameObject selectedButton) //TODO много аргументов
 	{
-		if(selectedItem.itemName == fourVariantsItemsList [winnerId].itemName)
+		if(clickedItem.itemName == fourVariantsItemsList [winnerId].itemName)
 		{
 			//угадал
-			MakeQuizPanelsInvisible ();
-			quizButtonsController.unTuneButtonsForQuiz ();
-			quizButtonsController.RemoveAllButtons ();
-			GoBrowseMode (selectedItem);
+			ChangeBrowseModeItemListTo (clickedItem);
+			GoBrowseMode (); 
 		}
 		else
 		{
 			// не угадал
-			selectedButton.GetComponent <SampleButton> ().MoveRedCrossForward ();
+			selectedButton.GetComponent <SampleButton> ().MoveRedCrossForward (); //TODO this goes to sample button
 		}
 	}
 
-	public void MakeMainVisible (int categoryId)
+	public void EnableMainMode ()
 	{
 		objectPickerPanelImage.enabled = true;
 		categoryPickerPanelImage.enabled = true;
 
-		RefreshMainModeItemList (categoryId);//new
-
-		objectPickerButtonsController.AddButtons (); 
-		categoryPickerButtonsController.AddButtons ();
+		objectPickerButtonsController.AddButtonsFromCurrentItemList (); 
+		categoryPickerButtonsController.AddButtonsFromCurrentItemList ();
 	}
 
-	public void MakeMainInvisible ()
+	public void DisableMainMode ()
 	{
 		objectPickerPanelImage.enabled =false;
 		categoryPickerPanelImage.enabled =false;
@@ -180,34 +173,59 @@ public class PanelsController : MonoBehaviour
 		objectPickerButtonsController.RemoveAllButtons();
 		categoryPickerButtonsController.RemoveAllButtons();
 
+		objectPickerButtonsController.currentItemList.Clear ();
+		categoryPickerButtonsController.currentItemList.Clear ();
 	}
 
-	public void MakeBrowseVisible (Item newItem)
+	public void EnableBrowseMode ()
 	{
-		RefreshBrowseModeItemListTo (newItem);
-		browseModeButtonsController.AddButtons();
-
+		browseModeButtonsController.AddButtonsFromCurrentItemList();
 	}
 
-	public void MakeBrowseInvisible ()
+	public void DisableBrowseMode ()
 	{
 		browseModeButtonsController.RemoveAllButtons();
+		browseModeButtonsController.currentItemList.Clear ();
 	}
 
-	public void MakeQuizPanelsVisible ()
+	public void EnableQuizMode ()
 	{
 		quizButtonsPanelImage.enabled = true;
 		questionPanelImage.enabled = true;
 		constantQuestionText.enabled = true;
 		variativeQuestionText.enabled = true;
+
+		quizButtonsController.AddButtonsFromCurrentItemList ();
+		quizButtonsController.TuneButtonsForQuiz ();
 	}
 
-	public void MakeQuizPanelsInvisible ()
+	public void DisableQuizMode ()
 	{
 		quizButtonsPanelImage.enabled = false;
 		questionPanelImage.enabled = false;
 		constantQuestionText.enabled = false;
 		variativeQuestionText.enabled = false;
+
+		quizButtonsController.unTuneButtonsForQuiz ();
+		quizButtonsController.RemoveAllButtons ();
+		quizButtonsController.currentItemList.Clear();
 	}
 
+	public void ChangeObjectPickerItemListCategoryTo (int categoryId)
+	{
+		objectPickerButtonsController.currentItemList.Clear ();
+		objectPickerButtonsController.FilterObjectPickerItemListTo (categoryId);
+	}
+
+	public void ChangeBrowseModeItemListTo (Item desiredItem)
+	{
+		browseModeButtonsController.currentItemList.Clear ();
+		browseModeButtonsController.currentItemList.Add (desiredItem);
+	}
+
+	public void RepopulateObjectPicker()
+	{
+		objectPickerButtonsController.RemoveAllButtons ();
+		objectPickerButtonsController.AddButtonsFromCurrentItemList ();
+	}
 }

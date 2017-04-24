@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 
 public class ButtonsController : MonoBehaviour 
 {
-	public List<Item> itemList;
+	public List<Item> currentItemList;
 	private ButtonsController currentController;
 	public SimpleObjectPool buttonObjectPool;
 
@@ -16,10 +16,10 @@ public class ButtonsController : MonoBehaviour
 	public GameObject dataContainer;
 	public List<Item> allItemsList;
 
-	void Start () 
+	void OnEnable () 
 	{
-		//загружаем данные в лист
-		dataContainer.GetComponentsInChildren <Item> (allItemsList);
+		//загружаем данные из контейнера в контроллер
+		dataContainer.GetComponentsInChildren <Item> (allItemsList); //TODO move to PC
 	}
 
 	//взять кнопку из пула и просетапить ее полученным аргументом itemToSetupWith
@@ -45,11 +45,11 @@ public class ButtonsController : MonoBehaviour
 	}
 
 	//сетапим все кнопки из itemList в цикле
-	public void AddButtons()
+	public void AddButtonsFromCurrentItemList()
 	{
-		for (int i = 0; i < itemList.Count; i++) 
+		for (int i = 0; i < currentItemList.Count; i++) 
 		{
-			Item currentItem = itemList [i];
+			Item currentItem = currentItemList [i];
 			TakeOneButtonFromPoolAndSetupWith (currentItem);
 		}
 	}
@@ -78,29 +78,27 @@ public class ButtonsController : MonoBehaviour
 			quizButton.GetComponent <SampleButton> ().MoveRedCrossBackward ();
 		}
 	}
-
-	//переключиться на другую категорию
-	public void ChangeCategory (int desiredCategoryId)
+		
+	public void FilterCategoryPickerItemList()
 	{
-		RemoveItemsFrom (objectPicker);
-		RefreshObjectPickerItemListTo (desiredCategoryId); //подтягиваем в objectPicker нужные item
-	}
-
-	public void RefreshObjectPickerItemListTo (int desiredCategoryId)
-	{
-		foreach (Item sortedItem in allItemsList)
+		foreach (Item sortedItem in allItemsList) 
 		{
-			if (sortedItem.Category == desiredCategoryId && sortedItem.transform.parent.name != "DataContainer")
-			{
-//				objectPicker.itemList.Add (sortedItem);
-				this.itemList.Add (sortedItem);
+			if (sortedItem.isACategory == true) 
+			{ 
+				categoryPicker.currentItemList.Add (sortedItem);
 			}
 		}
 	}
 
-	public void RemoveItemsFrom (ButtonsController controllerToClear)
+	public void FilterObjectPickerItemListTo (int desiredCategoryId)
 	{
-		controllerToClear.itemList.Clear ();
+		foreach (Item sortedItem in allItemsList)
+		{
+			if (sortedItem.Category == desiredCategoryId &&  sortedItem.isACategory ==false)
+			{
+				objectPicker.currentItemList.Add (sortedItem);
+			}
+		}
 	}
 
 	//убрать в пул одну кнопку 
@@ -115,8 +113,6 @@ public class ButtonsController : MonoBehaviour
 	{
 		currentController = this;
 		while (currentController.transform.childCount > 0) 
-//		while (this.transform.childCount > 0) 
-			
 		{
 			ReturnOneButtonToPool ();
 		}

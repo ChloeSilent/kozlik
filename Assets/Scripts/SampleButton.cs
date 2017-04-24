@@ -112,22 +112,25 @@ public class SampleButton : MonoBehaviour
 		switch (transform.parent.name) 
 		{
 		case("CategoryPickerPanel"): 
-			panelsController.GoMainMode (item);
+			panelsController.ChangeObjectPickerItemListCategoryTo (item.Category);
+			panelsController.RepopulateObjectPicker ();
 			break;
 
 		case("ObjectPickerPanel"): 
 			if(item.gameObject.name == "Quiz") //12 кнопка quiz
 			{
-				panelsController.GoQuizMode ();
+				panelsController.GoQuizMode (); 
 			}
 			else //1-11 кнопка
 			{
-				panelsController.GoBrowseMode(item);	
+				panelsController.ChangeBrowseModeItemListTo (item);
+				panelsController.GoBrowseMode ();
 			}
 			break;
 
 		case("BrowseModePanel"):
-			panelsController.GoMainMode(item); 
+			panelsController.RefreshMainModeItemLists (item.Category);
+			panelsController.GoMainMode(); 
 			break;
 
 		case("QuizButtonsPanel"):
@@ -147,7 +150,6 @@ public class SampleButton : MonoBehaviour
 
 	public void MoveRedCrossBackward()
 	{
-		
 		this.transform.FindChild ("WrongImage").SetAsFirstSibling ();
 	}
 }

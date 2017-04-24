@@ -154,6 +154,7 @@ MonoBehaviour:
   Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &69461088
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,6 +201,7 @@ MonoBehaviour:
   Category: 3
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &76314717
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,6 +248,7 @@ MonoBehaviour:
   Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &80782404
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,6 +295,7 @@ MonoBehaviour:
   Category: 3
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &82451682
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,6 +346,7 @@ MonoBehaviour:
   Category: 0
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &152369859
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,6 +393,7 @@ MonoBehaviour:
   Category: 3
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &154025920
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,6 +514,7 @@ MonoBehaviour:
   Category: 0
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &251546899
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,6 +561,7 @@ MonoBehaviour:
   Category: 3
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &312061594
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,6 +682,7 @@ MonoBehaviour:
   Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &325978613
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,6 +733,7 @@ MonoBehaviour:
   Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &341607314
 GameObject:
   m_ObjectHideFlags: 0
@@ -770,6 +780,7 @@ MonoBehaviour:
   Category: 3
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &343125506
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,22 +885,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a716cee504e43bda6af25ef85374fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemList: []
+  currentItemList: []
   buttonObjectPool: {fileID: 436182474}
   objectPicker: {fileID: 343125511}
   categoryPicker: {fileID: 1490034599}
   dataContainer: {fileID: 1714477797}
-  allItemsList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  allItemsList: []
 --- !u!1 &375557639
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,6 +949,7 @@ MonoBehaviour:
   Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 1
 --- !u!1 &376808124
 GameObject:
   m_ObjectHideFlags: 0
@@ -998,6 +1000,7 @@ MonoBehaviour:
   Category: 0
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &436182473
 GameObject:
   m_ObjectHideFlags: 0
@@ -1085,6 +1088,7 @@ MonoBehaviour:
   Category: 3
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &480297505
 GameObject:
   m_ObjectHideFlags: 0
@@ -1131,6 +1135,7 @@ MonoBehaviour:
   Category: 4
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &493757011
 GameObject:
   m_ObjectHideFlags: 0
@@ -1177,6 +1182,7 @@ MonoBehaviour:
   Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &503819026
 GameObject:
   m_ObjectHideFlags: 0
@@ -1235,6 +1241,7 @@ MonoBehaviour:
   Category: 0
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 1
 --- !u!1 &533418074
 GameObject:
   m_ObjectHideFlags: 0
@@ -1293,6 +1300,7 @@ MonoBehaviour:
   Category: 3
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 1
 --- !u!1 &546596426
 GameObject:
   m_ObjectHideFlags: 0
@@ -1343,6 +1351,7 @@ MonoBehaviour:
   Category: 0
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &553426101
 GameObject:
   m_ObjectHideFlags: 0
@@ -1389,6 +1398,7 @@ MonoBehaviour:
   Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &554121861
 GameObject:
   m_ObjectHideFlags: 0
@@ -1439,6 +1449,7 @@ MonoBehaviour:
   Category: 0
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &594709125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1485,6 +1496,7 @@ MonoBehaviour:
   Category: 4
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &598185855
 GameObject:
   m_ObjectHideFlags: 0
@@ -1680,6 +1692,7 @@ MonoBehaviour:
   Category: 0
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &681272778
 GameObject:
   m_ObjectHideFlags: 0
@@ -1730,6 +1743,7 @@ MonoBehaviour:
   Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &716996914
 GameObject:
   m_ObjectHideFlags: 0
@@ -1776,6 +1790,7 @@ MonoBehaviour:
   Category: 3
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &780615070
 GameObject:
   m_ObjectHideFlags: 0
@@ -1857,8 +1872,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a716cee504e43bda6af25ef85374fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemList:
-  - {fileID: 0}
+  currentItemList: []
   buttonObjectPool: {fileID: 436182474}
   objectPicker: {fileID: 0}
   categoryPicker: {fileID: 1490034599}
@@ -1936,6 +1950,7 @@ MonoBehaviour:
   Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &826114341
 GameObject:
   m_ObjectHideFlags: 0
@@ -1982,6 +1997,7 @@ MonoBehaviour:
   Category: 3
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &854489480
 GameObject:
   m_ObjectHideFlags: 0
@@ -2028,6 +2044,7 @@ MonoBehaviour:
   Category: 4
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &868920527
 GameObject:
   m_ObjectHideFlags: 0
@@ -2074,6 +2091,7 @@ MonoBehaviour:
   Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &880261913
 GameObject:
   m_ObjectHideFlags: 0
@@ -2120,6 +2138,7 @@ MonoBehaviour:
   Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &888130944
 GameObject:
   m_ObjectHideFlags: 0
@@ -2170,6 +2189,7 @@ MonoBehaviour:
   Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &890701220
 GameObject:
   m_ObjectHideFlags: 0
@@ -2216,6 +2236,7 @@ MonoBehaviour:
   Category: 3
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &916378231
 GameObject:
   m_ObjectHideFlags: 0
@@ -2262,6 +2283,7 @@ MonoBehaviour:
   Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &961350645
 GameObject:
   m_ObjectHideFlags: 0
@@ -2308,6 +2330,7 @@ MonoBehaviour:
   Category: 3
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &1017559825
 GameObject:
   m_ObjectHideFlags: 0
@@ -2358,6 +2381,7 @@ MonoBehaviour:
   Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &1049096885
 GameObject:
   m_ObjectHideFlags: 0
@@ -2408,6 +2432,7 @@ MonoBehaviour:
   Category: 0
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &1110590049
 GameObject:
   m_ObjectHideFlags: 0
@@ -2454,6 +2479,7 @@ MonoBehaviour:
   Category: 4
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &1119238656
 GameObject:
   m_ObjectHideFlags: 0
@@ -2589,6 +2615,7 @@ MonoBehaviour:
   Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &1168588935
 GameObject:
   m_ObjectHideFlags: 0
@@ -2635,6 +2662,7 @@ MonoBehaviour:
   Category: 3
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &1189250681
 GameObject:
   m_ObjectHideFlags: 0
@@ -2681,6 +2709,7 @@ MonoBehaviour:
   Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &1209988417
 GameObject:
   m_ObjectHideFlags: 0
@@ -2727,6 +2756,7 @@ MonoBehaviour:
   Category: 4
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &1220443843
 GameObject:
   m_ObjectHideFlags: 0
@@ -2777,6 +2807,7 @@ MonoBehaviour:
   Category: 0
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &1223238299
 GameObject:
   m_ObjectHideFlags: 0
@@ -2823,6 +2854,7 @@ MonoBehaviour:
   Category: 4
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &1225950183
 GameObject:
   m_ObjectHideFlags: 0
@@ -2881,6 +2913,7 @@ MonoBehaviour:
   Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 1
 --- !u!1 &1276349608
 GameObject:
   m_ObjectHideFlags: 0
@@ -2927,6 +2960,7 @@ MonoBehaviour:
   Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &1282916832
 GameObject:
   m_ObjectHideFlags: 0
@@ -3111,11 +3145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a716cee504e43bda6af25ef85374fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  currentItemList: []
   buttonObjectPool: {fileID: 436182474}
   objectPicker: {fileID: 0}
   categoryPicker: {fileID: 1490034599}
@@ -3227,6 +3257,7 @@ MonoBehaviour:
   Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &1362304036
 GameObject:
   m_ObjectHideFlags: 0
@@ -3273,6 +3304,7 @@ MonoBehaviour:
   Category: 0
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &1379817267
 GameObject:
   m_ObjectHideFlags: 0
@@ -3323,6 +3355,7 @@ MonoBehaviour:
   Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &1396631005
 GameObject:
   m_ObjectHideFlags: 0
@@ -3443,6 +3476,7 @@ MonoBehaviour:
   Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &1452271611
 GameObject:
   m_ObjectHideFlags: 0
@@ -3489,6 +3523,7 @@ MonoBehaviour:
   Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &1470821240
 GameObject:
   m_ObjectHideFlags: 0
@@ -3535,6 +3570,7 @@ MonoBehaviour:
   Category: 4
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &1486434969
 GameObject:
   m_ObjectHideFlags: 0
@@ -3581,6 +3617,7 @@ MonoBehaviour:
   Category: 4
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &1490034594
 GameObject:
   m_ObjectHideFlags: 0
@@ -3685,12 +3722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a716cee504e43bda6af25ef85374fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemList:
-  - {fileID: 503819028}
-  - {fileID: 375557641}
-  - {fileID: 1225950185}
-  - {fileID: 533418076}
-  - {fileID: 1647184632}
+  currentItemList: []
   buttonObjectPool: {fileID: 436182474}
   objectPicker: {fileID: 343125511}
   categoryPicker: {fileID: 1490034599}
@@ -3746,6 +3778,7 @@ MonoBehaviour:
   Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &1563689792
 GameObject:
   m_ObjectHideFlags: 0
@@ -3796,6 +3829,7 @@ MonoBehaviour:
   Category: 0
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &1621656863
 GameObject:
   m_ObjectHideFlags: 0
@@ -3846,6 +3880,7 @@ MonoBehaviour:
   Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &1646200062
 GameObject:
   m_ObjectHideFlags: 0
@@ -3892,6 +3927,7 @@ MonoBehaviour:
   Category: 4
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &1647184630
 GameObject:
   m_ObjectHideFlags: 0
@@ -3950,6 +3986,7 @@ MonoBehaviour:
   Category: 4
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 1
 --- !u!1 &1714477797
 GameObject:
   m_ObjectHideFlags: 0
@@ -4029,6 +4066,7 @@ MonoBehaviour:
   Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &1726901355
 GameObject:
   m_ObjectHideFlags: 0
@@ -4075,6 +4113,7 @@ MonoBehaviour:
   Category: 4
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &1737648087
 GameObject:
   m_ObjectHideFlags: 0
@@ -4121,6 +4160,7 @@ MonoBehaviour:
   Category: 4
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &1746721182
 GameObject:
   m_ObjectHideFlags: 0
@@ -4171,6 +4211,7 @@ MonoBehaviour:
   Category: 0
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &1882820510
 GameObject:
   m_ObjectHideFlags: 0
@@ -4287,6 +4328,7 @@ MonoBehaviour:
   Category: 4
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &1951228854
 GameObject:
   m_ObjectHideFlags: 0
@@ -4337,6 +4379,7 @@ MonoBehaviour:
   Category: 0
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &1962206379
 GameObject:
   m_ObjectHideFlags: 0
@@ -4387,6 +4430,7 @@ MonoBehaviour:
   Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0
 --- !u!1 &2080325403
 GameObject:
   m_ObjectHideFlags: 0
@@ -4433,3 +4477,4 @@ MonoBehaviour:
   Category: 3
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
+  isACategory: 0

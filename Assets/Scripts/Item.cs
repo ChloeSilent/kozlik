@@ -11,4 +11,5 @@ public class Item : MonoBehaviour
 	public int Category;
 	public int savedNumberOfSelectedPicture;
 	public bool spriteWasSelected;
+	public bool isACategory;
 }  
