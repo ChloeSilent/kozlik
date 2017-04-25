@@ -33,42 +33,26 @@ public class SampleButton : MonoBehaviour
 	{
 		item = itemToSetupWith; 
 		nameLabel.text = item.itemName;
-
-		if (transform.parent.name == "CategoryPickerPanel") 
-		{
-			SetupCategorySprite ();
-		}
-		else
-		{
-			SetupNonCategorySprite ();
-		}
+		SetupSprite ();
+	
 	}
 
-	public void SetupNonCategorySprite ()
+	public void SetupSprite ()
 	{
-		if (item.spriteWasSelected == true) //если номер спрайта был выбран ранее
+		if (item.spriteWasSelected == false) //если номер спрайта не был выбран ранее
 		{
-			// то используем выбранный ранее
-			iconImage.sprite = item.pictureList [item.savedNumberOfSelectedPicture];
-		} 
-		else // иначе выберем новый спрайт
-		{
+			// то выберем новый спрайт
 			int numberOfRandomPicture = Random.Range (0, item.pictureList.Capacity);	
-
-				//пропишем выбранный спрайт в кнопку 
-			iconImage.sprite = item.pictureList [numberOfRandomPicture];
-
-				//пропишем выбранный спрайт в айтем 
-			item.savedNumberOfSelectedPicture = numberOfRandomPicture;
-
-				// и отметим, что у этого айтема спрайт уже выбран
+		
+			// отметим флажком, что у этого айтема спрайт уже выбран
 			item.spriteWasSelected = true;
-		}
-	}
 
-	public void SetupCategorySprite ()
-	{
-//				int numberOfRandomItemOfCategory = Random.Range (0, 11);
+			//пропишем выбранный спрайт в айтем 
+			item.savedNumberOfSelectedPicture = numberOfRandomPicture;
+		} 
+
+		//пропишем выбранный спрайт в кнопку 
+		iconImage.sprite = item.pictureList [item.savedNumberOfSelectedPicture];
 	}
 
 	public void SwitchToNextSprite()

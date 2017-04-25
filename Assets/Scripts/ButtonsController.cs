@@ -19,7 +19,7 @@ public class ButtonsController : MonoBehaviour
 	void OnEnable () 
 	{
 		//загружаем данные из контейнера в контроллер
-		dataContainer.GetComponentsInChildren <Item> (allItemsList); 
+		dataContainer.GetComponentsInChildren <Item> (allItemsList); //TODO copy
 	}
 
 	//взять кнопку из пула и просетапить ее полученным аргументом itemToSetupWith
