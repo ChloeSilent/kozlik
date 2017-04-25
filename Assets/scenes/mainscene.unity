@@ -887,8 +887,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentItemList: []
   buttonObjectPool: {fileID: 436182474}
-  objectPicker: {fileID: 343125511}
-  categoryPicker: {fileID: 1490034599}
+  objectPickerButtonsController: {fileID: 343125511}
+  categoryPickerButtonsController: {fileID: 1490034599}
   dataContainer: {fileID: 1714477797}
   allItemsList: []
 --- !u!1 &375557639
@@ -1635,13 +1635,12 @@ MonoBehaviour:
   questionPanelImage: {fileID: 312061597}
   constantQuestionText: {fileID: 1396631007}
   variativeQuestionText: {fileID: 1317587837}
-  itemList:
-  - {fileID: 0}
   fourVariantsItemsList:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  winnerId: 0
 --- !u!1 &616920226
 GameObject:
   m_ObjectHideFlags: 0
@@ -1874,8 +1873,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentItemList: []
   buttonObjectPool: {fileID: 436182474}
-  objectPicker: {fileID: 0}
-  categoryPicker: {fileID: 1490034599}
+  objectPickerButtonsController: {fileID: 0}
+  categoryPickerButtonsController: {fileID: 0}
   dataContainer: {fileID: 1714477797}
   allItemsList: []
 --- !u!114 &780615075
@@ -3147,8 +3146,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentItemList: []
   buttonObjectPool: {fileID: 436182474}
-  objectPicker: {fileID: 0}
-  categoryPicker: {fileID: 1490034599}
+  objectPickerButtonsController: {fileID: 0}
+  categoryPickerButtonsController: {fileID: 0}
   dataContainer: {fileID: 1714477797}
   allItemsList: []
 --- !u!114 &1324254780
@@ -3724,8 +3723,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentItemList: []
   buttonObjectPool: {fileID: 436182474}
-  objectPicker: {fileID: 343125511}
-  categoryPicker: {fileID: 1490034599}
+  objectPickerButtonsController: {fileID: 1490034599}
+  categoryPickerButtonsController: {fileID: 1490034599}
   dataContainer: {fileID: 1714477797}
   allItemsList: []
 --- !u!1 &1504134613

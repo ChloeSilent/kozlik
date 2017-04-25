@@ -29,21 +29,22 @@ public class SampleButton : MonoBehaviour
 		}
 	}
 
-	public void Setup (Item currentItem)
+	public void Setup (Item itemToSetupWith)
 	{
-		item = currentItem; //TODO это хуйня. переделать
+		item = itemToSetupWith; 
 		nameLabel.text = item.itemName;
+
 		if (transform.parent.name == "CategoryPickerPanel") 
 		{
-			SetupCategorySprite (currentItem);
+			SetupCategorySprite ();
 		}
 		else
 		{
-			SetupNonCategorySprite (currentItem);
+			SetupNonCategorySprite ();
 		}
 	}
 
-	public void SetupNonCategorySprite (Item currentItem)
+	public void SetupNonCategorySprite ()
 	{
 		if (item.spriteWasSelected == true) //если номер спрайта был выбран ранее
 		{
@@ -52,26 +53,23 @@ public class SampleButton : MonoBehaviour
 		} 
 		else // иначе выберем новый спрайт
 		{
-				int numberOfRandomPicture = Random.Range (0, item.pictureList.Capacity);	
+			int numberOfRandomPicture = Random.Range (0, item.pictureList.Capacity);	
 
 				//пропишем выбранный спрайт в кнопку 
-				iconImage.sprite = item.pictureList [numberOfRandomPicture];
+			iconImage.sprite = item.pictureList [numberOfRandomPicture];
 
 				//пропишем выбранный спрайт в айтем 
-				item.savedNumberOfSelectedPicture = numberOfRandomPicture;
+			item.savedNumberOfSelectedPicture = numberOfRandomPicture;
 
 				// и отметим, что у этого айтема спрайт уже выбран
-				item.spriteWasSelected = true;
+			item.spriteWasSelected = true;
 		}
 	}
 
-	public void SetupCategorySprite (Item currentItem)
+	public void SetupCategorySprite ()
 	{
 //				int numberOfRandomItemOfCategory = Random.Range (0, 11);
 	}
-
-
-
 
 	public void SwitchToNextSprite()
 	{
@@ -104,9 +102,7 @@ public class SampleButton : MonoBehaviour
 	//обработка нажатий
 	public void HandleClick()
 	{
-		//храним ссылку на родителей
-		PanelsController panelsController = GameObject.Find ("MainCanvas").GetComponent<PanelsController> (); //todo fix find
-		ButtonsController currentButtonsController = this.transform.parent.GetComponent<ButtonsController> ();
+		PanelsController panelsController = GameObject.Find ("MainCanvas").GetComponent<PanelsController> ();
 
 		//выясняем кто parent нажатой кнопки, реагируем соответственно
 		switch (transform.parent.name) 
@@ -134,12 +130,37 @@ public class SampleButton : MonoBehaviour
 			break;
 
 		case("QuizButtonsPanel"):
-			panelsController.CheckIfWinner(item, button.gameObject); 
+			bool guessWasSuccessfull = CheckIfWinner (item); 
+			if (guessWasSuccessfull == true) 
+			{
+				panelsController.ChangeBrowseModeItemListTo (item);
+				panelsController.GoBrowseMode ();
+			}
+			else 
+			{
+				this.MoveRedCrossForward ();
+			}
 			break;
 
 		default:
 			Debug.LogError ("new or unknown category" + transform.parent.name);
 			break;
+		}
+	}
+
+	//проверяем ответ викторины на правильность
+	public bool CheckIfWinner (Item clickedItem)
+	{
+		PanelsController panelsController = GameObject.Find ("MainCanvas").GetComponent<PanelsController> ();
+		if (clickedItem.itemName == panelsController.fourVariantsItemsList [panelsController.winnerId].itemName) 
+		{
+			//угадал
+			return true;
+		} 
+		else 
+		{
+			// не угадал
+			return false;
 		}
 	}
 

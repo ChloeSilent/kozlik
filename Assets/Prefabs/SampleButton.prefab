@@ -163,6 +163,7 @@ MonoBehaviour:
   button: {fileID: 114289999587928184}
   nameLabel: {fileID: 114525962362285310}
   iconImage: {fileID: 114722907419529854}
+  panelsController: {fileID: 0}
 --- !u!114 &114525962362285310
 MonoBehaviour:
   m_ObjectHideFlags: 1

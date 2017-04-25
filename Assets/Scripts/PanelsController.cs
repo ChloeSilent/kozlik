@@ -19,10 +19,9 @@ public class PanelsController : MonoBehaviour
 	public Text constantQuestionText; 
 	public Text variativeQuestionText;
 
-	public List<Item> itemList; //здесь хранится текущий контент загруженный из контейнера
 	public List<Item> fourVariantsItemsList;
 
-	private int winnerId;
+	public int winnerId;
 
 	void Start () 
 	{
@@ -134,21 +133,21 @@ public class PanelsController : MonoBehaviour
 
 	public void SelectFourRandomVariants ()
 	{
-		// выберем из objectPickerButtonsController.itemList 4 случайных варианта для викторины.
-		// берем в цикле 4 раза случайный item из objectPickerButtonsController.itemList , и после проверки помещаем в лист вариантов fourVariantsItemsList
+		// выберем из objectPickerButtonsController.currentItemList 4 случайных варианта для викторины.
+		// берем в цикле 4 раза случайный item из objectPickerButtonsController.currentItemList , и после проверки помещаем в лист вариантов fourVariantsItemsList
 		for (int k = 0; k <4 ; k++) // k индекс листа fourVariantsItemsList [k]. нам нужно 4 варианта, поэтому цикл на 4 итерации, с нуля до трёх
 		{
 			// Наш лист из 12 элементов  нумеруется с 0 до 11. 11ый вариант это кнопка квиза, она не является валидным участником викторины
 			// ,а значит нам нужны номера с 0 до 10.
 			// Random.Range: Note that max is exclusive, so using Random.Range( 0, 10 ) will return values between 0 and 9. 
 			// значит range будет (0, 11)
-			int i = Random.Range(0, 11); // i индекс листа objectPickerButtonsController.itemList [i] . рандомизированный.
+			int i = Random.Range(0, 11); // i индекс листа objectPickerButtonsController.currentItemList [i] . рандомизированный.
 
 			// кроме того, нужно обеспечить неповторяемость айтемов в fourVariantsItemsList
 			// проверим, вдруг в fourVariantsItemsList уже есть такой item
 			// обойдём в цикле с индексом "u" fourVariantsItemsList и сравним каждый его элемент 
-			// с текущим выбранным претендентом objectPickerButtonsController.itemList [i] на помещение в список.
-			// если окажется, что fourVariantsItemsList [u] == objectPickerButtonsController.itemList [i] то отметим его флажком
+			// с текущим выбранным претендентом objectPickerButtonsController.currentItemList [i] на помещение в список.
+			// если окажется, что fourVariantsItemsList [u] == objectPickerButtonsController.currentItemList [i] то отметим его флажком
 			bool isUnique = true;
 			for (int u = 0; u < 4; u++) 
 			{
@@ -194,7 +193,7 @@ public class PanelsController : MonoBehaviour
 	//выбираем что будем отгадывать
 	public void SetSomeVariantAsWinner()
 	{
-		winnerId = Random.Range(0, 4); //TODO save this info to item ?
+		winnerId = Random.Range(0, 4); 
 	}
 
 	//указываем победителя в variativeQuestionText
@@ -203,18 +202,20 @@ public class PanelsController : MonoBehaviour
 		variativeQuestionText.text = fourVariantsItemsList [winnerId].itemName;
 	}
 
-	//проверяем ответ викторины на правильность
-	public void CheckIfWinner (Item clickedItem, GameObject selectedButton) //TODO много аргументов
-	{
-		if (clickedItem.itemName == fourVariantsItemsList [winnerId].itemName) {
-			//угадал
-			ChangeBrowseModeItemListTo (clickedItem);
-			GoBrowseMode (); 
-		} else {
-			// не угадал
-			selectedButton.GetComponent <SampleButton> ().MoveRedCrossForward (); //TODO this goes to sample button
-		}
-	}
+//	//проверяем ответ викторины на правильность
+//	public bool CheckIfWinner (Item clickedItem)
+//	{
+//		if (clickedItem.itemName == fourVariantsItemsList [winnerId].itemName) 
+//		{
+//			//угадал
+//			return true;
+//		} 
+//		else 
+//		{
+//			// не угадал
+//			return false;
+//		}
+//	}
 
 	public void DisableQuizMode ()
 	{

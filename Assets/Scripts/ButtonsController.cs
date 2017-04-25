@@ -6,20 +6,20 @@ using System.Runtime.CompilerServices;
 
 public class ButtonsController : MonoBehaviour 
 {
-	public List<Item> currentItemList;
+	public List<Item> currentItemList; //здесь хранится отфильтрованный из allItemsList контент 
 	private ButtonsController currentController;
 	public SimpleObjectPool buttonObjectPool;
 
-	public ButtonsController objectPicker;//TODO fix name
-	public ButtonsController categoryPicker;//TODO fix name
+	public ButtonsController objectPickerButtonsController;
+	public ButtonsController categoryPickerButtonsController;
 
 	public GameObject dataContainer;
-	public List<Item> allItemsList;
+	public List<Item> allItemsList; //здесь хранится весь контент загруженный из контейнера
 
 	void OnEnable () 
 	{
 		//загружаем данные из контейнера в контроллер
-		dataContainer.GetComponentsInChildren <Item> (allItemsList); //TODO move to PC
+		dataContainer.GetComponentsInChildren <Item> (allItemsList); 
 	}
 
 	//взять кнопку из пула и просетапить ее полученным аргументом itemToSetupWith
@@ -85,7 +85,7 @@ public class ButtonsController : MonoBehaviour
 		{
 			if (sortedItem.isACategory == true) 
 			{ 
-				categoryPicker.currentItemList.Add (sortedItem);
+				categoryPickerButtonsController.currentItemList.Add (sortedItem);
 			}
 		}
 	}
@@ -96,7 +96,7 @@ public class ButtonsController : MonoBehaviour
 		{
 			if (sortedItem.Category == desiredCategoryId &&  sortedItem.isACategory ==false)
 			{
-				objectPicker.currentItemList.Add (sortedItem);
+				objectPickerButtonsController.currentItemList.Add (sortedItem);
 			}
 		}
 	}
