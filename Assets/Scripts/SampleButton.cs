@@ -18,14 +18,17 @@ public class SampleButton : MonoBehaviour
 
 	void Update()
 	{
-		if (Input.GetKeyUp("right"))
+		if (transform.parent.name == "BrowseModePanel") 
 		{
-			SwitchToNextSprite ();
-		}
+			if (Input.GetKeyUp("right"))
+			{
+				SwitchToNextSprite ();
+			}
 
-		if (Input.GetKeyUp("left"))
-		{
-			SwitchToPreviousSprite ();
+			if (Input.GetKeyUp("left"))
+			{
+				SwitchToPreviousSprite ();
+			}	
 		}
 	}
 
@@ -40,6 +43,7 @@ public class SampleButton : MonoBehaviour
 	public void SetupSprite ()
 	{
 		if (item.spriteWasSelected == false) //если номер спрайта не был выбран ранее
+			
 		{
 			// то выберем новый спрайт
 			int numberOfRandomPicture = Random.Range (0, item.pictureList.Capacity);	

@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System.Collections.Generic; // нужно для  [System.Serializable]
 
@@ -40,11 +39,10 @@ public class OrganizeData : MonoBehaviour
 			categoriesItemsList[c].GetComponentsInChildren <Item> (itemsOfCategory); //all items of category
 			itemsOfCategory.RemoveAt (0); //kill category item itself
 			itemsOfCategory.RemoveAt (itemsOfCategory.Count-1); //kill quiz
-			Debug.Log ("itemsOfCategory.Count " + itemsOfCategory.Count);
-			int r = Random.Range (0, (itemsOfCategory.Count - 1)); //random item of category except quiz and categoryItem itself
+
+			int r = Random.Range (0, itemsOfCategory.Count); //index of random item of category 
 			categoriesItemsList [c].pictureList [0] = itemsOfCategory [r].pictureList [Random.Range (0, itemsOfCategory [r].pictureList.Count)];
 		}
-
 	}
 
 }
