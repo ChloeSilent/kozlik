@@ -65,6 +65,15 @@ public class PanelsController : MonoBehaviour
 		objectPickerButtonsController.RemoveAllButtons ();
 		objectPickerButtonsController.AddButtonsFromCurrentItemList ();
 	}
+	public void RandomizeObjectPickerSprites()
+	{
+		//TODO
+		for(int i = 0; i < 11 ; i++)
+		{
+			objectPickerButtonsController.currentItemList [i].spriteWasSelected = false;
+		}
+
+	}
 
 	public void DisableMainMode ()
 	{

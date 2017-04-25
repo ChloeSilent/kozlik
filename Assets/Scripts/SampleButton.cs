@@ -127,6 +127,7 @@ public class SampleButton : MonoBehaviour
 
 		case("BrowseModePanel"):
 			panelsController.RefreshMainModeItemLists (item.Category);
+			panelsController.RandomizeObjectPickerSprites ();
 			panelsController.GoMainMode(); 
 			break;
 
