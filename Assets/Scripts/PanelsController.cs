@@ -43,11 +43,67 @@ public class PanelsController : MonoBehaviour
 		DisableQuizMode ();
 	}
 
+	public void EnableMainMode ()
+	{
+		objectPickerPanelImage.enabled = true;
+		categoryPickerPanelImage.enabled = true;
+
+		objectPickerButtonsController.AddButtonsFromCurrentItemList (); 
+		categoryPickerButtonsController.AddButtonsFromCurrentItemList ();
+	}
+
+	public void ChangeObjectPickerItemListCategoryTo (int categoryId)
+	{
+		objectPickerButtonsController.currentItemList.Clear ();
+		objectPickerButtonsController.FilterObjectPickerItemListTo (categoryId);
+	}
+
+	public void RefreshMainModeItemLists (int categoryId)
+	{
+		objectPickerButtonsController.FilterObjectPickerItemListTo (categoryId);
+		categoryPickerButtonsController.FilterCategoryPickerItemList();
+	}
+
+	public void RepopulateObjectPicker()
+	{
+		objectPickerButtonsController.RemoveAllButtons ();
+		objectPickerButtonsController.AddButtonsFromCurrentItemList ();
+	}
+
+	public void DisableMainMode ()
+	{
+		objectPickerPanelImage.enabled =false;
+		categoryPickerPanelImage.enabled =false;
+
+		objectPickerButtonsController.RemoveAllButtons();
+		categoryPickerButtonsController.RemoveAllButtons();
+
+		objectPickerButtonsController.currentItemList.Clear ();
+		categoryPickerButtonsController.currentItemList.Clear ();
+	}
+
 	public	void GoBrowseMode () 
 	{
 		EnableBrowseMode ();
 		DisableMainMode (); 
 		DisableQuizMode ();
+	}
+
+	public void EnableBrowseMode ()
+	{
+		browseModeButtonsController.AddButtonsFromCurrentItemList();
+	}
+
+	public void ChangeBrowseModeItemListTo (Item desiredItem)
+	{
+		browseModeButtonsController.currentItemList.Clear ();
+		browseModeButtonsController.currentItemList.Add (desiredItem);
+	}
+
+	public void DisableBrowseMode ()
+	{
+		browseModeButtonsController.RemoveAllButtons();
+		browseModeButtonsController.currentItemList.Clear ();
 	}
 
 	public void GoQuizMode ()
@@ -63,11 +119,18 @@ public class PanelsController : MonoBehaviour
 		DisableBrowseMode (); 
 	}
 
-	public void RefreshMainModeItemLists (int categoryId)
+	public void EnableQuizMode ()
 	{
-		objectPickerButtonsController.FilterObjectPickerItemListTo (categoryId);
-		categoryPickerButtonsController.FilterCategoryPickerItemList();
+		quizButtonsPanelImage.enabled = true;
+		questionPanelImage.enabled = true;
+		constantQuestionText.enabled = true;
+		variativeQuestionText.enabled = true;
+
+		quizButtonsController.AddButtonsFromCurrentItemList ();
+		quizButtonsController.TuneButtonsForQuiz ();
 	}
+
+
 
 	public void SelectFourRandomVariants ()
 	{
@@ -143,60 +206,14 @@ public class PanelsController : MonoBehaviour
 	//проверяем ответ викторины на правильность
 	public void CheckIfWinner (Item clickedItem, GameObject selectedButton) //TODO много аргументов
 	{
-		if(clickedItem.itemName == fourVariantsItemsList [winnerId].itemName)
-		{
+		if (clickedItem.itemName == fourVariantsItemsList [winnerId].itemName) {
 			//угадал
 			ChangeBrowseModeItemListTo (clickedItem);
 			GoBrowseMode (); 
-		}
-		else
-		{
+		} else {
 			// не угадал
 			selectedButton.GetComponent <SampleButton> ().MoveRedCrossForward (); //TODO this goes to sample button
 		}
-	}
-
-	public void EnableMainMode ()
-	{
-		objectPickerPanelImage.enabled = true;
-		categoryPickerPanelImage.enabled = true;
-
-		objectPickerButtonsController.AddButtonsFromCurrentItemList (); 
-		categoryPickerButtonsController.AddButtonsFromCurrentItemList ();
-	}
-
-	public void DisableMainMode ()
-	{
-		objectPickerPanelImage.enabled =false;
-		categoryPickerPanelImage.enabled =false;
-
-		objectPickerButtonsController.RemoveAllButtons();
-		categoryPickerButtonsController.RemoveAllButtons();
-
-		objectPickerButtonsController.currentItemList.Clear ();
-		categoryPickerButtonsController.currentItemList.Clear ();
-	}
-
-	public void EnableBrowseMode ()
-	{
-		browseModeButtonsController.AddButtonsFromCurrentItemList();
-	}
-
-	public void DisableBrowseMode ()
-	{
-		browseModeButtonsController.RemoveAllButtons();
-		browseModeButtonsController.currentItemList.Clear ();
-	}
-
-	public void EnableQuizMode ()
-	{
-		quizButtonsPanelImage.enabled = true;
-		questionPanelImage.enabled = true;
-		constantQuestionText.enabled = true;
-		variativeQuestionText.enabled = true;
-
-		quizButtonsController.AddButtonsFromCurrentItemList ();
-		quizButtonsController.TuneButtonsForQuiz ();
 	}
 
 	public void DisableQuizMode ()
@@ -206,26 +223,8 @@ public class PanelsController : MonoBehaviour
 		constantQuestionText.enabled = false;
 		variativeQuestionText.enabled = false;
 
-		quizButtonsController.unTuneButtonsForQuiz ();
+		quizButtonsController.UnTuneButtonsForQuiz ();
 		quizButtonsController.RemoveAllButtons ();
 		quizButtonsController.currentItemList.Clear();
-	}
-
-	public void ChangeObjectPickerItemListCategoryTo (int categoryId)
-	{
-		objectPickerButtonsController.currentItemList.Clear ();
-		objectPickerButtonsController.FilterObjectPickerItemListTo (categoryId);
-	}
-
-	public void ChangeBrowseModeItemListTo (Item desiredItem)
-	{
-		browseModeButtonsController.currentItemList.Clear ();
-		browseModeButtonsController.currentItemList.Add (desiredItem);
-	}
-
-	public void RepopulateObjectPicker()
-	{
-		objectPickerButtonsController.RemoveAllButtons ();
-		objectPickerButtonsController.AddButtonsFromCurrentItemList ();
 	}
 }

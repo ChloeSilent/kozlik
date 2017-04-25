@@ -66,7 +66,7 @@ public class ButtonsController : MonoBehaviour
 	}
 
 	//откатываем изменения, которые вносились в кнопки для квиз режима
-	public void unTuneButtonsForQuiz ()
+	public void UnTuneButtonsForQuiz ()
 	{
 		//перебираем кнопки в квизе
 		foreach (Transform quizButton in transform) 
