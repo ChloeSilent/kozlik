@@ -423,6 +423,7 @@ RectTransform:
   m_Children:
   - {fileID: 312061595}
   - {fileID: 1324254778}
+  - {fileID: 298024518}
   m_Father: {fileID: 598185860}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -562,6 +563,55 @@ MonoBehaviour:
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
   isACategory: 0
+--- !u!1 &298024517
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 298024518}
+  - component: {fileID: 298024519}
+  m_Layer: 0
+  m_Name: QuizController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &298024518
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 298024517}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -450.00003, y: -720.48737, z: 0}
+  m_LocalScale: {x: 1.6245488, y: 1.6245488, z: 1.6245488}
+  m_Children: []
+  m_Father: {fileID: 154025921}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &298024519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 298024517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65b845dca51d54726896e36f83ac0d68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fourVariantsItemsList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  objectPickerButtonsController: {fileID: 343125511}
+  quizButtonsController: {fileID: 1324254779}
+  panelsController: {fileID: 598185861}
+  winnerId: 0
 --- !u!1 &312061594
 GameObject:
   m_ObjectHideFlags: 0
@@ -1629,18 +1679,13 @@ MonoBehaviour:
   objectPickerButtonsController: {fileID: 343125511}
   quizButtonsController: {fileID: 1324254779}
   categoryPickerButtonsController: {fileID: 1490034599}
+  quizController: {fileID: 298024519}
   objectPickerPanelImage: {fileID: 343125508}
   categoryPickerPanelImage: {fileID: 1490034596}
   quizButtonsPanelImage: {fileID: 1324254781}
   questionPanelImage: {fileID: 312061597}
   constantQuestionText: {fileID: 1396631007}
   variativeQuestionText: {fileID: 1317587837}
-  fourVariantsItemsList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  winnerId: 0
 --- !u!1 &616920226
 GameObject:
   m_ObjectHideFlags: 0

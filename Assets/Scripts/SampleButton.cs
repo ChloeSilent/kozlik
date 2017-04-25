@@ -103,6 +103,7 @@ public class SampleButton : MonoBehaviour
 	public void HandleClick()
 	{
 		PanelsController panelsController = GameObject.Find ("MainCanvas").GetComponent<PanelsController> ();
+		QuizController quizController = GameObject.Find ("QuizController").GetComponent<QuizController> ();
 
 		//выясняем кто parent нажатой кнопки, реагируем соответственно
 		switch (transform.parent.name) 
@@ -130,7 +131,7 @@ public class SampleButton : MonoBehaviour
 			break;
 
 		case("QuizButtonsPanel"):
-			bool guessWasSuccessfull = CheckIfWinner (item); 
+			bool guessWasSuccessfull = quizController.CheckIfWinner (item); 
 			if (guessWasSuccessfull == true) 
 			{
 				panelsController.ChangeBrowseModeItemListTo (item);
@@ -145,22 +146,6 @@ public class SampleButton : MonoBehaviour
 		default:
 			Debug.LogError ("new or unknown category" + transform.parent.name);
 			break;
-		}
-	}
-
-	//проверяем ответ викторины на правильность
-	public bool CheckIfWinner (Item clickedItem)
-	{
-		PanelsController panelsController = GameObject.Find ("MainCanvas").GetComponent<PanelsController> ();
-		if (clickedItem.itemName == panelsController.fourVariantsItemsList [panelsController.winnerId].itemName) 
-		{
-			//угадал
-			return true;
-		} 
-		else 
-		{
-			// не угадал
-			return false;
 		}
 	}
 
