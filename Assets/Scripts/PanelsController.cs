@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI; 
 using System.Collections.Generic; // нужно для  [System.Serializable] //kill ?
+using UnityEngine.Networking.Types;
 
 
 public class PanelsController : MonoBehaviour 
@@ -22,14 +23,11 @@ public class PanelsController : MonoBehaviour
 
 	void Start () 
 	{
-		//app start with default category of zero
-		objectPickerPanelImage.enabled = true;
+		//app start
 		objectPickerButtonsController.FilterObjectPickerItemListTo (0);
-		objectPickerButtonsController.AddButtonsFromCurrentItemList (); 
-
-		categoryPickerPanelImage.enabled = true;
 		categoryPickerButtonsController.FilterCategoryPickerItemList();
-		categoryPickerButtonsController.AddButtonsFromCurrentItemList ();
+
+		GoMainMode ();
 	}
 
 	public void GoMainMode () 
@@ -46,6 +44,9 @@ public class PanelsController : MonoBehaviour
 
 		objectPickerButtonsController.AddButtonsFromCurrentItemList (); 
 		categoryPickerButtonsController.AddButtonsFromCurrentItemList ();
+
+		objectPickerButtonsController.TuneButtonsForMain ();
+		categoryPickerButtonsController.TuneButtonsForMain ();
 	}
 
 	public void ChangeObjectPickerItemListCategoryTo (int categoryId)
@@ -65,6 +66,7 @@ public class PanelsController : MonoBehaviour
 		objectPickerButtonsController.RemoveAllButtons ();
 		objectPickerButtonsController.AddButtonsFromCurrentItemList ();
 	}
+
 	public void RandomizeObjectPickerSprites()
 	{
 		for(int i = 0; i < 11 ; i++)
@@ -90,11 +92,13 @@ public class PanelsController : MonoBehaviour
 		EnableBrowseMode ();
 		DisableMainMode (); 
 		DisableQuizMode ();
+
 	}
 
 	public void EnableBrowseMode ()
 	{
 		browseModeButtonsController.AddButtonsFromCurrentItemList();
+		browseModeButtonsController.TuneButtonsForBrowse ();
 	}
 
 	public void ChangeBrowseModeItemListTo (Item desiredItem)
@@ -155,7 +159,6 @@ public class PanelsController : MonoBehaviour
 		constantQuestionText.enabled = false;
 		variativeQuestionText.enabled = false;
 
-		quizButtonsController.UnTuneButtonsForQuiz ();
 		quizButtonsController.RemoveAllButtons ();
 		quizButtonsController.currentItemList.Clear();
 	}

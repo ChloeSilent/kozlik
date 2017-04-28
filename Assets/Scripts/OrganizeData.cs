@@ -3,17 +3,19 @@ using UnityEngine;
 using System.Collections.Generic; // нужно для  [System.Serializable]
 
 [System.Serializable] // выводит в инспектор
+[ExecuteInEditMode]
 public class OrganizeData : MonoBehaviour 
 {
 	public List<Item> allItemsList;
 	public List<Item> categoriesItemsList;
 	public List<Item> itemsOfCategory;
 
-	void Start()
+	void Awake()
 	{
 		LoadAllDataToList ();
 		FindCategories ();
 		GenerateCategorySprites ();
+		GenerateInitialLetter ();
 	}
 
 	public void LoadAllDataToList()
@@ -34,7 +36,7 @@ public class OrganizeData : MonoBehaviour
 
 	public void GenerateCategorySprites()
 	{
-		for (int c = 0; c < 5; c++)
+		for (int c = 0; c < categoriesItemsList.Count; c++)
 		{
 			categoriesItemsList[c].GetComponentsInChildren <Item> (itemsOfCategory); //all items of category
 			itemsOfCategory.RemoveAt (0); //kill category item itself
@@ -43,6 +45,15 @@ public class OrganizeData : MonoBehaviour
 			int r = Random.Range (0, itemsOfCategory.Count); //index of random item of category 
 			categoriesItemsList [c].pictureList [0] = itemsOfCategory [r].pictureList [Random.Range (0, itemsOfCategory [r].pictureList.Count)];
 		}
+	}
+
+	public void GenerateInitialLetter()
+	{
+		foreach (Item item in allItemsList)
+		{
+			item.initialLetter = item.itemName [0]; //TODO  exception if empty
+		}
+		
 	}
 
 }

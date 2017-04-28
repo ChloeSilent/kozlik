@@ -7,6 +7,7 @@ using System.Collections.Generic; // нужно для  [System.Serializable]
 public class Item : MonoBehaviour
 {
 	public string itemName;
+	public char initialLetter;
 	public List<Sprite> pictureList;
 	public int Category;
 	public int savedNumberOfSelectedPicture;

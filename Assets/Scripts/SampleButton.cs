@@ -7,7 +7,10 @@ using UnityEngine.UI;
 public class SampleButton : MonoBehaviour 
 {
 	public Button button;
+	public GameObject letterPanel;
+	public GameObject namePanel;
 	public Text nameLabel;
+	public Text initialLetter;
 	public Image iconImage;
 	private Item item;
 
@@ -36,14 +39,13 @@ public class SampleButton : MonoBehaviour
 	{
 		item = itemToSetupWith; 
 		nameLabel.text = item.itemName;
+		initialLetter.text = item.initialLetter.ToString ();
 		SetupSprite ();
-	
 	}
 
 	public void SetupSprite ()
 	{
 		if (item.spriteWasSelected == false) //если номер спрайта не был выбран ранее
-			
 		{
 			// то выберем новый спрайт
 			int numberOfRandomPicture = Random.Range (0, item.pictureList.Capacity);	
@@ -70,7 +72,7 @@ public class SampleButton : MonoBehaviour
 		{
 			item.savedNumberOfSelectedPicture++;			
 		}
-		Setup (item);
+		Setup (item); //TODO setup sprite    ?
 	}
 
 	public void SwitchToPreviousSprite()
@@ -92,7 +94,6 @@ public class SampleButton : MonoBehaviour
 	{
 		PanelsController panelsController = GameObject.Find ("MainCanvas").GetComponent<PanelsController> ();
 		QuizController quizController = GameObject.Find ("QuizController").GetComponent<QuizController> ();
-
 		//выясняем кто parent нажатой кнопки, реагируем соответственно
 		switch (transform.parent.name) 
 		{
@@ -128,7 +129,7 @@ public class SampleButton : MonoBehaviour
 			}
 			else 
 			{
-				this.MoveRedCrossForward ();
+				this.MoveRedCrossForward (); //TODO CHECK IF THIS needed
 			}
 			break;
 
@@ -138,13 +139,34 @@ public class SampleButton : MonoBehaviour
 		}
 	}
 
+	public void TuneButtonForMain()
+	{
+		namePanel.SetActive (true);
+		letterPanel.SetActive (false);
+		MoveRedCrossBackward ();
+	}
+
+	public void TuneButtonForBrowse()
+	{
+		namePanel.SetActive (true);
+		letterPanel.SetActive (true);
+		MoveRedCrossBackward ();
+	}
+
+	public void TuneButtonForQuiz()
+	{
+		namePanel.SetActive (false);
+		letterPanel.SetActive (false);
+		MoveRedCrossBackward ();
+	}
+
 	public void MoveRedCrossForward()
 	{
-		this.transform.FindChild ("WrongImage").SetAsLastSibling ();
+		this.transform.FindChild ("WrongImage").SetAsLastSibling (); //TODO no find
 	}
 
 	public void MoveRedCrossBackward()
 	{
-		this.transform.FindChild ("WrongImage").SetAsFirstSibling ();
+		this.transform.FindChild ("WrongImage").SetAsFirstSibling (); //TODO no find
 	}
 }

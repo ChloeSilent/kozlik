@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u0414\u0436\u0438\u043F"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: 94e8723220a8444daafe50c9b8f6c755, type: 3}
   Category: 2
@@ -196,6 +197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: SomeItem
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
   Category: 3
@@ -243,6 +245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u0410\u0432\u0442\u043E\u0431\u0443\u0441"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: ca07a994aeffb4c4e8eeaee49c5c4698, type: 3}
   Category: 2
@@ -290,6 +293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: SomeItem
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
   Category: 3
@@ -337,6 +341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u041E\u0432\u0446\u0430"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: 3c95d2d00341f4373941d097aeb16887, type: 3}
   - {fileID: 21300000, guid: 7b681ccf886de419d98495d948fd9aa9, type: 3}
@@ -388,6 +393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: SomeItem
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
   Category: 3
@@ -506,6 +512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u041B\u043E\u0448\u0430\u0434\u044C"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: 0af2dcceb68664e4798f30361d5a52fe, type: 3}
   - {fileID: 21300000, guid: bc52060199989446191f555089290ced, type: 3}
@@ -557,6 +564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: SomeItem
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
   Category: 3
@@ -723,6 +731,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u0423\u0442\u043A\u0430"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: cc50046291ce74565aed5c39f4dad709, type: 3}
   - {fileID: 21300000, guid: 4aafcf8e2048d4f36908432204ff3c28, type: 3}
@@ -774,6 +783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u0423\u0442\u043A\u0430"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: cc50046291ce74565aed5c39f4dad709, type: 3}
   - {fileID: 21300000, guid: 4aafcf8e2048d4f36908432204ff3c28, type: 3}
@@ -825,6 +835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: SomeItem
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
   Category: 3
@@ -994,6 +1005,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u041F\u0442\u0438\u0446\u044B"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
   Category: 1
@@ -1041,6 +1053,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u041E\u0431\u0435\u0437\u044C\u044F\u043D\u0430"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: 4af1f644689e846dcbe0cebc6468291b, type: 3}
   - {fileID: 21300000, guid: 95dc8501e67e747fba3e070741510fe1, type: 3}
@@ -1133,6 +1146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: SomeItem
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
   Category: 3
@@ -1180,6 +1194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: SomeItem
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
   Category: 4
@@ -1227,6 +1242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u041A\u043E\u0440\u0430\u0431\u043B\u044C"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: 8bcaa95c3781b4006923b594eac5301c, type: 3}
   Category: 2
@@ -1286,8 +1302,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u0416\u0438\u0432\u043E\u0442\u043D\u044B\u0435"
+  initialLetter: 0
   pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
+  - {fileID: 0}
   Category: 0
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
@@ -1345,6 +1362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u041C\u0430\u0448\u0438\u043D\u044B"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
   Category: 3
@@ -1392,6 +1410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u041B\u0435\u0432"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: 659530e31639c4fa4bd4213eceee32cc, type: 3}
   - {fileID: 21300000, guid: a29491434d0db4351a6cef50121a872b, type: 3}
@@ -1443,6 +1462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: quiz
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: ce6f0b07176b84ccbb92f79454ba4d41, type: 3}
   Category: 1
@@ -1490,6 +1510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u0411\u0435\u043B\u043A\u0430"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: 578ff895c43b54df88b6b5c73461c512, type: 3}
   - {fileID: 21300000, guid: 9daec57825f484361bdf4975a0ae9c43, type: 3}
@@ -1541,6 +1562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: SomeItem
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
   Category: 4
@@ -1727,6 +1749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u041A\u043E\u0440\u043E\u0432\u0430"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: ab0fb228635c3485c97f87e83a0462ce, type: 3}
   - {fileID: 21300000, guid: 2e94481d1bdc541a5a8ccdbfe4d2c1e0, type: 3}
@@ -1778,6 +1801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u0423\u0442\u043A\u0430"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: cc50046291ce74565aed5c39f4dad709, type: 3}
   - {fileID: 21300000, guid: 4aafcf8e2048d4f36908432204ff3c28, type: 3}
@@ -1829,6 +1853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: SomeItem
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
   Category: 3
@@ -1985,6 +2010,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u0423\u0442\u043A\u0430"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: cc50046291ce74565aed5c39f4dad709, type: 3}
   - {fileID: 21300000, guid: 4aafcf8e2048d4f36908432204ff3c28, type: 3}
@@ -2036,6 +2062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: quiz
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: ce6f0b07176b84ccbb92f79454ba4d41, type: 3}
   Category: 3
@@ -2083,6 +2110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: SomeItem
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
   Category: 4
@@ -2130,6 +2158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: quiz
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: ce6f0b07176b84ccbb92f79454ba4d41, type: 3}
   Category: 2
@@ -2177,6 +2206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u0421\u0430\u043C\u043E\u043B\u0435\u0442"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: 776fa7876ed214b3b8a7e58719bbcaed, type: 3}
   Category: 2
@@ -2224,6 +2254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u0423\u0442\u043A\u0430"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: cc50046291ce74565aed5c39f4dad709, type: 3}
   - {fileID: 21300000, guid: 4aafcf8e2048d4f36908432204ff3c28, type: 3}
@@ -2275,6 +2306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: SomeItem
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
   Category: 3
@@ -2322,6 +2354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u042D\u043A\u0441\u043A\u0430\u0432\u0430\u0442\u043E\u0440"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: 39230e2ecc0ea45ef8c118dee774a705, type: 3}
   Category: 2
@@ -2369,6 +2402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: SomeItem
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
   Category: 3
@@ -2416,6 +2450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u0423\u0442\u043A\u0430"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: cc50046291ce74565aed5c39f4dad709, type: 3}
   - {fileID: 21300000, guid: 4aafcf8e2048d4f36908432204ff3c28, type: 3}
@@ -2467,6 +2502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u041A\u0440\u043E\u043B\u0438\u043A"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: 006518cf9c7f14f3e8be5f9a9237fa0b, type: 3}
   - {fileID: 21300000, guid: f9ce4ec2a2e9a42178de3a5093038fd6, type: 3}
@@ -2518,6 +2554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: SomeItem
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
   Category: 4
@@ -2654,6 +2691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u0413\u0440\u0443\u0437\u043E\u0432\u0438\u043A"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: 4220b40fd0c894d52a7e40aa2d16e74a, type: 3}
   Category: 2
@@ -2701,6 +2739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: SomeItem
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
   Category: 3
@@ -2748,6 +2787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u0412\u0435\u0440\u0442\u043E\u043B\u0435\u0442"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: 5dee325ef714e4355ba086ee1fb7ad0f, type: 3}
   Category: 2
@@ -2795,6 +2835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: SomeItem
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
   Category: 4
@@ -2842,6 +2883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u0421\u043E\u0431\u0430\u043A\u0430"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: ef064c8ac9938421697602a50a355c46, type: 3}
   - {fileID: 21300000, guid: 33d138e5596a8496aa488951f985ae39, type: 3}
@@ -2893,6 +2935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: SomeItem
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
   Category: 4
@@ -2952,6 +2995,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u041C\u0430\u0448\u0438\u043D\u044B"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
   Category: 2
@@ -2999,6 +3043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u0420\u0430\u043A\u0435\u0442\u0430"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: 5d48dfe62587347039201d653b3cc6a3, type: 3}
   Category: 2
@@ -3292,6 +3337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u0423\u0442\u043A\u0430"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: cc50046291ce74565aed5c39f4dad709, type: 3}
   - {fileID: 21300000, guid: 4aafcf8e2048d4f36908432204ff3c28, type: 3}
@@ -3343,6 +3389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: quiz
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: ce6f0b07176b84ccbb92f79454ba4d41, type: 3}
   Category: 0
@@ -3390,6 +3437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u0421\u043E\u0432\u0430"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: 2a30fc25f6522456781bf0e37464d23e, type: 3}
   - {fileID: 21300000, guid: 58fa5c753f45544dab0b00ed3e061f86, type: 3}
@@ -3515,6 +3563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u041C\u043E\u0442\u043E\u0446\u0438\u043A\u043B"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: a8bbd7275b10640afa30c3b1df2c3400, type: 3}
   Category: 2
@@ -3562,6 +3611,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u0422\u0440\u0430\u043A\u0442\u043E\u0440"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: 01ad5af50213b45ea8ec642b539df68b, type: 3}
   Category: 2
@@ -3609,6 +3659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: SomeItem
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
   Category: 4
@@ -3656,6 +3707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: SomeItem
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
   Category: 4
@@ -3813,6 +3865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u0423\u0442\u043A\u0430"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: cc50046291ce74565aed5c39f4dad709, type: 3}
   - {fileID: 21300000, guid: 4aafcf8e2048d4f36908432204ff3c28, type: 3}
@@ -3864,6 +3917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u041A\u043E\u0437\u0430"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: b1722d99219a9412eaeda56a44d397f7, type: 3}
   - {fileID: 21300000, guid: 0a739c54c653340f08585cf28ea4069d, type: 3}
@@ -3915,6 +3969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u0423\u0442\u043A\u0430"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: cc50046291ce74565aed5c39f4dad709, type: 3}
   - {fileID: 21300000, guid: 4aafcf8e2048d4f36908432204ff3c28, type: 3}
@@ -3966,6 +4021,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: SomeItem
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
   Category: 4
@@ -4025,6 +4081,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u041C\u0430\u0448\u0438\u043D\u044B"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
   Category: 4
@@ -4120,6 +4177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u0412\u0435\u043B\u043E\u0441\u0438\u043F\u0435\u0434"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: 8a316e4c75e2a4a07afdea08883e5d24, type: 3}
   Category: 2
@@ -4167,6 +4225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: SomeItem
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
   Category: 4
@@ -4214,6 +4273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: SomeItem
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
   Category: 4
@@ -4261,6 +4321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u0422\u0438\u0433\u0440"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: d582e553704d9401a8439be420a43b96, type: 3}
   - {fileID: 21300000, guid: cafafa544bdac4b02acbc8aa85553629, type: 3}
@@ -4382,6 +4443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: quiz
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: ce6f0b07176b84ccbb92f79454ba4d41, type: 3}
   Category: 4
@@ -4429,6 +4491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u0421\u0443\u0440\u0438\u043A\u0430\u0442"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: 6ec8d765e31464eea868386bda9dad4e, type: 3}
   - {fileID: 21300000, guid: 96525362aa6854678858715b3286450e, type: 3}
@@ -4480,6 +4543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "\u0423\u0442\u043A\u0430"
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: cc50046291ce74565aed5c39f4dad709, type: 3}
   - {fileID: 21300000, guid: 4aafcf8e2048d4f36908432204ff3c28, type: 3}
@@ -4531,6 +4595,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: SomeItem
+  initialLetter: 0
   pictureList:
   - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
   Category: 3

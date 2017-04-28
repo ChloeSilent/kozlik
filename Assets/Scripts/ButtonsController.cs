@@ -16,10 +16,10 @@ public class ButtonsController : MonoBehaviour
 	public GameObject dataContainer;
 	public List<Item> allItemsList; //здесь хранится весь контент загруженный из контейнера
 
-	void OnEnable () 
+	void OnEnable ()  
 	{
 		//загружаем данные из контейнера в контроллер
-		dataContainer.GetComponentsInChildren <Item> (allItemsList); //TODO copy
+		dataContainer.GetComponentsInChildren <Item> (allItemsList); //TODO copy from container
 	}
 
 	//взять кнопку из пула и просетапить ее полученным аргументом itemToSetupWith
@@ -44,7 +44,7 @@ public class ButtonsController : MonoBehaviour
 		buttonRectTransform.offsetMax = new Vector2(buttonRectTransform.offsetMax.y, 0);
 	}
 
-	//сетапим все кнопки из itemList в цикле
+	//сетапим все кнопки из currentItemList в цикле
 	public void AddButtonsFromCurrentItemList()
 	{
 		for (int i = 0; i < currentItemList.Count; i++) 
@@ -54,31 +54,31 @@ public class ButtonsController : MonoBehaviour
 		}
 	}
 
-	// модифицируем кнопки для квиза, убираем надпись и подложку
-	public void TuneButtonsForQuiz ()
+
+	public void TuneButtonsForMain ()
 	{
-		//перебираем кнопки в квизе
-		foreach (Transform quizButton in transform) 
+		foreach (Transform mainButton in transform) 
 		{
-			GameObject currentTextPanel = quizButton.FindChild ("TextPanel").gameObject;
-			currentTextPanel.SetActive (false);
+			mainButton.GetComponent <SampleButton> ().TuneButtonForMain ();
 		}
 	}
 
-	//откатываем изменения, которые вносились в кнопки для квиз режима
-	public void UnTuneButtonsForQuiz ()
+	public void TuneButtonsForBrowse ()
 	{
-		//перебираем кнопки в квизе
-		foreach (Transform quizButton in transform) 
+		foreach (Transform browseButton in transform) 
 		{
-			//включаем обратно плашку с текстом
-			GameObject currentTextPanel = quizButton.FindChild ("TextPanel").gameObject;
-			currentTextPanel.SetActive (true);
-			//прячем красный крест на второй план
-			quizButton.GetComponent <SampleButton> ().MoveRedCrossBackward ();
+			browseButton.GetComponent <SampleButton> ().TuneButtonForBrowse ();
 		}
 	}
-		
+
+	public void TuneButtonsForQuiz ()
+	{
+		foreach (Transform quizButton in transform) 
+		{
+			quizButton.GetComponent <SampleButton> ().TuneButtonForQuiz ();
+		}
+	}
+
 	public void FilterCategoryPickerItemList()
 	{
 		foreach (Item sortedItem in allItemsList) 
