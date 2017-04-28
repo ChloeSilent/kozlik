@@ -3,19 +3,27 @@ using UnityEngine;
 using System.Collections.Generic; // нужно для  [System.Serializable]
 
 [System.Serializable] // выводит в инспектор
-[ExecuteInEditMode]
 public class OrganizeData : MonoBehaviour 
 {
 	public List<Item> allItemsList;
 	public List<Item> categoriesItemsList;
 	public List<Item> itemsOfCategory;
+	public PanelsController panelsController;
 
-	void Awake()
+	void Start()
+	{
+		StartCoroutine("PrepareData");
+		//start only when data is ready
+		panelsController.DelayedStart (); 
+	}
+
+	IEnumerator PrepareData()
 	{
 		LoadAllDataToList ();
 		FindCategories ();
 		GenerateCategorySprites ();
 		GenerateInitialLetter ();
+		yield return null;
 	}
 
 	public void LoadAllDataToList()
@@ -53,7 +61,7 @@ public class OrganizeData : MonoBehaviour
 		{
 			item.initialLetter = item.itemName [0]; //TODO  exception if empty
 		}
-		
+
 	}
 
 }

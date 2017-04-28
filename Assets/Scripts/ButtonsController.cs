@@ -13,14 +13,14 @@ public class ButtonsController : MonoBehaviour
 	public ButtonsController objectPickerButtonsController;
 	public ButtonsController categoryPickerButtonsController;
 
-	public GameObject dataContainer;
+	public OrganizeData dataContainer;
 	public List<Item> allItemsList; //здесь хранится весь контент загруженный из контейнера
 
-	void OnEnable ()  
-	{
-		//загружаем данные из контейнера в контроллер
-		dataContainer.GetComponentsInChildren <Item> (allItemsList); //TODO copy from container
-	}
+//	void Start ()  
+//	{
+//		//загружаем данные из контейнера в контроллер
+//		dataContainer.GetComponentsInChildren <Item> (allItemsList); //TODO copy from container
+//	}
 
 	//взять кнопку из пула и просетапить ее полученным аргументом itemToSetupWith
 	public void TakeOneButtonFromPoolAndSetupWith(Item itemToSetupWith)
@@ -81,7 +81,8 @@ public class ButtonsController : MonoBehaviour
 
 	public void FilterCategoryPickerItemList()
 	{
-		foreach (Item sortedItem in allItemsList) 
+		foreach (Item sortedItem in dataContainer.allItemsList) 
+//		foreach (Item sortedItem in allItemsList) 
 		{
 			if (sortedItem.isACategory == true) 
 			{ 
@@ -92,7 +93,8 @@ public class ButtonsController : MonoBehaviour
 
 	public void FilterObjectPickerItemListTo (int desiredCategoryId)
 	{
-		foreach (Item sortedItem in allItemsList)
+		foreach (Item sortedItem in dataContainer.allItemsList)
+//		foreach (Item sortedItem in allItemsList)
 		{
 			if (sortedItem.Category == desiredCategoryId &&  sortedItem.isACategory ==false)
 			{

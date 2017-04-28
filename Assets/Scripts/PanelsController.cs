@@ -21,7 +21,7 @@ public class PanelsController : MonoBehaviour
 	public Text constantQuestionText; 
 	public Text variativeQuestionText;
 
-	void Start () 
+	public void DelayedStart () 
 	{
 		//app start
 		objectPickerButtonsController.FilterObjectPickerItemListTo (0);
