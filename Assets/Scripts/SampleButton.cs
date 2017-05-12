@@ -16,10 +16,10 @@ public class SampleButton : MonoBehaviour
 	private Item item;
 	public bool swipesAreEnabled;
 
-	void Start () 
-	{
-		SubscribeToClickEvents ();
-	}
+//	void Start () 
+//	{
+//		SubscribeToClickEvents ();
+//	}
 
 
 //	void Update()
@@ -37,30 +37,30 @@ public class SampleButton : MonoBehaviour
 //			}	
 //		}
 //	}
-	void SubscribeToClickEvents()
-	{
-//		Debug.Log ("before sub " + button.onClick.ToString ());
-		button.onClick.AddListener (HandleClick);
-//		Debug.Log ("after sub " + button.onClick.ToString ());
-	}
+//	void SubscribeToClickEvents()
+//	{
+////		Debug.Log ("before sub " + button.onClick.ToString ());
+////		button.onClick.AddListener (HandleClick);
+////		Debug.Log ("after sub " + button.onClick.ToString ());
+//	}
 
-	void SubscribeToSwipeEvents()
-	{
-		SwipeController.OnLeftSwipe += SwitchToPreviousSprite;
-		SwipeController.OnRightSwipe += SwitchToNextSprite;
-		swipesAreEnabled = true;
-	}
-
-	void UnsubscribeFromAllEvents()
-	{
-		SwipeController.OnLeftSwipe -= SwitchToPreviousSprite;
-		SwipeController.OnRightSwipe -= SwitchToNextSprite;
-		swipesAreEnabled = false;
-		Debug.Log ("before unsub " + button.onClick.ToString ());
-		button.onClick.RemoveAllListeners ();
-		Debug.Log ("after unsub " + button.onClick.ToString ());
-
-	}
+//	void SubscribeToSwipeEvents()
+//	{
+//		SwipeController.OnLeftSwipe += SwitchToPreviousSprite;
+//		SwipeController.OnRightSwipe += SwitchToNextSprite;
+//		swipesAreEnabled = true;
+//	}
+//
+//	void UnsubscribeFromAllEvents()
+//	{
+//		SwipeController.OnLeftSwipe -= SwitchToPreviousSprite;
+//		SwipeController.OnRightSwipe -= SwitchToNextSprite;
+//		swipesAreEnabled = false;
+//		Debug.Log ("before unsub " + button.onClick.ToString ());
+//		button.onClick.RemoveAllListeners ();
+//		Debug.Log ("after unsub " + button.onClick.ToString ());
+//
+//	}
 
 	public void Setup (Item itemToSetupWith)
 	{
@@ -176,8 +176,8 @@ public class SampleButton : MonoBehaviour
 		letterPanel.SetActive (false);
 		MoveRedCrossBackward ();
 
-		UnsubscribeFromAllEvents ();
-		SubscribeToClickEvents ();
+//		UnsubscribeFromAllEvents ();
+//		SubscribeToClickEvents ();
 	}
 
 	public void TuneButtonForBrowse()
@@ -186,9 +186,9 @@ public class SampleButton : MonoBehaviour
 		letterPanel.SetActive (true);
 		MoveRedCrossBackward ();
 
-		UnsubscribeFromAllEvents ();
+//		UnsubscribeFromAllEvents ();
 //		SubscribeToClickEvents ();
-		SubscribeToSwipeEvents ();
+//		SubscribeToSwipeEvents ();
 	}
 
 	public void TuneButtonForQuiz()
@@ -197,13 +197,13 @@ public class SampleButton : MonoBehaviour
 		letterPanel.SetActive (false);
 		MoveRedCrossBackward ();
 
-		UnsubscribeFromAllEvents ();
-		SubscribeToClickEvents ();
+//		UnsubscribeFromAllEvents ();
+//		SubscribeToClickEvents ();
 	}
 
 	public void TuneButtonForPool()
 	{
-		UnsubscribeFromAllEvents ();
+//		UnsubscribeFromAllEvents ();
 	}
 
 	public void MoveRedCrossForward()

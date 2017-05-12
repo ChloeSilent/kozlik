@@ -1,17 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
+using System.Collections;
+using System.Collections.Generic;
 
+[System.Serializable] // выводит в инспектор
 public class SwipeController : MonoBehaviour {
 	private Vector3 fp;   //First touch position
 	private Vector3 lp;   //Last touch position
 	private float dragDistance;  //minimum distance for a swipe to be registered
 
-	public delegate void SwipeAction();
-	public static event SwipeAction OnLeftSwipe;
-	public static event SwipeAction OnRightSwipe;
+//	public delegate void SwipeAction();
+//	public static event SwipeAction OnLeftSwipe;
+//	public static event SwipeAction OnRightSwipe;
 //	public static event SwipeAction OnClick;
+	public UnityEvent OnLeftSwipe;
+	public UnityEvent OnRightSwipe;
+
 
 	void Start()
 	{
@@ -45,14 +49,14 @@ public class SwipeController : MonoBehaviour {
 						if ((lp.x > fp.x))  //If the movement was to the right)
 						{   //Right swipe
 							Debug.Log("Right Swipe");
-							if(OnRightSwipe != null)
-								OnRightSwipe();
+//							if(OnRightSwipe != null)
+//								OnRightSwipe();
 						}
 						else
 						{   //Left swipe
 							Debug.Log("Left Swipe");
-							if(OnLeftSwipe != null)
-								OnLeftSwipe();
+//							if(OnLeftSwipe != null)
+//								OnLeftSwipe();
 						}
 					}
 //					else
