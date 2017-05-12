@@ -106,8 +106,9 @@ public class ButtonsController : MonoBehaviour
 	//убрать в пул одну кнопку 
 	public void ReturnOneButtonToPool ()
 	{	
-		GameObject toRemove = transform.GetChild (0).gameObject;
-		buttonObjectPool.ReturnObject (toRemove);
+		GameObject toBeRemoved = transform.GetChild (0).gameObject;
+		toBeRemoved.GetComponent <SampleButton>().TuneButtonForPool ();
+		buttonObjectPool.ReturnObject (toBeRemoved);
 	}
 
 	//убирать в пул все кнопки  пока не кончатся

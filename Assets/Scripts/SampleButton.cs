@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using NUnit.Framework;
 
 
 public class SampleButton : MonoBehaviour 
@@ -13,26 +14,52 @@ public class SampleButton : MonoBehaviour
 	public Text initialLetter;
 	public Image iconImage;
 	private Item item;
+	public bool swipesAreEnabled;
 
 	void Start () 
 	{
-		button.onClick.AddListener (HandleClick);
+		SubscribeToClickEvents ();
 	}
 
-	void Update()
-	{
-		if (transform.parent.name == "BrowseModePanel") 
-		{
-			if (Input.GetKeyUp("right"))
-			{
-				SwitchToNextSprite ();
-			}
 
-			if (Input.GetKeyUp("left"))
-			{
-				SwitchToPreviousSprite ();
-			}	
-		}
+//	void Update()
+//	{
+//		if (transform.parent.name == "BrowseModePanel") 
+//		{
+//			if (Input.GetKeyUp("right"))
+//			{
+//				SwitchToNextSprite ();
+//			}
+//
+//			if (Input.GetKeyUp("left"))
+//			{
+//				SwitchToPreviousSprite ();
+//			}	
+//		}
+//	}
+	void SubscribeToClickEvents()
+	{
+//		Debug.Log ("before sub " + button.onClick.ToString ());
+		button.onClick.AddListener (HandleClick);
+//		Debug.Log ("after sub " + button.onClick.ToString ());
+	}
+
+	void SubscribeToSwipeEvents()
+	{
+		SwipeController.OnLeftSwipe += SwitchToPreviousSprite;
+		SwipeController.OnRightSwipe += SwitchToNextSprite;
+		swipesAreEnabled = true;
+	}
+
+	void UnsubscribeFromAllEvents()
+	{
+		SwipeController.OnLeftSwipe -= SwitchToPreviousSprite;
+		SwipeController.OnRightSwipe -= SwitchToNextSprite;
+		swipesAreEnabled = false;
+		Debug.Log ("before unsub " + button.onClick.ToString ());
+		button.onClick.RemoveAllListeners ();
+		Debug.Log ("after unsub " + button.onClick.ToString ());
+
 	}
 
 	public void Setup (Item itemToSetupWith)
@@ -41,6 +68,7 @@ public class SampleButton : MonoBehaviour
 		nameLabel.text = item.itemName;
 		initialLetter.text = item.initialLetter.ToString ();
 		SetupSprite ();
+		button.gameObject.name = item.itemName;
 	}
 
 	public void SetupSprite ()
@@ -63,6 +91,7 @@ public class SampleButton : MonoBehaviour
 
 	public void SwitchToNextSprite()
 	{
+		Debug.Log (("SwitchToNextSprite"));
 		//если выбран последний спрайт
 		if(item.savedNumberOfSelectedPicture==(item.pictureList.Count-1))
 		{
@@ -77,6 +106,7 @@ public class SampleButton : MonoBehaviour
 
 	public void SwitchToPreviousSprite()
 	{
+		Debug.Log (("SwitchToPreviousSprite"));
 		//если выбран первый спрайт
 		if(item.savedNumberOfSelectedPicture==0)
 		{
@@ -92,6 +122,7 @@ public class SampleButton : MonoBehaviour
 	//обработка нажатий
 	public void HandleClick()
 	{
+		Debug.Log (("HandleClick at button "+ button.name));
 		PanelsController panelsController = GameObject.Find ("MainCanvas").GetComponent<PanelsController> ();
 		QuizController quizController = GameObject.Find ("QuizController").GetComponent<QuizController> ();
 		//выясняем кто parent нажатой кнопки, реагируем соответственно
@@ -144,6 +175,9 @@ public class SampleButton : MonoBehaviour
 		namePanel.SetActive (true);
 		letterPanel.SetActive (false);
 		MoveRedCrossBackward ();
+
+		UnsubscribeFromAllEvents ();
+		SubscribeToClickEvents ();
 	}
 
 	public void TuneButtonForBrowse()
@@ -151,6 +185,10 @@ public class SampleButton : MonoBehaviour
 		namePanel.SetActive (true);
 		letterPanel.SetActive (true);
 		MoveRedCrossBackward ();
+
+		UnsubscribeFromAllEvents ();
+//		SubscribeToClickEvents ();
+		SubscribeToSwipeEvents ();
 	}
 
 	public void TuneButtonForQuiz()
@@ -158,6 +196,14 @@ public class SampleButton : MonoBehaviour
 		namePanel.SetActive (false);
 		letterPanel.SetActive (false);
 		MoveRedCrossBackward ();
+
+		UnsubscribeFromAllEvents ();
+		SubscribeToClickEvents ();
+	}
+
+	public void TuneButtonForPool()
+	{
+		UnsubscribeFromAllEvents ();
 	}
 
 	public void MoveRedCrossForward()
