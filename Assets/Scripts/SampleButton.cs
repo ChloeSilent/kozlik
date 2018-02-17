@@ -122,7 +122,8 @@ public class SampleButton : MonoBehaviour
 	//обработка нажатий
 	public void HandleClick()
 	{
-		Debug.Log (("HandleClick at button "+ button.name));
+//		Debug.Log (("HandleClick at button "+ button.name));
+
 		PanelsController panelsController = GameObject.Find ("MainCanvas").GetComponent<PanelsController> ();
 		QuizController quizController = GameObject.Find ("QuizController").GetComponent<QuizController> ();
 		//выясняем кто parent нажатой кнопки, реагируем соответственно
@@ -208,11 +209,11 @@ public class SampleButton : MonoBehaviour
 
 	public void MoveRedCrossForward()
 	{
-		this.transform.FindChild ("WrongImage").SetAsLastSibling (); //TODO no find
+		this.transform.Find ("WrongImage").SetAsLastSibling (); //TODO no find
 	}
 
 	public void MoveRedCrossBackward()
 	{
-		this.transform.FindChild ("WrongImage").SetAsFirstSibling (); //TODO no find
+		this.transform.Find ("WrongImage").SetAsFirstSibling (); //TODO no find
 	}
 }

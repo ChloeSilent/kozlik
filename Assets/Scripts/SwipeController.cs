@@ -3,7 +3,7 @@ using UnityEngine.Events;
 using System.Collections;
 using System.Collections.Generic;
 
-[System.Serializable] // выводит в инспектор
+//[System.Serializable] // выводит в инспектор
 public class SwipeController : MonoBehaviour {
 	private Vector3 fp;   //First touch position
 	private Vector3 lp;   //Last touch position
@@ -49,12 +49,14 @@ public class SwipeController : MonoBehaviour {
 						if ((lp.x > fp.x))  //If the movement was to the right)
 						{   //Right swipe
 							Debug.Log("Right Swipe");
+							OnRightSwipe.Invoke ();
 //							if(OnRightSwipe != null)
 //								OnRightSwipe();
 						}
 						else
 						{   //Left swipe
 							Debug.Log("Left Swipe");
+							OnLeftSwipe.Invoke ();
 //							if(OnLeftSwipe != null)
 //								OnLeftSwipe();
 						}
@@ -73,10 +75,9 @@ public class SwipeController : MonoBehaviour {
 				}
 //				else
 //				{   //It's a tap as the drag distance is less than 20% of the screen height
-//					Debug.Log("Click");
+//					Debug.Log("tap");
 //					if(OnClick != null)
 //					{
-//						Debug.Log("OnClick is now "+ OnClick);
 //						OnClick();
 //					}
 //				}
