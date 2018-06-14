@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using NUnit.Framework;
+//откуда и что это ?
+//using NUnit.Framework;
 
 
 public class SampleButton : MonoBehaviour 
