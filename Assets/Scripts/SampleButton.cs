@@ -130,9 +130,12 @@ public class SampleButton : MonoBehaviour
 		//выясняем кто parent нажатой кнопки, реагируем соответственно
 		switch (transform.parent.name) 
 		{
+            //если нажатая кнопка находится в панели выбора категории
 		case("CategoryPickerPanel"): 
-			panelsController.ChangeObjectPickerItemListCategoryTo (item.Category);
-			panelsController.RepopulateObjectPicker ();
+            // то меняем список объектов текущей категории в панели выбора объектов
+            panelsController.ChangeObjectPickerItemListCategoryTo (item.Category);
+			// и обновляем панель выбора объектов
+            panelsController.RepopulateObjectPicker ();
 			break;
 
 		case("ObjectPickerPanel"): 

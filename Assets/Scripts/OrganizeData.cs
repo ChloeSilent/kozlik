@@ -17,7 +17,8 @@ public class OrganizeData : MonoBehaviour
 		panelsController.DelayedStart (); 
 	}
 
-	IEnumerator PrepareData()
+    //декларация корутины
+    IEnumerator PrepareData()
 	{
 		LoadAllDataToList ();
 		FindCategories ();
@@ -59,7 +60,7 @@ public class OrganizeData : MonoBehaviour
 	{
 		foreach (Item item in allItemsList)
 		{
-			item.initialLetter = item.itemName [0]; //TODO  exception if empty
+			item.initialLetter = item.itemName [0]; 
 		}
 
 	}

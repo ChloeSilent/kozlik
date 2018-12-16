@@ -23,9 +23,10 @@ public class PanelsController : MonoBehaviour
 
 	public void DelayedStart () 
 	{
-		//app start
-		objectPickerButtonsController.FilterObjectPickerItemListTo (0);
-		categoryPickerButtonsController.FilterCategoryPickerItemList();
+        //фильтруем объекты к категории по умолчанию
+        objectPickerButtonsController.FilterObjectPickerItemListTo (0);
+        // отфильтровываем  объекты  для размещения в нижней панели
+        categoryPickerButtonsController.FilterCategoryPickerItemList();
 
 		GoMainMode ();
 	}

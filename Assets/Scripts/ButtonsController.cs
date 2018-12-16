@@ -2,7 +2,7 @@
 using System.Collections.Generic; // нужно для  [System.Serializable]
 using UnityEngine;
 using UnityEngine.UI;
-using System.Runtime.CompilerServices;
+using System.Runtime.CompilerServices; //что это и зачем ?
 
 public class ButtonsController : MonoBehaviour 
 {
@@ -14,21 +14,15 @@ public class ButtonsController : MonoBehaviour
 	public ButtonsController categoryPickerButtonsController;
 
 	public OrganizeData dataContainer;
-	public List<Item> allItemsList; //здесь хранится весь контент загруженный из контейнера
 
-//	void Start ()  
-//	{
-//		//загружаем данные из контейнера в контроллер
-//		dataContainer.GetComponentsInChildren <Item> (allItemsList); //TODO copy from container
-//	}
 
 	//взять кнопку из пула и просетапить ее полученным аргументом itemToSetupWith
 	public void TakeOneButtonFromPoolAndSetupWith(Item itemToSetupWith)
 	{
-		currentController = this;
+		currentController = this;  // а почему сразу не использовать this ?
 
-		//для правильного скейлинга при извлечении из пула нужно утанавливать parent. для этого передаем currentController
-		GameObject newButton = buttonObjectPool.GetObject (currentController.transform);
+        //для правильного скейлинга при извлечении из пула нужно утанавливать parent. для этого передаем currentController
+        GameObject newButton = buttonObjectPool.GetObject (currentController.transform);
 		SampleButton sampleButton = newButton.GetComponent<SampleButton> ();
 		sampleButton.Setup (itemToSetupWith);
 
@@ -82,7 +76,6 @@ public class ButtonsController : MonoBehaviour
 	public void FilterCategoryPickerItemList()
 	{
 		foreach (Item sortedItem in dataContainer.allItemsList) 
-//		foreach (Item sortedItem in allItemsList) 
 		{
 			if (sortedItem.isACategory == true) 
 			{ 
@@ -94,7 +87,6 @@ public class ButtonsController : MonoBehaviour
 	public void FilterObjectPickerItemListTo (int desiredCategoryId)
 	{
 		foreach (Item sortedItem in dataContainer.allItemsList)
-//		foreach (Item sortedItem in allItemsList)
 		{
 			if (sortedItem.Category == desiredCategoryId &&  sortedItem.isACategory ==false)
 			{
@@ -115,9 +107,10 @@ public class ButtonsController : MonoBehaviour
 	public void RemoveAllButtons() 
 	{
 		currentController = this;
-		while (currentController.transform.childCount > 0) 
-		{
-			ReturnOneButtonToPool ();
+		while (currentController.transform.childCount > 0)
+        // а почему сразу не использовать this ?
+        {
+            ReturnOneButtonToPool ();
 		}
 	}
 }
