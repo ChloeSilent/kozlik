@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 
 // осмысленно взято отсюда https://unity3d.com/ru/learn/tutorials/topics/user-interface-ui/button-prefab?playlist=17111
+
 // пул кнопок
 public class SimpleObjectPool : MonoBehaviour
 {
@@ -32,7 +33,8 @@ public class SimpleObjectPool : MonoBehaviour
 			pooledObject.pool = this;
 		}
 
-		//устанавливаем родителя для spawnedGameObject. Если использовать SetParent  с одним аргументом - распидорасит скейлинг. Второй аргумент "false" говорит "dont modify parent-relative position"
+		// устанавливаем родителя для spawnedGameObject. Если использовать SetParent  с одним аргументом - сломает скейлинг. 
+        // Второй аргумент "false" говорит "dont modify parent-relative position"
 		spawnedGameObject.transform.SetParent(parentGameObject, false);
 
 		//grid layout родителя иногда ломает скейл дочерней кнопки. Фиксим принудительно.

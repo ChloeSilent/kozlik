@@ -73,7 +73,8 @@ public class ButtonsController : MonoBehaviour
 		}
 	}
 
-	public void FilterCategoryPickerItemList()
+    // из общего списка объектов отфильтруем тех, кто не объект, а категория объектов
+    public void FilterCategoryPickerItemList()
 	{
 		foreach (Item sortedItem in dataContainer.allItemsList) 
 		{
@@ -84,7 +85,8 @@ public class ButtonsController : MonoBehaviour
 		}
 	}
 
-	public void FilterObjectPickerItemListTo (int desiredCategoryId)
+    // из общего списка объектов отфильтруем тех, кто принадлежит нужной категории
+    public void FilterObjectPickerItemListTo (int desiredCategoryId)
 	{
 		foreach (Item sortedItem in dataContainer.allItemsList)
 		{
@@ -109,6 +111,7 @@ public class ButtonsController : MonoBehaviour
 		currentController = this;
 		while (currentController.transform.childCount > 0)
         // а почему сразу не использовать this ?
+        // TODO разобраться
         {
             ReturnOneButtonToPool ();
 		}

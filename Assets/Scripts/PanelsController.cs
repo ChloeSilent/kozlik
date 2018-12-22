@@ -21,6 +21,8 @@ public class PanelsController : MonoBehaviour
 	public Text constantQuestionText; 
 	public Text variativeQuestionText;
 
+
+    // TODO переименовать в инициализацию
 	public void DelayedStart () 
 	{
         //фильтруем объекты к категории по умолчанию
@@ -50,25 +52,32 @@ public class PanelsController : MonoBehaviour
 		categoryPickerButtonsController.TuneButtonsForMain ();
 	}
 
+    // очищаем список предметов для отображения в верхней панели и по-новой наполняем его предметами полученной категории
 	public void ChangeObjectPickerItemListCategoryTo (int categoryId)
 	{
 		objectPickerButtonsController.currentItemList.Clear ();
 		objectPickerButtonsController.FilterObjectPickerItemListTo (categoryId);
 	}
 
-	public void RefreshMainModeItemLists (int categoryId)
+    //чем этот метод отличается от предыдущего ?
+    // почти ничем. отрефакторить,
+    // TODO перенести фильтр категории (FilterCategoryPickerItemList) в метод выше, дальше везде использовать его
+    public void RefreshMainModeItemLists (int categoryId)
 	{
 		objectPickerButtonsController.FilterObjectPickerItemListTo (categoryId);
 		categoryPickerButtonsController.FilterCategoryPickerItemList();
 	}
 
+    // убрать из верхней панели все кнопки, создать новые взамен
 	public void RepopulateObjectPicker()
 	{
 		objectPickerButtonsController.RemoveAllButtons ();
 		objectPickerButtonsController.AddButtonsFromCurrentItemList ();
 	}
 
-	public void RandomizeObjectPickerSprites()
+    // сбрасываем флаг, который отмечает, что для объекта  ранее  был выбран спрайт.
+    // это приведет к рандомизации при следующем возвращении кнопки из пула
+    public void RandomizeObjectPickerSprites()
 	{
 		for(int i = 0; i < 11 ; i++)
 		{
@@ -102,7 +111,9 @@ public class PanelsController : MonoBehaviour
 		browseModeButtonsController.TuneButtonsForBrowse ();
 	}
 
-	public void ChangeBrowseModeItemListTo (Item desiredItem)
+    // очищаем и перенаполняем список объектов для просмотра в полноэкранном режиме
+    // хоть в этом списке всегда будет один пункт,  но это не меняет его типа
+    public void ChangeBrowseModeItemListTo (Item desiredItem)
 	{
 		browseModeButtonsController.currentItemList.Clear ();
 		browseModeButtonsController.currentItemList.Add (desiredItem);

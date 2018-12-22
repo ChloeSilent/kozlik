@@ -20,7 +20,7 @@ public class QuizController : MonoBehaviour
 		panelsController.RefreshVariativeQuestionText ();
 	}
 
-
+    // выбирает четырех случайных участников викторины
 	public void SelectFourRandomVariants ()
 	{
 		// выберем в цикле 4 раза случайный item из objectPickerButtonsController.currentItemList ,

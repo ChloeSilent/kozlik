@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-//откуда и что это ?
-//using NUnit.Framework;
-
 
 public class SampleButton : MonoBehaviour 
 {
@@ -38,6 +35,7 @@ public class SampleButton : MonoBehaviour
 //			}	
 //		}
 //	}
+
 //	void SubscribeToClickEvents()
 //	{
 ////		Debug.Log ("before sub " + button.onClick.ToString ());
@@ -92,29 +90,29 @@ public class SampleButton : MonoBehaviour
 
 	public void SwitchToNextSprite()
 	{
-		Debug.Log (("SwitchToNextSprite"));
-		//если выбран последний спрайт
+		// Если выбран последний спрайт, то переключаем на первый, т.к. листаем по кругу
 		if(item.savedNumberOfSelectedPicture==(item.pictureList.Count-1))
 		{
 			item.savedNumberOfSelectedPicture = 0;
 		}
+        // Для всех остальных кроме последнего просто увеличим номер на единицу
 		else
 		{
 			item.savedNumberOfSelectedPicture++;			
 		}
-		Setup (item); //TODO setup sprite    ?
+		Setup (item); 
 	}
 
 	public void SwitchToPreviousSprite()
 	{
-		Debug.Log (("SwitchToPreviousSprite"));
-		//если выбран первый спрайт
-		if(item.savedNumberOfSelectedPicture==0)
+        //если выбран первый спрайт, то переключим на последний, т.к. листаем по кругу
+        if (item.savedNumberOfSelectedPicture==0)
 		{
 			item.savedNumberOfSelectedPicture = (item.pictureList.Count-1);
 		}
-		else
-		{
+        // Для всех остальных кроме перого просто уменьшим номер на единицу
+        else
+        {
 			item.savedNumberOfSelectedPicture--;			
 		}
 		Setup (item);
@@ -123,10 +121,9 @@ public class SampleButton : MonoBehaviour
 	//обработка нажатий
 	public void HandleClick()
 	{
-//		Debug.Log (("HandleClick at button "+ button.name));
-
-		PanelsController panelsController = GameObject.Find ("MainCanvas").GetComponent<PanelsController> ();
+        PanelsController panelsController = GameObject.Find ("MainCanvas").GetComponent<PanelsController> ();
 		QuizController quizController = GameObject.Find ("QuizController").GetComponent<QuizController> ();
+
 		//выясняем кто parent нажатой кнопки, реагируем соответственно
 		switch (transform.parent.name) 
 		{
@@ -152,7 +149,7 @@ public class SampleButton : MonoBehaviour
 
 		case("BrowseModePanel"):
 			panelsController.RefreshMainModeItemLists (item.Category);
-			panelsController.RandomizeObjectPickerSprites ();
+			panelsController.RandomizeObjectPickerSprites (); // TODO это должно быть не здесь
 			panelsController.GoMainMode(); 
 			break;
 
@@ -206,6 +203,7 @@ public class SampleButton : MonoBehaviour
 //		SubscribeToClickEvents ();
 	}
 
+    // TODO пустой  метод. удалить метод и ссылки на него
 	public void TuneButtonForPool()
 	{
 //		UnsubscribeFromAllEvents ();
@@ -213,11 +211,11 @@ public class SampleButton : MonoBehaviour
 
 	public void MoveRedCrossForward()
 	{
-		this.transform.Find ("WrongImage").SetAsLastSibling (); //TODO no find
+		this.transform.Find ("WrongImage").SetAsLastSibling (); 
 	}
 
 	public void MoveRedCrossBackward()
 	{
-		this.transform.Find ("WrongImage").SetAsFirstSibling (); //TODO no find
+		this.transform.Find ("WrongImage").SetAsFirstSibling (); 
 	}
 }
