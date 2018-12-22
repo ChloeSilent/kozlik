@@ -12,54 +12,22 @@ public class SampleButton : MonoBehaviour
 	public Text initialLetter;
 	public Image iconImage;
 	private Item item;
-	public bool swipesAreEnabled;
 
-//	void Start () 
-//	{
-//		SubscribeToClickEvents ();
-//	}
+	void Update()
+	{
+		if (transform.parent.name == "BrowseModePanel") 
+		{
+			if (Input.GetKeyUp("right"))
+			{
+				SwitchToNextSprite ();
+			}
 
-
-//	void Update()
-//	{
-//		if (transform.parent.name == "BrowseModePanel") 
-//		{
-//			if (Input.GetKeyUp("right"))
-//			{
-//				SwitchToNextSprite ();
-//			}
-//
-//			if (Input.GetKeyUp("left"))
-//			{
-//				SwitchToPreviousSprite ();
-//			}	
-//		}
-//	}
-
-//	void SubscribeToClickEvents()
-//	{
-////		Debug.Log ("before sub " + button.onClick.ToString ());
-////		button.onClick.AddListener (HandleClick);
-////		Debug.Log ("after sub " + button.onClick.ToString ());
-//	}
-
-//	void SubscribeToSwipeEvents()
-//	{
-//		SwipeController.OnLeftSwipe += SwitchToPreviousSprite;
-//		SwipeController.OnRightSwipe += SwitchToNextSprite;
-//		swipesAreEnabled = true;
-//	}
-//
-//	void UnsubscribeFromAllEvents()
-//	{
-//		SwipeController.OnLeftSwipe -= SwitchToPreviousSprite;
-//		SwipeController.OnRightSwipe -= SwitchToNextSprite;
-//		swipesAreEnabled = false;
-//		Debug.Log ("before unsub " + button.onClick.ToString ());
-//		button.onClick.RemoveAllListeners ();
-//		Debug.Log ("after unsub " + button.onClick.ToString ());
-//
-//	}
+			if (Input.GetKeyUp("left"))
+			{
+				SwitchToPreviousSprite ();
+			}	
+		}
+	}
 
 	public void Setup (Item itemToSetupWith)
 	{
@@ -177,9 +145,6 @@ public class SampleButton : MonoBehaviour
 		namePanel.SetActive (true);
 		letterPanel.SetActive (false);
 		MoveRedCrossBackward ();
-
-//		UnsubscribeFromAllEvents ();
-//		SubscribeToClickEvents ();
 	}
 
 	public void TuneButtonForBrowse()
@@ -187,26 +152,13 @@ public class SampleButton : MonoBehaviour
 		namePanel.SetActive (true);
 		letterPanel.SetActive (true);
 		MoveRedCrossBackward ();
-
-//		UnsubscribeFromAllEvents ();
-//		SubscribeToClickEvents ();
-//		SubscribeToSwipeEvents ();
-	}
+    }
 
 	public void TuneButtonForQuiz()
 	{
 		namePanel.SetActive (false);
 		letterPanel.SetActive (false);
 		MoveRedCrossBackward ();
-
-//		UnsubscribeFromAllEvents ();
-//		SubscribeToClickEvents ();
-	}
-
-    // TODO пустой  метод. удалить метод и ссылки на него
-	public void TuneButtonForPool()
-	{
-//		UnsubscribeFromAllEvents ();
 	}
 
 	public void MoveRedCrossForward()

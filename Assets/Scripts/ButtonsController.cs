@@ -101,7 +101,6 @@ public class ButtonsController : MonoBehaviour
 	public void ReturnOneButtonToPool ()
 	{	
 		GameObject toBeRemoved = transform.GetChild (0).gameObject;
-		toBeRemoved.GetComponent <SampleButton>().TuneButtonForPool ();
 		buttonObjectPool.ReturnObject (toBeRemoved);
 	}
 
