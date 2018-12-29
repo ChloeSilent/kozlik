@@ -161,54 +161,6 @@ MonoBehaviour:
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
   isACategory: 0
---- !u!1 &69461088
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 69461089}
-  - component: {fileID: 69461090}
-  m_Layer: 0
-  m_Name: SomeItem (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &69461089
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 69461088}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 533418075}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &69461090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 69461088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: SomeItem
-  initialLetter: 83
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 3
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
-  isACategory: 0
 --- !u!1 &76314717
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,54 +206,6 @@ MonoBehaviour:
   pictureList:
   - {fileID: 21300000, guid: ca07a994aeffb4c4e8eeaee49c5c4698, type: 3}
   Category: 2
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
-  isACategory: 0
---- !u!1 &80782404
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 80782405}
-  - component: {fileID: 80782406}
-  m_Layer: 0
-  m_Name: SomeItem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &80782405
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 80782404}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 533418075}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &80782406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 80782404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: SomeItem
-  initialLetter: 83
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 3
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
   isACategory: 0
@@ -354,54 +258,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3edbd553d1a0a4e80a476fa079e80434, type: 3}
   - {fileID: 21300000, guid: 99af5a39bfaf9485dbfb124f5238b7b4, type: 3}
   Category: 0
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
-  isACategory: 0
---- !u!1 &152369859
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 152369860}
-  - component: {fileID: 152369861}
-  m_Layer: 0
-  m_Name: SomeItem (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &152369860
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 152369859}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 533418075}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &152369861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 152369859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: SomeItem
-  initialLetter: 83
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 3
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
   isACategory: 0
@@ -529,54 +385,6 @@ MonoBehaviour:
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
   isACategory: 0
---- !u!1 &251546899
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 251546900}
-  - component: {fileID: 251546901}
-  m_Layer: 0
-  m_Name: SomeItem (9)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &251546900
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 251546899}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 533418075}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &251546901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 251546899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: SomeItem
-  initialLetter: 83
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 3
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
-  isACategory: 0
 --- !u!1 &298024517
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,158 +505,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 312061594}
   m_CullTransparentMesh: 0
---- !u!1 &323613537
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 323613538}
-  - component: {fileID: 323613539}
-  m_Layer: 0
-  m_Name: Duck (9)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &323613538
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 323613537}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 375557640}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &323613539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 323613537}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: "\u0423\u0442\u043A\u0430"
-  initialLetter: 1059
-  pictureList:
-  - {fileID: 21300000, guid: cc50046291ce74565aed5c39f4dad709, type: 3}
-  - {fileID: 21300000, guid: 4aafcf8e2048d4f36908432204ff3c28, type: 3}
-  - {fileID: 21300000, guid: 301af2dfeaa4941dbaf8818df74ccb30, type: 3}
-  - {fileID: 21300000, guid: 5951e87a739944e28bf3e7d573336efe, type: 3}
-  - {fileID: 21300000, guid: ae50b16ce95ad407eb00d58a55b4e19a, type: 3}
-  Category: 1
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
-  isACategory: 0
---- !u!1 &325978613
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 325978614}
-  - component: {fileID: 325978615}
-  m_Layer: 0
-  m_Name: Duck (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &325978614
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 325978613}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 375557640}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &325978615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 325978613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: "\u0423\u0442\u043A\u0430"
-  initialLetter: 1059
-  pictureList:
-  - {fileID: 21300000, guid: cc50046291ce74565aed5c39f4dad709, type: 3}
-  - {fileID: 21300000, guid: 4aafcf8e2048d4f36908432204ff3c28, type: 3}
-  - {fileID: 21300000, guid: 301af2dfeaa4941dbaf8818df74ccb30, type: 3}
-  - {fileID: 21300000, guid: 5951e87a739944e28bf3e7d573336efe, type: 3}
-  - {fileID: 21300000, guid: ae50b16ce95ad407eb00d58a55b4e19a, type: 3}
-  Category: 1
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
-  isACategory: 0
---- !u!1 &341607314
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 341607315}
-  - component: {fileID: 341607316}
-  m_Layer: 0
-  m_Name: SomeItem (10)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &341607315
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 341607314}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 533418075}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &341607316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 341607314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: SomeItem
-  initialLetter: 83
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 3
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
-  isACategory: 0
 --- !u!1 &343125506
 GameObject:
   m_ObjectHideFlags: 0
@@ -988,14 +644,9 @@ Transform:
   - {fileID: 1379817268}
   - {fileID: 800058040}
   - {fileID: 1962206380}
-  - {fileID: 1347421124}
-  - {fileID: 1504134614}
-  - {fileID: 325978614}
-  - {fileID: 1621656864}
-  - {fileID: 1017559826}
-  - {fileID: 888130945}
-  - {fileID: 681272779}
-  - {fileID: 323613538}
+  - {fileID: 1550724727}
+  - {fileID: 2063624671}
+  - {fileID: 1728154470}
   - {fileID: 553426102}
   m_Father: {fileID: 1714477798}
   m_RootOrder: 1
@@ -1112,102 +763,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &479567744
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 479567745}
-  - component: {fileID: 479567746}
-  m_Layer: 0
-  m_Name: SomeItem (8)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &479567745
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 479567744}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 533418075}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &479567746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 479567744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: SomeItem
-  initialLetter: 83
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 3
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
-  isACategory: 0
---- !u!1 &480297505
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 480297506}
-  - component: {fileID: 480297507}
-  m_Layer: 0
-  m_Name: SomeItem (8)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &480297506
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 480297505}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1647184631}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &480297507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 480297505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: SomeItem
-  initialLetter: 83
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 4
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
-  isACategory: 0
 --- !u!1 &493757011
 GameObject:
   m_ObjectHideFlags: 0
@@ -1316,66 +871,6 @@ MonoBehaviour:
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
   isACategory: 1
---- !u!1 &533418074
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 533418075}
-  - component: {fileID: 533418076}
-  m_Layer: 0
-  m_Name: SomeCategory 3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &533418075
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 533418074}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 80782405}
-  - {fileID: 716996915}
-  - {fileID: 2080325404}
-  - {fileID: 69461089}
-  - {fileID: 152369860}
-  - {fileID: 961350646}
-  - {fileID: 1168588936}
-  - {fileID: 890701221}
-  - {fileID: 479567745}
-  - {fileID: 251546900}
-  - {fileID: 341607315}
-  - {fileID: 826114342}
-  m_Father: {fileID: 1714477798}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &533418076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 533418074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: "\u041C\u0430\u0448\u0438\u043D\u044B"
-  initialLetter: 1052
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 3
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
-  isACategory: 1
 --- !u!1 &546596426
 GameObject:
   m_ObjectHideFlags: 0
@@ -1455,7 +950,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 375557640}
-  m_RootOrder: 11
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &553426103
 MonoBehaviour:
@@ -1525,54 +1020,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0312fb7172535499081f7bd1e2d9f701, type: 3}
   - {fileID: 21300000, guid: c5dd1919233024bca8f2f3444ac66337, type: 3}
   Category: 0
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
-  isACategory: 0
---- !u!1 &594709125
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 594709126}
-  - component: {fileID: 594709127}
-  m_Layer: 0
-  m_Name: SomeItem (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &594709126
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 594709125}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1647184631}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &594709127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 594709125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: SomeItem
-  initialLetter: 83
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 4
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
   isACategory: 0
@@ -1767,106 +1214,6 @@ MonoBehaviour:
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
   isACategory: 0
---- !u!1 &681272778
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 681272779}
-  - component: {fileID: 681272780}
-  m_Layer: 0
-  m_Name: Duck (8)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &681272779
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 681272778}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 375557640}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &681272780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 681272778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: "\u0423\u0442\u043A\u0430"
-  initialLetter: 1059
-  pictureList:
-  - {fileID: 21300000, guid: cc50046291ce74565aed5c39f4dad709, type: 3}
-  - {fileID: 21300000, guid: 4aafcf8e2048d4f36908432204ff3c28, type: 3}
-  - {fileID: 21300000, guid: 301af2dfeaa4941dbaf8818df74ccb30, type: 3}
-  - {fileID: 21300000, guid: 5951e87a739944e28bf3e7d573336efe, type: 3}
-  - {fileID: 21300000, guid: ae50b16ce95ad407eb00d58a55b4e19a, type: 3}
-  Category: 1
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
-  isACategory: 0
---- !u!1 &716996914
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 716996915}
-  - component: {fileID: 716996916}
-  m_Layer: 0
-  m_Name: SomeItem (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &716996915
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 716996914}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 533418075}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &716996916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 716996914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: SomeItem
-  initialLetter: 83
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 3
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
-  isACategory: 0
 --- !u!1 &780615070
 GameObject:
   m_ObjectHideFlags: 0
@@ -2028,102 +1375,6 @@ MonoBehaviour:
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
   isACategory: 0
---- !u!1 &826114341
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 826114342}
-  - component: {fileID: 826114343}
-  m_Layer: 0
-  m_Name: Quiz
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &826114342
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 826114341}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 533418075}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &826114343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 826114341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: quiz
-  initialLetter: 113
-  pictureList:
-  - {fileID: 21300000, guid: ce6f0b07176b84ccbb92f79454ba4d41, type: 3}
-  Category: 3
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
-  isACategory: 0
---- !u!1 &854489480
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 854489481}
-  - component: {fileID: 854489482}
-  m_Layer: 0
-  m_Name: SomeItem (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &854489481
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 854489480}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1647184631}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &854489482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 854489480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: SomeItem
-  initialLetter: 83
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 4
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
-  isACategory: 0
 --- !u!1 &868920527
 GameObject:
   m_ObjectHideFlags: 0
@@ -2220,106 +1471,6 @@ MonoBehaviour:
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
   isACategory: 0
---- !u!1 &888130944
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 888130945}
-  - component: {fileID: 888130946}
-  m_Layer: 0
-  m_Name: Duck (7)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &888130945
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 888130944}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 375557640}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &888130946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 888130944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: "\u0423\u0442\u043A\u0430"
-  initialLetter: 1059
-  pictureList:
-  - {fileID: 21300000, guid: cc50046291ce74565aed5c39f4dad709, type: 3}
-  - {fileID: 21300000, guid: 4aafcf8e2048d4f36908432204ff3c28, type: 3}
-  - {fileID: 21300000, guid: 301af2dfeaa4941dbaf8818df74ccb30, type: 3}
-  - {fileID: 21300000, guid: 5951e87a739944e28bf3e7d573336efe, type: 3}
-  - {fileID: 21300000, guid: ae50b16ce95ad407eb00d58a55b4e19a, type: 3}
-  Category: 1
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
-  isACategory: 0
---- !u!1 &890701220
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 890701221}
-  - component: {fileID: 890701222}
-  m_Layer: 0
-  m_Name: SomeItem (7)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &890701221
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 890701220}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 533418075}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &890701222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 890701220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: SomeItem
-  initialLetter: 83
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 3
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
-  isACategory: 0
 --- !u!1 &916378231
 GameObject:
   m_ObjectHideFlags: 0
@@ -2365,106 +1516,6 @@ MonoBehaviour:
   pictureList:
   - {fileID: 21300000, guid: 39230e2ecc0ea45ef8c118dee774a705, type: 3}
   Category: 2
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
-  isACategory: 0
---- !u!1 &961350645
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 961350646}
-  - component: {fileID: 961350647}
-  m_Layer: 0
-  m_Name: SomeItem (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &961350646
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 961350645}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 533418075}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &961350647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 961350645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: SomeItem
-  initialLetter: 83
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 3
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
-  isACategory: 0
---- !u!1 &1017559825
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1017559826}
-  - component: {fileID: 1017559827}
-  m_Layer: 0
-  m_Name: Duck (6)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1017559826
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1017559825}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 375557640}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1017559827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1017559825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: "\u0423\u0442\u043A\u0430"
-  initialLetter: 1059
-  pictureList:
-  - {fileID: 21300000, guid: cc50046291ce74565aed5c39f4dad709, type: 3}
-  - {fileID: 21300000, guid: 4aafcf8e2048d4f36908432204ff3c28, type: 3}
-  - {fileID: 21300000, guid: 301af2dfeaa4941dbaf8818df74ccb30, type: 3}
-  - {fileID: 21300000, guid: 5951e87a739944e28bf3e7d573336efe, type: 3}
-  - {fileID: 21300000, guid: ae50b16ce95ad407eb00d58a55b4e19a, type: 3}
-  Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
   isACategory: 0
@@ -2517,54 +1568,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 954dafdc6b4ae4f4ead4daa09d4d3d24, type: 3}
   - {fileID: 21300000, guid: 6b1b04afcc7b147f7a5f6615ba2be0ae, type: 3}
   Category: 0
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
-  isACategory: 0
---- !u!1 &1110590049
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1110590050}
-  - component: {fileID: 1110590051}
-  m_Layer: 0
-  m_Name: SomeItem (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1110590050
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1110590049}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1647184631}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1110590051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1110590049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: SomeItem
-  initialLetter: 83
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 4
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
   isACategory: 0
@@ -2709,54 +1712,6 @@ MonoBehaviour:
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
   isACategory: 0
---- !u!1 &1168588935
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1168588936}
-  - component: {fileID: 1168588937}
-  m_Layer: 0
-  m_Name: SomeItem (6)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1168588936
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1168588935}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 533418075}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1168588937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1168588935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: SomeItem
-  initialLetter: 83
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 3
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
-  isACategory: 0
 --- !u!1 &1189250681
 GameObject:
   m_ObjectHideFlags: 0
@@ -2802,54 +1757,6 @@ MonoBehaviour:
   pictureList:
   - {fileID: 21300000, guid: 5dee325ef714e4355ba086ee1fb7ad0f, type: 3}
   Category: 2
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
-  isACategory: 0
---- !u!1 &1209988417
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1209988418}
-  - component: {fileID: 1209988419}
-  m_Layer: 0
-  m_Name: SomeItem (9)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1209988418
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1209988417}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1647184631}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1209988419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1209988417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: SomeItem
-  initialLetter: 83
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 4
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
   isACategory: 0
@@ -2902,54 +1809,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 406ccaf0f4e4f42148049b939224e7d1, type: 3}
   - {fileID: 21300000, guid: b8608eaf2fe6b4b7dac2d923820f0b2f, type: 3}
   Category: 0
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
-  isACategory: 0
---- !u!1 &1223238299
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1223238300}
-  - component: {fileID: 1223238301}
-  m_Layer: 0
-  m_Name: SomeItem (10)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1223238300
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1223238299}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1647184631}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1223238301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1223238299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: SomeItem
-  initialLetter: 83
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 4
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
   isACategory: 0
@@ -3308,58 +2167,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1324254777}
   m_CullTransparentMesh: 0
---- !u!1 &1347421123
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1347421124}
-  - component: {fileID: 1347421125}
-  m_Layer: 0
-  m_Name: Duck (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1347421124
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1347421123}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 375557640}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1347421125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1347421123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: "\u0423\u0442\u043A\u0430"
-  initialLetter: 1059
-  pictureList:
-  - {fileID: 21300000, guid: cc50046291ce74565aed5c39f4dad709, type: 3}
-  - {fileID: 21300000, guid: 4aafcf8e2048d4f36908432204ff3c28, type: 3}
-  - {fileID: 21300000, guid: 301af2dfeaa4941dbaf8818df74ccb30, type: 3}
-  - {fileID: 21300000, guid: 5951e87a739944e28bf3e7d573336efe, type: 3}
-  - {fileID: 21300000, guid: ae50b16ce95ad407eb00d58a55b4e19a, type: 3}
-  Category: 1
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
-  isACategory: 0
 --- !u!1 &1362304036
 GameObject:
   m_ObjectHideFlags: 0
@@ -3631,102 +2438,6 @@ MonoBehaviour:
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
   isACategory: 0
---- !u!1 &1470821240
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1470821241}
-  - component: {fileID: 1470821242}
-  m_Layer: 0
-  m_Name: SomeItem (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1470821241
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1470821240}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1647184631}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1470821242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1470821240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: SomeItem
-  initialLetter: 83
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 4
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
-  isACategory: 0
---- !u!1 &1486434969
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1486434970}
-  - component: {fileID: 1486434971}
-  m_Layer: 0
-  m_Name: SomeItem (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1486434970
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1486434969}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1647184631}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1486434971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1486434969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: SomeItem
-  initialLetter: 83
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 4
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
-  isACategory: 0
 --- !u!1 &1490034594
 GameObject:
   m_ObjectHideFlags: 0
@@ -3837,54 +2548,57 @@ MonoBehaviour:
   objectPickerButtonsController: {fileID: 1490034599}
   categoryPickerButtonsController: {fileID: 1490034599}
   dataContainer: {fileID: 1714477799}
---- !u!1 &1504134613
+--- !u!1 &1550724726
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1504134614}
-  - component: {fileID: 1504134615}
+  - component: {fileID: 1550724727}
+  - component: {fileID: 1550724728}
   m_Layer: 0
-  m_Name: Duck (3)
+  m_Name: Sparrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1504134614
+--- !u!4 &1550724727
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1504134613}
+  m_GameObject: {fileID: 1550724726}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 375557640}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1504134615
+--- !u!114 &1550724728
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1504134613}
+  m_GameObject: {fileID: 1550724726}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: "\u0423\u0442\u043A\u0430"
-  initialLetter: 1059
+  itemName: "\u0412\u043E\u0440\u043E\u0431\u0435\u0439"
+  initialLetter: 1042
   pictureList:
-  - {fileID: 21300000, guid: cc50046291ce74565aed5c39f4dad709, type: 3}
-  - {fileID: 21300000, guid: 4aafcf8e2048d4f36908432204ff3c28, type: 3}
-  - {fileID: 21300000, guid: 301af2dfeaa4941dbaf8818df74ccb30, type: 3}
-  - {fileID: 21300000, guid: 5951e87a739944e28bf3e7d573336efe, type: 3}
-  - {fileID: 21300000, guid: ae50b16ce95ad407eb00d58a55b4e19a, type: 3}
+  - {fileID: 21300000, guid: a267bb598f17d459195bbd427aacbefd, type: 3}
+  - {fileID: 21300000, guid: 60a9d4e43e2be4e51978b1c1e30fcb9e, type: 3}
+  - {fileID: 21300000, guid: baf23eba71bba437e8ea6d3fca378f74, type: 3}
+  - {fileID: 21300000, guid: 383653893cdf34c50998131a6dd8d2d0, type: 3}
+  - {fileID: 21300000, guid: 635d702f3dbac4723a1fdcc7490ecf51, type: 3}
+  - {fileID: 21300000, guid: 383a48b36c6d74aeaa74fd31cab658e8, type: 3}
+  - {fileID: 21300000, guid: bfad0a5732c034f2b8794ef4b07bd966, type: 3}
+  - {fileID: 21300000, guid: fee63a64e5b4544759900edde90b4705, type: 3}
   Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
@@ -3941,166 +2655,6 @@ MonoBehaviour:
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
   isACategory: 0
---- !u!1 &1621656863
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1621656864}
-  - component: {fileID: 1621656865}
-  m_Layer: 0
-  m_Name: Duck (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1621656864
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1621656863}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 375557640}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1621656865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1621656863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: "\u0423\u0442\u043A\u0430"
-  initialLetter: 1059
-  pictureList:
-  - {fileID: 21300000, guid: cc50046291ce74565aed5c39f4dad709, type: 3}
-  - {fileID: 21300000, guid: 4aafcf8e2048d4f36908432204ff3c28, type: 3}
-  - {fileID: 21300000, guid: 301af2dfeaa4941dbaf8818df74ccb30, type: 3}
-  - {fileID: 21300000, guid: 5951e87a739944e28bf3e7d573336efe, type: 3}
-  - {fileID: 21300000, guid: ae50b16ce95ad407eb00d58a55b4e19a, type: 3}
-  Category: 1
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
-  isACategory: 0
---- !u!1 &1646200062
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1646200063}
-  - component: {fileID: 1646200064}
-  m_Layer: 0
-  m_Name: SomeItem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1646200063
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1646200062}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1647184631}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1646200064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1646200062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: SomeItem
-  initialLetter: 83
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 4
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
-  isACategory: 0
---- !u!1 &1647184630
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1647184631}
-  - component: {fileID: 1647184632}
-  m_Layer: 0
-  m_Name: SomeCategory 4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1647184631
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1647184630}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1646200063}
-  - {fileID: 854489481}
-  - {fileID: 594709126}
-  - {fileID: 1470821241}
-  - {fileID: 1110590050}
-  - {fileID: 1486434970}
-  - {fileID: 1737648088}
-  - {fileID: 1726901356}
-  - {fileID: 480297506}
-  - {fileID: 1209988418}
-  - {fileID: 1223238300}
-  - {fileID: 1915029656}
-  m_Father: {fileID: 1714477798}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1647184632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1647184630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: "\u041C\u0430\u0448\u0438\u043D\u044B"
-  initialLetter: 1052
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 4
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
-  isACategory: 1
 --- !u!1 &1714477797
 GameObject:
   m_ObjectHideFlags: 0
@@ -4130,8 +2684,6 @@ Transform:
   - {fileID: 503819027}
   - {fileID: 375557640}
   - {fileID: 1225950184}
-  - {fileID: 533418075}
-  - {fileID: 1647184631}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4146,145 +2698,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 406934034cc654d529e8c3d366326c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allItemsList:
-  - {fileID: 503819028}
-  - {fileID: 1220443845}
-  - {fileID: 616920228}
-  - {fileID: 1563689794}
-  - {fileID: 169811554}
-  - {fileID: 376808126}
-  - {fileID: 1951228856}
-  - {fileID: 546596428}
-  - {fileID: 554121863}
-  - {fileID: 1746721184}
-  - {fileID: 82451684}
-  - {fileID: 1049096887}
-  - {fileID: 1362304038}
-  - {fileID: 375557641}
-  - {fileID: 1379817269}
-  - {fileID: 800058041}
-  - {fileID: 1962206381}
-  - {fileID: 1347421125}
-  - {fileID: 1504134615}
-  - {fileID: 325978615}
-  - {fileID: 1621656865}
-  - {fileID: 1017559827}
-  - {fileID: 888130946}
-  - {fileID: 681272780}
-  - {fileID: 323613539}
-  - {fileID: 553426103}
-  - {fileID: 1225950185}
-  - {fileID: 916378233}
-  - {fileID: 493757013}
-  - {fileID: 880261915}
-  - {fileID: 1398702017}
-  - {fileID: 66635174}
-  - {fileID: 1452271613}
-  - {fileID: 76314719}
-  - {fileID: 1276349610}
-  - {fileID: 1148336662}
-  - {fileID: 1189250683}
-  - {fileID: 1724236383}
-  - {fileID: 868920529}
-  - {fileID: 533418076}
-  - {fileID: 80782406}
-  - {fileID: 716996916}
-  - {fileID: 2080325405}
-  - {fileID: 69461090}
-  - {fileID: 152369861}
-  - {fileID: 961350647}
-  - {fileID: 1168588937}
-  - {fileID: 890701222}
-  - {fileID: 479567746}
-  - {fileID: 251546901}
-  - {fileID: 341607316}
-  - {fileID: 826114343}
-  - {fileID: 1647184632}
-  - {fileID: 1646200064}
-  - {fileID: 854489482}
-  - {fileID: 594709127}
-  - {fileID: 1470821242}
-  - {fileID: 1110590051}
-  - {fileID: 1486434971}
-  - {fileID: 1737648089}
-  - {fileID: 1726901357}
-  - {fileID: 480297507}
-  - {fileID: 1209988419}
-  - {fileID: 1223238301}
-  - {fileID: 1915029657}
-  categoriesItemsList:
-  - {fileID: 503819028}
-  - {fileID: 375557641}
-  - {fileID: 1225950185}
-  - {fileID: 533418076}
-  - {fileID: 1647184632}
-  - {fileID: 503819028}
-  - {fileID: 375557641}
-  - {fileID: 1225950185}
-  - {fileID: 533418076}
-  - {fileID: 1647184632}
-  - {fileID: 503819028}
-  - {fileID: 375557641}
-  - {fileID: 1225950185}
-  - {fileID: 533418076}
-  - {fileID: 1647184632}
-  - {fileID: 503819028}
-  - {fileID: 375557641}
-  - {fileID: 1225950185}
-  - {fileID: 533418076}
-  - {fileID: 1647184632}
-  - {fileID: 503819028}
-  - {fileID: 375557641}
-  - {fileID: 1225950185}
-  - {fileID: 533418076}
-  - {fileID: 1647184632}
-  - {fileID: 503819028}
-  - {fileID: 375557641}
-  - {fileID: 1225950185}
-  - {fileID: 533418076}
-  - {fileID: 1647184632}
-  - {fileID: 503819028}
-  - {fileID: 375557641}
-  - {fileID: 1225950185}
-  - {fileID: 533418076}
-  - {fileID: 1647184632}
-  - {fileID: 503819028}
-  - {fileID: 375557641}
-  - {fileID: 1225950185}
-  - {fileID: 533418076}
-  - {fileID: 1647184632}
-  - {fileID: 503819028}
-  - {fileID: 375557641}
-  - {fileID: 1225950185}
-  - {fileID: 533418076}
-  - {fileID: 1647184632}
-  - {fileID: 503819028}
-  - {fileID: 375557641}
-  - {fileID: 1225950185}
-  - {fileID: 533418076}
-  - {fileID: 1647184632}
-  - {fileID: 503819028}
-  - {fileID: 375557641}
-  - {fileID: 1225950185}
-  - {fileID: 533418076}
-  - {fileID: 1647184632}
-  - {fileID: 503819028}
-  - {fileID: 375557641}
-  - {fileID: 1225950185}
-  - {fileID: 533418076}
-  - {fileID: 1647184632}
-  itemsOfCategory:
-  - {fileID: 1646200064}
-  - {fileID: 854489482}
-  - {fileID: 594709127}
-  - {fileID: 1470821242}
-  - {fileID: 1110590051}
-  - {fileID: 1486434971}
-  - {fileID: 1737648089}
-  - {fileID: 1726901357}
-  - {fileID: 480297507}
-  - {fileID: 1209988419}
-  - {fileID: 1223238301}
+  allItemsList: []
+  categoriesItemsList: []
+  itemsOfCategory: []
   panelsController: {fileID: 598185861}
 --- !u!1 &1724236381
 GameObject:
@@ -4334,99 +2750,56 @@ MonoBehaviour:
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
   isACategory: 0
---- !u!1 &1726901355
+--- !u!1 &1728154469
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1726901356}
-  - component: {fileID: 1726901357}
+  - component: {fileID: 1728154470}
+  - component: {fileID: 1728154471}
   m_Layer: 0
-  m_Name: SomeItem (7)
+  m_Name: Pigeon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1726901356
+--- !u!4 &1728154470
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1726901355}
+  m_GameObject: {fileID: 1728154469}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1647184631}
-  m_RootOrder: 7
+  m_Father: {fileID: 375557640}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1726901357
+--- !u!114 &1728154471
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1726901355}
+  m_GameObject: {fileID: 1728154469}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: SomeItem
-  initialLetter: 83
+  itemName: "\u0413\u043E\u043B\u0443\u0431\u044C"
+  initialLetter: 1043
   pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 4
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
-  isACategory: 0
---- !u!1 &1737648087
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1737648088}
-  - component: {fileID: 1737648089}
-  m_Layer: 0
-  m_Name: SomeItem (6)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1737648088
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1737648087}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1647184631}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1737648089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1737648087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: SomeItem
-  initialLetter: 83
-  pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 4
+  - {fileID: 21300000, guid: 0798a767e5e0b4f87ae8f234e3aae4e2, type: 3}
+  - {fileID: 21300000, guid: 3be8502f1de6942fda7c11dfff421dbe, type: 3}
+  - {fileID: 21300000, guid: 889a89f1c205648919a77edbfe2531cd, type: 3}
+  - {fileID: 21300000, guid: 516c195e855cc4825996703f590f1bf2, type: 3}
+  - {fileID: 21300000, guid: ae221683ebfd846f8bc7a42bc9eb4aee, type: 3}
+  - {fileID: 21300000, guid: 2bc1f068b230b4ffcbb1c2c384e809aa, type: 3}
+  Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
   isACategory: 0
@@ -4553,54 +2926,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1882820510}
   m_CullTransparentMesh: 0
---- !u!1 &1915029655
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1915029656}
-  - component: {fileID: 1915029657}
-  m_Layer: 0
-  m_Name: Quiz
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1915029656
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1915029655}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1647184631}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1915029657
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1915029655}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: quiz
-  initialLetter: 113
-  pictureList:
-  - {fileID: 21300000, guid: ce6f0b07176b84ccbb92f79454ba4d41, type: 3}
-  Category: 4
-  savedNumberOfSelectedPicture: 0
-  spriteWasSelected: 0
-  isACategory: 0
 --- !u!1 &1951228854
 GameObject:
   m_ObjectHideFlags: 0
@@ -4663,7 +2988,7 @@ GameObject:
   - component: {fileID: 1962206380}
   - component: {fileID: 1962206381}
   m_Layer: 0
-  m_Name: Duck (1)
+  m_Name: Parrot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4693,137 +3018,72 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: "\u0423\u0442\u043A\u0430"
+  itemName: "\u041F\u043E\u043F\u0443\u0433\u0430\u0439"
   initialLetter: 1059
   pictureList:
-  - {fileID: 21300000, guid: cc50046291ce74565aed5c39f4dad709, type: 3}
-  - {fileID: 21300000, guid: 4aafcf8e2048d4f36908432204ff3c28, type: 3}
-  - {fileID: 21300000, guid: 301af2dfeaa4941dbaf8818df74ccb30, type: 3}
-  - {fileID: 21300000, guid: 5951e87a739944e28bf3e7d573336efe, type: 3}
-  - {fileID: 21300000, guid: ae50b16ce95ad407eb00d58a55b4e19a, type: 3}
+  - {fileID: 21300000, guid: 4af18c7e0ae96403fa18bbc57d56b92c, type: 3}
+  - {fileID: 21300000, guid: f37f3109eae194692b44aa0217cd6f91, type: 3}
+  - {fileID: 21300000, guid: 465a7e91d3dd7424e9526f89f8e1fbae, type: 3}
+  - {fileID: 21300000, guid: da9282b83fd3a432a803c09b94fea12a, type: 3}
+  - {fileID: 21300000, guid: b8d1107a5ed494a2b840b85b902cb644, type: 3}
+  - {fileID: 21300000, guid: 5092a561caa4946d6adae0f948b2491a, type: 3}
+  - {fileID: 21300000, guid: b351be364821548f5b286a40a1bac637, type: 3}
+  - {fileID: 21300000, guid: dcd48297bec744e0cb1f063bc0614fbb, type: 3}
+  - {fileID: 21300000, guid: 8d58bd0d02fd24168a07697c55fe5132, type: 3}
+  - {fileID: 21300000, guid: e7327f2fc292349f8b2836f4ceca3e51, type: 3}
   Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
   isACategory: 0
---- !u!1 &2049467932
+--- !u!1 &2063624670
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2049467933}
-  - component: {fileID: 2049467934}
+  - component: {fileID: 2063624671}
+  - component: {fileID: 2063624672}
   m_Layer: 0
-  m_Name: SwipeController
+  m_Name: Penguin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2049467933
+--- !u!4 &2063624671
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2049467932}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2049467934
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2049467932}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b9da9168f839488d9e3f5c1b7cf7601, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnLeftSwipe:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114380594260311728, guid: 0238151e30ae84365aa7c7d4f307d5b5,
-          type: 2}
-        m_MethodName: SwitchToPreviousSprite
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnRightSwipe:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114380594260311728, guid: 0238151e30ae84365aa7c7d4f307d5b5,
-          type: 2}
-        m_MethodName: SwitchToNextSprite
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!1 &2080325403
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2080325404}
-  - component: {fileID: 2080325405}
-  m_Layer: 0
-  m_Name: SomeItem (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2080325404
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2080325403}
+  m_GameObject: {fileID: 2063624670}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 533418075}
-  m_RootOrder: 2
+  m_Father: {fileID: 375557640}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2080325405
+--- !u!114 &2063624672
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2080325403}
+  m_GameObject: {fileID: 2063624670}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ceb43db80fa84e7faab6f63a38dd4aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: SomeItem
-  initialLetter: 83
+  itemName: "\u041F\u0438\u043D\u0433\u0432\u0438\u043D"
+  initialLetter: 1055
   pictureList:
-  - {fileID: 21300000, guid: bd2c7a547330b4856b28ace945712b07, type: 3}
-  Category: 3
+  - {fileID: 21300000, guid: 940b6fea7fb3d43bb9e660acaff125ad, type: 3}
+  - {fileID: 21300000, guid: 0531f2f137a32434f8e70b45ce2b34bc, type: 3}
+  - {fileID: 21300000, guid: 91f75806bcd464fabb4cf07d3ed9a542, type: 3}
+  - {fileID: 21300000, guid: 99fb90b0a32fa4bc886c6a5ac3866fdf, type: 3}
+  - {fileID: 21300000, guid: 2702a306fb63b4bc89a5d99864437935, type: 3}
+  Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
   isACategory: 0
