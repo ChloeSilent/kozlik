@@ -27,11 +27,10 @@ public class QuizController : MonoBehaviour
 		//и после проверки помещаем в лист вариантов fourVariantsItemsList
 		for (int k = 0; k <4 ; k++) // k индекс листа fourVariantsItemsList [k]. нам нужно 4 варианта, поэтому цикл на 4 итерации, с нуля до трёх
 		{
-			// Наш лист из 12 элементов нумеруется с 0 до 11. 11ый вариант это кнопка квиза, она не является валидным участником викторины
-			// ,а значит нам нужны номера с 0 до 10.
+			// Наш лист элементов нумеруется с 0. Последний элемпнт- это кнопка квиза, она не является валидным участником викторины
 			// Random.Range: Note that max is exclusive, so using Random.Range( 0, 10 ) will return values between 0 and 9. 
 			// значит range будет (0, 11)
-			int i = Random.Range(0, 11); // i индекс листа objectPickerButtonsController.currentItemList [i]
+			int i = Random.Range(0, objectPickerButtonsController.currentItemList.Count-1); // i индекс листа objectPickerButtonsController.currentItemList [i]
 
 			// проверка претендента на уникальность
 			bool isUnique = CheckIfPretendentIsUnique (i);

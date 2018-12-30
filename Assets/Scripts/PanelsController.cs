@@ -79,8 +79,8 @@ public class PanelsController : MonoBehaviour
     // это приведет к рандомизации при следующем возвращении кнопки из пула
     public void RandomizeObjectPickerSprites()
 	{
-		for(int i = 0; i < 11 ; i++)
-		{
+        for (int i = 0; i < objectPickerButtonsController.currentItemList.Count; i++)
+        {
 			objectPickerButtonsController.currentItemList [i].spriteWasSelected = false;
 		}
 	}
