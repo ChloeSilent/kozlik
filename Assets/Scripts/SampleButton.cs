@@ -149,7 +149,7 @@ public class SampleButton : MonoBehaviour
 
     public void TuneButtonForMain()
 	{
-		namePanel.SetActive (true);
+		namePanel.SetActive (false);
 		letterPanel.SetActive (false);
 		MoveRedCrossBackward ();
 	}
