@@ -140,7 +140,14 @@ public class SampleButton : MonoBehaviour
 		}
 	}
 
-	public void TuneButtonForMain()
+    public void TuneButtonForPool()
+    {
+        namePanel.SetActive(false);
+        letterPanel.SetActive(false);
+        MoveRedCrossBackward();
+    }
+
+    public void TuneButtonForMain()
 	{
 		namePanel.SetActive (true);
 		letterPanel.SetActive (false);
