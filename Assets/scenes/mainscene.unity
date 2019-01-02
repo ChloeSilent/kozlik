@@ -2743,12 +2743,10 @@ MonoBehaviour:
   pictureList:
   - {fileID: 21300000, guid: a267bb598f17d459195bbd427aacbefd, type: 3}
   - {fileID: 21300000, guid: 60a9d4e43e2be4e51978b1c1e30fcb9e, type: 3}
-  - {fileID: 21300000, guid: baf23eba71bba437e8ea6d3fca378f74, type: 3}
-  - {fileID: 21300000, guid: 383653893cdf34c50998131a6dd8d2d0, type: 3}
-  - {fileID: 21300000, guid: 635d702f3dbac4723a1fdcc7490ecf51, type: 3}
-  - {fileID: 21300000, guid: 383a48b36c6d74aeaa74fd31cab658e8, type: 3}
   - {fileID: 21300000, guid: bfad0a5732c034f2b8794ef4b07bd966, type: 3}
   - {fileID: 21300000, guid: fee63a64e5b4544759900edde90b4705, type: 3}
+  - {fileID: 21300000, guid: 635d702f3dbac4723a1fdcc7490ecf51, type: 3}
+  - {fileID: 21300000, guid: 383a48b36c6d74aeaa74fd31cab658e8, type: 3}
   Category: 1
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
