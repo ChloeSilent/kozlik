@@ -87,11 +87,13 @@ public class QuizController : MonoBehaviour
 		if (clickedItem.itemName == fourVariantsItemsList [winnerId].itemName) 
 		{
 			//угадал
+			soundController.TellRight();
 			return true;
 		} 
 		else 
 		{
 			// не угадал
+			soundController.TellWrong();
 			return false;
 		}
 	}
