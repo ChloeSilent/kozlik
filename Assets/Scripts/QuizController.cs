@@ -9,6 +9,7 @@ public class QuizController : MonoBehaviour
 	public ButtonsController objectPickerButtonsController;
 	public ButtonsController quizButtonsController;
 	public PanelsController panelsController;
+    public SoundController soundController;
 
 	public int winnerId;
 
@@ -18,6 +19,7 @@ public class QuizController : MonoBehaviour
 		panelsController.RefreshQuizModeItemList (); 
 		SetSomeVariantAsWinner ();
 		panelsController.RefreshVariativeQuestionText ();
+		soundController.AskQiuzAudioQuestion(winnerId);
 	}
 
     // выбирает четырех случайных участников викторины
@@ -92,5 +94,10 @@ public class QuizController : MonoBehaviour
 			// не угадал
 			return false;
 		}
+	}
+
+	public AudioClip ReturnWinnersAudioClip()
+	{
+		return fourVariantsItemsList[winnerId].GetComponent<AudioSource>().clip;
 	}
 }
