@@ -7,7 +7,7 @@ UnityGenerated/
 Library/
 Assets/AssetStoreTools*
 .vs/
-.vs*
+.gradle/
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
