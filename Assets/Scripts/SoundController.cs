@@ -11,6 +11,7 @@ public class SoundController : MonoBehaviour
 	public AudioClip tellWrong;
 	private AudioSource audioSource;
 	private AudioClip buttonName;
+	public AudioClip wordLetterClip;
 
 	private void Awake()
 	{
@@ -20,7 +21,8 @@ public class SoundController : MonoBehaviour
 	// озвучивает "покажи, где"  потом название правильного варианта
 	public void AskQiuzAudioQuestion(int winnerId)
 	{
-		StartCoroutine(playSequentially());
+		rightAnswer = quizController.ReturnWinnersAudioClip();
+		StartCoroutine(playTwoClipsSequentially(showMeWhere, rightAnswer));
 	}
 
 	IEnumerator playSequentially()
@@ -50,6 +52,22 @@ public class SoundController : MonoBehaviour
 	public void TellButtonName(AudioClip buttonName)
 	{
 		audioSource.clip = buttonName;
+		audioSource.Play();
+	}
+
+	public void TellButtonLetter (AudioClip buttonLetter)
+	{
+		StartCoroutine(playTwoClipsSequentially(wordLetterClip, buttonLetter));
+	}
+
+	IEnumerator playTwoClipsSequentially(AudioClip firstClip, AudioClip secondClip)
+	{
+		audioSource.clip = firstClip;
+		audioSource.Play();
+
+		yield return new WaitForSeconds(audioSource.clip.length);
+
+		audioSource.clip = secondClip;
 		audioSource.Play();
 	}
 }
