@@ -18,7 +18,6 @@ public class PanelsController : MonoBehaviour
 	public Image quizButtonsPanelImage;
 	public Image questionPanelImage;
 
-	public Text constantQuestionText;
 	public Text variativeQuestionText;
 
 
@@ -138,7 +137,6 @@ public class PanelsController : MonoBehaviour
 	{
 		quizButtonsPanelImage.enabled = true;
 		questionPanelImage.enabled = true;
-		constantQuestionText.enabled = true;
 		variativeQuestionText.enabled = true;
 
 		quizButtonsController.AddButtonsFromCurrentItemList ();
@@ -167,7 +165,6 @@ public class PanelsController : MonoBehaviour
 	{
 		quizButtonsPanelImage.enabled = false;
 		questionPanelImage.enabled = false;
-		constantQuestionText.enabled = false;
 		variativeQuestionText.enabled = false;
 
 		quizButtonsController.RemoveAllButtons ();
