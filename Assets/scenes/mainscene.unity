@@ -160,7 +160,7 @@ MonoBehaviour:
   itemName: "\u0414\u0416\u0418\u041F"
   initialLetter: 1044
   pictureList:
-  - {fileID: 21300000, guid: 94e8723220a8444daafe50c9b8f6c755, type: 3}
+  - {fileID: 21300000, guid: 51143965eb1ffbf47b190c5954288bf4, type: 3}
   Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
@@ -1918,7 +1918,7 @@ MonoBehaviour:
   itemName: "\u041A\u041E\u0420\u0410\u0411\u041B\u042C"
   initialLetter: 1050
   pictureList:
-  - {fileID: 21300000, guid: 8bcaa95c3781b4006923b594eac5301c, type: 3}
+  - {fileID: 21300000, guid: 17d9810ce74430f488e80d9ead0071a2, type: 3}
   Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
@@ -3682,7 +3682,7 @@ MonoBehaviour:
   itemName: "\u0421\u0410\u041C\u041E\u041B\u0415\u0422"
   initialLetter: 1057
   pictureList:
-  - {fileID: 21300000, guid: 776fa7876ed214b3b8a7e58719bbcaed, type: 3}
+  - {fileID: 21300000, guid: ed3314488e33a7f478dba9e303fdb301, type: 3}
   Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
@@ -3927,7 +3927,7 @@ MonoBehaviour:
   itemName: "\u042D\u041A\u0421\u041A\u0410\u0412\u0410\u0422\u041E\u0420"
   initialLetter: 1069
   pictureList:
-  - {fileID: 21300000, guid: 39230e2ecc0ea45ef8c118dee774a705, type: 3}
+  - {fileID: 21300000, guid: c1fd508ee6df5e848a4c392b206cca86, type: 3}
   Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
@@ -4637,7 +4637,7 @@ MonoBehaviour:
   itemName: "\u0413\u0420\u0423\u0417\u041E\u0412\u0418\u041A"
   initialLetter: 1043
   pictureList:
-  - {fileID: 21300000, guid: 4220b40fd0c894d52a7e40aa2d16e74a, type: 3}
+  - {fileID: 21300000, guid: f44daa083ba1591418ddd01f4e9698f2, type: 3}
   Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
@@ -4882,7 +4882,7 @@ MonoBehaviour:
   itemName: "\u0412\u0415\u0420\u0422\u041E\u041B\u0415\u0422"
   initialLetter: 1042
   pictureList:
-  - {fileID: 21300000, guid: 5dee325ef714e4355ba086ee1fb7ad0f, type: 3}
+  - {fileID: 21300000, guid: e7a78bb3683335b48848d1b1e3664a96, type: 3}
   Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
@@ -5536,7 +5536,7 @@ MonoBehaviour:
   itemName: "\u0420\u0410\u041A\u0415\u0422\u0410"
   initialLetter: 1056
   pictureList:
-  - {fileID: 21300000, guid: 5d48dfe62587347039201d653b3cc6a3, type: 3}
+  - {fileID: 21300000, guid: e9471c69b6f458443984bc28f113e719, type: 3}
   Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
@@ -6343,7 +6343,7 @@ MonoBehaviour:
   itemName: "\u041C\u041E\u0422\u041E\u0426\u0418\u041A\u041B"
   initialLetter: 1052
   pictureList:
-  - {fileID: 21300000, guid: a8bbd7275b10640afa30c3b1df2c3400, type: 3}
+  - {fileID: 21300000, guid: 31eeaf3d9fb15234391d38220fbc5a6b, type: 3}
   Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
@@ -6553,7 +6553,7 @@ GameObject:
   - component: {fileID: 1452271614}
   - component: {fileID: 1452271615}
   m_Layer: 0
-  m_Name: Tractor
+  m_Name: Tracktor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6588,7 +6588,7 @@ MonoBehaviour:
   itemName: "\u0422\u0420\u0410\u041A\u0422\u041E\u0420"
   initialLetter: 1058
   pictureList:
-  - {fileID: 21300000, guid: 01ad5af50213b45ea8ec642b539df68b, type: 3}
+  - {fileID: 21300000, guid: 4fedb026b498c76479d99fc1cec34e12, type: 3}
   Category: 2
   savedNumberOfSelectedPicture: 0
   spriteWasSelected: 0
