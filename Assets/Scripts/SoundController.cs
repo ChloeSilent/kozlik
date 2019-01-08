@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class SoundController : MonoBehaviour
 {
-    public QuizController quizController;
+	public QuizController quizController;
 	public AudioClip showMeWhere;
 	public AudioClip rightAnswer;
 	public AudioClip tellRight;
 	public AudioClip tellWrong;
 	private AudioSource audioSource;
+	private AudioClip buttonName;
 
 	private void Awake()
 	{
@@ -21,17 +22,17 @@ public class SoundController : MonoBehaviour
 	{
 		StartCoroutine(playSequentially());
 	}
-	
+
 	IEnumerator playSequentially()
-	{ 
+	{
 		audioSource.clip = showMeWhere;
 		audioSource.Play();
 
 		yield return new WaitForSeconds(audioSource.clip.length);
-	
+
 		rightAnswer = quizController.ReturnWinnersAudioClip();
 		audioSource.clip = rightAnswer;
-		audioSource.Play(); 	 
+		audioSource.Play();
 	}
 
 	public void TellRight()
@@ -39,10 +40,16 @@ public class SoundController : MonoBehaviour
 		audioSource.clip = tellRight;
 		audioSource.Play();
 	}
-	
+
 	public void TellWrong()
 	{
 		audioSource.clip = tellWrong;
+		audioSource.Play();
+	}
+
+	public void TellButtonName(AudioClip buttonName)
+	{
+		audioSource.clip = buttonName;
 		audioSource.Play();
 	}
 }
