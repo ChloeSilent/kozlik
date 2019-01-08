@@ -20,6 +20,7 @@ public class SampleButton : MonoBehaviour
 	private void Awake()
 	{
 		soundController = FindObjectOfType<SoundController>();
+		initialLetter.fontSize = 810;
 	}
 
 	void Update()
