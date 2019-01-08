@@ -8,7 +8,7 @@
 
 Если вы хотите обсудить сотрудничество, 
 
-пишите в телеграм: @V_osnovnom_bezvreden
+пишите в телеграм: https://tele.click/v_osnovnom_bezvreden
 
 или на почту: v-osnovnom-bezvreden@ya.ru
 
@@ -23,7 +23,7 @@ This is my first project, I never did programming before, so please ask question
 
 If you want to discuss collaboration feel free to contact me via
 
-telegram: @V_osnovnom_bezvreden
+telegram: https://tele.click/v_osnovnom_bezvreden
 
 and email: v-osnovnom-bezvreden@ya.ru
 
