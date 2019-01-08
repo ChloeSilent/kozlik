@@ -5,7 +5,7 @@ using System.Collections.Generic; // нужно для  [System.Serializable] //
 using UnityEngine.Networking.Types;
 
 
-public class PanelsController : MonoBehaviour 
+public class PanelsController : MonoBehaviour
 {
 	public ButtonsController browseModeButtonsController;
 	public ButtonsController objectPickerButtonsController;
@@ -18,22 +18,22 @@ public class PanelsController : MonoBehaviour
 	public Image quizButtonsPanelImage;
 	public Image questionPanelImage;
 
-	public Text constantQuestionText; 
+	public Text constantQuestionText;
 	public Text variativeQuestionText;
 
 
-    // TODO переименовать в инициализацию
-	public void DelayedStart () 
+	// TODO переименовать в инициализацию
+	public void DelayedStart ()
 	{
-        //фильтруем объекты к категории по умолчанию
-        objectPickerButtonsController.FilterObjectPickerItemListTo (0);
-        // отфильтровываем  объекты  для размещения в нижней панели
-        categoryPickerButtonsController.FilterCategoryPickerItemList();
+		//фильтруем объекты к категории по умолчанию
+		objectPickerButtonsController.FilterObjectPickerItemListTo (0);
+		// отфильтровываем  объекты  для размещения в нижней панели
+		categoryPickerButtonsController.FilterCategoryPickerItemList();
 
 		GoMainMode ();
 	}
 
-	public void GoMainMode () 
+	public void GoMainMode ()
 	{
 		EnableMainMode ();
 		DisableBrowseMode ();
@@ -102,8 +102,7 @@ public class PanelsController : MonoBehaviour
 		EnableBrowseMode ();
 		DisableMainMode (); 
 		DisableQuizMode ();
-
-	}
+}
 
 	public void EnableBrowseMode ()
 	{
@@ -132,7 +131,7 @@ public class PanelsController : MonoBehaviour
 		EnableQuizMode (); 
 
 		DisableMainMode (); 
-		DisableBrowseMode (); 
+		DisableBrowseMode ();
 	}
 
 	public void EnableQuizMode ()
