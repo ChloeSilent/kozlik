@@ -16,11 +16,13 @@ public class SampleButton : MonoBehaviour
 	private AudioClip letterClip;
 	private AudioClip nameClip;
 	public SoundController soundController;
+	private Mask maskComponent;
 
 	private void Awake()
 	{
 		soundController = FindObjectOfType<SoundController>();
 		initialLetter.fontSize = 710;
+		maskComponent = transform.GetComponent<Mask>();
 	}
 
 	void Update()
@@ -185,6 +187,7 @@ public class SampleButton : MonoBehaviour
 
     public void TuneButtonForMain()
 	{
+		maskComponent.enabled = true;
 		namePanel.SetActive (false);
 		letterPanel.SetActive (false);
 		MoveRedCrossBackward ();
@@ -192,6 +195,7 @@ public class SampleButton : MonoBehaviour
 
 	public void TuneButtonForBrowse()
 	{
+		maskComponent.enabled = false;
 		namePanel.SetActive (false);
 		letterPanel.SetActive (false);
 		MoveRedCrossBackward ();
@@ -200,6 +204,7 @@ public class SampleButton : MonoBehaviour
 
 	public void TuneButtonForQuiz()
 	{
+		maskComponent.enabled = true;
 		namePanel.SetActive (false);
 		letterPanel.SetActive (false);
 		MoveRedCrossBackward ();
