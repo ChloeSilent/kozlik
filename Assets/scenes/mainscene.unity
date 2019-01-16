@@ -3697,7 +3697,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 704aac8a0520b2540add53e11fa0871a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9ef692645f01b074a88323f7303816e7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -4586,8 +4586,8 @@ MonoBehaviour:
   quizController: {fileID: 298024519}
   showMeWhere: {fileID: 8300000, guid: c0c02dfcc5005ef46ac44d5595af2a46, type: 3}
   rightAnswer: {fileID: 0}
-  tellRight: {fileID: 8300000, guid: 4940d84323832a94b80bde6bb3dcdd50, type: 3}
-  tellWrong: {fileID: 8300000, guid: f2f67f5e343f26f4498e69a0f94a2b80, type: 3}
+  tellRight: {fileID: 8300000, guid: fe9e950e88f71d4419f230d606fc7a67, type: 3}
+  tellWrong: {fileID: 8300000, guid: 672b176ba2390f2439a98efef5de72dd, type: 3}
   wordLetterClip: {fileID: 8300000, guid: ee9bf8b1b55b27c4a9223e23ff928d5e, type: 3}
 --- !u!1 &1148336660
 GameObject:
@@ -4897,7 +4897,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f73bcd1d620dcce4d8c4f1f43f791810, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b14da39c5013ecf4c99bca73fd4f57b7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
