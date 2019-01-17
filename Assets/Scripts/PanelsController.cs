@@ -107,6 +107,7 @@ public class PanelsController : MonoBehaviour
 	{
 		browseModeButtonsController.AddButtonsFromCurrentItemList();
 		browseModeButtonsController.TuneButtonsForBrowse ();
+		browseModeButtonsController.GetComponent<Image>().enabled = true;
 	}
 
     // очищаем и перенаполняем список объектов для просмотра в полноэкранном режиме
@@ -119,8 +120,10 @@ public class PanelsController : MonoBehaviour
 
 	public void DisableBrowseMode ()
 	{
+		browseModeButtonsController.TuneButtonsForMain();
 		browseModeButtonsController.RemoveAllButtons();
 		browseModeButtonsController.currentItemList.Clear ();
+		browseModeButtonsController.GetComponent<Image>().enabled = false;
 	}
 
 	public void GoQuizMode ()

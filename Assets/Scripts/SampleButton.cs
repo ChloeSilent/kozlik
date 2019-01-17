@@ -191,6 +191,7 @@ public class SampleButton : MonoBehaviour
 		namePanel.SetActive (false);
 		letterPanel.SetActive (false);
 		MoveRedCrossBackward ();
+		DisableARF();
 	}
 
 	public void TuneButtonForBrowse()
@@ -200,7 +201,8 @@ public class SampleButton : MonoBehaviour
 		letterPanel.SetActive (false);
 		MoveRedCrossBackward ();
 		isDislpayingPictureNow = true;
-    }
+		EnableARF();
+	}
 
 	public void TuneButtonForQuiz()
 	{
@@ -225,4 +227,17 @@ public class SampleButton : MonoBehaviour
 		namePanel.SetActive(true);
 		letterPanel.SetActive(true);
 	}
+
+	private void EnableARF ()
+	{
+		AspectRatioFitter arf = GetComponent<AspectRatioFitter>();
+		arf.enabled = true;
+	}
+
+	private void DisableARF()
+	{
+		AspectRatioFitter arf = GetComponent<AspectRatioFitter>();
+		arf.enabled = false;
+	}
+
 }
