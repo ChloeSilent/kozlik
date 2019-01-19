@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic; // нужно для  [System.Serializable]
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using System.Runtime.CompilerServices; //что это и зачем ?
 
 public class ButtonsController : MonoBehaviour 
 {
