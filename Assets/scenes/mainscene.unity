@@ -1418,10 +1418,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentItemList: []
-  buttonObjectPool: {fileID: 436182474}
-  objectPickerButtonsController: {fileID: 343125511}
-  categoryPickerButtonsController: {fileID: 1490034599}
-  dataContainer: {fileID: 1714477799}
 --- !u!1 &375557639
 GameObject:
   m_ObjectHideFlags: 0
@@ -3307,10 +3303,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentItemList: []
-  buttonObjectPool: {fileID: 436182474}
-  objectPickerButtonsController: {fileID: 343125511}
-  categoryPickerButtonsController: {fileID: 1490034599}
-  dataContainer: {fileID: 1714477799}
 --- !u!114 &780615075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5930,10 +5922,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentItemList: []
-  buttonObjectPool: {fileID: 436182474}
-  objectPickerButtonsController: {fileID: 343125511}
-  categoryPickerButtonsController: {fileID: 1490034599}
-  dataContainer: {fileID: 1714477799}
 --- !u!114 &1324254780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6898,10 +6886,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentItemList: []
-  buttonObjectPool: {fileID: 436182474}
-  objectPickerButtonsController: {fileID: 1490034599}
-  categoryPickerButtonsController: {fileID: 1490034599}
-  dataContainer: {fileID: 1714477799}
 --- !u!1 &1550724726
 GameObject:
   m_ObjectHideFlags: 0

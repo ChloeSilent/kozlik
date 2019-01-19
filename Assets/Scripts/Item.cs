@@ -1,9 +1,6 @@
-using System.Collections;
 using UnityEngine;
-using UnityEngine.UI; 
-using System.Collections.Generic; // нужно для  [System.Serializable]
+using System.Collections.Generic;
 
-[System.Serializable] // выводит в инспектор
 public class Item : MonoBehaviour
 {
 	public string itemName;
