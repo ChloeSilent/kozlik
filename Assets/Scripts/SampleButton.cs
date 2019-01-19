@@ -15,18 +15,21 @@ public class SampleButton : MonoBehaviour
 	private bool isDislpayingPictureNow;
 	private AudioClip letterClip;
 	private AudioClip nameClip;
-	public SoundController soundController;
+	private SoundController soundController;
 	private Mask maskComponent;
 
 	private void Awake()
 	{
+		//нам пригодится ссылка на звуковой контроллер
 		soundController = FindObjectOfType<SoundController>();
+		// через инспектор нельзя назначить значение больше трёхсот, поэтому назначим тут
 		initialLetter.fontSize = 710;
 		maskComponent = transform.GetComponent<Mask>();
 	}
 
 	void Update()
 	{
+		// на десктопе можно стрелками листать спрайты
 		if (transform.parent.name == "BrowseModePanel") 
 		{
 			if (Input.GetKeyUp("right"))
@@ -84,7 +87,7 @@ public class SampleButton : MonoBehaviour
 		{
 			item.savedNumberOfSelectedPicture = 0;
 		}
-        // Для всех остальных кроме последнего просто увеличим номер на единицу
+        // Для всех остальных кроме последнего переключимся на следующий, увеличив номер на единицу
 		else
 		{
 			item.savedNumberOfSelectedPicture++;			
@@ -99,7 +102,7 @@ public class SampleButton : MonoBehaviour
 		{
 			item.savedNumberOfSelectedPicture = (item.pictureList.Count-1);
 		}
-        // Для всех остальных кроме перого просто уменьшим номер на единицу
+        // Для всех остальных кроме первого перенключимся на предыдущий, уменьшив номер на единицу
         else
         {
 			item.savedNumberOfSelectedPicture--;			
@@ -126,11 +129,13 @@ public class SampleButton : MonoBehaviour
 			break;
 
 		case("ObjectPickerPanel"): 
-			if(item.gameObject.name == "Quiz") //12 кнопка quiz
+			//если нажата кнопка квиза, то гоу в квиз
+			if(item.gameObject.name == "Quiz")
 			{
 				panelsController.GoQuizMode (); 
 			}
-			else //1-11 кнопка
+			// если нажата НЕ кнопка квиза, то это кнопка предмета, гоу в  BrowseMode
+			else
 			{
 				panelsController.ChangeBrowseModeItemListTo (item);
 				panelsController.GoBrowseMode ();
@@ -173,7 +178,7 @@ public class SampleButton : MonoBehaviour
 			break;
 
 		default:
-			Debug.LogError ("new or unknown category" + transform.parent.name);
+			Debug.LogError ("Ошибка. У кнопки неверный или несуществующий parent" + transform.parent.name);
 			break;
 		}
 	}
@@ -228,16 +233,17 @@ public class SampleButton : MonoBehaviour
 		letterPanel.SetActive(true);
 	}
 
+	// ресайзит картинку под текущее соотношение сторон экрана
 	private void EnableARF ()
 	{
 		AspectRatioFitter arf = GetComponent<AspectRatioFitter>();
 		arf.enabled = true;
 	}
 
+	// отключаем управление ratio, дальше этим будет заниматься layout group
 	private void DisableARF()
 	{
 		AspectRatioFitter arf = GetComponent<AspectRatioFitter>();
 		arf.enabled = false;
 	}
-
 }

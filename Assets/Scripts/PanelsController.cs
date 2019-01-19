@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using UnityEngine;
-using UnityEngine.UI; 
-using System.Collections.Generic; // нужно для  [System.Serializable] //kill ?
-using UnityEngine.Networking.Types;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 
 public class PanelsController : MonoBehaviour
@@ -11,7 +8,7 @@ public class PanelsController : MonoBehaviour
 	public ButtonsController objectPickerButtonsController;
 	public ButtonsController quizButtonsController;
 	public ButtonsController categoryPickerButtonsController;
-	public QuizController quizController;
+	private QuizController quizController;
 
 	public Image objectPickerPanelImage;
 	public Image categoryPickerPanelImage;
@@ -20,16 +17,19 @@ public class PanelsController : MonoBehaviour
 
 	public Text variativeQuestionText;
 
+	private void Awake()
+	{
+		quizController = FindObjectOfType<QuizController>();
+	}
 
-	// TODO переименовать в инициализацию
 	public void DelayedStart ()
 	{
 		//фильтруем объекты к категории по умолчанию
 		objectPickerButtonsController.FilterObjectPickerItemListTo (0);
 		// отфильтровываем  объекты  для размещения в нижней панели
 		categoryPickerButtonsController.FilterCategoryPickerItemList();
-
-		GoMainMode ();
+		//листы в верхнем и нижнем ButtonsController`ах наполнены нужными  предметами, теперь можно генерировать кнопки
+		GoMainMode();
 	}
 
 	public void GoMainMode ()
@@ -51,11 +51,11 @@ public class PanelsController : MonoBehaviour
 		categoryPickerButtonsController.TuneButtonsForMain ();
 	}
 
-    // очищаем список предметов для отображения в верхней панели и по-новой наполняем его предметами полученной категории
-	public void ChangeObjectPickerItemListCategoryTo (int categoryId)
+    // очищаем список предметов для отображения в верхней панели и по-новой наполняем его предметами  категории, на которую нужно переключиться
+	public void ChangeObjectPickerItemListCategoryTo (int desiredCategoryId)
 	{
 		objectPickerButtonsController.currentItemList.Clear ();
-		objectPickerButtonsController.FilterObjectPickerItemListTo (categoryId);
+		objectPickerButtonsController.FilterObjectPickerItemListTo (desiredCategoryId);
 	}
 
     //чем этот метод отличается от предыдущего ?
