@@ -1,30 +1,27 @@
-using System.Collections.Generic;
+using System.Collections.Generic; 
 using UnityEngine;
 
 public class ButtonsController : MonoBehaviour 
 {
 	public List<Item> currentItemList; //здесь хранится отфильтрованный из allItemsList контент 
-	private ButtonsController currentController;
-	public SimpleObjectPool buttonObjectPool;
+	private SimpleObjectPool buttonObjectPool;
+	private OrganizeData dataContainer;
 
-	public ButtonsController objectPickerButtonsController;
-	public ButtonsController categoryPickerButtonsController;
-
-	public OrganizeData dataContainer;
-
+	private void Awake()
+	{
+		buttonObjectPool = FindObjectOfType<SimpleObjectPool>();
+		dataContainer = FindObjectOfType<OrganizeData>();
+	}
 
 	//взять кнопку из пула и просетапить ее полученным аргументом itemToSetupWith
 	public void TakeOneButtonFromPoolAndSetupWith(Item itemToSetupWith)
 	{
-		currentController = this;  // а почему сразу не использовать this ?
+        GameObject returningGameObject = buttonObjectPool.GetObject (this.transform);
+		SampleButton buttonUnderConstruction = returningGameObject.GetComponent<SampleButton> ();
+		buttonUnderConstruction.Setup (itemToSetupWith);
 
-        //для правильного скейлинга при извлечении из пула нужно утанавливать parent. для этого передаем currentController
-        GameObject newButton = buttonObjectPool.GetObject (currentController.transform);
-		SampleButton sampleButton = newButton.GetComponent<SampleButton> ();
-		sampleButton.Setup (itemToSetupWith);
-
-		//смена парента при возвращении из пула  ломает не только скейлинг, но и якоря и оффсеты. жестко фиксим  
-		RectTransform buttonRectTransform = sampleButton.GetComponent<RectTransform>();
+		// фиксим якоря и оффсеты при возвращении из пула
+		RectTransform buttonRectTransform = buttonUnderConstruction.GetComponent<RectTransform>();
 
 		buttonRectTransform.anchorMax = new Vector2(1, 1);
 		buttonRectTransform.anchorMin = new Vector2(0, 0);
@@ -44,7 +41,6 @@ public class ButtonsController : MonoBehaviour
 			TakeOneButtonFromPoolAndSetupWith (currentItem);
 		}
 	}
-
 
 	public void TuneButtonsForMain ()
 	{
@@ -77,7 +73,7 @@ public class ButtonsController : MonoBehaviour
 		{
 			if (sortedItem.isACategory == true) 
 			{ 
-				categoryPickerButtonsController.currentItemList.Add (sortedItem);
+				this.currentItemList.Add (sortedItem);
 			}
 		}
 	}
@@ -89,7 +85,7 @@ public class ButtonsController : MonoBehaviour
 		{
 			if (sortedItem.Category == desiredCategoryId &&  sortedItem.isACategory ==false)
 			{
-				objectPickerButtonsController.currentItemList.Add (sortedItem);
+				this.currentItemList.Add (sortedItem);
 			}
 		}
 	}
@@ -104,10 +100,7 @@ public class ButtonsController : MonoBehaviour
 	//убирать в пул все кнопки  пока не кончатся
 	public void RemoveAllButtons() 
 	{
-		currentController = this;
-		while (currentController.transform.childCount > 0)
-        // а почему сразу не использовать this ?
-        // TODO разобраться
+		while (this.transform.childCount > 0)
         {
             ReturnOneButtonToPool ();
 		}
