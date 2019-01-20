@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-
 public class PanelsController : MonoBehaviour
 {
 	public ButtonsController browseModeButtonsController;
@@ -22,27 +21,22 @@ public class PanelsController : MonoBehaviour
 		quizController = FindObjectOfType<QuizController>();
 	}
 
-	public void DelayedStart ()
+	public void GoMainMode (int desiredCategoryId)
 	{
-		//фильтруем объекты к категории по умолчанию
-		objectPickerButtonsController.FilterObjectPickerItemListTo (0);
-		// отфильтровываем  объекты  для размещения в нижней панели
-		categoryPickerButtonsController.FilterCategoryPickerItemList();
-		//листы в верхнем и нижнем ButtonsController`ах наполнены нужными  предметами, теперь можно генерировать кнопки
-		GoMainMode();
-	}
-
-	public void GoMainMode ()
-	{
-		EnableMainMode ();
+		DisableMainMode();
 		DisableBrowseMode ();
 		DisableQuizMode ();
+
+		EnableMainMode(desiredCategoryId);
 	}
 
-	public void EnableMainMode ()
+	public void EnableMainMode (int desiredCategoryId)
 	{
 		objectPickerPanelImage.enabled = true;
 		categoryPickerPanelImage.enabled = true;
+
+		objectPickerButtonsController.FilterObjectPickerItemListTo(desiredCategoryId);
+		categoryPickerButtonsController.FilterCategoryPickerItemList();
 
 		objectPickerButtonsController.AddButtonsFromCurrentItemList (); 
 		categoryPickerButtonsController.AddButtonsFromCurrentItemList ();
@@ -51,32 +45,9 @@ public class PanelsController : MonoBehaviour
 		categoryPickerButtonsController.TuneButtonsForMain ();
 	}
 
-    // очищаем список предметов для отображения в верхней панели и по-новой наполняем его предметами  категории, на которую нужно переключиться
-	public void ChangeObjectPickerItemListCategoryTo (int desiredCategoryId)
-	{
-		objectPickerButtonsController.currentItemList.Clear ();
-		objectPickerButtonsController.FilterObjectPickerItemListTo (desiredCategoryId);
-	}
-
-    //чем этот метод отличается от предыдущего ?
-    // почти ничем. отрефакторить,
-    // TODO перенести фильтр категории (FilterCategoryPickerItemList) в метод выше, дальше везде использовать его
-    public void RefreshMainModeItemLists (int categoryId)
-	{
-		objectPickerButtonsController.FilterObjectPickerItemListTo (categoryId);
-		categoryPickerButtonsController.FilterCategoryPickerItemList();
-	}
-
-    // убрать из верхней панели все кнопки, создать новые взамен
-	public void RepopulateObjectPicker()
-	{
-		objectPickerButtonsController.RemoveAllButtons ();
-		objectPickerButtonsController.AddButtonsFromCurrentItemList ();
-	}
-
-    // сбрасываем флаг, который отмечает, что для объекта  ранее  был выбран спрайт.
-    // это приведет к рандомизации при следующем возвращении кнопки из пула
-    public void RandomizeObjectPickerSprites()
+	// сбрасываем флаг, который отмечает, что для объекта  ранее  был выбран спрайт.
+	// это приведет к рандомизации при следующем возвращении кнопки из пула
+	public void RandomizeObjectPickerSprites() // TODO переместить
 	{
         for (int i = 0; i < objectPickerButtonsController.currentItemList.Count; i++)
         {
@@ -101,7 +72,7 @@ public class PanelsController : MonoBehaviour
 		EnableBrowseMode ();
 		DisableMainMode (); 
 		DisableQuizMode ();
-}
+	}
 
 	public void EnableBrowseMode ()
 	{
@@ -111,7 +82,7 @@ public class PanelsController : MonoBehaviour
 	}
 
     // очищаем и перенаполняем список объектов для просмотра в полноэкранном режиме
-    // хоть в этом списке всегда будет один пункт,  но это не меняет его типа
+    //в этом списке всегда будет один пункт
     public void ChangeBrowseModeItemListTo (Item desiredItem)
 	{
 		browseModeButtonsController.currentItemList.Clear ();
@@ -128,10 +99,7 @@ public class PanelsController : MonoBehaviour
 
 	public void GoQuizMode ()
 	{
-		quizController.PrepareQuiz ();
-
 		EnableQuizMode (); 
-
 		DisableMainMode (); 
 		DisableBrowseMode ();
 	}
@@ -142,11 +110,12 @@ public class PanelsController : MonoBehaviour
 		questionPanelImage.enabled = true;
 		variativeQuestionText.enabled = true;
 
+		// загадать новую загадку, т.е. выбать 4 кандидатов и одного из них назначить правильным
+		quizController.PrepareQuiz();
+		// теперь, когда у нас есть кандидаты, можно напилить из них кнопок
 		quizButtonsController.AddButtonsFromCurrentItemList ();
 		quizButtonsController.TuneButtonsForQuiz ();
 	}
-
-
 
 	public void RefreshQuizModeItemList ()
 	{

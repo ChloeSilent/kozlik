@@ -113,19 +113,16 @@ public class SampleButton : MonoBehaviour
 	//обработка нажатий
 	public void HandleClick()
 	{
-        PanelsController panelsController = GameObject.Find ("MainCanvas").GetComponent<PanelsController> ();
-		QuizController quizController = GameObject.Find ("QuizController").GetComponent<QuizController> ();
+        PanelsController panelsController = GameObject.Find ("MainCanvas").GetComponent<PanelsController> (); // TODO переместить
+		QuizController quizController = GameObject.Find ("QuizController").GetComponent<QuizController> (); // TODO переместить
 
 		//выясняем кто parent нажатой кнопки, реагируем соответственно
 		switch (transform.parent.name) 
 		{
             //если нажатая кнопка находится в панели выбора категории
 		case("CategoryPickerPanel"): 
-            // то меняем список объектов текущей категории в панели выбора объектов
-            panelsController.ChangeObjectPickerItemListCategoryTo (item.Category);
-			// и обновляем панель выбора объектов
-            panelsController.RepopulateObjectPicker (); 
-			soundController.TellButtonName(nameClip);
+            panelsController.GoMainMode (item.Category);
+			soundController.TellButtonName(nameClip);  // TODO переместить
 			break;
 
 		case("ObjectPickerPanel"): 
@@ -137,14 +134,14 @@ public class SampleButton : MonoBehaviour
 			// если нажата НЕ кнопка квиза, то это кнопка предмета, гоу в  BrowseMode
 			else
 			{
-				panelsController.ChangeBrowseModeItemListTo (item);
+				panelsController.ChangeBrowseModeItemListTo (item);  // TODO  переместить
 				panelsController.GoBrowseMode ();
-				soundController.TellButtonName(nameClip);
-			}
+				soundController.TellButtonName(nameClip);  //  TODO переместить
+				}
 			break;
 
 		case("BrowseModePanel"):
-				if (isDislpayingPictureNow==true)
+				if (isDislpayingPictureNow==true) // TODO переименовать
 				{
 					// если это первый экран для browseMode , то 
 					// переключаемся на второй экран с буквицей
@@ -158,19 +155,20 @@ public class SampleButton : MonoBehaviour
 				else
 				{
 					// если это второй экран для browseMode , то возвращаемся на главный экран
-					panelsController.RefreshMainModeItemLists(item.Category);
-					panelsController.RandomizeObjectPickerSprites(); // TODO это должно быть не здесь
-					panelsController.GoMainMode();
+					panelsController.GoMainMode(item.Category);
 					break;
 				}
 
 		case("QuizButtonsPanel"):
+			// угадал?
 			bool guessWasSuccessfull = quizController.CheckIfWinner (item); 
+			// да, угадал
 			if (guessWasSuccessfull == true) 
 			{
-				panelsController.ChangeBrowseModeItemListTo (item);
+				panelsController.ChangeBrowseModeItemListTo (item); //  TODO переместить
 				panelsController.GoBrowseMode ();
 			}
+			// нет, не угадал
 			else 
 			{
 				this.MoveRedCrossForward (); //TODO CHECK IF THIS needed

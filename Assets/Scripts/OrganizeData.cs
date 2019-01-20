@@ -14,7 +14,8 @@ public class OrganizeData : MonoBehaviour
 		StartCoroutine("PrepareData");
 		//корутина отработала, стартуем
 		panelsController = FindObjectOfType<PanelsController>();
-		panelsController.DelayedStart (); 
+		// категория по умолчанию на старте имеет индекс ноль
+		panelsController.GoMainMode (0); 
 	}
 
 	//корутина готовит данные, когда она закончит работу - можно стартовать
