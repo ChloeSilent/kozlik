@@ -7,15 +7,10 @@ public class OrganizeData : MonoBehaviour
 	public List<Item> allItemsList;
 	public List<Item> categoriesItemsList;
 	public List<Item> itemsOfCategory;
-	private PanelsController panelsController;
 
-	void Start()
+	public void StartDataProcessing()
 	{
 		StartCoroutine("PrepareData");
-		//корутина отработала, стартуем
-		panelsController = FindObjectOfType<PanelsController>();
-		// категория по умолчанию на старте имеет индекс ноль
-		panelsController.GoMainMode (0); 
 	}
 
 	//корутина готовит данные, когда она закончит работу - можно стартовать
@@ -25,6 +20,7 @@ public class OrganizeData : MonoBehaviour
 		FindCategories ();
 		GenerateCategorySprites ();
 		GenerateInitialLetter ();
+		//корутина отработала, стартуем
 		yield return null;
 	}
 
@@ -59,7 +55,7 @@ public class OrganizeData : MonoBehaviour
 			// последним идёт предмет-квиз, уберем его тоже
 			itemsOfCategory.RemoveAt (itemsOfCategory.Count-1); 
 
-			// теперь в листе только преметы, принадлежащие данной категории, выберем из них случайный
+			// теперь в листе только предметы, принадлежащие данной категории, выберем из них случайный
 			int r = Random.Range (0, itemsOfCategory.Count); 
 
 			// у предмета из шага выше выберем рандомный спрайт и назначим его спрайтом для всей категории

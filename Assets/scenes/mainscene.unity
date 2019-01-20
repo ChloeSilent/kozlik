@@ -2959,11 +2959,11 @@ MonoBehaviour:
   objectPickerButtonsController: {fileID: 343125511}
   quizButtonsController: {fileID: 1324254779}
   categoryPickerButtonsController: {fileID: 1490034599}
-  quizController: {fileID: 298024519}
   objectPickerPanelImage: {fileID: 343125508}
   categoryPickerPanelImage: {fileID: 1490034596}
   quizButtonsPanelImage: {fileID: 1324254781}
   questionPanelImage: {fileID: 312061597}
+  browseModePanelImage: {fileID: 780615072}
   variativeQuestionText: {fileID: 1317587837}
 --- !u!1 &616920226
 GameObject:
@@ -3260,7 +3260,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 780615070}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -4380,6 +4380,7 @@ GameObject:
   - component: {fileID: 1119238657}
   - component: {fileID: 1119238662}
   - component: {fileID: 1119238663}
+  - component: {fileID: 1119238664}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4581,6 +4582,22 @@ MonoBehaviour:
   tellRight: {fileID: 8300000, guid: fe9e950e88f71d4419f230d606fc7a67, type: 3}
   tellWrong: {fileID: 8300000, guid: 672b176ba2390f2439a98efef5de72dd, type: 3}
   wordLetterClip: {fileID: 8300000, guid: ee9bf8b1b55b27c4a9223e23ff928d5e, type: 3}
+--- !u!114 &1119238664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119238656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b60b8f2868990c045879d6b8e264a33e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPickerButtonsController: {fileID: 343125511}
+  categoryPickerButtonsController: {fileID: 1490034599}
+  quizModeButtonsController: {fileID: 1324254779}
+  browseModeButtonsController: {fileID: 780615074}
 --- !u!1 &1148336660
 GameObject:
   m_ObjectHideFlags: 0
@@ -7434,7 +7451,6 @@ MonoBehaviour:
   allItemsList: []
   categoriesItemsList: []
   itemsOfCategory: []
-  panelsController: {fileID: 598185861}
 --- !u!1 &1724236381
 GameObject:
   m_ObjectHideFlags: 0

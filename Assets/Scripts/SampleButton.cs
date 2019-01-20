@@ -17,11 +17,13 @@ public class SampleButton : MonoBehaviour
 	private AudioClip nameClip;
 	private SoundController soundController;
 	private Mask maskComponent;
+	private GameController gameController;
 
 	private void Awake()
 	{
-		//нам пригодится ссылка на звуковой контроллер
+		//соберем ссылки на контроллеры 
 		soundController = FindObjectOfType<SoundController>();
+		gameController = FindObjectOfType<GameController>();
 		// через инспектор нельзя назначить значение больше трёхсот, поэтому назначим тут
 		initialLetter.fontSize = 710;
 		maskComponent = transform.GetComponent<Mask>();
@@ -50,7 +52,7 @@ public class SampleButton : MonoBehaviour
 		nameLabel.text = item.itemName;
 		initialLetter.text = item.initialLetter.ToString ();
 		SetupSprite ();
-		button.gameObject.name = item.itemName;
+		button.gameObject.name = item.itemName; // использовать this ?
 		AudioSource[] allAudioSourcesOfButton = item.GetComponents<AudioSource>();
 		if (allAudioSourcesOfButton.Length>0)
 		{
@@ -121,23 +123,22 @@ public class SampleButton : MonoBehaviour
 		{
             //если нажатая кнопка находится в панели выбора категории
 		case("CategoryPickerPanel"): 
-            panelsController.GoMainMode (item.Category);
 			soundController.TellButtonName(nameClip);  // TODO переместить
+            gameController.GoMainMode(item);
 			break;
 
 		case("ObjectPickerPanel"): 
 			//если нажата кнопка квиза, то гоу в квиз
 			if(item.gameObject.name == "Quiz")
 			{
-				panelsController.GoQuizMode (); 
+				gameController.GoQuizMode (); 
 			}
 			// если нажата НЕ кнопка квиза, то это кнопка предмета, гоу в  BrowseMode
 			else
 			{
-				panelsController.ChangeBrowseModeItemListTo (item);  // TODO  переместить
-				panelsController.GoBrowseMode ();
+				gameController.GoBrowseMode (item);
 				soundController.TellButtonName(nameClip);  //  TODO переместить
-				}
+			}
 			break;
 
 		case("BrowseModePanel"):
@@ -155,7 +156,7 @@ public class SampleButton : MonoBehaviour
 				else
 				{
 					// если это второй экран для browseMode , то возвращаемся на главный экран
-					panelsController.GoMainMode(item.Category);
+					gameController.GoMainMode(item);
 					break;
 				}
 
@@ -166,7 +167,7 @@ public class SampleButton : MonoBehaviour
 			if (guessWasSuccessfull == true) 
 			{
 				panelsController.ChangeBrowseModeItemListTo (item); //  TODO переместить
-				panelsController.GoBrowseMode ();
+				gameController.GoBrowseMode (item);
 			}
 			// нет, не угадал
 			else 

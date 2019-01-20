@@ -66,26 +66,26 @@ public class ButtonsController : MonoBehaviour
 		}
 	}
 
-    // из общего списка объектов отфильтруем тех, кто не объект, а категория объектов
-    public void FilterCategoryPickerItemList()
+    // из общего списка объектов отфильтруем тех, кто принадлежит нужной категории
+    public void FilterObjectPickerItemListTo (Item desiredItem)
 	{
-		foreach (Item sortedItem in dataContainer.allItemsList) 
+		foreach (Item sortedItem in dataContainer.allItemsList)
 		{
-			if (sortedItem.isACategory == true) 
-			{ 
+			if (sortedItem.Category == desiredItem.Category && sortedItem.isACategory ==false)
+			{
 				this.currentItemList.Add (sortedItem);
 			}
 		}
 	}
 
-    // из общего списка объектов отфильтруем тех, кто принадлежит нужной категории
-    public void FilterObjectPickerItemListTo (int desiredCategoryId)
+	// из общего списка объектов отфильтруем тех, кто не объект, а категория объектов
+	public void FilterCategoryPickerItemList()
 	{
 		foreach (Item sortedItem in dataContainer.allItemsList)
 		{
-			if (sortedItem.Category == desiredCategoryId &&  sortedItem.isACategory ==false)
+			if (sortedItem.isACategory == true)
 			{
-				this.currentItemList.Add (sortedItem);
+				this.currentItemList.Add(sortedItem);
 			}
 		}
 	}
