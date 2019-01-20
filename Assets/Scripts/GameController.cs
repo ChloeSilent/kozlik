@@ -56,6 +56,8 @@ public class GameController : MonoBehaviour
 		objectPickerButtonsController.FilterObjectPickerItemListTo(item);
 		categoryPickerButtonsController.FilterCategoryPickerItemList();
 
+		panelsController.RandomizeObjectPickerSprites();
+
 		objectPickerButtonsController.AddButtonsFromCurrentItemList();
 		categoryPickerButtonsController.AddButtonsFromCurrentItemList();
 

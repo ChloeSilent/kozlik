@@ -66,7 +66,7 @@ public class PanelsController : MonoBehaviour
 
 	// сбрасываем флаг, который отмечает, что для объекта  ранее  был выбран спрайт.
 	// это приведет к рандомизации при следующем возвращении кнопки из пула
-	public void RandomizeObjectPickerSprites() // TODO переместить
+	public void RandomizeObjectPickerSprites()
 	{
 		for (int i = 0; i < objectPickerButtonsController.currentItemList.Count; i++)
 		{
