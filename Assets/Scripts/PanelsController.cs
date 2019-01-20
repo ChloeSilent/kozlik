@@ -66,15 +66,6 @@ public class PanelsController : MonoBehaviour
 		browseModeButtonsController.currentItemList.Add (desiredItem);
 	}
 
-	public void RefreshQuizModeItemList () //TODO move
-	{
-		//передаем сформированный лист из 4 вариантов в quiz
-		for (int i = 0; i < 4; i++) 
-		{
-			quizButtonsController.currentItemList.Add (quizController.fourVariantsItemsList [i]);
-		}
-	}
-
 	//указываем победителя в variativeQuestionText
 	public void RefreshVariativeQuestionText ()
 	{

@@ -16,13 +16,22 @@ public class QuizController : MonoBehaviour
 	public void PrepareQuiz()
 	{
 		SelectFourRandomVariants ();
-		panelsController.RefreshQuizModeItemList (); 
+		RefreshQuizModeItemList (); 
 		SetSomeVariantAsWinner ();
 		panelsController.RefreshVariativeQuestionText ();
 		soundController.AskQiuzAudioQuestion(winnerId);
 	}
 
-    // выбирает четырех случайных участников викторины
+	public void RefreshQuizModeItemList() //TODO move
+	{
+		//передаем сформированный лист из 4 вариантов в quiz
+		for (int i = 0; i < 4; i++)
+		{
+			quizButtonsController.currentItemList.Add(fourVariantsItemsList[i]);
+		}
+	}
+
+	// выбирает четырех случайных участников викторины
 	public void SelectFourRandomVariants ()
 	{
 		// выберем в цикле 4 раза случайный item из objectPickerButtonsController.currentItemList ,
