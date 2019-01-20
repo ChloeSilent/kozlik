@@ -69,7 +69,7 @@ public class SampleButton : MonoBehaviour
 		if (item.spriteWasSelected == false) //если номер спрайта не был выбран ранее
 		{
 			// то выберем новый спрайт
-			int numberOfRandomPicture = Random.Range (0, item.pictureList.Capacity);	
+			int numberOfRandomPicture = Random.Range (0, item.pictureList.Count);	
 		
 			// отметим флажком, что у этого айтема спрайт уже выбран
 			item.spriteWasSelected = true;

@@ -41,25 +41,30 @@ public class OrganizeData : MonoBehaviour
 		}
 	}
 
-	// выберем  случайный спрайт для всей категории среди спрайтов предметов принадлежащих этой категории
+	// выберем  случайный спрайт для всей категории среди спрайтов предметов, принадлежащих этой категории
 	public void GenerateCategorySprites()
 	{
+		// для каждой категории 
 		for (int c = 0; c < categoriesItemsList.Count; c++)
 		{
-			// сначала соберем в один лист все предметы, принадлежащие данной категории
+			// сначала соберем в лист itemsOfCategory все предметы, принадлежащие данной категории
 			categoriesItemsList[c].GetComponentsInChildren <Item> (itemsOfCategory); 
 
-			// первым идёт сама категория, уберем её
+			// в этом листе первой идёт сама категория, уберем её
 			itemsOfCategory.RemoveAt (0); 
 
 			// последним идёт предмет-квиз, уберем его тоже
-			itemsOfCategory.RemoveAt (itemsOfCategory.Count-1); 
+			itemsOfCategory.RemoveAt (itemsOfCategory.Count-1);
 
-			// теперь в листе только предметы, принадлежащие данной категории, выберем из них случайный
-			int r = Random.Range (0, itemsOfCategory.Count); 
-
-			// у предмета из шага выше выберем рандомный спрайт и назначим его спрайтом для всей категории
-			categoriesItemsList [c].pictureList [0] = itemsOfCategory [r].pictureList [Random.Range (0, itemsOfCategory [r].pictureList.Count)];
+			// Готово. Теперь в листе itemsOfCategory только предметы, принадлежащие данной категории. 
+			// Пройдёмся циклом по листу itemsOfCategory.
+			for (int ioc=0; ioc < itemsOfCategory.Count; ioc++)
+			{
+				// выберем один случайный спрайт из каждого предмета
+				int randomSpriteNumber = Random.Range(0, itemsOfCategory[ioc].pictureList.Count);
+				// и добавим его в лист спрайтов категории
+				categoriesItemsList[c].pictureList.Add(itemsOfCategory[ioc].pictureList[randomSpriteNumber]);
+			}
 		}
 	}
 
