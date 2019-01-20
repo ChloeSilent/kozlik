@@ -58,14 +58,6 @@ public class PanelsController : MonoBehaviour
 		variativeQuestionText.enabled = false;
 	}
 
-	// очищаем и перенаполняем список объектов для просмотра в полноэкранном режиме
-	//в этом списке всегда будет один пункт
-	public void ChangeBrowseModeItemListTo (Item desiredItem) // TODO move
-	{
-		browseModeButtonsController.currentItemList.Clear (); // дубликат?
-		browseModeButtonsController.currentItemList.Add (desiredItem);
-	}
-
 	//указываем победителя в variativeQuestionText
 	public void RefreshVariativeQuestionText ()
 	{

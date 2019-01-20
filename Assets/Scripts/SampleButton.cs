@@ -166,7 +166,6 @@ public class SampleButton : MonoBehaviour
 			// да, угадал
 			if (guessWasSuccessfull == true) 
 			{
-				panelsController.ChangeBrowseModeItemListTo (item); //  TODO переместить
 				gameController.GoBrowseMode (item);
 			}
 			// нет, не угадал
