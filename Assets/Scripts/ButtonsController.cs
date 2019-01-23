@@ -32,7 +32,6 @@ public class ButtonsController : MonoBehaviour
 		buttonRectTransform.offsetMax = new Vector2(buttonRectTransform.offsetMax.y, 0);
 	}
 
-	//сетапим все кнопки из currentItemList в цикле
 	public void AddButtonsFromCurrentItemList()
 	{
 		for (int i = 0; i < currentItemList.Count; i++) 
