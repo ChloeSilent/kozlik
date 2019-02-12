@@ -822,7 +822,7 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
-    Build: 1
+    Build: 0
     UNet: 1
   luminIcon:
     m_Name: 
@@ -845,7 +845,7 @@ PlayerSettings:
   apiCompatibilityLevel: 2
   cloudProjectId: d5cbd6fb-fd23-482b-85b5-63db74de7a1b
   framebufferDepthMemorylessMode: 0
-  projectName: kozlenok
+  projectName: kozlik
   organizationId: v_osnovnom_bezvreden
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
