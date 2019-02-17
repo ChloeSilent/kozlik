@@ -8055,7 +8055,7 @@ MonoBehaviour:
   delayBeforeAds: 10
   placementId: top_banner
   adsEnabled: 0
-  testMode: 1
+  testMode: 0
 --- !u!224 &1743573541
 RectTransform:
   m_ObjectHideFlags: 0

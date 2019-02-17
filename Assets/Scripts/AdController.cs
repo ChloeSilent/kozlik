@@ -12,7 +12,7 @@ public class AdController : MonoBehaviour
 
 	#if UNITY_ANDROID
 		public const string gameId = "3038717";
-		public bool testMode = true;
+		public bool testMode = false;
 	#elif UNITY_EDITOR
 		public const string gameId = "0000000";
 		public bool testMode = true;
