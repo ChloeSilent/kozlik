@@ -12,12 +12,14 @@ public class GameController : MonoBehaviour
 	public ButtonsController quizModeButtonsController;
 	public ButtonsController browseModeButtonsController;
 	private QuizController quizController;
+	private AdController adController;
 
 	private void Awake()
 	{
 		dataContainer = FindObjectOfType<OrganizeData>();
 		panelsController = FindObjectOfType<PanelsController>();
 		quizController = FindObjectOfType<QuizController>();
+		adController = FindObjectOfType<AdController>();
 	}
 
 	void Start()
@@ -64,6 +66,8 @@ public class GameController : MonoBehaviour
 
 		objectPickerButtonsController.TuneButtonsForMain();
 		categoryPickerButtonsController.TuneButtonsForMain();
+
+		adController.ShowAds();
 	}
 
 	public void DisableMainMode()
@@ -75,7 +79,8 @@ public class GameController : MonoBehaviour
 
 		objectPickerButtonsController.RemoveAllButtons();
 		categoryPickerButtonsController.RemoveAllButtons();
-	
+
+		adController.HideAds();
 	}
 
 	public void EnableBrowseMode(Item item)

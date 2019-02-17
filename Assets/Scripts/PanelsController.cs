@@ -9,6 +9,7 @@ public class PanelsController : MonoBehaviour
 	public ButtonsController categoryPickerButtonsController;
 	private QuizController quizController;
 
+	public Image adPanelImage;
 	public Image objectPickerPanelImage;
 	public Image categoryPickerPanelImage;
 	public Image quizButtonsPanelImage;
@@ -24,12 +25,14 @@ public class PanelsController : MonoBehaviour
 
 	public void EnableMainPanels ()
 	{
+		adPanelImage.enabled = true;
 		objectPickerPanelImage.enabled = true;
 		categoryPickerPanelImage.enabled = true;
 	}
 
 	public void DisableMainPanels()
 	{
+		adPanelImage.enabled = false;
 		objectPickerPanelImage.enabled = false;
 		categoryPickerPanelImage.enabled = false;
 	}
