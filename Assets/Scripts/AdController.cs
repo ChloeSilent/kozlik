@@ -10,8 +10,9 @@ public class AdController : MonoBehaviour
 	public int delayBeforeAds = 10;
 	public string placementId = "top_banner";
 	public bool adsEnabled = false;
-	public Text adStatusText;
 	public bool successfullyPurchased = false;
+	public Image disableAdsButtonImage;
+	public Text disableAdsButtonText;
 
 	#if UNITY_ANDROID
 		public const string gameId = "3038717";
@@ -29,9 +30,10 @@ public class AdController : MonoBehaviour
 		Advertisement.Initialize(gameId, testMode);
 	}
 
-	// если не куплен отказ от рекламы , и прошло некторое время со старта приложения, то включаем рекламу
+	
 	void Update()
 	{
+		//если не куплен отказ от рекламы, и прошло некторое время со старта приложения, то включаем рекламу
 		if (Time.realtimeSinceStartup > delayBeforeAds && successfullyPurchased==false) 
 		{
 			adsEnabled = true;
@@ -40,7 +42,6 @@ public class AdController : MonoBehaviour
 		{
 			adsEnabled = false;
 		}
-		TellAdStatus();
 	}
 	
 	IEnumerator ShowBannerWhenReady()
@@ -52,13 +53,17 @@ public class AdController : MonoBehaviour
 
 		Advertisement.Banner.SetPosition(BannerPosition.TOP_CENTER); 
 		Advertisement.Banner.Show();
+		disableAdsButtonImage.enabled = true;
+		disableAdsButtonText.enabled = true;
 	}
-	public void  HideAds()
+	public void  TemporarilyHideAds()
 	{
 		Advertisement.Banner.Hide();
+		disableAdsButtonImage.enabled = false;
+		disableAdsButtonText.enabled = false;
 	}
 
-	public void ShowAds()
+	public void ShowAdsIfApplicable()
 	{
 		if (adsEnabled==true)
 		{
@@ -66,22 +71,11 @@ public class AdController : MonoBehaviour
 		}
 	}
 
-	private void TellAdStatus()
-	{
-		if (adsEnabled == true)
-		{
-			adStatusText.text = "ads enabled";
-		}
-		else
-		{
-			adStatusText.text = "ads disabled";
-		}
-	}
-
 	public void DisableAdsForever()
 	{
-		Debug.Log("DisableAdsForever");
 		successfullyPurchased = true;
 		Advertisement.Banner.Hide();
+		disableAdsButtonImage.enabled = false;
+		disableAdsButtonText.enabled = false;
 	}
 }

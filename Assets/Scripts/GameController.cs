@@ -31,7 +31,7 @@ public class GameController : MonoBehaviour
 
 	public void GoMainMode(Item item)
 	{
-		DisableMainMode();
+		DisableMainMode(); //TODO  это костыль! без него при смене категории все кнопки дублируются. подумать как переделать
 		DisableBrowseMode();
 		DisableQuizMode();
 		EnableMainMode(item);
@@ -67,7 +67,7 @@ public class GameController : MonoBehaviour
 		objectPickerButtonsController.TuneButtonsForMain();
 		categoryPickerButtonsController.TuneButtonsForMain();
 
-		adController.ShowAds();
+		adController.ShowAdsIfApplicable();
 	}
 
 	public void DisableMainMode()
@@ -80,7 +80,7 @@ public class GameController : MonoBehaviour
 		objectPickerButtonsController.RemoveAllButtons();
 		categoryPickerButtonsController.RemoveAllButtons();
 
-		adController.HideAds();
+		adController.TemporarilyHideAds();
 	}
 
 	public void EnableBrowseMode(Item item)
