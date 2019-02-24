@@ -67,7 +67,7 @@ public class GameController : MonoBehaviour
 		objectPickerButtonsController.TuneButtonsForMain();
 		categoryPickerButtonsController.TuneButtonsForMain();
 
-		adController.ShowAdsIfApplicable();
+		//adController.ShowAdsIfApplicable();
 	}
 
 	public void DisableMainMode()
@@ -80,7 +80,7 @@ public class GameController : MonoBehaviour
 		objectPickerButtonsController.RemoveAllButtons();
 		categoryPickerButtonsController.RemoveAllButtons();
 
-		adController.TemporarilyHideAds();
+		//adController.TemporarilyHideAds();
 	}
 
 	public void EnableBrowseMode(Item item)
