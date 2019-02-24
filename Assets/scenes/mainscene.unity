@@ -4333,7 +4333,7 @@ MonoBehaviour:
   onPurchaseComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1313171131}
+      - m_Target: {fileID: 0}
         m_MethodName: DisableAdsForever
         m_Mode: 1
         m_Arguments:
@@ -6057,7 +6057,7 @@ GameObject:
   - component: {fileID: 1313171128}
   - component: {fileID: 1313171130}
   - component: {fileID: 1313171129}
-  - component: {fileID: 1313171131}
+  - component: {fileID: 1313171132}
   m_Layer: 5
   m_Name: AdsAndSettingsPanel
   m_TagString: Untagged
@@ -6122,7 +6122,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1313171127}
   m_CullTransparentMesh: 0
---- !u!114 &1313171131
+--- !u!114 &1313171132
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6131,16 +6131,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1313171127}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa9c235188fc4ff4f9a5db3fae003fcf, type: 3}
+  m_Script: {fileID: 11500000, guid: 32587d691aff16241baaa186846def3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayBeforeAds: 5
-  placementId: top_banner
-  adsEnabled: 0
-  successfullyPurchased: 0
-  disableAdsButtonImage: {fileID: 1036250536}
-  disableAdsButtonText: {fileID: 272573020}
-  testMode: 0
 --- !u!1 &1317587835
 GameObject:
   m_ObjectHideFlags: 0
