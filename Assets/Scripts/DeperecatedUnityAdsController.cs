@@ -5,7 +5,11 @@ using UnityEngine;
 using UnityEngine.Advertisements;
 using UnityEngine.UI;
 
-public class AdController : MonoBehaviour
+
+//this is a controller to use witn unity ads. Trying to switch project to Admob. This file will be derpecated. Can be restored in future from git history.
+//changing name from AdController to DeperecatedUnityAdsController
+
+public class DeperecatedUnityAdsController : MonoBehaviour
 {
 	public int delayBeforeAds = 10;
 	public string placementId = "top_banner";
