@@ -58,7 +58,8 @@ public class GoogleMobileAdsScript : MonoBehaviour
 		// Create an empty ad request.
 		AdRequest request = new AdRequest.Builder()
 		//.AddTestDevice("C5A74FCB9AB91559B78C81A174E2C2E6") //mart
-		.AddTestDevice("4AC2811559563C8348D03C6D9DE61104") //son
+		//.AddTestDevice("4AC2811559563C8348D03C6D9DE61104") //son
+		.TagForChildDirectedTreatment(true)
 		.Build();
 		// Load the banner with the request.
 		bannerView.LoadAd(request);
