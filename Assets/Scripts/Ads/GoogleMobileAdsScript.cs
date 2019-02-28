@@ -40,14 +40,6 @@ public class GoogleMobileAdsScript : MonoBehaviour
 	public void SetupIds()
 	{
 #if UNITY_ANDROID
-	//Do not change appId
-	currentAdUnitId = realAdUnitId;
-		Debug.Log("appId is" + appId);
-#elif UNITY_EDITOR_WIN
-	string appId = "Tha platform is editor";
-	currentAdUnitId = testAdUnitId;
-#elif UNITY_EDITOR
-	string appId = "Tha platform is editor";
 	currentAdUnitId = testAdUnitId;
 #elif UNITY_IPHONE
 	string appId = "The platform is iphone";
@@ -65,7 +57,8 @@ public class GoogleMobileAdsScript : MonoBehaviour
 		bannerView = new BannerView(currentAdUnitId, AdSize.Banner, AdPosition.Top);
 		// Create an empty ad request.
 		AdRequest request = new AdRequest.Builder()
-		.AddTestDevice("C5A74FCB9AB91559B78C81A174E2C2E6")
+		//.AddTestDevice("C5A74FCB9AB91559B78C81A174E2C2E6") //mart
+		.AddTestDevice("4AC2811559563C8348D03C6D9DE61104") //son
 		.Build();
 		// Load the banner with the request.
 		bannerView.LoadAd(request);
@@ -82,15 +75,18 @@ public class GoogleMobileAdsScript : MonoBehaviour
 
 	public void TemporarilyHideAdsAndButton()
 	{
-		//bannerView.Destroy();
+		if (bannerView != null)
+		{
+			bannerView.Destroy();
+		}
 		this.HideButton();
 	}
 
 	public void DisableAdsForever()
 	{
+		this.TemporarilyHideAdsAndButton();
 		successfullyPurchased = true;
-		bannerView.Destroy();
-		this.HideButton();
+		adsEnabled = false;
 	}
 
 	private void HideButton()

@@ -36,7 +36,6 @@ namespace GoogleMobileAds.Api
             client.CreateBannerView(adUnitId, adSize, position);
 
             ConfigureBannerEvents();
-			Debug.Log("succeessfully created instance of  BannerView");
         }
 
         // Creates a BannerView with a custom position.
