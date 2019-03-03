@@ -1211,8 +1211,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: -0.000015258789}
-  m_SizeDelta: {x: -0.000061035, y: -0.000030518}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &272573020
 MonoBehaviour:
@@ -4233,8 +4233,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -383.1, y: 0}
-  m_SizeDelta: {x: 110.1, y: 67.1}
+  m_AnchoredPosition: {x: -405.6, y: 0}
+  m_SizeDelta: {x: 65.2, y: 67.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1036250535
 MonoBehaviour:
@@ -6134,7 +6134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32587d691aff16241baaa186846def3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayBeforeAds: 1
+  delayBeforeAds: 10
   appId: ca-app-pub-6835010280990929~1256467464
   realAdUnitId: ca-app-pub-6835010280990929/3166514157
   testAdUnitId: ca-app-pub-3940256099942544/6300978111
