@@ -8,25 +8,20 @@ public class GoogleMobileAdsScript : MonoBehaviour
 {
 	private BannerView bannerView;
 	public int delayBeforeAds;
-
-	public string currentAppId;
-	public string androidAppId;
-	public string iosAppId;
-
+	public string appId;
+	public string realAdUnitId;
+	public string testAdUnitId;
 	public string currentAdUnitId;
-	public string testAdUnitIdForAndroid;
-	public string realAdUnitIdForAndroid;
-	public string testAdUnitIdForIos;
-	public string realAdUnitIdForIos;
-
 	public bool adsEnabled = false;
 	public bool successfullyPurchased = false;
 
 	public void Start()
 	{
-		InitializeAds();
+		this.SetupIds();
+		// Initialize the Google Mobile Ads SDK.
+		MobileAds.Initialize(appId);
 	}
-	
+
 	void Update()
 	{
 		//если не куплен отказ от рекламы, и прошло некторое время со старта приложения, то включаем рекламу
@@ -40,32 +35,18 @@ public class GoogleMobileAdsScript : MonoBehaviour
 		}
 	}
 
-
-	private void InitializeAds()
+	public void SetupIds()
 	{
-		#if UNITY_EDITOR
-			currentAppId = "no currentAppId  available for UNITY_EDITOR";
-			currentAdUnitId = "no currentAdUnitId available for UNITY_EDITOR";
-			Debug.Log("Google ads is not available for UNITY_EDITOR, so we will skip its initialization");
-		#elif UNITY_ANDROID
-			currentAppId = androidAppId;
-			currentAdUnitId = realAdUnitIdForAndroid;
-			Debug.Log("Start initilization of Google Ads at UNITY_ANDROID platform");
-			MobileAds.Initialize(currentAppId);
-		#elif UNITY_WEBGL
-			currentAppId = "no currentAppId available for UNITY_WEBGL";
-			currentAdUnitId = "no currentAdUnitId available for UNITY_WEBGL";
-			Debug.Log("Google ads is not available for UNITY_WEBGL, so we will skip its initialization");
-		#elif UNITY_IOS
-			currentAppId = iosAppId;
-			currentAdUnitId = testAdUnitIdForIos;
-			Debug.Log("Start initilization of Google Ads at UNITY_IOS platform");
-			MobileAds.Initialize(currentAppId);
-		#else
-			currentAppId = "WARNING! UNEXPECTED PLATFORM";
-			currentAdUnitId = "WARNING! UNEXPECTED PLATFORM";
-			Debug.Log("Google ads is not available for UNEXPECTED PLATFORM, so we will skip its initialization");
-		#endif
+#if UNITY_ANDROID
+	currentAdUnitId = testAdUnitId;
+#elif UNITY_IPHONE
+	string appId = "The platform is iphone";
+	currentAdUnitId = testAdUnitId;
+#else
+	string appId = "The platform is unexpected";
+	currentAdUnitId = testAdUnitId;
+#endif
+
 	}
 
 	private void RequesAndDisplayBanner()
@@ -74,6 +55,8 @@ public class GoogleMobileAdsScript : MonoBehaviour
 		bannerView = new BannerView(currentAdUnitId, AdSize.Banner, AdPosition.Top);
 		// Create an empty ad request.
 		AdRequest request = new AdRequest.Builder()
+		//.AddTestDevice("C5A74FCB9AB91559B78C81A174E2C2E6") //mart
+		//.AddTestDevice("4AC2811559563C8348D03C6D9DE61104") //son
 		.TagForChildDirectedTreatment(true)
 		.Build();
 		// Load the banner with the request.
