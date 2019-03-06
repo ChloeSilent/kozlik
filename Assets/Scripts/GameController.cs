@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -13,6 +13,14 @@ public class GameController : MonoBehaviour
 	public ButtonsController browseModeButtonsController;
 	private QuizController quizController;
 	private GoogleMobileAdsScript adController;
+
+	public Image settingsButtonImage;
+
+	public Image backToGameButtonImage;
+	public Text backToGameButtonText;
+
+	public Image disableAdsButtonImage;
+	public Text disableAdsButtonText;
 
 	private void Awake()
 	{
@@ -34,6 +42,7 @@ public class GameController : MonoBehaviour
 		DisableMainMode(); //TODO  это костыль! без него при смене категории все кнопки дублируются. подумать как переделать
 		DisableBrowseMode();
 		DisableQuizMode();
+		DisableSettingsMode();
 		EnableMainMode(item);
 	}
 
@@ -42,6 +51,7 @@ public class GameController : MonoBehaviour
 		EnableBrowseMode(item);
 		DisableMainMode();
 		DisableQuizMode();
+		DisableSettingsMode();
 	}
 
 	public void GoQuizMode()
@@ -49,6 +59,15 @@ public class GameController : MonoBehaviour
 		EnableQuizMode();
 		DisableMainMode();
 		DisableBrowseMode();
+		DisableSettingsMode();
+	}
+
+	public void GoSettingsMode()
+	{
+		EnableSettingsMode();
+		DisableMainMode();
+		DisableBrowseMode();
+		DisableQuizMode();
 	}
 
 	public void EnableMainMode(Item item)
@@ -68,6 +87,8 @@ public class GameController : MonoBehaviour
 		categoryPickerButtonsController.TuneButtonsForMain();
 
 		adController.ShowAdsIfEnabled();
+
+		settingsButtonImage.enabled = true;
 	}
 
 	public void DisableMainMode()
@@ -80,7 +101,9 @@ public class GameController : MonoBehaviour
 		objectPickerButtonsController.RemoveAllButtons();
 		categoryPickerButtonsController.RemoveAllButtons();
 
-		adController.TemporarilyHideAdsAndButton();
+		adController.TemporarilyHideAds();
+
+		settingsButtonImage.enabled = false;
 	}
 
 	public void EnableBrowseMode(Item item)
@@ -122,5 +145,27 @@ public class GameController : MonoBehaviour
 		quizModeButtonsController.currentItemList.Clear();
 
 		quizModeButtonsController.RemoveAllButtons();
+	}
+
+	public void EnableSettingsMode()
+	{
+		panelsController.EnableSettingsPanels();
+
+		backToGameButtonImage.enabled = true;
+		backToGameButtonText.enabled = true;
+
+		disableAdsButtonImage.enabled = true;
+		disableAdsButtonText.enabled = true;
+	}
+
+	public void DisableSettingsMode()
+	{
+		panelsController.DisableSettingsPanels();
+
+		backToGameButtonImage.enabled = false;
+		backToGameButtonText.enabled = false;
+
+		disableAdsButtonImage.enabled = false;
+		disableAdsButtonText.enabled = false;
 	}
 }

@@ -15,6 +15,7 @@ public class PanelsController : MonoBehaviour
 	public Image quizButtonsPanelImage;
 	public Image questionPanelImage;
 	public Image browseModePanelImage;
+	public Image settingsModePanelImage;
 
 	public Text variativeQuestionText;
 
@@ -59,6 +60,16 @@ public class PanelsController : MonoBehaviour
 		quizButtonsPanelImage.enabled = false;
 		questionPanelImage.enabled = false;
 		variativeQuestionText.enabled = false;
+	}
+
+	public void EnableSettingsPanels()
+	{
+		settingsModePanelImage.enabled = true;
+	}
+
+	public void DisableSettingsPanels()
+	{
+		settingsModePanelImage.enabled = false;
 	}
 
 	//указываем победителя в variativeQuestionText

@@ -14,8 +14,6 @@ public class GoogleMobileAdsScript : MonoBehaviour
 	public string currentAdUnitId;
 	public bool adsEnabled = false;
 	public bool successfullyPurchased = false;
-	public Image disableAdsButtonImage;
-	public Text disableAdsButtonText;
 
 	public void Start()
 	{
@@ -70,37 +68,25 @@ public class GoogleMobileAdsScript : MonoBehaviour
 		if (adsEnabled == true)
 		{
 			this.RequesAndDisplayBanner();
-			this.UnhideButton();
 		}
 	}
 
-	public void TemporarilyHideAdsAndButton()
+	public void TemporarilyHideAds()
 	{
 		if (bannerView != null)
 		{
 			bannerView.Destroy();
 		}
-		this.HideButton();
 	}
 
 	public void DisableAdsForever()
 	{
-		this.TemporarilyHideAdsAndButton();
+		this.TemporarilyHideAds();
 		successfullyPurchased = true;
 		adsEnabled = false;
 	}
 
-	private void HideButton()
-	{
-		disableAdsButtonImage.enabled = false;
-		disableAdsButtonText.enabled = false;
-	}
 
-	private void UnhideButton()
-	{
-		disableAdsButtonImage.enabled = true;
-		disableAdsButtonText.enabled = true;
-	}
 }
 
 
