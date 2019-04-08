@@ -196,7 +196,7 @@ public class ItemButton : MonoBehaviour
 		namePanel.SetActive (false);
 		letterPanel.SetActive (false);
 		MoveRedCrossBackward ();
-		DisableARF();
+		MakeButtonNotFullscreen();
 	}
 
 	public void TuneButtonForBrowse()
@@ -206,7 +206,7 @@ public class ItemButton : MonoBehaviour
 		letterPanel.SetActive (false);
 		MoveRedCrossBackward ();
 		isDislpayingPictureNow = true;
-		EnableARF();
+		MakeButtonFullscreen();
 	}
 
 	public void TuneButtonForQuiz()
@@ -215,7 +215,7 @@ public class ItemButton : MonoBehaviour
 		namePanel.SetActive (false);
 		letterPanel.SetActive (false);
 		MoveRedCrossBackward ();
-		DisableARF();
+		MakeButtonNotFullscreen();
 	}
 
 	public void MoveRedCrossForward()
@@ -235,14 +235,14 @@ public class ItemButton : MonoBehaviour
 	}
 
 	// ресайзит картинку под текущее соотношение сторон экрана
-	private void EnableARF ()
+	private void MakeButtonFullscreen ()
 	{
 		AspectRatioFitter arf = GetComponent<AspectRatioFitter>();
 		arf.enabled = true;
 	}
 
 	// отключаем управление ratio, дальше этим будет заниматься layout group
-	private void DisableARF()
+	private void MakeButtonNotFullscreen()
 	{
 		AspectRatioFitter arf = GetComponent<AspectRatioFitter>();
 		arf.enabled = false;
