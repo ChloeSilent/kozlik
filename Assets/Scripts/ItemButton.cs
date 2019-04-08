@@ -173,7 +173,8 @@ public class ItemButton : MonoBehaviour
 			else 
 			{
 				this.MoveRedCrossForward (); //TODO CHECK IF THIS needed
-			}
+				soundController.TellWrong();
+				}
 			break;
 
 		default:

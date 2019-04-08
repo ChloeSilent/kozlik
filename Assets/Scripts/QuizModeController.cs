@@ -10,7 +10,7 @@ public class QuizModeController : MonoBehaviour
 	public List<Item> tempList;
 	public ButtonsController objectPickerButtonsController;
 	public ButtonsController quizButtonsController;
-	public SoundController soundController;
+	
 	public ChoiseModeController choiseModeController;
 	public Text variativeQuestionText;
 
@@ -40,7 +40,6 @@ public class QuizModeController : MonoBehaviour
 		SendChosenVariantsToButtonsController();
 		SetSomeVariantAsWinner();
 		RefreshVariativeQuestionText();
-		soundController.AskQiuzAudioQuestion(winnerId);
 	}
 
 	// TODO There should be a beeter way to copy list. Think about it.
@@ -115,13 +114,11 @@ public class QuizModeController : MonoBehaviour
 		if (clickedItem.itemName == tempList[winnerId].itemName)
 		{
 			//угадал
-			soundController.TellRight();
 			return true;
 		}
 		else
 		{
 			// не угадал
-			soundController.TellWrong();
 			return false;
 		}
 	}

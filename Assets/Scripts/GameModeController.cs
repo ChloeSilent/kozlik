@@ -20,6 +20,7 @@ public class GameModeController : MonoBehaviour
 	public ChoiseModeController choiseModeController;
 	public BrowseModeController browseModeController;
 	public QuizModeController quizModeController;
+	public SoundController soundController;
 
 	public Mode currentMode;
 	public enum Mode
@@ -79,6 +80,7 @@ public class GameModeController : MonoBehaviour
 	{
 		DisableQuizMode(item);
 		EnableBrowseMode(item);
+		soundController.TellRight();
 	}
 
 	public void SwitchCategory(Item item)
@@ -129,6 +131,7 @@ public class GameModeController : MonoBehaviour
 		currentMode = Mode.Quiz;
 		quizCanvas.enabled = true;
 		quizModeController.EnterQuizMode(itemList);
+		soundController.AskQiuzAudioQuestion(quizModeController.winnerId);
 	}
 
 	private void DisableQuizMode(Item item)
