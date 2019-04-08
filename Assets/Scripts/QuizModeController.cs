@@ -97,7 +97,7 @@ public class QuizModeController : MonoBehaviour
 		{
 			while (tempList.Count > 4)
 			{
-				int randomIndex = Random.Range(0, (tempList.Count - 1));
+				int randomIndex = Random.Range(0, tempList.Count);
 				tempList.Remove(tempList[randomIndex]);
 			}
 		}
