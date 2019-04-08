@@ -58,7 +58,7 @@ public class SimpleObjectPool : MonoBehaviour
 		{
 			// make the instance a child of this and disable it
 			toReturn.transform.SetParent(transform,false);
-            toReturn.GetComponent<SampleButton>().TuneButtonForPool();
+            toReturn.GetComponent<ItemButton>().TuneButtonForPool();
             toReturn.SetActive(false);
 
 			// add the instance to the collection of inactive instances

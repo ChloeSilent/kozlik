@@ -17,7 +17,7 @@ public class ButtonsController : MonoBehaviour
 	public void TakeOneButtonFromPoolAndSetupWith(Item itemToSetupWith)
 	{
         GameObject returningGameObject = buttonObjectPool.GetObject (this.transform);
-		SampleButton buttonUnderConstruction = returningGameObject.GetComponent<SampleButton> ();
+		ItemButton buttonUnderConstruction = returningGameObject.GetComponent<ItemButton> ();
 		buttonUnderConstruction.Setup (itemToSetupWith);
 
 		// фиксим якоря и оффсеты при возвращении из пула
@@ -45,7 +45,7 @@ public class ButtonsController : MonoBehaviour
 	{
         foreach (Transform mainButton in transform) 
 		{
-			mainButton.GetComponent <SampleButton> ().TuneButtonForMain ();
+			mainButton.GetComponent <ItemButton> ().TuneButtonForMain ();
 		}
 	}
 
@@ -53,7 +53,7 @@ public class ButtonsController : MonoBehaviour
 	{
         foreach (Transform browseButton in transform) 
 		{
-			browseButton.GetComponent <SampleButton> ().TuneButtonForBrowse ();
+			browseButton.GetComponent <ItemButton> ().TuneButtonForBrowse ();
         }
 	}
 
@@ -61,7 +61,7 @@ public class ButtonsController : MonoBehaviour
 	{
 		foreach (Transform quizButton in transform) 
 		{
-			quizButton.GetComponent <SampleButton> ().TuneButtonForQuiz ();
+			quizButton.GetComponent <ItemButton> ().TuneButtonForQuiz ();
 		}
 	}
 
