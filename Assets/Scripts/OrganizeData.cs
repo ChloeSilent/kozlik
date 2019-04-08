@@ -8,20 +8,12 @@ public class OrganizeData : MonoBehaviour
 	public List<Item> categoriesItemsList;
 	public List<Item> itemsOfCategory;
 
-	public void StartDataProcessing()
+	public void  PrepareData()
 	{
-		StartCoroutine("PrepareData");
-	}
-
-	//корутина готовит данные, когда она закончит работу - можно стартовать
-	IEnumerator PrepareData()
-	{
-		LoadAllDataToList ();
-		FindCategories ();
-		GenerateCategorySprites ();
-		GenerateInitialLetter ();
-		//корутина отработала, стартуем
-		yield return null;
+		LoadAllDataToList();
+		FindCategories();
+		GenerateCategorySprites();
+		GenerateInitialLetter();
 	}
 
 	public void LoadAllDataToList()

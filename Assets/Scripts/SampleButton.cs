@@ -17,13 +17,13 @@ public class SampleButton : MonoBehaviour
 	private AudioClip nameClip;
 	private SoundController soundController;
 	private Mask maskComponent;
-	private GameController gameController;
+	private GameModeController gameModeController;
 
 	private void Awake()
 	{
 		//соберем ссылки на контроллеры 
 		soundController = FindObjectOfType<SoundController>();
-		gameController = FindObjectOfType<GameController>();
+		gameModeController = FindObjectOfType<GameModeController>();
 		// через инспектор нельзя назначить значение больше трёхсот, поэтому назначим тут
 		initialLetter.fontSize = 710;
 		maskComponent = transform.GetComponent<Mask>();
@@ -115,7 +115,6 @@ public class SampleButton : MonoBehaviour
 	//обработка нажатий
 	public void HandleClick()
 	{
-        PanelsController panelsController = GameObject.Find ("MainCanvas").GetComponent<PanelsController> (); // TODO переместить
 		QuizController quizController = GameObject.Find ("QuizController").GetComponent<QuizController> (); // TODO переместить
 
 		//выясняем кто parent нажатой кнопки, реагируем соответственно
@@ -124,19 +123,19 @@ public class SampleButton : MonoBehaviour
             //если нажатая кнопка находится в панели выбора категории
 		case("CategoryPickerPanel"): 
 			soundController.TellButtonName(nameClip);  // TODO переместить
-            gameController.GoMainMode(item);
+            gameModeController.SwitchCategory(item);
 			break;
 
 		case("ObjectPickerPanel"): 
 			//если нажата кнопка квиза, то гоу в квиз
 			if(item.gameObject.name == "Quiz")
 			{
-				gameController.GoQuizMode (); 
+				gameModeController.SwitchFromChoiseToQuiz(item); 
 			}
 			// если нажата НЕ кнопка квиза, то это кнопка предмета, гоу в  BrowseMode
 			else
 			{
-				gameController.GoBrowseMode (item);
+				gameModeController.SwitchFromChoiseToBrowse(item);
 				soundController.TellButtonName(nameClip);  //  TODO переместить
 			}
 			break;
@@ -146,7 +145,6 @@ public class SampleButton : MonoBehaviour
 				{
 					// если это первый экран для browseMode , то 
 					// переключаемся на второй экран с буквицей
-					//this.DisplayInitialLetterFullscreeen();
 					DisplayInitialLetterFullscreeen();
 					soundController.TellButtonLetter(letterClip);
 					// и ставим флаг, сигнализирующий, что мы уже не на первом экране
@@ -156,7 +154,7 @@ public class SampleButton : MonoBehaviour
 				else
 				{
 					// если это второй экран для browseMode , то возвращаемся на главный экран
-					gameController.GoMainMode(item);
+					gameModeController.SwitchFromBrowseToChoise(item);
 					break;
 				}
 
@@ -166,7 +164,7 @@ public class SampleButton : MonoBehaviour
 			// да, угадал
 			if (guessWasSuccessfull == true) 
 			{
-				gameController.GoBrowseMode (item);
+				gameModeController.SwitchFromQuizToBrowse(item);
 			}
 			// нет, не угадал
 			else 
@@ -213,6 +211,7 @@ public class SampleButton : MonoBehaviour
 		namePanel.SetActive (false);
 		letterPanel.SetActive (false);
 		MoveRedCrossBackward ();
+		DisableARF();
 	}
 
 	public void MoveRedCrossForward()

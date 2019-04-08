@@ -8,8 +8,9 @@ public class QuizController : MonoBehaviour
 	public List<Item> fourVariantsItemsList;
 	public ButtonsController objectPickerButtonsController;
 	public ButtonsController quizButtonsController;
-	public PanelsController panelsController;
     public SoundController soundController;
+	public ChoiseModeController choiseModeController;
+	public Text variativeQuestionText;
 
 	public int winnerId;
 
@@ -18,7 +19,7 @@ public class QuizController : MonoBehaviour
 		SelectFourRandomVariants ();
 		RefreshQuizModeItemList (); 
 		SetSomeVariantAsWinner ();
-		panelsController.RefreshVariativeQuestionText ();
+		RefreshVariativeQuestionText ();
 		soundController.AskQiuzAudioQuestion(winnerId);
 	}
 
@@ -110,5 +111,21 @@ public class QuizController : MonoBehaviour
 	public AudioClip ReturnWinnersAudioClip()
 	{
 		return fourVariantsItemsList[winnerId].GetComponent<AudioSource>().clip;
+	}
+
+	//указываем победителя в variativeQuestionText
+	public void RefreshVariativeQuestionText()
+	{
+		if (variativeQuestionText.text==null) 
+		{
+			Debug.Log("variativeQuestionText.text is null");
+		}
+
+		if (winnerId == null)
+		{
+			Debug.Log("quizController.winnerId is null");
+		}
+		variativeQuestionText.text = fourVariantsItemsList[winnerId].itemName;
+
 	}
 }
