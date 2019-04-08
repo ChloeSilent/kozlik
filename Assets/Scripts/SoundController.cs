@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundController : MonoBehaviour
 {
-	public QuizController quizController;
+	public QuizModeController quizModeController;
 	public AudioClip showMeWhere;
 	public AudioClip rightAnswer;
 	public AudioClip tellRight;
@@ -21,7 +21,7 @@ public class SoundController : MonoBehaviour
 	// озвучивает "покажи, где"  потом название правильного варианта
 	public void AskQiuzAudioQuestion(int winnerId)
 	{
-		rightAnswer = quizController.ReturnWinnersAudioClip();
+		rightAnswer = quizModeController.ReturnWinnersAudioClip();
 		StartCoroutine(playTwoClipsSequentially(showMeWhere, rightAnswer));
 	}
 
@@ -32,7 +32,7 @@ public class SoundController : MonoBehaviour
 
 		yield return new WaitForSeconds(audioSource.clip.length);
 
-		rightAnswer = quizController.ReturnWinnersAudioClip();
+		rightAnswer = quizModeController.ReturnWinnersAudioClip();
 		audioSource.clip = rightAnswer;
 		audioSource.Play();
 	}

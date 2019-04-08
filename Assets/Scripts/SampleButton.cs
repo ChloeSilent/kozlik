@@ -18,6 +18,8 @@ public class SampleButton : MonoBehaviour
 	private SoundController soundController;
 	private Mask maskComponent;
 	private GameModeController gameModeController;
+	private QuizModeController quizModeController;
+	private ButtonsController objectPickerButtonsController;
 
 	private void Awake()
 	{
@@ -115,7 +117,8 @@ public class SampleButton : MonoBehaviour
 	//обработка нажатий
 	public void HandleClick()
 	{
-		QuizController quizController = GameObject.Find ("QuizController").GetComponent<QuizController> (); // TODO переместить
+		ButtonsController objectPickerButtonsController = GameObject.Find("ObjectPickerPanel").GetComponent<ButtonsController>();
+		QuizModeController quizModeController = GameObject.Find("QuizCanvas").GetComponent<QuizModeController>();
 
 		//выясняем кто parent нажатой кнопки, реагируем соответственно
 		switch (transform.parent.name) 
@@ -130,7 +133,7 @@ public class SampleButton : MonoBehaviour
 			//если нажата кнопка квиза, то гоу в квиз
 			if(item.gameObject.name == "Quiz")
 			{
-				gameModeController.SwitchFromChoiseToQuiz(item); 
+				gameModeController.SwitchFromChoiseToQuiz(objectPickerButtonsController.currentItemList); 
 			}
 			// если нажата НЕ кнопка квиза, то это кнопка предмета, гоу в  BrowseMode
 			else
@@ -160,7 +163,7 @@ public class SampleButton : MonoBehaviour
 
 		case("QuizButtonsPanel"):
 			// угадал?
-			bool guessWasSuccessfull = quizController.CheckIfWinner (item); 
+			bool guessWasSuccessfull = quizModeController.CheckIfWinner (item); 
 			// да, угадал
 			if (guessWasSuccessfull == true) 
 			{

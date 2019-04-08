@@ -884,8 +884,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23776b0829edfb944a91a133cc7d6d0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quizController: {fileID: 1354405295}
   quizModeButtonsController: {fileID: 330101648}
+  fourVariantsItemsList: []
+  tempList: []
+  objectPickerButtonsController: {fileID: 343125511}
+  quizButtonsController: {fileID: 330101648}
+  soundController: {fileID: 1119238663}
+  choiseModeController: {fileID: 598185861}
+  variativeQuestionText: {fileID: 1144274856}
+  winnerId: 0
 --- !u!131 &167286494
 GUITexture:
   m_ObjectHideFlags: 0
@@ -1354,7 +1361,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 280702315}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -1527,7 +1534,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330101647}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -3227,7 +3234,6 @@ MonoBehaviour:
   objectPickerButtonsController: {fileID: 343125511}
   categoryPickerButtonsController: {fileID: 1490034599}
   adController: {fileID: 1313171132}
-  variativeQuestionText: {fileID: 0}
 --- !u!1 &616920226
 GameObject:
   m_ObjectHideFlags: 0
@@ -5345,7 +5351,6 @@ RectTransform:
   m_Children:
   - {fileID: 280702316}
   - {fileID: 330101652}
-  - {fileID: 1354405294}
   m_Father: {fileID: 167286498}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5361,7 +5366,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1095137814}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -5676,7 +5681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91946beff6531d14287b16e0cb2ad5c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quizController: {fileID: 0}
+  quizModeController: {fileID: 167286493}
   showMeWhere: {fileID: 8300000, guid: c0c02dfcc5005ef46ac44d5595af2a46, type: 3}
   rightAnswer: {fileID: 0}
   tellRight: {fileID: 8300000, guid: fe9e950e88f71d4419f230d606fc7a67, type: 3}
@@ -5747,7 +5752,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1144274854}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -7238,59 +7243,6 @@ MonoBehaviour:
   adsEnabled: 0
   successfullyPurchased: 0
   delayBeforeAds: 10
---- !u!1 &1354405293
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1354405294}
-  - component: {fileID: 1354405295}
-  m_Layer: 0
-  m_Name: QuizController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1354405294
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1354405293}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -450.00003, y: -720.48737, z: 0}
-  m_LocalScale: {x: 1.6245488, y: 1.6245488, z: 1.6245488}
-  m_Children: []
-  m_Father: {fileID: 1095137815}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1354405295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1354405293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65b845dca51d54726896e36f83ac0d68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fourVariantsItemsList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  objectPickerButtonsController: {fileID: 0}
-  quizButtonsController: {fileID: 330101648}
-  soundController: {fileID: 1119238663}
-  choiseModeController: {fileID: 0}
-  winnerId: 0
 --- !u!1 &1362304036
 GameObject:
   m_ObjectHideFlags: 0

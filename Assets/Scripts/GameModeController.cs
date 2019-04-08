@@ -69,9 +69,9 @@ public class GameModeController : MonoBehaviour
 		DisableBrowseMode(item);
 	}
 
-	public void SwitchFromChoiseToQuiz(Item item)
+	public void SwitchFromChoiseToQuiz(List<Item> itemList)
 	{
-		EnableQuizMode(item);
+		EnableQuizMode(itemList);
 		DisableChoiseMode();
 	}
 
@@ -124,11 +124,11 @@ public class GameModeController : MonoBehaviour
 		browseModeController.LeaveBrowseMode(item);
 	}
 
-	private void EnableQuizMode(Item item)
+	private void EnableQuizMode(List<Item> itemList)
 	{
 		currentMode = Mode.Quiz;
 		quizCanvas.enabled = true;
-		quizModeController.EnterQuizMode(item);
+		quizModeController.EnterQuizMode(itemList);
 	}
 
 	private void DisableQuizMode(Item item)
