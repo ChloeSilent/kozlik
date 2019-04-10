@@ -62,7 +62,7 @@ public class GoogleMobileAdsScript : MonoBehaviour
 	{
 		// Create a 320x50 banner view at the top of the screen.
 			bannerView = new BannerView(currentAdUnitId, AdSize.Banner, AdPosition.Top);
-			Debug.Log("ads: CreateBannerView called");
+		//	Debug.Log("ads: CreateBannerView called");
 	}
 
 	private void CreateAdRequest()
@@ -72,14 +72,14 @@ public class GoogleMobileAdsScript : MonoBehaviour
 			.AddTestDevice("4AC2811559563C8348D03C6D9DE61104") //son
 			.TagForChildDirectedTreatment(true)
 			.Build();
-			Debug.Log("ads: CreateAdRequest called");
+		//	Debug.Log("ads: CreateAdRequest called");
 	}
 
 	private void LoadRequestedBannerToView()
 	{
 			bannerView.LoadAd(request);
 
-			Debug.Log("ads: LoadRequestedBannerToView called");
+		//	Debug.Log("ads: LoadRequestedBannerToView called");
 	}
 
 	public void ShowAdsIfEnabled() 
@@ -89,12 +89,12 @@ public class GoogleMobileAdsScript : MonoBehaviour
 		if (Time.realtimeSinceStartup > delayBeforeAds && successfullyPurchased == false)
 		{
 			adsEnabled = true;
-			Debug.Log("ads: adsEnabled set to true");
+		//	Debug.Log("ads: adsEnabled set to true");
 		}
 		else
 		{
 			adsEnabled = false;
-			Debug.Log("ads: adsEnabled set to false");
+		//	Debug.Log("ads: adsEnabled set to false");
 		}
 
 		// show ads if flag allows, or do nothing if doesnt
@@ -109,7 +109,7 @@ public class GoogleMobileAdsScript : MonoBehaviour
 		if (bannerView != null)
 		{
 			bannerView.Hide();
-			Debug.Log(" ads: TemporarilyHideAds called");
+		//	Debug.Log(" ads: TemporarilyHideAds called");
 		}
 	}
 
@@ -121,7 +121,7 @@ public class GoogleMobileAdsScript : MonoBehaviour
 		}
 		successfullyPurchased = true;
 		adsEnabled = false;
-		Debug.Log(" ads: DisableAdsForever called");
+		//Debug.Log(" ads: DisableAdsForever called");
 	}
 }
 
