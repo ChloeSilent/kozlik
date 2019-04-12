@@ -14,9 +14,12 @@ public class GameModeController : MonoBehaviour
 	public OrganizeData dataContainer;
 
 	public Canvas choiseCanvas;
-	public Canvas settingsMenuCanvas;
+	public Canvas settingsCanvas;
 	public Canvas browseCanvas;
 	public Canvas quizCanvas;
+	public Canvas infoCanvas;
+	public Canvas helpCanvas;
+	public Canvas languageCanvas;
 
 	public ChoiseModeController choiseModeController;
 	public BrowseModeController browseModeController;
@@ -34,9 +37,12 @@ public class GameModeController : MonoBehaviour
 	public enum Mode
 	{
 		Choise,
-		SettingsMenu,
+		Settings,
 		Browse,
 		Quiz,
+		Info,
+		Help,
+		Language,
 	}
 
 	private void OnEnable()
@@ -67,10 +73,11 @@ public class GameModeController : MonoBehaviour
 
 	void Start()
 	{
-		// Load data from storage
+		// Game begins here!
+		// First of all lets load data from storage
 		dataContainer.PrepareData();
 	
-		// After loading data game starts in Choise mode
+		// After loading data, game starts in Choise mode
 		StartInChoiseModeWithFirstCategory();
 	}
 
@@ -80,16 +87,16 @@ public class GameModeController : MonoBehaviour
 		EnableChoiseMode(dataContainer.allItemsList[0].Category);
 	}
 
-	public void SwitchFromChoiseToSettingsMenu()
+	public void SwitchFromChoiseToSettings()
 	{
-		EnableSettingsMenuMode();
+		EnableSettingsMode();
 		DisableChoiseMode();
 	}
 
-	public void SwitchFromSettingsMenuToChoise()
+	public void SwitchFromSettingsToChoise()
 	{
 		EnableChoiseMode(dataContainer.allItemsList[0].Category);
-		DisableSettingsMenuMode();
+		DisableSettingsMode();
 	}
 
 	public void SwitchFromChoiseToBrowse(ItemButton itemButton)
@@ -122,6 +129,75 @@ public class GameModeController : MonoBehaviour
 		EnableChoiseMode(itemButton.item.Category);
 	}
 
+	public void SwitchFromSettingsToInfo()
+	{
+		DisableSettingsMode();
+		EnableInfoMode();
+	}
+
+	public void SwitchFromInfoToSettings()
+	{
+		DisableInfoMode();
+		EnableSettingsMode();
+	}
+
+	public void SwitchFromSettingsToHelp()
+	{
+		DisableSettingsMode();
+		EnableHelpMode();
+	}
+
+	public void SwitchFromHelpToSettings()
+	{
+		DisableHelpMode();
+		EnableSettingsMode();
+	}
+
+	public void SwitchFromSettingsToLanguage()
+	{
+		DisableSettingsMode();
+		EnableLanguageMode();
+	}
+
+	public void SwitchFromLanguageToSettings()
+	{
+		DisableLanguageMode();
+		EnableSettingsMode();
+	}
+
+	private void EnableInfoMode()
+	{
+		currentMode = Mode.Info; 
+		infoCanvas.enabled = true;
+	}
+
+	private void DisableInfoMode()
+	{
+		infoCanvas.enabled = false;
+	}
+
+	private void EnableHelpMode()
+	{
+		currentMode = Mode.Help; 
+		helpCanvas.enabled = true;
+	}
+
+	private void DisableHelpMode()
+	{
+		helpCanvas.enabled = false;
+	}
+
+	private void EnableLanguageMode()
+	{
+		currentMode = Mode.Language; 
+		languageCanvas.enabled = true;
+	}
+
+	private void DisableLanguageMode()
+	{
+		languageCanvas.enabled = false;
+	}
+	
 	private void EnableChoiseMode(int category)
 	{
 		currentMode = Mode.Choise; //TODO move up
@@ -135,15 +211,15 @@ public class GameModeController : MonoBehaviour
 		choiseModeController.LeaveChoiseMode();
 	}
 
-	private void EnableSettingsMenuMode()
+	private void EnableSettingsMode()
 	{
-		currentMode = Mode.SettingsMenu;
-		settingsMenuCanvas.enabled = true;
+		currentMode = Mode.Settings;
+		settingsCanvas.enabled = true;
 	}
 
-	private void DisableSettingsMenuMode()
+	private void DisableSettingsMode()
 	{
-		settingsMenuCanvas.enabled = false;
+		settingsCanvas.enabled = false;
 	}
 
 	private void EnableBrowseMode(Item item)
@@ -164,7 +240,7 @@ public class GameModeController : MonoBehaviour
 		currentMode = Mode.Quiz;
 		quizCanvas.enabled = true;
 		quizModeController.EnterQuizMode(category);
-		soundController.AskQiuzAudioQuestion(quizModeController.winnerId); //TODO move
+		soundController.AskQiuzAudioQuestion(quizModeController.winnerId);
 	}
 
 	private void DisableQuizMode(Item item)
