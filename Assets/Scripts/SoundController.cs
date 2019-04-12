@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SoundController : MonoBehaviour
 {
@@ -12,10 +13,29 @@ public class SoundController : MonoBehaviour
 	private AudioSource audioSource;
 	private AudioClip buttonName;
 	public AudioClip wordLetterClip;
+	private UnityAction<ItemButton> TellButtonNameListener;
+	private UnityAction<ItemButton> TellButtonLetterListener;
 
 	private void Awake()
 	{
 		audioSource = GetComponent<AudioSource>();
+	}
+
+	private void OnEnable()
+	{
+		TellButtonNameListener = new UnityAction<ItemButton> (TellButtonName);
+		TellButtonLetterListener = new UnityAction<ItemButton> (TellButtonLetter);
+
+		EventManager.StartListening ("CategoryPickerButtonClicked", TellButtonNameListener);
+		EventManager.StartListening ("ObjectPickerButtonClicked", TellButtonNameListener);
+		EventManager.StartListening ("FirstClickInBrowseMode", TellButtonLetterListener);
+	}
+
+	private void OnDisable()
+	{
+		EventManager.StopListening ("CategoryPickerButtonClicked", TellButtonNameListener);
+		EventManager.StopListening ("ObjectPickerButtonClicked", TellButtonNameListener);
+		EventManager.StopListening ("FirstClickInBrowseMode", TellButtonLetterListener);
 	}
 
 	// озвучивает "покажи, где"  потом название правильного варианта
@@ -49,15 +69,15 @@ public class SoundController : MonoBehaviour
 		audioSource.Play();
 	}
 
-	public void TellButtonName(AudioClip buttonName)
+	public void TellButtonName(ItemButton itemButton)
 	{
-		audioSource.clip = buttonName;
+		audioSource.clip = itemButton.nameClip;
 		audioSource.Play();
 	}
 
-	public void TellButtonLetter (AudioClip buttonLetter)
+	public void TellButtonLetter (ItemButton itemButton)
 	{
-		StartCoroutine(playTwoClipsSequentially(wordLetterClip, buttonLetter));
+		StartCoroutine(playTwoClipsSequentially(wordLetterClip, itemButton.letterClip));
 	}
 
 	IEnumerator playTwoClipsSequentially(AudioClip firstClip, AudioClip secondClip)

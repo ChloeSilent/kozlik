@@ -4,6 +4,8 @@ using System.Collections.Generic;
 // осмысленно взято отсюда https://unity3d.com/ru/learn/tutorials/topics/user-interface-ui/button-prefab?playlist=17111
 
 // пул кнопок
+
+//TODO rename
 public class SimpleObjectPool : MonoBehaviour
 {
 	// the prefab that this object pool returns instances of

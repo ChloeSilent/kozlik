@@ -13,7 +13,7 @@ public class BrowseModeController : MonoBehaviour
 		browseModeButtonsController.TuneButtonsForBrowse();
 	}
 
-	public void LeaveBrowseMode(Item item)
+	public void LeaveBrowseMode()
 	{
 		browseModeButtonsController.RemoveAllButtons();
 		browseModeButtonsController.currentItemList.Clear();

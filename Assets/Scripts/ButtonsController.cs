@@ -66,11 +66,11 @@ public class ButtonsController : MonoBehaviour
 	}
 
     // из общего списка объектов отфильтруем тех, кто принадлежит нужной категории
-    public void FilterObjectPickerItemListTo (Item desiredItem)
+    public void FilterObjectPickerItemListTo (int category)
 	{
 		foreach (Item sortedItem in dataContainer.allItemsList)
 		{
-			if (sortedItem.Category == desiredItem.Category && sortedItem.isACategory ==false)
+			if (sortedItem.Category == category && sortedItem.isACategory ==false)
 			{
 				this.currentItemList.Add (sortedItem);
 			}

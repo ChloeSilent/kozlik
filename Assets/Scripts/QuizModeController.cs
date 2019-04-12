@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class QuizModeController : MonoBehaviour
@@ -11,46 +12,51 @@ public class QuizModeController : MonoBehaviour
 	public ButtonsController objectPickerButtonsController;
 	public ButtonsController quizButtonsController;
 	
-	public ChoiseModeController choiseModeController;
 	public Text variativeQuestionText;
 
 	public int winnerId;
 
+	private OrganizeData dataContainer;
 
-	public void EnterQuizMode(List<Item> itemList)
+	private void Awake()
 	{
-		// загадать новую загадку, т.е. выбать 4 кандидатов и одного из них назначить правильным
-		PrepareQuiz(itemList);
+		dataContainer = FindObjectOfType<OrganizeData>();
+	}
 
+	public void EnterQuizMode(int category)
+	{
+		PrepareQuiz(category);
 		quizModeButtonsController.AddButtonsFromCurrentItemList();
 		quizModeButtonsController.TuneButtonsForQuiz();
 	}
 
-	public void LeaveQuizMode(Item item)
+	public void LeaveQuizMode()
 	{
 		quizModeButtonsController.currentItemList.Clear();
 		quizModeButtonsController.RemoveAllButtons();
 		tempList.Clear();
 	}
 
-	public void PrepareQuiz(List<Item> itemList)
+	// Make a new riddle, i.e. choose 4 random variants and randomly choose one as a winner
+	public void PrepareQuiz(int category)
 	{
-		RecieveItemList(itemList);
+		RecieveItemList(category);
 		SelectFourRandomVariants();
 		SendChosenVariantsToButtonsController();
 		SetSomeVariantAsWinner();
 		RefreshVariativeQuestionText();
 	}
 
-	// TODO There should be a beeter way to copy list. Think about it.
-	public void RecieveItemList(List<Item> itemList)
+	public void RecieveItemList(int category)
 	{
-		foreach (Item item in itemList)
+		foreach (Item item in dataContainer.allItemsList)
 		{
-			tempList.Add(item);
+			if (item.isACategory != true && item.Category == category)
+			{
+				tempList.Add(item);
+			}
 		}
 	}
-
 
 	public void SendChosenVariantsToButtonsController() 
 	{
@@ -72,7 +78,7 @@ public class QuizModeController : MonoBehaviour
 		DecreaseItemListCountToFour();
 	}
 
-	// Iterate through tempList, find item with "Quiz" name and remove it, beacause it is not siutable variant for a game
+	// Iterate through tempList, find item with "Quiz" name and remove it, because it is not siutable variant for a game
 	private void DeleteQuizItemButtonFromList()
 	{
 		for (int i=0; i<tempList.Count; i++)
@@ -87,7 +93,7 @@ public class QuizModeController : MonoBehaviour
 	private void DecreaseItemListCountToFour()
 	{
 		//Check if its enough item to make a quiz
-		if(tempList.Count < 5)
+		if(tempList.Count < 4)
 		{
 			Debug.Log("Not enough items to make a quiz");
 		}
@@ -102,7 +108,7 @@ public class QuizModeController : MonoBehaviour
 		}
 	}
 
-	public void SetSomeVariantAsWinner()
+	private void SetSomeVariantAsWinner()
 	{
 		// Randomly choose one item of the list as correct answer
 		winnerId = Random.Range(0, tempList.Count);
@@ -129,7 +135,7 @@ public class QuizModeController : MonoBehaviour
 	}
 
 	//указываем победителя в variativeQuestionText
-	public void RefreshVariativeQuestionText()
+	private void RefreshVariativeQuestionText()
 	{
 		variativeQuestionText.text = tempList[winnerId].itemName;
 	}

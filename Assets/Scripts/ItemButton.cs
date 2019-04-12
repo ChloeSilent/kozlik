@@ -11,21 +11,14 @@ public class ItemButton : MonoBehaviour
 	public Text nameLabel;
 	public Text initialLetter;
 	public Image iconImage;
-	private Item item;
-	private bool isDislpayingPictureNow;
-	private AudioClip letterClip;
-	private AudioClip nameClip;
-	private SoundController soundController;
+	public Item item;
+	private bool noClicksWasMadeYet;
+	public AudioClip letterClip;
+	public AudioClip nameClip;
 	private Mask maskComponent;
-	private GameModeController gameModeController;
-	private QuizModeController quizModeController;
-	private ButtonsController objectPickerButtonsController;
 
 	private void Awake()
 	{
-		//соберем ссылки на контроллеры 
-		soundController = FindObjectOfType<SoundController>();
-		gameModeController = FindObjectOfType<GameModeController>();
 		// через инспектор нельзя назначить значение больше трёхсот, поэтому назначим тут
 		initialLetter.fontSize = 710;
 		maskComponent = transform.GetComponent<Mask>();
@@ -54,8 +47,8 @@ public class ItemButton : MonoBehaviour
 		nameLabel.text = item.itemName;
 		initialLetter.text = item.initialLetter.ToString ();
 		SetupSprite ();
-		button.gameObject.name = item.itemName; // использовать this ?
-		AudioSource[] allAudioSourcesOfButton = item.GetComponents<AudioSource>();
+		button.gameObject.name = item.itemName; 
+		AudioSource[] allAudioSourcesOfButton = item.GetComponents<AudioSource>(); // TODO а точно нужен отдельный компонент AudioSource ? может сделать звуковой файл просто полем в  Item
 		if (allAudioSourcesOfButton.Length>0)
 		{
 			nameClip = allAudioSourcesOfButton[0].clip;
@@ -114,67 +107,41 @@ public class ItemButton : MonoBehaviour
 		Setup (item);
 	}
 
-	//обработка нажатий
 	public void HandleClick()
 	{
-		ButtonsController objectPickerButtonsController = GameObject.Find("ObjectPickerPanel").GetComponent<ButtonsController>();
-		QuizModeController quizModeController = GameObject.Find("QuizCanvas").GetComponent<QuizModeController>();
-
-		//выясняем кто parent нажатой кнопки, реагируем соответственно
+		// Lets find out who is the parent of clicked button
 		switch (transform.parent.name) 
 		{
-            //если нажатая кнопка находится в панели выбора категории
 		case("CategoryPickerPanel"): 
-			soundController.TellButtonName(nameClip);  // TODO переместить
-            gameModeController.SwitchCategory(item);
+			EventManager.TriggerEvent ("CategoryPickerButtonClicked", this);
 			break;
 
 		case("ObjectPickerPanel"): 
-			//если нажата кнопка квиза, то гоу в квиз
 			if(item.gameObject.name == "Quiz")
 			{
-				gameModeController.SwitchFromChoiseToQuiz(objectPickerButtonsController.currentItemList); 
+				EventManager.TriggerEvent ("QuizButtonClicked", this);	
 			}
-			// если нажата НЕ кнопка квиза, то это кнопка предмета, гоу в  BrowseMode
+			// if it is not quiz button that was clicked, then this is regular item button
 			else
 			{
-				gameModeController.SwitchFromChoiseToBrowse(item);
-				soundController.TellButtonName(nameClip);  //  TODO переместить
+				EventManager.TriggerEvent ("ObjectPickerButtonClicked", this);
 			}
 			break;
 
 		case("BrowseModePanel"):
-				if (isDislpayingPictureNow==true) // TODO переименовать
+				if (noClicksWasMadeYet==true) 
 				{
-					// если это первый экран для browseMode , то 
-					// переключаемся на второй экран с буквицей
-					DisplayInitialLetterFullscreeen();
-					soundController.TellButtonLetter(letterClip);
-					// и ставим флаг, сигнализирующий, что мы уже не на первом экране
-					isDislpayingPictureNow = false;
-					break;
+					EventManager.TriggerEvent ("FirstClickInBrowseMode", this);
+					noClicksWasMadeYet = false;
 				}
 				else
 				{
-					// если это второй экран для browseMode , то возвращаемся на главный экран
-					gameModeController.SwitchFromBrowseToChoise(item);
-					break;
+					EventManager.TriggerEvent ("SecondClickInBrowseMode", this);
 				}
+				break;
 
 		case("QuizButtonsPanel"):
-			// угадал?
-			bool guessWasSuccessfull = quizModeController.CheckIfWinner (item); 
-			// да, угадал
-			if (guessWasSuccessfull == true) 
-			{
-				gameModeController.SwitchFromQuizToBrowse(item);
-			}
-			// нет, не угадал
-			else 
-			{
-				this.MoveRedCrossForward (); //TODO CHECK IF THIS needed
-				soundController.TellWrong();
-				}
+			EventManager.TriggerEvent ("QuizVariantClicked", this);
 			break;
 
 		default:
@@ -205,7 +172,7 @@ public class ItemButton : MonoBehaviour
 		namePanel.SetActive (false);
 		letterPanel.SetActive (false);
 		MoveRedCrossBackward ();
-		isDislpayingPictureNow = true;
+		noClicksWasMadeYet = true;
 		MakeButtonFullscreen();
 	}
 
@@ -220,28 +187,29 @@ public class ItemButton : MonoBehaviour
 
 	public void MoveRedCrossForward()
 	{
-		this.transform.Find ("WrongImage").SetAsLastSibling (); 
+		transform.Find ("WrongImage").SetAsLastSibling (); 
 	}
 
 	public void MoveRedCrossBackward()
 	{
-		this.transform.Find ("WrongImage").SetAsFirstSibling (); 
+		transform.Find ("WrongImage").SetAsFirstSibling (); 
 	}
 
-	private void DisplayInitialLetterFullscreeen()
+	public void DisplayInitialLetterFullscreeen()
 	{
 		namePanel.SetActive(true);
 		letterPanel.SetActive(true);
 	}
 
-	// ресайзит картинку под текущее соотношение сторон экрана
+	// Resize picture to screen resolution
 	private void MakeButtonFullscreen ()
 	{
 		AspectRatioFitter arf = GetComponent<AspectRatioFitter>();
 		arf.enabled = true;
 	}
 
-	// отключаем управление ratio, дальше этим будет заниматься layout group
+	// Disable ratio control witn AspectRatioFitter. 
+	// Further managenent will be made by layout group component in parent panel.
 	private void MakeButtonNotFullscreen()
 	{
 		AspectRatioFitter arf = GetComponent<AspectRatioFitter>();

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 // This class controls changing game modes. 
@@ -22,6 +23,13 @@ public class GameModeController : MonoBehaviour
 	public QuizModeController quizModeController;
 	public SoundController soundController;
 
+	public UnityAction<ItemButton> SwitchCategoryListener;
+	public UnityAction<ItemButton> SwitchFromChoiseToBrowseListener;
+	public UnityAction<ItemButton> SwitchFromChoiseToQuizListener;
+	public UnityAction<ItemButton> SwitchFromBrowseToChoiseListener;
+	public UnityAction<ItemButton> TuneButtonToDisplayLetterListener;
+		
+
 	public Mode currentMode;
 	public enum Mode
 	{
@@ -29,6 +37,32 @@ public class GameModeController : MonoBehaviour
 		SettingsMenu,
 		Browse,
 		Quiz,
+	}
+
+	private void OnEnable()
+	{
+		SwitchCategoryListener = new UnityAction<ItemButton> (SwitchCategory);
+		SwitchFromChoiseToBrowseListener = new UnityAction<ItemButton> (SwitchFromChoiseToBrowse);
+		SwitchCategoryListener = new UnityAction<ItemButton> (SwitchFromChoiseToQuiz);
+		SwitchFromBrowseToChoiseListener = new UnityAction<ItemButton> (SwitchFromBrowseToChoise);
+		TuneButtonToDisplayLetterListener = new UnityAction<ItemButton> (TuneButtonToDisplayLetter);
+
+		EventManager.StartListening ("CategoryPickerButtonClicked", SwitchCategory);
+		EventManager.StartListening ("ObjectPickerButtonClicked", SwitchFromChoiseToBrowse);
+		EventManager.StartListening ("QuizButtonClicked", SwitchFromChoiseToQuiz);
+		EventManager.StartListening ("FirstClickInBrowseMode", TuneButtonToDisplayLetterListener);
+		EventManager.StartListening ("SecondClickInBrowseMode", SwitchFromBrowseToChoise);
+		EventManager.StartListening ("QuizVariantClicked", CheckVariant);
+	}
+
+	private void OnDisable()
+	{
+		EventManager.StopListening ("CategoryPickerButtonClicked", SwitchCategory);
+		EventManager.StopListening ("ObjectPickerButtonClicked", SwitchFromChoiseToBrowse);
+		EventManager.StopListening ("QuizButtonClicked", SwitchFromChoiseToQuiz);
+		EventManager.StopListening ("FirstClickInBrowseMode", TuneButtonToDisplayLetterListener);
+		EventManager.StopListening ("SecondClickInBrowseMode", SwitchFromBrowseToChoise);
+		EventManager.StopListening ("QuizVariantClicked", CheckVariant);
 	}
 
 	void Start()
@@ -43,7 +77,7 @@ public class GameModeController : MonoBehaviour
 	private void StartInChoiseModeWithFirstCategory()
 	{
 		// Index 0 is used because we want start with catagory of first item in dataContainer
-		EnableChoiseMode(dataContainer.allItemsList[0]);
+		EnableChoiseMode(dataContainer.allItemsList[0].Category);
 	}
 
 	public void SwitchFromChoiseToSettingsMenu()
@@ -54,25 +88,25 @@ public class GameModeController : MonoBehaviour
 
 	public void SwitchFromSettingsMenuToChoise()
 	{
-		EnableChoiseMode(dataContainer.allItemsList[0]);
+		EnableChoiseMode(dataContainer.allItemsList[0].Category);
 		DisableSettingsMenuMode();
 	}
 
-	public void SwitchFromChoiseToBrowse(Item item)
+	public void SwitchFromChoiseToBrowse(ItemButton itemButton)
 	{
-		EnableBrowseMode(item);
+		EnableBrowseMode(itemButton.item);
 		DisableChoiseMode();
 	}
 
-	public void SwitchFromBrowseToChoise(Item item)
+	public void SwitchFromBrowseToChoise(ItemButton itemButton)
 	{
-		EnableChoiseMode(item);
-		DisableBrowseMode(item);
+		EnableChoiseMode(itemButton.item.Category);
+		DisableBrowseMode();
 	}
 
-	public void SwitchFromChoiseToQuiz(List<Item> itemList)
+	public void SwitchFromChoiseToQuiz(ItemButton itemButton)
 	{
-		EnableQuizMode(itemList);
+		EnableQuizMode(itemButton.item.Category);
 		DisableChoiseMode();
 	}
 
@@ -80,20 +114,19 @@ public class GameModeController : MonoBehaviour
 	{
 		DisableQuizMode(item);
 		EnableBrowseMode(item);
-		soundController.TellRight();
 	}
 
-	public void SwitchCategory(Item item)
+	public void SwitchCategory(ItemButton itemButton)
 	{
 		DisableChoiseMode();
-		EnableChoiseMode(item);
+		EnableChoiseMode(itemButton.item.Category);
 	}
 
-	private void EnableChoiseMode(Item item)
+	private void EnableChoiseMode(int category)
 	{
-		currentMode = Mode.Choise;
+		currentMode = Mode.Choise; //TODO move up
 		choiseCanvas.enabled = true;
-		choiseModeController.EnterChoiseMode(item);
+		choiseModeController.EnterChoiseMode(category);
 	}
 
 	private void DisableChoiseMode()
@@ -120,23 +153,43 @@ public class GameModeController : MonoBehaviour
 		browseModeController.EnterBrowseMode(item);
 	}
 
-	private void DisableBrowseMode(Item item)
+	private void DisableBrowseMode()
 	{
 		browseCanvas.enabled = false;
-		browseModeController.LeaveBrowseMode(item);
+		browseModeController.LeaveBrowseMode();
 	}
 
-	private void EnableQuizMode(List<Item> itemList)
+	private void EnableQuizMode(int category)
 	{
 		currentMode = Mode.Quiz;
 		quizCanvas.enabled = true;
-		quizModeController.EnterQuizMode(itemList);
-		soundController.AskQiuzAudioQuestion(quizModeController.winnerId);
+		quizModeController.EnterQuizMode(category);
+		soundController.AskQiuzAudioQuestion(quizModeController.winnerId); //TODO move
 	}
 
 	private void DisableQuizMode(Item item)
 	{
 		quizCanvas.enabled = true;
-		quizModeController.LeaveQuizMode(item);
+		quizModeController.LeaveQuizMode();
+	}
+
+	private void CheckVariant(ItemButton itemButton)
+	{
+		bool guessWasSuccessfull = quizModeController.CheckIfWinner(itemButton.item);
+		if (guessWasSuccessfull)
+		{
+			SwitchFromQuizToBrowse(itemButton.item);
+			soundController.TellRight();
+		}
+		else
+		{
+			itemButton.MoveRedCrossForward();
+			soundController.TellWrong();
+		}
+	}
+
+	private void TuneButtonToDisplayLetter(ItemButton itemButton)
+	{
+		itemButton.DisplayInitialLetterFullscreeen();
 	}
 }

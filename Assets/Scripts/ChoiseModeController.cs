@@ -9,9 +9,9 @@ public class ChoiseModeController : MonoBehaviour
 	public ButtonsController categoryPickerButtonsController;
 	public GoogleMobileAdsScript adController;
 
-	public void EnterChoiseMode(Item item)
+	public void EnterChoiseMode(int category)
     {
-		objectPickerButtonsController.FilterObjectPickerItemListTo(item);
+		objectPickerButtonsController.FilterObjectPickerItemListTo(category);
 		categoryPickerButtonsController.FilterCategoryPickerItemList();
 
 		RandomizeObjectPickerSprites();

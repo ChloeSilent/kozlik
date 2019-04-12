@@ -885,11 +885,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quizModeButtonsController: {fileID: 330101648}
-  fourVariantsItemsList: []
   tempList: []
   objectPickerButtonsController: {fileID: 343125511}
   quizButtonsController: {fileID: 330101648}
-  soundController: {fileID: 1119238663}
   choiseModeController: {fileID: 598185861}
   variativeQuestionText: {fileID: 1144274856}
   winnerId: 0
@@ -986,7 +984,7 @@ RectTransform:
   m_Children:
   - {fileID: 1095137815}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2142,7 +2140,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &493757011
 GameObject:
@@ -3212,7 +3210,7 @@ RectTransform:
   m_Children:
   - {fileID: 1882820511}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3610,7 +3608,7 @@ RectTransform:
   m_Children:
   - {fileID: 2128243239}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5571,7 +5569,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1119238662
 AudioSource:
@@ -5707,6 +5705,7 @@ MonoBehaviour:
   choiseModeController: {fileID: 598185861}
   browseModeController: {fileID: 619243137}
   quizModeController: {fileID: 167286493}
+  soundController: {fileID: 1119238663}
   currentMode: 0
 --- !u!1 &1144274854
 GameObject:
@@ -7090,6 +7089,7 @@ GameObject:
   - component: {fileID: 1282916835}
   - component: {fileID: 1282916834}
   - component: {fileID: 1282916833}
+  - component: {fileID: 1282916836}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -7145,6 +7145,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1282916836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282916832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55f178804fc88344b7ba8ec689e9678, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1313171127
 GameObject:
   m_ObjectHideFlags: 0
@@ -8796,7 +8808,7 @@ Transform:
   - {fileID: 375557640}
   - {fileID: 1225950184}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1714477799
 MonoBehaviour:
@@ -9591,7 +9603,7 @@ RectTransform:
   m_Children:
   - {fileID: 748765333}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
