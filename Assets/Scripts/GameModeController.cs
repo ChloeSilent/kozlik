@@ -83,6 +83,14 @@ public class GameModeController : MonoBehaviour
 		StartInChoiseModeWithFirstCategory();
 	}
 
+	void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			Application.Quit();
+		}
+	}
+
 	private void StartInChoiseModeWithFirstCategory()
 	{
 		// Index 0 is used because we want start with catagory of first item in dataContainer
