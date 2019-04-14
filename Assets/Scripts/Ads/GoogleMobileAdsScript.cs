@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using GoogleMobileAds.Api;
+using System;
 
 public class GoogleMobileAdsScript : MonoBehaviour
 {
@@ -21,14 +22,29 @@ public class GoogleMobileAdsScript : MonoBehaviour
 
 	public bool adsEnabled = false;
 	public bool successfullyPurchased = false;
+	public bool goodPlatformForAds = false;
+	public bool thisDeviseIsATestDevice = false;
 	public int delayBeforeAds;
 
 	public void Start()
 	{
-		SetupIds();
-		CreateBannerView();
-		CreateAdRequest();
-		LoadRequestedBannerToView();
+		CheckPlatform();
+
+		if(goodPlatformForAds)
+		{
+			SetupIds();
+			CreateBannerView();
+			CreateAdRequest();
+			LoadRequestedBannerToView();
+		}
+	}
+
+	private void CheckPlatform()
+	{
+		if (Application.platform.ToString() == "Android")
+		{
+			goodPlatformForAds = true;
+		}
 	}
 
 	private void SetupIds()

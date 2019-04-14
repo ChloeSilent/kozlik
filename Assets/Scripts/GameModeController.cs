@@ -20,6 +20,7 @@ public class GameModeController : MonoBehaviour
 	public Canvas infoCanvas;
 	public Canvas helpCanvas;
 	public Canvas languageCanvas;
+	public Canvas aboutAppCanvas;
 
 	public ChoiseModeController choiseModeController;
 	public BrowseModeController browseModeController;
@@ -43,6 +44,7 @@ public class GameModeController : MonoBehaviour
 		Info,
 		Help,
 		Language,
+		AboutApp,
 	}
 
 	private void OnEnable()
@@ -101,8 +103,8 @@ public class GameModeController : MonoBehaviour
 
 	public void SwitchFromChoiseToBrowse(ItemButton itemButton)
 	{
-		EnableBrowseMode(itemButton.item);
 		DisableChoiseMode();
+		EnableBrowseMode(itemButton.item);
 	}
 
 	public void SwitchFromBrowseToChoise(ItemButton itemButton)
@@ -113,8 +115,8 @@ public class GameModeController : MonoBehaviour
 
 	public void SwitchFromChoiseToQuiz(ItemButton itemButton)
 	{
-		EnableQuizMode(itemButton.item.Category);
 		DisableChoiseMode();
+		EnableQuizMode(itemButton.item.Category);
 	}
 
 	public void SwitchFromQuizToBrowse(Item item)
@@ -163,6 +165,29 @@ public class GameModeController : MonoBehaviour
 	{
 		DisableLanguageMode();
 		EnableSettingsMode();
+	}
+
+	public void SwitchFromInfoToAboutApp()
+	{
+		DisableInfoMode();
+		EnableAboutAppMode();
+	}
+
+	public void SwitchFromAboutAppToInfo()
+	{
+		DisableAboutAppMode();
+		EnableInfoMode();
+	}
+
+	private void EnableAboutAppMode()
+	{
+		currentMode = Mode.AboutApp; 
+		aboutAppCanvas.enabled = true;
+	}
+
+	private void DisableAboutAppMode()
+	{
+		aboutAppCanvas.enabled = false;
 	}
 
 	private void EnableInfoMode()
@@ -245,7 +270,7 @@ public class GameModeController : MonoBehaviour
 
 	private void DisableQuizMode(Item item)
 	{
-		quizCanvas.enabled = true;
+		quizCanvas.enabled = false;
 		quizModeController.LeaveQuizMode();
 	}
 
