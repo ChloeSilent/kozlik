@@ -114,7 +114,7 @@ public class GoogleMobileAdsScript : MonoBehaviour
 		}
 
 		// show ads if flag allows, or do nothing if doesnt
-		if (adsEnabled == true)
+		if (adsEnabled == true && bannerView != null)
 		{
 			bannerView.Show();
 		}
